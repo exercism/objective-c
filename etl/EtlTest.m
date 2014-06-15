@@ -8,8 +8,8 @@
 @implementation test_suite
 
 - (void)testTransformOneValue {
-  NSDictionary *old = @{ @1 : @[ @"WORLD" ] };
-  NSDictionary *expected = @{ @"world" : @1 };
+  NSDictionary *old = @{ @1 : @[ @"W" ] };
+  NSDictionary *expected = @{ @"w" : @1 };
 
   NSDictionary *results = [ETL transform:old];
 
@@ -17,8 +17,8 @@
 }
 
 - (void)testTransformMoreValues {
-  NSDictionary *old = @{ @1 : @[ @"WORLD", @"GSCHOOLERS" ] };
-  NSDictionary *expected = @{ @"world" : @1, @"gschoolers" : @1 };
+  NSDictionary *old = @{ @1 : @[ @"W", @"G" ] };
+  NSDictionary *expected = @{ @"w" : @1, @"g" : @1 };
 
   NSDictionary *results = [ETL transform:old];
 
@@ -26,8 +26,8 @@
 }
 
 - (void)testMoreKeys {
-  NSDictionary *old = @{ @1 : @[ @"APPLE", @"ARTICHOKE" ], @2 : @[ @"BOAT", @"BALLERINA" ] };
-  NSDictionary *expected = @{ @"apple" : @1, @"artichoke" : @1, @"boat" : @2, @"ballerina" : @2 };
+  NSDictionary *old = @{ @1 : @[ @"A", @"B" ], @2 : @[ @"C", @"D" ] };
+  NSDictionary *expected = @{ @"a" : @1, @"b" : @1, @"c" : @2, @"d" : @2 };
 
   NSDictionary *results = [ETL transform:old];
 
