@@ -12,7 +12,7 @@
   NSDictionary *expected = @{ @"word" : @1 };
   NSDictionary *result = [words count];
 
-  XCTAssertEqual([expected objectForKey:@"word"],[result objectForKey:@"word"]);
+  XCTAssertEqualObjects([expected objectForKey:@"word"],[result objectForKey:@"word"]);
 }
 
 - (void)testCountOneOfEeach {
@@ -20,9 +20,9 @@
   NSDictionary *expected = @{ @"one" : @1, @"of" : @1, @"each" : @1 };
   NSDictionary *result = [words count];
 
-  XCTAssertEqual([expected objectForKey:@"one"],[result objectForKey:@"one"]);
-  XCTAssertEqual([expected objectForKey:@"of"],[result objectForKey:@"of"]);
-  XCTAssertEqual([expected objectForKey:@"each"],[result objectForKey:@"each"]);
+  XCTAssertEqualObjects([expected objectForKey:@"one"],[result objectForKey:@"one"]);
+  XCTAssertEqualObjects([expected objectForKey:@"of"],[result objectForKey:@"of"]);
+  XCTAssertEqualObjects([expected objectForKey:@"each"],[result objectForKey:@"each"]);
 }
 
 - (void)testCountMultipleOccurrences {
@@ -30,11 +30,11 @@
   NSDictionary *expected = @{ @"one" : @1, @"fish" : @4, @"two" : @1, @"red" : @1, @"blue" : @1 };
   NSDictionary *result = [words count];
 
-  XCTAssertEqual([expected objectForKey:@"one"],[result objectForKey:@"one"]);
-  XCTAssertEqual([expected objectForKey:@"fish"],[result objectForKey:@"fish"]);
-  XCTAssertEqual([expected objectForKey:@"two"],[result objectForKey:@"two"]);
-  XCTAssertEqual([expected objectForKey:@"red"],[result objectForKey:@"red"]);
-  XCTAssertEqual([expected objectForKey:@"blue"],[result objectForKey:@"blue"]);
+  XCTAssertEqualObjects([expected objectForKey:@"one"],[result objectForKey:@"one"]);
+  XCTAssertEqualObjects([expected objectForKey:@"fish"],[result objectForKey:@"fish"]);
+  XCTAssertEqualObjects([expected objectForKey:@"two"],[result objectForKey:@"two"]);
+  XCTAssertEqualObjects([expected objectForKey:@"red"],[result objectForKey:@"red"]);
+  XCTAssertEqualObjects([expected objectForKey:@"blue"],[result objectForKey:@"blue"]);
 }
 
 - (void)testIgnorePunctation {
@@ -42,11 +42,11 @@
   NSDictionary *expected = @{ @"car" : @1, @"carpet" : @1, @"as" : @1, @"java" : @1, @"javascript" : @1 };
   NSDictionary *result = [words count];
 
-  XCTAssertEqual([expected objectForKey:@"car"],[result objectForKey:@"car"]);
-  XCTAssertEqual([expected objectForKey:@"carpet"],[result objectForKey:@"carpet"]);
-  XCTAssertEqual([expected objectForKey:@"as"],[result objectForKey:@"as"]);
-  XCTAssertEqual([expected objectForKey:@"java"],[result objectForKey:@"java"]);
-  XCTAssertEqual([expected objectForKey:@"javascript"],[result objectForKey:@"javascript"]);
+  XCTAssertEqualObjects([expected objectForKey:@"car"],[result objectForKey:@"car"]);
+  XCTAssertEqualObjects([expected objectForKey:@"carpet"],[result objectForKey:@"carpet"]);
+  XCTAssertEqualObjects([expected objectForKey:@"as"],[result objectForKey:@"as"]);
+  XCTAssertEqualObjects([expected objectForKey:@"java"],[result objectForKey:@"java"]);
+  XCTAssertEqualObjects([expected objectForKey:@"javascript"],[result objectForKey:@"javascript"]);
 }
 
 - (void)testIncludeNumbers {
@@ -54,9 +54,9 @@
   NSDictionary *expected = @{ @"testing" : @2, @"1" : @1, @"2" : @1 };
   NSDictionary *result = [words count];
 
-  XCTAssertEqual([expected objectForKey:@"testing"],[result objectForKey:@"testing"]);
-  XCTAssertEqual([expected objectForKey:@"1"],[result objectForKey:@"1"]);
-  XCTAssertEqual([expected objectForKey:@"2"],[result objectForKey:@"2"]);
+  XCTAssertEqualObjects([expected objectForKey:@"testing"],[result objectForKey:@"testing"]);
+  XCTAssertEqualObjects([expected objectForKey:@"1"],[result objectForKey:@"1"]);
+  XCTAssertEqualObjects([expected objectForKey:@"2"],[result objectForKey:@"2"]);
 }
 
 - (void)testNormalizeCase {
@@ -64,7 +64,7 @@
   NSDictionary *expected = @{ @"go" : @3 };
   NSDictionary *result = [words count];
 
-  XCTAssertEqual([expected objectForKey:@"go"],[result objectForKey:@"go"]);
+  XCTAssertEqualObjects([expected objectForKey:@"go"],[result objectForKey:@"go"]);
 }
 
 @end
