@@ -20,7 +20,7 @@
 
 - (void)testShouting {
   NSString *input = @"WATCH OUT!";
-  NSString *expected = @"Woah, chill out!";
+  NSString *expected = @"Whoa, chill out!";
   NSString *result = [[self bob] hey:input];
   XCTAssertEqualObjects(expected, result, @"");
 }
@@ -48,14 +48,14 @@
 
 - (void)testForcefulQuestions {
   NSString *input = @"WHAT THE HELL WERE YOU THINKING?";
-  NSString *expected = @"Woah, chill out!";
+  NSString *expected = @"Whoa, chill out!";
   NSString *result = [[self bob] hey:input];
   XCTAssertEqualObjects(expected, result, @"");
 }
 
 - (void)testShoutingNumbers {
   NSString *input = @"1, 2, 3 GO!";
-  NSString *expected = @"Woah, chill out!";
+  NSString *expected = @"Whoa, chill out!";
   NSString *result = [[self bob] hey:input];
   XCTAssertEqualObjects(expected, result, @"");
 }
@@ -75,14 +75,14 @@
 
 - (void)testShoutingWithSpecialCharacters {
   NSString *input = @"ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!";
-  NSString *expected = @"Woah, chill out!";
+  NSString *expected = @"Whoa, chill out!";
   NSString *result = [[self bob] hey:input];
   XCTAssertEqualObjects(expected, result, @"");
 }
 
 - (void)testShoutingWithUmlautsCharacters {
   NSString *input = @"ÄMLÄTS!";
-  NSString *expected = @"Woah, chill out!";
+  NSString *expected = @"Whoa, chill out!";
   NSString *result = [[self bob] hey:input];
   XCTAssertEqualObjects(expected, result, @"");
 }
@@ -96,7 +96,7 @@
 
 - (void)testShoutingWithNoExclamationMark {
   NSString *input = @"I HATE YOU";
-  NSString *expected = @"Woah, chill out!";
+  NSString *expected = @"Whoa, chill out!";
   NSString *result = [[self bob] hey:input];
   XCTAssertEqualObjects(expected, result, @"");
 }
