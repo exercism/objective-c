@@ -20,7 +20,7 @@
         return @"Fine, be that way.";
     }
     else if ([input isShouting]) {
-        return @"Woah, chill out!";
+        return @"Whoa, chill out!";
     }
     else if ([input isQuestion]) {
         return  @"Sure.";
