@@ -17,7 +17,7 @@
 
 -(NSString *) hey: (NSString *) input {
     if ([input isEmpty]) {
-        return @"Fine, be that way.";
+        return @"Fine. Be that way!";
     }
     else if ([input isShouting]) {
         return @"Whoa, chill out!";
