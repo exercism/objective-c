@@ -117,14 +117,14 @@
 
 - (void)testSilence {
   NSString *input = @"";
-  NSString *expected = @"Fine, be that way.";
+  NSString *expected = @"Fine. Be that way!";
   NSString *result = [[self bob] hey:input];
   XCTAssertEqualObjects(expected, result, @"");
 }
 
 - (void)testProlongedSilence {
   NSString *input = @"     ";
-  NSString *expected = @"Fine, be that way.";
+  NSString *expected = @"Fine. Be that way!";
   NSString *result = [[self bob] hey:input];
   XCTAssertEqualObjects(expected, result, @"");
 }
