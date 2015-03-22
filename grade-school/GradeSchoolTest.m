@@ -11,7 +11,7 @@
   GradeSchool *school = [[GradeSchool alloc] init];
   NSDictionary *expected = @{};
   NSDictionary *result = [school db];
-  XCTAssert([result isEqualToDictionary:expected]);
+  XCTAssertEqualObjects(result, expected);
 }
 
 - (void)testAddStudent {
@@ -21,7 +21,7 @@
 
   NSDictionary *expected = @{ @2 : @[ @"Aimee" ] };
 
-  XCTAssert([result isEqualToDictionary:expected]);
+  XCTAssertEqualObjects(result, expected);
 }
 
 - (void)testAddMoreStudentsInSameClass {
@@ -33,7 +33,7 @@
 
   NSDictionary *expected = @{ @2 : @[ @"James", @"Blair", @"Paul" ] };
 
-  XCTAssert([result isEqualToDictionary:expected]);
+  XCTAssertEqualObjects(result, expected);
 }
 
 
@@ -44,7 +44,7 @@
   NSDictionary *result = [school db];
 
   NSDictionary *expected = @{ @3 : @[ @"Chelsea" ], @7 : @[ @"Logan" ] };
-  XCTAssert([result isEqualToDictionary:expected]);
+  XCTAssertEqualObjects(result, expected);
 }
 
 - (void)testGetStudentsInAGrade {
@@ -55,7 +55,7 @@
   NSArray *result = [school studentsInGrade:@5];
 
   NSArray *expected = @[ @"Franklin", @"Bradley" ];
-  XCTAssert([result isEqualToArray:expected]);
+  XCTAssertEqualObjects(result, expected);
 }
 
 - (void)testGetStudentsInANonExistantGrade {
@@ -63,7 +63,7 @@
   NSArray *result = [school studentsInGrade:@1];
 
   NSArray *expected = @[];
-  XCTAssert([result isEqualToArray:expected]);
+  XCTAssertEqualObjects(result, expected);
 }
 
 - (void)testSortSchool {
@@ -78,7 +78,7 @@
                               @4 : @[ @"Christopher", @"Jennifer" ],
                               @6 : @[ @"Kareem"] };
 
-  XCTAssert([result isEqualToDictionary:expected]);
+  XCTAssertEqualObjects(result, expected);
 }
 
 @end
