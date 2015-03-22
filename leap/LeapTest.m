@@ -14,12 +14,12 @@
 
 - (void)testAnyOldYear {
   Year *year = [[Year alloc] initWithCalendarYear:@1997];
-  XCTAssert(![year isLeapYear]);
+  XCTAssertFalse([year isLeapYear]);
 }
 
 - (void)testCentury {
   Year *year = [[Year alloc] initWithCalendarYear:@1900];
-  XCTAssert(![year isLeapYear]);
+  XCTAssertFalse([year isLeapYear]);
 }
 
 - (void)testExceptionalCentury {
