@@ -9,7 +9,9 @@
 
 - (BOOL)string:(NSString *)string matches:(NSString *)regexString {
 
-  NSRegularExpression *expression = [NSRegularExpression regularExpressionWithPattern:regexString options:NSRegularExpressionCaseInsensitive error:NULL];
+  NSRegularExpression *expression = [NSRegularExpression regularExpressionWithPattern:regexString
+                                                                              options:NSRegularExpressionCaseInsensitive
+                                                                                error:NULL];
 
   NSArray *matches = [expression matchesInString:string options:0 range:NSMakeRange(0,[string length])];
 
