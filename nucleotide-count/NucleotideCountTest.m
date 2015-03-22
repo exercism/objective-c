@@ -66,23 +66,15 @@
 
 - (void)testValidatesNucleotides {
   DNA *dna = [[DNA alloc] initWithStrand:@"GACT"];
-  @try {
-    [dna count:@"X"];
-    XCTFail(@"This is an invalid nucleotide");
-  } @catch(NSException *example) { }
-
+  XCTAssertThrows([dna count:@"X"]);
 }
 
 - (void)testValidatesDNANotRNA {
-  @try {
-    DNA *dna = [[DNA alloc] initWithStrand:@"ACGU"];
-  } @catch(NSException *example) { }
+  XCTAssertThrows([[DNA alloc] initWithStrand:@"ACGU"]);
 }
 
 - (void)testValidatesDNA {
-  @try {
-    DNA *dna = [[DNA alloc] initWithStrand:@"John"];
-  } @catch(NSException *example) { }
+  XCTAssertThrows([[DNA alloc] initWithStrand:@"John"]);
 }
 
 - (void)testCountsAllNucleotides {
