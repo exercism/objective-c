@@ -21,19 +21,20 @@
 - (void)testHasName {
   Robot *robot = [[Robot alloc] init];
 
-  XCTAssert([self string:[robot name] matches:@"\\A\\w{2}\\d{3}\\z"]);
+  NSString *name = [robot name];
+  XCTAssert([self string:name matches:@"\\A\\w{2}\\d{3}\\z"], @"%@ is not a valid robot name", name);
 }
 
 - (void)testNameSticks {
   Robot *robot = [[Robot alloc] init];
   [robot name];
-  XCTAssert([[robot name] isEqualToString:[robot name]]);
+  XCTAssertEqualObjects([robot name], [robot name]);
 }
 
 - (void)testDifferentRobotsHaveDifferentNames {
   Robot *firstRobot = [[Robot alloc] init];
   Robot *secondRobot = [[Robot alloc] init];
-  XCTAssert(![[firstRobot name] isEqualToString:[secondRobot name]]);
+  XCTAssertNotEqualObjects([firstRobot name], [secondRobot name]);
 }
 
 - (void)testResetName {
@@ -42,7 +43,7 @@
   [robot reset];
   NSString *secondName = [robot name];
 
-  XCTAssert(![firstName isEqualToString:secondName]);
+  XCTAssertNotEqualObjects(firstName, secondName);
 }
 
 @end
