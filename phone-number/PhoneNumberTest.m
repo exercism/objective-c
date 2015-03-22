@@ -12,7 +12,7 @@
   NSString *expected = @"1234567890";
   PhoneNumber *number = [[PhoneNumber alloc] initWithString:startingNumber];
   NSString *result = [number number];
-  XCTAssert([result isEqualToString:expected]);
+  XCTAssertEqualObjects(result, expected);
 }
 
 - (void)testCleansNumberWithDots {
@@ -20,7 +20,7 @@
   NSString *expected = @"1234567890";
   PhoneNumber *number = [[PhoneNumber alloc] initWithString:startingNumber];
   NSString *result = [number number];
-  XCTAssert([result isEqualToString:expected]);
+  XCTAssertEqualObjects(result, expected);
 }
 
 - (void)testValidWithElevenDigitsAndFirstIsOne {
@@ -28,7 +28,7 @@
   NSString *expected = @"1234567890";
   PhoneNumber *number = [[PhoneNumber alloc] initWithString:startingNumber];
   NSString *result = [number number];
-  XCTAssert([result isEqualToString:expected]);
+  XCTAssertEqualObjects(result, expected);
 }
 
 - (void)testInvalidWhenElevenDigits {
@@ -36,7 +36,7 @@
   NSString *expected = @"0000000000";
   PhoneNumber *number = [[PhoneNumber alloc] initWithString:startingNumber];
   NSString *result = [number number];
-  XCTAssert([result isEqualToString:expected]);
+  XCTAssertEqualObjects(result, expected);
 }
 
 - (void)testInvalidWhenNineDigits {
@@ -44,7 +44,7 @@
   NSString *expected = @"0000000000";
   PhoneNumber *number = [[PhoneNumber alloc] initWithString:startingNumber];
   NSString *result = [number number];
-  XCTAssert([result isEqualToString:expected]);
+  XCTAssertEqualObjects(result, expected);
 }
 
 - (void)testAreaCode {
@@ -52,7 +52,7 @@
   NSString *expected = @"123";
   PhoneNumber *number = [[PhoneNumber alloc] initWithString:startingNumber];
   NSString *result = [number areaCode];
-  XCTAssert([result isEqualToString:expected]);
+  XCTAssertEqualObjects(result, expected);
 }
 
 - (void)testPrettyPrint {
@@ -60,7 +60,7 @@
   NSString *expected = @"(123) 456-7890";
   PhoneNumber *number = [[PhoneNumber alloc] initWithString:startingNumber];
   NSString *result = [number description];
-  XCTAssert([result isEqualToString:expected]);
+  XCTAssertEqualObjects(result, expected);
 }
 
 - (void)testPrettyPrintWithFullUSPhoneNumber {
@@ -68,7 +68,7 @@
   NSString *expected = @"(123) 456-7890";
   PhoneNumber *number = [[PhoneNumber alloc] initWithString:startingNumber];
   NSString *result = [number description];
-  XCTAssert([result isEqualToString:expected]);
+  XCTAssertEqualObjects(result, expected);
 }
 
 @end
