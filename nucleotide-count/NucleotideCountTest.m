@@ -18,7 +18,7 @@
   DNA *dna = [[DNA alloc] initWithStrand:@""];
   NSDictionary *results = [dna nucleotideCounts];
   NSDictionary *expected = @{ @"A": @0, @"T" : @0, @"C" : @0, @"G" : @0 };
-  XCTAssert([results isEqualToDictionary:expected]);
+  XCTAssertEqualObjects(results, expected);
 }
 
 - (void)testRepetitiveCytidineGetsCounted {
@@ -32,7 +32,7 @@
   DNA *dna = [[DNA alloc] initWithStrand:@"GGGGGGGG"];
   NSDictionary *results = [dna nucleotideCounts];
   NSDictionary *expected = @{ @"A": @0, @"T" : @0, @"C" : @0, @"G" : @8 };
-  XCTAssert([results isEqualToDictionary:expected]);
+  XCTAssertEqualObjects(results, expected);
 }
 
 - (void)testCountsByThymidine {
@@ -61,7 +61,7 @@
   [dna count:@"U"];
   NSDictionary *results = [dna nucleotideCounts];
   NSDictionary *expected = @{ @"A": @3, @"T" : @2, @"C" : @1, @"G" : @1 };
-  XCTAssert([results isEqualToDictionary:expected]);
+  XCTAssertEqualObjects(results, expected);
 }
 
 - (void)testValidatesNucleotides {
@@ -82,7 +82,7 @@
   DNA *dna = [[DNA alloc] initWithStrand:longStrand];
   NSDictionary *results = [dna nucleotideCounts];
   NSDictionary *expected = @{ @"A": @20, @"T" : @21, @"C" : @12, @"G" : @17 };
-  XCTAssert([results isEqualToDictionary:expected]);
+  XCTAssertEqualObjects(results, expected);
 }
 
 @end
