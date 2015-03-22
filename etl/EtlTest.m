@@ -13,7 +13,7 @@
 
   NSDictionary *results = [ETL transform:old];
 
-  XCTAssert([expected isEqualToDictionary:results]);
+  XCTAssertEqualObjects(expected, results);
 }
 
 - (void)testTransformMoreValues {
@@ -22,7 +22,7 @@
 
   NSDictionary *results = [ETL transform:old];
 
-  XCTAssert([expected isEqualToDictionary:results]);
+  XCTAssertEqualObjects(expected, results);
 }
 
 - (void)testMoreKeys {
@@ -31,7 +31,7 @@
 
   NSDictionary *results = [ETL transform:old];
 
-  XCTAssert([expected isEqualToDictionary:results]);
+  XCTAssertEqualObjects(expected, results);
 }
 
 - (void)testFullDataSet {
@@ -52,7 +52,7 @@
 
   NSDictionary *results = [ETL transform:old];
 
-  XCTAssert([expected isEqualToDictionary:results]);
+  XCTAssertEqualObjects(expected, results);
 
 }
 
