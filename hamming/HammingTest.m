@@ -43,16 +43,4 @@
   XCTAssertEqual(expected,result);
 }
 
-- (void)testIgnoreExtraLengthOnOtherStrandWhenLonger {
-  NSUInteger result = [Hamming compute:@"AAACTAGGGG" against:@"AGGCTAGCGGTAGGAC"];
-  NSUInteger expected = 3;
-  XCTAssertEqual(expected,result);
-}
-
-- (void)testIgnoresExtraLengthOnOriginalStrandWhenLonger {
-  NSUInteger result = [Hamming compute:@"GACTACGGACAGGGTAGGGAAT" against:@"GACATCGCACACC"];
-  NSUInteger expected = 5;
-  XCTAssertEqual(expected,result);
-}
-
 @end
