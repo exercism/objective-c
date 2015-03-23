@@ -35,13 +35,10 @@
 - (NSUInteger)distance {
   NSUInteger calculatedDistance = 0;
 
-  NSString *firstSequence = [self firstSequence];
-  NSString *secondSequence = [self secondSequence];
+  for (NSUInteger i = 0; i < self.firstStrand.length; i++) {
 
-  for (NSUInteger i = 0; i < [self commonDistance]; i++) {
-
-    unichar firstGene = [firstSequence characterAtIndex:i];
-    unichar secondGene = [secondSequence characterAtIndex:i];
+    unichar firstGene = [self.firstStrand characterAtIndex:i];
+    unichar secondGene = [self.secondStrand characterAtIndex:i];
 
     if ([self mutationBetween:firstGene and:secondGene]) {
         calculatedDistance ++;
@@ -49,18 +46,6 @@
   }
 
   return calculatedDistance;
-}
-
-- (NSString *)firstSequence {
-  return [self.firstStrand substringToIndex:[self commonDistance]];
-}
-
-- (NSString *)secondSequence {
-  return [self.secondStrand substringToIndex:[self commonDistance]];
-}
-
-- (NSUInteger)commonDistance {
-    return MIN(self.firstStrand.length,self.secondStrand.length);
 }
 
 - (BOOL)mutationBetween:(unichar)firstGene and:(unichar)secondGene {
