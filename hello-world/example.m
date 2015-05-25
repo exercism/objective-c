@@ -10,7 +10,7 @@
 @implementation HelloWorld
 - (NSString *)hello:(NSString *)name {
   if(!name) {
-    name = @"world";
+    name = @"World";
   }
   return [NSString stringWithFormat:@"Hello, %@!", name];
 }
