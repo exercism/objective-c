@@ -13,7 +13,7 @@
 
 - (void)testNoName {
   NSString *input = nil;
-  NSString *expected = @"Hello, world!";
+  NSString *expected = @"Hello, World!";
   NSString *result = [[self helloWorld] hello:input];
   XCTAssertEqualObjects(expected, result);
 }
