@@ -3,60 +3,68 @@
 
 @interface test_suite : XCTestCase
 
+- (void)assertValue1:(double)value1 isEqualToValue2:(double)value2;
+
 @end
 
 @implementation test_suite
 
+- (void)assertValue1:(double)value1 isEqualToValue2:(double)value2 {
+    double accuracyLevel = 0.01;
+    XCTAssertEqualWithAccuracy(value1, value2, accuracyLevel);
+}
+
 - (void)testAgeInSeconds {
     SpaceAge *age = [[SpaceAge alloc] initWithSeconds:1000000];
     XCTAssertEqual(1000000, [age seconds]);
+    
 }
 
 - (void)testAgeInEarthYears {
     SpaceAge *age = [[SpaceAge alloc] initWithSeconds:1000000000];
-    XCTAssertEqual(31.69, [age onEarth]);
+    [self assertValue1:31.69 isEqualToValue2:[age onEarth]];
 }
 
 - (void)testAgeInMercuryYears {
     SpaceAge *age = [[SpaceAge alloc] initWithSeconds:2134835688];
-    XCTAssertEqual(67.65, [age onEarth]);
-    XCTAssertEqual(280.88, [age onMercury]);
+    [self assertValue1:67.65 isEqualToValue2:[age onEarth]];
+    [self assertValue1:280.88 isEqualToValue2:[age onMercury]];
 }
 
 - (void)testAgeInVenusYears {
     SpaceAge *age = [[SpaceAge alloc] initWithSeconds:189839836];
-    XCTAssertEqual(6.02, [age onEarth]);
-    XCTAssertEqual(9.78, [age onVenus]);
+    [self assertValue1:6.02 isEqualToValue2:[age onEarth]];
+    [self assertValue1:9.78 isEqualToValue2:[age onVenus]];
 }
 
 - (void)testAgeOnMars {
     SpaceAge *age = [[SpaceAge alloc] initWithSeconds:2329871239];
-    XCTAssertEqual(73.83, [age onEarth]);
-    XCTAssertEqual(39.25, [age onMars]);
+    [self assertValue1:73.83 isEqualToValue2:[age onEarth]];
+    [self assertValue1:39.25 isEqualToValue2:[age onMars]];
 }
 
 - (void)testAgeOnJupiter {
     SpaceAge *age = [[SpaceAge alloc] initWithSeconds:901876382];
-    XCTAssertEqual(28.58, [age onEarth]);
-    XCTAssertEqual(2.41, [age onJupiter]);
+    [self assertValue1:28.58 isEqualToValue2:[age onEarth]];
+    [self assertValue1:2.41 isEqualToValue2:[age onJupiter]];
 }
 
 - (void)testAgeOnSaturn {
     SpaceAge *age = [[SpaceAge alloc] initWithSeconds:3000000000];
-    XCTAssertEqual(95.06, [age onEarth]);
-    XCTAssertEqual(3.23, [age onSaturn]);
+    [self assertValue1:95.06 isEqualToValue2:[age onEarth]];
+    [self assertValue1:3.23 isEqualToValue2:[age onSaturn]];
 }
 
 - (void)testAgeOnUranus {
     SpaceAge *age = [[SpaceAge alloc] initWithSeconds:3210123456];
-    XCTAssertEqual(101.72, [age onEarth]);
-    XCTAssertEqual(1.21, [age onUranus]);
+    [self assertValue1:101.72 isEqualToValue2:[age onEarth]];
+    [self assertValue1:1.21 isEqualToValue2:[age onUranus]];
 }
 
 - (void)testAgeOnNeptune {
     SpaceAge *age = [[SpaceAge alloc] initWithSeconds:8210123456];
-    XCTAssertEqual(260.16, [age onEarth]);
-    XCTAssertEqual(1.58, [age onNeptune]);
+    [self assertValue1:260.16 isEqualToValue2:[age onEarth]];
+    [self assertValue1:1.58 isEqualToValue2:[age onNeptune]];
 }
 
 @end
