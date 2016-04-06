@@ -4,23 +4,24 @@
   "repository": "https://github.com/exercism/xobjective-c",
   "active": true,
   "problems": [
-    "hello-world",
-    "bob",
-    "hamming",
-    "word-count",
-    "anagram",
-    "nucleotide-count",
-    "phone-number",
-    "grade-school",
-    "robot-name",
-    "leap",
-    "etl"
+     "hello-world"
+    ,"bob"
+    ,"hamming"
+    ,"word-count"
+    ,"anagram"
+    ,"nucleotide-count"
+    ,"phone-number"
+    ,"grade-school"
+    ,"robot-name"
+    ,"leap"
+    ,"etl"
   ],
   "deprecated": [
 
   ],
   "ignored": [
     "docs"
+    ,xcodeProject
   ],
   "foregone": [
 
