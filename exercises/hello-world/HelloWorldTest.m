@@ -1,0 +1,40 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("HelloWorld.h")
+# import "HelloWorld.h"
+# else
+# import "HelloWorldExample.h"
+#endif
+
+@interface HelloWorldTest : XCTestCase
+
+@end
+
+@implementation HelloWorldTest
+
+- (HelloWorld *)helloWorld {
+  return [[HelloWorld alloc] init];
+}
+
+- (void)testNoName {
+  NSString *input = nil;
+  NSString *expected = @"Hello, World!";
+  NSString *result = [[self helloWorld] hello:input];
+  XCTAssertEqualObjects(expected, result);
+}
+
+- (void)testSampleName {
+  NSString *input = @"Alice";
+  NSString *expected = @"Hello, Alice!";
+  NSString *result = [[self helloWorld] hello:input];
+  XCTAssertEqualObjects(expected, result);
+}
+  
+- (void)testOtherSampleName {
+  NSString *input = @"Bob";
+  NSString *expected = @"Hello, Bob!";
+  NSString *result = [[self helloWorld] hello:input];
+  XCTAssertEqualObjects(expected, result);
+}
+
+@end

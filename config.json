@@ -23,6 +23,7 @@
   ],
   "ignored": [
     "docs"
+    ,xcodeProject
   ],
   "foregone": [
 
