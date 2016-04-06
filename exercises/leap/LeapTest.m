@@ -1,11 +1,16 @@
 #import <XCTest/XCTest.h>
-#import "Leap.h"
+#if __has_include("Leap.h")
+# import "Leap.h"
+# else
+# import "LeapExample.h"
+#endif
 
-@interface test_suite : XCTestCase
+
+@interface LeapTest : XCTestCase
 
 @end
 
-@implementation test_suite
+@implementation LeapTest
 
 - (void)testVanillaLeapYear {
   Year *year = [[Year alloc] initWithCalendarYear:@1996];

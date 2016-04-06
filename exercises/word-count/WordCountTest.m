@@ -1,11 +1,15 @@
 #import <XCTest/XCTest.h>
-#import "WordCount.h"
+#if __has_include("WordCount.h")
+# import "WordCount.h"
+# else
+# import "WordCountExample.h"
+#endif
 
-@interface test_suite : XCTestCase
+@interface WordCountTest : XCTestCase
 
 @end
 
-@implementation test_suite
+@implementation WordCountTest
 
 - (void)testCountOneWord {
   WordCount *words = [[WordCount alloc] initWithString:@"word"];

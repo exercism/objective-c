@@ -1,11 +1,15 @@
 #import <XCTest/XCTest.h>
-#import "RobotName.h"
+#if __has_include("RobotName.h")
+# import "RobotName.h"
+# else
+# import "RobotNameExample.h"
+#endif
 
-@interface test_suite : XCTestCase
+@interface RobotNameTest : XCTestCase
 
 @end
 
-@implementation test_suite
+@implementation RobotNameTest
 
 - (BOOL)string:(NSString *)string matches:(NSString *)regexString {
 

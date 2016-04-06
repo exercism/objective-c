@@ -1,12 +1,5 @@
-@interface DNA : NSObject
-
-- (instancetype)initWithStrand:(NSString *)strand;
-
-- (NSUInteger)count:(NSString *)nucleotide;
-- (NSDictionary *)nucleotideCounts;
-
-@end
-
+#import <Foundation/Foundation.h>
+#import "NucleotideCountExample.h"
 
 @interface DNA ()
 
