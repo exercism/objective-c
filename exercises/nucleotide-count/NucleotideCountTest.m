@@ -1,11 +1,15 @@
 #import <XCTest/XCTest.h>
-#import "NucleotideCount.h"
+#if __has_include("NucleotideCount.h")
+# import "NucleotideCount.h"
+# else
+# import "NucleotideCountExample.h"
+#endif
 
-@interface test_suite : XCTestCase
+@interface NucleotideCountTest : XCTestCase
 
 @end
 
-@implementation test_suite
+@implementation NucleotideCountTest
 
 - (void)testEmptyDNAStringHasNoAdenosine {
   DNA *dna = [[DNA alloc] initWithStrand:@""];

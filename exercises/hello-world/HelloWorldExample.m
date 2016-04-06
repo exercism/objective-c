@@ -1,12 +1,6 @@
-// place in HelloWorld.h
-@interface HelloWorld : NSObject
+#import <Foundation/Foundation.h>
+#import "HelloWorldExample.h"
 
-- (NSString *)hello:(NSString *)name;
-
-@end
-
-// place in HelloWorld.m
-#import "HelloWorld.h"
 @implementation HelloWorld
 - (NSString *)hello:(NSString *)name {
   if(!name) {
