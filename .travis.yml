@@ -1,5 +1,9 @@
-language: bash
+language: objective-c
+osx_image: xcode7.3
+xcode_project: 'xcodeProject/ObjectiveC.xcodeproj'
+xcode_scheme: 'xobjectivecTest'
 
 script:
+  - xcodebuild test -project 'xcodeProject/ObjectiveC.xcodeproj' -scheme 'xobjectivecTest' -sdk macosx10.11
   - bin/fetch-configlet
   - bin/configlet .
