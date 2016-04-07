@@ -1,11 +1,16 @@
 #import <XCTest/XCTest.h>
-#import "PhoneNumber.h"
+#if __has_include("PhoneNumber.h")
+# import "PhoneNumber.h"
+# else
+# import "PhoneNumberExample.h"
+#endif
 
-@interface test_suite : XCTestCase
+
+@interface PhoneNumberTest : XCTestCase
 
 @end
 
-@implementation test_suite
+@implementation PhoneNumberTest
 
 - (void)testCleansNumber {
   NSString *startingNumber = @"(123) 456-7890";

@@ -1,11 +1,15 @@
 #import <XCTest/XCTest.h>
-#import "SpaceAge.h"
+#if __has_include("SpaceAge.h")
+# import "SpaceAge.h"
+# else
+# import "SpaceAgeExample.h"
+#endif
 
-@interface test_suite : XCTestCase
+@interface SpaceAgeTest : XCTestCase
 
 @end
 
-@implementation test_suite
+@implementation SpaceAgeTest
 
 static const double AgeAccuracy = 0.01;
 

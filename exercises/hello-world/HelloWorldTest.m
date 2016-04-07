@@ -1,11 +1,16 @@
 #import <XCTest/XCTest.h>
-#import "HelloWorld.h"
 
-@interface test_suite : XCTestCase
+#if __has_include("HelloWorld.h")
+# import "HelloWorld.h"
+# else
+# import "HelloWorldExample.h"
+#endif
+
+@interface HelloWorldTest : XCTestCase
 
 @end
 
-@implementation test_suite
+@implementation HelloWorldTest
 
 - (HelloWorld *)helloWorld {
   return [[HelloWorld alloc] init];

@@ -1,10 +1,5 @@
-@interface PhoneNumber : NSObject
-
-- (instancetype)initWithString:(NSString *)inputString;
-- (NSString *)number;
-- (NSString *)areaCode;
-
-@end
+#import <Foundation/Foundation.h>
+#import "PhoneNumberExample.h"
 
 @interface PhoneNumber ()
 

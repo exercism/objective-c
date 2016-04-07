@@ -1,9 +1,5 @@
-@interface Robot : NSObject
-
-@property (nonatomic,retain,readwrite) NSString *name;
-- (void)reset;
-
-@end
+#import <Foundation/Foundation.h>
+#import "RobotNameExample.h"
 
 @implementation Robot
 
