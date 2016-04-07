@@ -1,11 +1,7 @@
-// place in Bob.h
-@interface Bob : NSObject
+#import "BobExample.h"
+#import <Foundation/Foundation.h>
 
-- (NSString *)hey:(NSString *)statement;
 
-@end
-
-// place in Bob.m
 @interface NSString (BobTalk)
 -(BOOL) isEmpty;
 -(BOOL) isQuestion;
@@ -13,7 +9,7 @@
 @end
 
 
-@implementation Bob
+@implementation Bob : NSObject
 
 -(NSString *) hey: (NSString *) input {
     if ([input isEmpty]) {

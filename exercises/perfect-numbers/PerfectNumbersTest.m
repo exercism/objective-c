@@ -1,11 +1,15 @@
 #import <XCTest/XCTest.h>
-#import "PerfectNumbers.h"
+#if __has_include("PerfectNumbers.h")
+# import "PerfectNumbers.h"
+# else
+# import "PerfectNumbersExample.h"
+#endif
 
-@interface test_suite : XCTestCase
+@interface PerfectNumbersTest : XCTestCase
 
 @end
 
-@implementation test_suite
+@implementation PerfectNumbersTest
 
 - (void)testPerfect {
     NumberClassifier *numberClassifier = [[NumberClassifier alloc] initWithNumber:6];
