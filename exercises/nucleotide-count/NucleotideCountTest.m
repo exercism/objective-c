@@ -53,30 +53,6 @@
   XCTAssertEqual(expected,result);
 }
 
-- (void)testDNAHasNoUracil {
-  DNA *dna = [[DNA alloc] initWithStrand:@"GATTACA"];
-  NSUInteger result = [dna count:@"U"];
-  NSUInteger expected = 0;
-  XCTAssertEqual(expected,result);
-}
-
-- (void)testDNACountsDoNoChangeAfterCountingUracil {
-  DNA *dna = [[DNA alloc] initWithStrand:@"GATTACA"];
-  [dna count:@"U"];
-  NSDictionary *results = [dna nucleotideCounts];
-  NSDictionary *expected = @{ @"A": @3, @"T" : @2, @"C" : @1, @"G" : @1 };
-  XCTAssertEqualObjects(results, expected);
-}
-
-- (void)testValidatesNucleotides {
-  DNA *dna = [[DNA alloc] initWithStrand:@"GACT"];
-  XCTAssertThrows([dna count:@"X"]);
-}
-
-- (void)testValidatesDNANotRNA {
-  XCTAssertThrows([[DNA alloc] initWithStrand:@"ACGU"]);
-}
-
 - (void)testValidatesDNA {
   XCTAssertThrows([[DNA alloc] initWithStrand:@"John"]);
 }

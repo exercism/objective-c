@@ -35,19 +35,19 @@
 }
 
 - (NSCharacterSet *)invalidDNANucleotides {
-  return [[NSCharacterSet characterSetWithCharactersInString:@"ACGT"] invertedSet];
+  return [[self validDNANucleotides] invertedSet];
 }
 
 - (void)validateNucleotide:(NSString *)nucleotide {
-  NSRange range = [nucleotide rangeOfCharacterFromSet:[self validRNANucleotides]];
+  NSRange range = [nucleotide rangeOfCharacterFromSet:[self validDNANucleotides]];
 
   if (range.location == NSNotFound) {
       @throw [NSException exceptionWithName:@"Invalid Nucleotide" reason:@"Invalid" userInfo:@{}];
   }
 }
 
-- (NSCharacterSet *)validRNANucleotides {
-  return [NSCharacterSet characterSetWithCharactersInString:@"ATCGU"];
+- (NSCharacterSet *)validDNANucleotides {
+  return [NSCharacterSet characterSetWithCharactersInString:@"ATCG"];
 }
 
 - (NSDictionary *)nucleotideCounts {
