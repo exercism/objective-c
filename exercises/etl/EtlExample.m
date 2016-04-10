@@ -2,7 +2,7 @@
 #import "EtlExample.h"
 
 
-@implementation ETL
+@implementation Etl
 
 + (NSDictionary *)transform:(NSDictionary *)original {
     

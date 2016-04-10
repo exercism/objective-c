@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface ETL : NSObject
+@interface Etl : NSObject
 
 + (NSDictionary *)transform:(NSDictionary *)original;
 
