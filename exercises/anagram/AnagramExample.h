@@ -3,6 +3,6 @@
 @interface Anagram : NSObject
 
 - (instancetype)initWithString:(NSString *)string;
-- (NSArray *)match:(NSArray *)potentialMatches;
+- (NSArray<NSString *> *)match:(NSArray<NSString *> *)potentialMatches;
 
 @end
