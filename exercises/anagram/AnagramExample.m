@@ -20,14 +20,14 @@
     return self;
 }
 
-- (NSArray *)match:(NSArray *)potentialMatches {
+- (NSArray<NSString *> *)match:(NSArray<NSString *> *)potentialMatches {
     
-    NSMutableArray *matches = [NSMutableArray array];
+    NSMutableArray<NSString *> *matches = [NSMutableArray array];
     
     [potentialMatches enumerateObjectsUsingBlock:^(id obj, NSUInteger index, BOOL *stop) {
         
         if ([self isWord:self.baseWord anagramOf:obj]) {
-            [matches addObject:obj];
+            [matches addObject:(NSString *)obj];
         }
         
     }];
@@ -50,10 +50,10 @@
     }
 }
 
-- (NSArray *)sortedLettersFor:(NSString *)word {
-    NSArray *letters = [self letterArrayFor:[word lowercaseString]];
+- (NSArray<NSString *> *)sortedLettersFor:(NSString *)word {
+    NSArray<NSString *> *letters = [self letterArrayFor:[word lowercaseString]];
     
-    NSArray *sortedLetters = [letters sortedArrayUsingComparator:^(id first, id second) {
+    NSArray<NSString *> *sortedLetters = [letters sortedArrayUsingComparator:^(id first, id second) {
         if (first > second) {
             return (NSComparisonResult)NSOrderedAscending;
         } else if (first < second) {
@@ -66,8 +66,8 @@
     return sortedLetters;
 }
 
-- (NSArray *)letterArrayFor:(NSString *)word {
-    NSMutableArray *letters = [NSMutableArray array];
+- (NSArray<NSString *> *)letterArrayFor:(NSString *)word {
+    NSMutableArray<NSString *> *letters = [NSMutableArray array];
     
     for (int i = 0; i < word.length; i++) {
         unichar aCharacter = [word characterAtIndex:i];
