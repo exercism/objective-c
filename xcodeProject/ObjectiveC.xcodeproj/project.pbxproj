@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1EBFE4131CCCA3B4006D6E6B /* exercises in Resources */ = {isa = PBXBuildFile; fileRef = 1EBFE4121CCCA3B4006D6E6B /* exercises */; };
+		1E1F3D1B1CCCA90D0062E7D5 /* exercises in Resources */ = {isa = PBXBuildFile; fileRef = 1E1F3D1A1CCCA90D0062E7D5 /* exercises */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,9 +23,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1E1F3D1A1CCCA90D0062E7D5 /* exercises */ = {isa = PBXFileReference; lastKnownFileType = folder; name = exercises; path = ../exercises; sourceTree = SOURCE_ROOT; };
 		1E50BCFC1CB465C500FC128D /* xobjectivecTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xobjectivecTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E50BD001CB465C500FC128D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1EBFE4121CCCA3B4006D6E6B /* exercises */ = {isa = PBXFileReference; lastKnownFileType = folder; name = exercises; path = ../../exercises; sourceTree = "<group>"; };
 		1EE9CC5A1CB462CB00C92E6D /* ObjectiveC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjectiveC; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -50,7 +50,7 @@
 		1E50BCFD1CB465C500FC128D /* xobjectivecTest */ = {
 			isa = PBXGroup;
 			children = (
-				1EBFE4121CCCA3B4006D6E6B /* exercises */,
+				1E1F3D1A1CCCA90D0062E7D5 /* exercises */,
 				1E50BD001CB465C500FC128D /* Info.plist */,
 			);
 			path = xobjectivecTest;
@@ -150,7 +150,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EBFE4131CCCA3B4006D6E6B /* exercises in Resources */,
+				1E1F3D1B1CCCA90D0062E7D5 /* exercises in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
