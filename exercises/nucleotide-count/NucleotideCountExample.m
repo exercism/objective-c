@@ -1,13 +1,13 @@
 #import <Foundation/Foundation.h>
 #import "NucleotideCountExample.h"
 
-@interface DNA ()
+@interface NucleotideCount ()
 
 @property (nonatomic,strong,readwrite) NSString *strand;
 
 @end
 
-@implementation DNA
+@implementation NucleotideCount
 
 - (instancetype)initWithStrand:(NSString *)strand {
 

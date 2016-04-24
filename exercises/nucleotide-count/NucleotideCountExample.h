@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface DNA : NSObject
+@interface NucleotideCount : NSObject
 
 - (instancetype)initWithStrand:(NSString *)strand;
 
