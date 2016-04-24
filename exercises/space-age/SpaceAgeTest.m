@@ -5,6 +5,8 @@
 # import "SpaceAgeExample.h"
 #endif
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface SpaceAgeTest : XCTestCase
 
 @end
@@ -67,3 +69,6 @@ static const double AgeAccuracy = 0.01;
 }
 
 @end
+NS_ASSUME_NONNULL_END
+
+

@@ -5,6 +5,8 @@
 # import "NucleotideCountExample.h"
 #endif
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface NucleotideCountTest : XCTestCase
 
 @end
@@ -66,3 +68,4 @@
 }
 
 @end
+NS_ASSUME_NONNULL_END

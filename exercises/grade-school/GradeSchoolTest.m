@@ -6,6 +6,8 @@
 # import "GradeSchoolExample.h"
 #endif
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface GradeSchoolTest : XCTestCase
 
 @end
@@ -87,3 +89,5 @@
 }
 
 @end
+NS_ASSUME_NONNULL_END
+

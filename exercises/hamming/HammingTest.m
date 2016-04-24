@@ -5,6 +5,8 @@
 # import "HammingExample.h"
 #endif
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface HammingTest : XCTestCase
 
 @end
@@ -48,3 +50,4 @@
 }
 
 @end
+NS_ASSUME_NONNULL_END

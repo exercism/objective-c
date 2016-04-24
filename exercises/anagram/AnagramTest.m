@@ -6,6 +6,8 @@
 # import "AnagramExample.h"
 #endif
 
+NS_ASSUME_NONNULL_BEGIN
+
 
 @interface AnagramTest : XCTestCase
 
@@ -85,3 +87,4 @@
 }
 
 @end
+NS_ASSUME_NONNULL_END
