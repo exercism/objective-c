@@ -5,6 +5,8 @@
 # import "RobotNameExample.h"
 #endif
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface RobotNameTest : XCTestCase
 
 @end
@@ -51,3 +53,6 @@
 }
 
 @end
+NS_ASSUME_NONNULL_END
+
+

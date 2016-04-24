@@ -6,6 +6,8 @@
 # import "BobExample.h"
 #endif
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface BobTest : XCTestCase
 
 @end
@@ -135,3 +137,4 @@
 }
 
 @end
+NS_ASSUME_NONNULL_END

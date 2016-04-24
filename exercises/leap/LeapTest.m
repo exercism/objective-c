@@ -5,6 +5,8 @@
 # import "LeapExample.h"
 #endif
 
+NS_ASSUME_NONNULL_BEGIN
+
 
 @interface LeapTest : XCTestCase
 
@@ -33,3 +35,4 @@
 }
 
 @end
+NS_ASSUME_NONNULL_END

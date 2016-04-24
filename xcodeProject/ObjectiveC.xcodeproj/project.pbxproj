@@ -7,100 +7,80 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1E48E62A1CB49EAA0067DA05 /* SpaceAgeExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E48E6281CB49EAA0067DA05 /* SpaceAgeExample.m */; };
-		1E48E62B1CB49EAA0067DA05 /* SpaceAgeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E48E6291CB49EAA0067DA05 /* SpaceAgeTest.m */; };
-		1E48E62F1CB49F370067DA05 /* PerfectNumbersExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E48E62D1CB49F370067DA05 /* PerfectNumbersExample.m */; };
-		1E48E6301CB49F370067DA05 /* PerfectNumbersTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E48E62E1CB49F370067DA05 /* PerfectNumbersTest.m */; };
-		1E50BD651CB46C7000FC128D /* BobExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E50BD631CB46C7000FC128D /* BobExample.m */; };
-		1E50BD661CB46C7000FC128D /* BobTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E50BD641CB46C7000FC128D /* BobTest.m */; };
-		1E50BD6A1CB4856000FC128D /* AnagramExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E50BD681CB4856000FC128D /* AnagramExample.m */; };
-		1E50BD6B1CB4856000FC128D /* AnagramTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E50BD691CB4856000FC128D /* AnagramTest.m */; };
-		1ECEBA9B1CB48B3F00EF3628 /* EtlExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBA991CB48B3F00EF3628 /* EtlExample.m */; };
-		1ECEBA9C1CB48B3F00EF3628 /* EtlTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBA9A1CB48B3F00EF3628 /* EtlTest.m */; };
-		1ECEBAA01CB48C6700EF3628 /* GradeSchoolExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBA9E1CB48C6700EF3628 /* GradeSchoolExample.m */; };
-		1ECEBAA11CB48C6700EF3628 /* GradeSchoolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBA9F1CB48C6700EF3628 /* GradeSchoolTest.m */; };
-		1ECEBAA51CB48E7F00EF3628 /* HammingExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBAA31CB48E7F00EF3628 /* HammingExample.m */; };
-		1ECEBAA61CB48E7F00EF3628 /* HammingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBAA41CB48E7F00EF3628 /* HammingTest.m */; };
-		1ECEBAAA1CB48FC800EF3628 /* HelloWorldExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBAA81CB48FC800EF3628 /* HelloWorldExample.m */; };
-		1ECEBAAB1CB48FC800EF3628 /* HelloWorldTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBAA91CB48FC800EF3628 /* HelloWorldTest.m */; };
-		1ECEBAAF1CB4904E00EF3628 /* LeapExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBAAD1CB4904E00EF3628 /* LeapExample.m */; };
-		1ECEBAB01CB4904E00EF3628 /* LeapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBAAE1CB4904E00EF3628 /* LeapTest.m */; };
-		1ECEBAB41CB490E200EF3628 /* NucleotideCountExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBAB21CB490E200EF3628 /* NucleotideCountExample.m */; };
-		1ECEBAB51CB490E200EF3628 /* NucleotideCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBAB31CB490E200EF3628 /* NucleotideCountTest.m */; };
-		1ECEBAB91CB491F400EF3628 /* PhoneNumberExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBAB71CB491F400EF3628 /* PhoneNumberExample.m */; };
-		1ECEBABA1CB491F400EF3628 /* PhoneNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBAB81CB491F400EF3628 /* PhoneNumberTest.m */; };
-		1ECEBABE1CB4925D00EF3628 /* RobotNameExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBABC1CB4925D00EF3628 /* RobotNameExample.m */; };
-		1ECEBABF1CB4925D00EF3628 /* RobotNameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBABD1CB4925D00EF3628 /* RobotNameTest.m */; };
-		1ECEBAC31CB492A700EF3628 /* WordCountExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBAC11CB492A700EF3628 /* WordCountExample.m */; };
-		1ECEBAC41CB492A700EF3628 /* WordCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ECEBAC21CB492A700EF3628 /* WordCountTest.m */; };
+		1EFACAA31CCCAF3D006F2E69 /* AnagramExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA7D1CCCAF3D006F2E69 /* AnagramExample.m */; };
+		1EFACAA41CCCAF3D006F2E69 /* AnagramTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA7E1CCCAF3D006F2E69 /* AnagramTest.m */; };
+		1EFACAA51CCCAF3D006F2E69 /* BobExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA801CCCAF3D006F2E69 /* BobExample.m */; };
+		1EFACAA61CCCAF3D006F2E69 /* BobTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA811CCCAF3D006F2E69 /* BobTest.m */; };
+		1EFACAA71CCCAF3D006F2E69 /* EtlExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA831CCCAF3D006F2E69 /* EtlExample.m */; };
+		1EFACAA81CCCAF3D006F2E69 /* EtlTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA841CCCAF3D006F2E69 /* EtlTest.m */; };
+		1EFACAA91CCCAF3D006F2E69 /* GradeSchoolExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA861CCCAF3D006F2E69 /* GradeSchoolExample.m */; };
+		1EFACAAA1CCCAF3D006F2E69 /* GradeSchoolTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA871CCCAF3D006F2E69 /* GradeSchoolTest.m */; };
+		1EFACAAB1CCCAF3D006F2E69 /* HammingExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA891CCCAF3D006F2E69 /* HammingExample.m */; };
+		1EFACAAC1CCCAF3D006F2E69 /* HammingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA8A1CCCAF3D006F2E69 /* HammingTest.m */; };
+		1EFACAAD1CCCAF3D006F2E69 /* HelloWorldExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA8C1CCCAF3D006F2E69 /* HelloWorldExample.m */; };
+		1EFACAAE1CCCAF3D006F2E69 /* HelloWorldTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA8D1CCCAF3D006F2E69 /* HelloWorldTest.m */; };
+		1EFACAAF1CCCAF3D006F2E69 /* LeapExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA8F1CCCAF3D006F2E69 /* LeapExample.m */; };
+		1EFACAB01CCCAF3D006F2E69 /* LeapTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA901CCCAF3D006F2E69 /* LeapTest.m */; };
+		1EFACAB11CCCAF3D006F2E69 /* NucleotideCountExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA921CCCAF3D006F2E69 /* NucleotideCountExample.m */; };
+		1EFACAB21CCCAF3D006F2E69 /* NucleotideCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA931CCCAF3D006F2E69 /* NucleotideCountTest.m */; };
+		1EFACAB31CCCAF3D006F2E69 /* PerfectNumbersExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA951CCCAF3D006F2E69 /* PerfectNumbersExample.m */; };
+		1EFACAB41CCCAF3D006F2E69 /* PerfectNumbersTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA961CCCAF3D006F2E69 /* PerfectNumbersTest.m */; };
+		1EFACAB51CCCAF3D006F2E69 /* PhoneNumberExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA981CCCAF3D006F2E69 /* PhoneNumberExample.m */; };
+		1EFACAB61CCCAF3D006F2E69 /* PhoneNumberTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA991CCCAF3D006F2E69 /* PhoneNumberTest.m */; };
+		1EFACAB71CCCAF3D006F2E69 /* RobotNameExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA9B1CCCAF3D006F2E69 /* RobotNameExample.m */; };
+		1EFACAB81CCCAF3D006F2E69 /* RobotNameTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA9C1CCCAF3D006F2E69 /* RobotNameTest.m */; };
+		1EFACAB91CCCAF3D006F2E69 /* SpaceAgeExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA9E1CCCAF3D006F2E69 /* SpaceAgeExample.m */; };
+		1EFACABA1CCCAF3D006F2E69 /* SpaceAgeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA9F1CCCAF3D006F2E69 /* SpaceAgeTest.m */; };
+		1EFACABB1CCCAF3D006F2E69 /* WordCountExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACAA11CCCAF3D006F2E69 /* WordCountExample.m */; };
+		1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		1EE9CC581CB462CB00C92E6D /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		1E48E6271CB49EAA0067DA05 /* SpaceAgeExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpaceAgeExample.h; path = "../../exercises/space-age/SpaceAgeExample.h"; sourceTree = "<group>"; };
-		1E48E6281CB49EAA0067DA05 /* SpaceAgeExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpaceAgeExample.m; path = "../../exercises/space-age/SpaceAgeExample.m"; sourceTree = "<group>"; };
-		1E48E6291CB49EAA0067DA05 /* SpaceAgeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpaceAgeTest.m; path = "../../exercises/space-age/SpaceAgeTest.m"; sourceTree = "<group>"; };
-		1E48E62C1CB49F370067DA05 /* PerfectNumbersExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PerfectNumbersExample.h; path = "../../exercises/perfect-numbers/PerfectNumbersExample.h"; sourceTree = "<group>"; };
-		1E48E62D1CB49F370067DA05 /* PerfectNumbersExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PerfectNumbersExample.m; path = "../../exercises/perfect-numbers/PerfectNumbersExample.m"; sourceTree = "<group>"; };
-		1E48E62E1CB49F370067DA05 /* PerfectNumbersTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PerfectNumbersTest.m; path = "../../exercises/perfect-numbers/PerfectNumbersTest.m"; sourceTree = "<group>"; };
 		1E50BCFC1CB465C500FC128D /* xobjectivecTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xobjectivecTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1E50BD001CB465C500FC128D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		1E50BD631CB46C7000FC128D /* BobExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BobExample.m; path = ../../exercises/bob/BobExample.m; sourceTree = "<group>"; };
-		1E50BD641CB46C7000FC128D /* BobTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BobTest.m; path = ../../exercises/bob/BobTest.m; sourceTree = "<group>"; };
-		1E50BD681CB4856000FC128D /* AnagramExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnagramExample.m; path = ../../exercises/anagram/AnagramExample.m; sourceTree = "<group>"; };
-		1E50BD691CB4856000FC128D /* AnagramTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnagramTest.m; path = ../../exercises/anagram/AnagramTest.m; sourceTree = "<group>"; };
-		1E50BD6C1CB4859B00FC128D /* AnagramExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AnagramExample.h; path = ../../exercises/anagram/AnagramExample.h; sourceTree = "<group>"; };
-		1ECEBA971CB4895400EF3628 /* BobExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BobExample.h; path = ../../exercises/bob/BobExample.h; sourceTree = "<group>"; };
-		1ECEBA981CB48B3F00EF3628 /* EtlExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EtlExample.h; path = ../../exercises/etl/EtlExample.h; sourceTree = "<group>"; };
-		1ECEBA991CB48B3F00EF3628 /* EtlExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EtlExample.m; path = ../../exercises/etl/EtlExample.m; sourceTree = "<group>"; };
-		1ECEBA9A1CB48B3F00EF3628 /* EtlTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EtlTest.m; path = ../../exercises/etl/EtlTest.m; sourceTree = "<group>"; };
-		1ECEBA9D1CB48C6700EF3628 /* GradeSchoolExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GradeSchoolExample.h; path = "../../exercises/grade-school/GradeSchoolExample.h"; sourceTree = "<group>"; };
-		1ECEBA9E1CB48C6700EF3628 /* GradeSchoolExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GradeSchoolExample.m; path = "../../exercises/grade-school/GradeSchoolExample.m"; sourceTree = "<group>"; };
-		1ECEBA9F1CB48C6700EF3628 /* GradeSchoolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GradeSchoolTest.m; path = "../../exercises/grade-school/GradeSchoolTest.m"; sourceTree = "<group>"; };
-		1ECEBAA21CB48E7F00EF3628 /* HammingExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HammingExample.h; path = ../../exercises/hamming/HammingExample.h; sourceTree = "<group>"; };
-		1ECEBAA31CB48E7F00EF3628 /* HammingExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HammingExample.m; path = ../../exercises/hamming/HammingExample.m; sourceTree = "<group>"; };
-		1ECEBAA41CB48E7F00EF3628 /* HammingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HammingTest.m; path = ../../exercises/hamming/HammingTest.m; sourceTree = "<group>"; };
-		1ECEBAA71CB48FC800EF3628 /* HelloWorldExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelloWorldExample.h; path = "../../exercises/hello-world/HelloWorldExample.h"; sourceTree = "<group>"; };
-		1ECEBAA81CB48FC800EF3628 /* HelloWorldExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelloWorldExample.m; path = "../../exercises/hello-world/HelloWorldExample.m"; sourceTree = "<group>"; };
-		1ECEBAA91CB48FC800EF3628 /* HelloWorldTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelloWorldTest.m; path = "../../exercises/hello-world/HelloWorldTest.m"; sourceTree = "<group>"; };
-		1ECEBAAC1CB4904E00EF3628 /* LeapExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeapExample.h; path = ../../exercises/leap/LeapExample.h; sourceTree = "<group>"; };
-		1ECEBAAD1CB4904E00EF3628 /* LeapExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeapExample.m; path = ../../exercises/leap/LeapExample.m; sourceTree = "<group>"; };
-		1ECEBAAE1CB4904E00EF3628 /* LeapTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeapTest.m; path = ../../exercises/leap/LeapTest.m; sourceTree = "<group>"; };
-		1ECEBAB11CB490E200EF3628 /* NucleotideCountExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NucleotideCountExample.h; path = "../../exercises/nucleotide-count/NucleotideCountExample.h"; sourceTree = "<group>"; };
-		1ECEBAB21CB490E200EF3628 /* NucleotideCountExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NucleotideCountExample.m; path = "../../exercises/nucleotide-count/NucleotideCountExample.m"; sourceTree = "<group>"; };
-		1ECEBAB31CB490E200EF3628 /* NucleotideCountTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NucleotideCountTest.m; path = "../../exercises/nucleotide-count/NucleotideCountTest.m"; sourceTree = "<group>"; };
-		1ECEBAB61CB491F400EF3628 /* PhoneNumberExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhoneNumberExample.h; path = "../../exercises/phone-number/PhoneNumberExample.h"; sourceTree = "<group>"; };
-		1ECEBAB71CB491F400EF3628 /* PhoneNumberExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneNumberExample.m; path = "../../exercises/phone-number/PhoneNumberExample.m"; sourceTree = "<group>"; };
-		1ECEBAB81CB491F400EF3628 /* PhoneNumberTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneNumberTest.m; path = "../../exercises/phone-number/PhoneNumberTest.m"; sourceTree = "<group>"; };
-		1ECEBABB1CB4925D00EF3628 /* RobotNameExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RobotNameExample.h; path = "../../exercises/robot-name/RobotNameExample.h"; sourceTree = "<group>"; };
-		1ECEBABC1CB4925D00EF3628 /* RobotNameExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RobotNameExample.m; path = "../../exercises/robot-name/RobotNameExample.m"; sourceTree = "<group>"; };
-		1ECEBABD1CB4925D00EF3628 /* RobotNameTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RobotNameTest.m; path = "../../exercises/robot-name/RobotNameTest.m"; sourceTree = "<group>"; };
-		1ECEBAC01CB492A700EF3628 /* WordCountExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordCountExample.h; path = "../../exercises/word-count/WordCountExample.h"; sourceTree = "<group>"; };
-		1ECEBAC11CB492A700EF3628 /* WordCountExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordCountExample.m; path = "../../exercises/word-count/WordCountExample.m"; sourceTree = "<group>"; };
-		1ECEBAC21CB492A700EF3628 /* WordCountTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordCountTest.m; path = "../../exercises/word-count/WordCountTest.m"; sourceTree = "<group>"; };
-		1EE9CC5A1CB462CB00C92E6D /* ObjectiveC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ObjectiveC; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EFACA7C1CCCAF3D006F2E69 /* AnagramExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnagramExample.h; path = ../../exercises/anagram/AnagramExample.h; sourceTree = "<group>"; };
+		1EFACA7D1CCCAF3D006F2E69 /* AnagramExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnagramExample.m; path = ../../exercises/anagram/AnagramExample.m; sourceTree = "<group>"; };
+		1EFACA7E1CCCAF3D006F2E69 /* AnagramTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnagramTest.m; path = ../../exercises/anagram/AnagramTest.m; sourceTree = "<group>"; };
+		1EFACA7F1CCCAF3D006F2E69 /* BobExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BobExample.h; path = ../../exercises/bob/BobExample.h; sourceTree = "<group>"; };
+		1EFACA801CCCAF3D006F2E69 /* BobExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BobExample.m; path = ../../exercises/bob/BobExample.m; sourceTree = "<group>"; };
+		1EFACA811CCCAF3D006F2E69 /* BobTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BobTest.m; path = ../../exercises/bob/BobTest.m; sourceTree = "<group>"; };
+		1EFACA821CCCAF3D006F2E69 /* EtlExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EtlExample.h; path = ../../exercises/etl/EtlExample.h; sourceTree = "<group>"; };
+		1EFACA831CCCAF3D006F2E69 /* EtlExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EtlExample.m; path = ../../exercises/etl/EtlExample.m; sourceTree = "<group>"; };
+		1EFACA841CCCAF3D006F2E69 /* EtlTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EtlTest.m; path = ../../exercises/etl/EtlTest.m; sourceTree = "<group>"; };
+		1EFACA851CCCAF3D006F2E69 /* GradeSchoolExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GradeSchoolExample.h; path = "../../exercises/grade-school/GradeSchoolExample.h"; sourceTree = "<group>"; };
+		1EFACA861CCCAF3D006F2E69 /* GradeSchoolExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GradeSchoolExample.m; path = "../../exercises/grade-school/GradeSchoolExample.m"; sourceTree = "<group>"; };
+		1EFACA871CCCAF3D006F2E69 /* GradeSchoolTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GradeSchoolTest.m; path = "../../exercises/grade-school/GradeSchoolTest.m"; sourceTree = "<group>"; };
+		1EFACA881CCCAF3D006F2E69 /* HammingExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HammingExample.h; path = ../../exercises/hamming/HammingExample.h; sourceTree = "<group>"; };
+		1EFACA891CCCAF3D006F2E69 /* HammingExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HammingExample.m; path = ../../exercises/hamming/HammingExample.m; sourceTree = "<group>"; };
+		1EFACA8A1CCCAF3D006F2E69 /* HammingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HammingTest.m; path = ../../exercises/hamming/HammingTest.m; sourceTree = "<group>"; };
+		1EFACA8B1CCCAF3D006F2E69 /* HelloWorldExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HelloWorldExample.h; path = "../../exercises/hello-world/HelloWorldExample.h"; sourceTree = "<group>"; };
+		1EFACA8C1CCCAF3D006F2E69 /* HelloWorldExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelloWorldExample.m; path = "../../exercises/hello-world/HelloWorldExample.m"; sourceTree = "<group>"; };
+		1EFACA8D1CCCAF3D006F2E69 /* HelloWorldTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HelloWorldTest.m; path = "../../exercises/hello-world/HelloWorldTest.m"; sourceTree = "<group>"; };
+		1EFACA8E1CCCAF3D006F2E69 /* LeapExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeapExample.h; path = ../../exercises/leap/LeapExample.h; sourceTree = "<group>"; };
+		1EFACA8F1CCCAF3D006F2E69 /* LeapExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeapExample.m; path = ../../exercises/leap/LeapExample.m; sourceTree = "<group>"; };
+		1EFACA901CCCAF3D006F2E69 /* LeapTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeapTest.m; path = ../../exercises/leap/LeapTest.m; sourceTree = "<group>"; };
+		1EFACA911CCCAF3D006F2E69 /* NucleotideCountExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NucleotideCountExample.h; path = "../../exercises/nucleotide-count/NucleotideCountExample.h"; sourceTree = "<group>"; };
+		1EFACA921CCCAF3D006F2E69 /* NucleotideCountExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NucleotideCountExample.m; path = "../../exercises/nucleotide-count/NucleotideCountExample.m"; sourceTree = "<group>"; };
+		1EFACA931CCCAF3D006F2E69 /* NucleotideCountTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NucleotideCountTest.m; path = "../../exercises/nucleotide-count/NucleotideCountTest.m"; sourceTree = "<group>"; };
+		1EFACA941CCCAF3D006F2E69 /* PerfectNumbersExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PerfectNumbersExample.h; path = "../../exercises/perfect-numbers/PerfectNumbersExample.h"; sourceTree = "<group>"; };
+		1EFACA951CCCAF3D006F2E69 /* PerfectNumbersExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PerfectNumbersExample.m; path = "../../exercises/perfect-numbers/PerfectNumbersExample.m"; sourceTree = "<group>"; };
+		1EFACA961CCCAF3D006F2E69 /* PerfectNumbersTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PerfectNumbersTest.m; path = "../../exercises/perfect-numbers/PerfectNumbersTest.m"; sourceTree = "<group>"; };
+		1EFACA971CCCAF3D006F2E69 /* PhoneNumberExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PhoneNumberExample.h; path = "../../exercises/phone-number/PhoneNumberExample.h"; sourceTree = "<group>"; };
+		1EFACA981CCCAF3D006F2E69 /* PhoneNumberExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneNumberExample.m; path = "../../exercises/phone-number/PhoneNumberExample.m"; sourceTree = "<group>"; };
+		1EFACA991CCCAF3D006F2E69 /* PhoneNumberTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PhoneNumberTest.m; path = "../../exercises/phone-number/PhoneNumberTest.m"; sourceTree = "<group>"; };
+		1EFACA9A1CCCAF3D006F2E69 /* RobotNameExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RobotNameExample.h; path = "../../exercises/robot-name/RobotNameExample.h"; sourceTree = "<group>"; };
+		1EFACA9B1CCCAF3D006F2E69 /* RobotNameExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RobotNameExample.m; path = "../../exercises/robot-name/RobotNameExample.m"; sourceTree = "<group>"; };
+		1EFACA9C1CCCAF3D006F2E69 /* RobotNameTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RobotNameTest.m; path = "../../exercises/robot-name/RobotNameTest.m"; sourceTree = "<group>"; };
+		1EFACA9D1CCCAF3D006F2E69 /* SpaceAgeExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SpaceAgeExample.h; path = "../../exercises/space-age/SpaceAgeExample.h"; sourceTree = "<group>"; };
+		1EFACA9E1CCCAF3D006F2E69 /* SpaceAgeExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpaceAgeExample.m; path = "../../exercises/space-age/SpaceAgeExample.m"; sourceTree = "<group>"; };
+		1EFACA9F1CCCAF3D006F2E69 /* SpaceAgeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SpaceAgeTest.m; path = "../../exercises/space-age/SpaceAgeTest.m"; sourceTree = "<group>"; };
+		1EFACAA01CCCAF3D006F2E69 /* WordCountExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordCountExample.h; path = "../../exercises/word-count/WordCountExample.h"; sourceTree = "<group>"; };
+		1EFACAA11CCCAF3D006F2E69 /* WordCountExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordCountExample.m; path = "../../exercises/word-count/WordCountExample.m"; sourceTree = "<group>"; };
+		1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordCountTest.m; path = "../../exercises/word-count/WordCountTest.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1E50BCF91CB465C500FC128D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1EE9CC571CB462CB00C92E6D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -113,45 +93,45 @@
 		1E50BCFD1CB465C500FC128D /* xobjectivecTest */ = {
 			isa = PBXGroup;
 			children = (
-				1ECEBAA71CB48FC800EF3628 /* HelloWorldExample.h */,
-				1ECEBAA81CB48FC800EF3628 /* HelloWorldExample.m */,
-				1ECEBAA91CB48FC800EF3628 /* HelloWorldTest.m */,
-				1ECEBA971CB4895400EF3628 /* BobExample.h */,
-				1E50BD631CB46C7000FC128D /* BobExample.m */,
-				1E50BD641CB46C7000FC128D /* BobTest.m */,
-				1ECEBAA21CB48E7F00EF3628 /* HammingExample.h */,
-				1ECEBAA31CB48E7F00EF3628 /* HammingExample.m */,
-				1ECEBAA41CB48E7F00EF3628 /* HammingTest.m */,
-				1ECEBAC01CB492A700EF3628 /* WordCountExample.h */,
-				1ECEBAC11CB492A700EF3628 /* WordCountExample.m */,
-				1ECEBAC21CB492A700EF3628 /* WordCountTest.m */,
-				1E50BD6C1CB4859B00FC128D /* AnagramExample.h */,
-				1E50BD681CB4856000FC128D /* AnagramExample.m */,
-				1E50BD691CB4856000FC128D /* AnagramTest.m */,
-				1ECEBAB11CB490E200EF3628 /* NucleotideCountExample.h */,
-				1ECEBAB21CB490E200EF3628 /* NucleotideCountExample.m */,
-				1ECEBAB31CB490E200EF3628 /* NucleotideCountTest.m */,
-				1ECEBAB61CB491F400EF3628 /* PhoneNumberExample.h */,
-				1ECEBAB71CB491F400EF3628 /* PhoneNumberExample.m */,
-				1ECEBAB81CB491F400EF3628 /* PhoneNumberTest.m */,
-				1ECEBA9D1CB48C6700EF3628 /* GradeSchoolExample.h */,
-				1ECEBA9E1CB48C6700EF3628 /* GradeSchoolExample.m */,
-				1ECEBA9F1CB48C6700EF3628 /* GradeSchoolTest.m */,
-				1ECEBABB1CB4925D00EF3628 /* RobotNameExample.h */,
-				1ECEBABC1CB4925D00EF3628 /* RobotNameExample.m */,
-				1ECEBABD1CB4925D00EF3628 /* RobotNameTest.m */,
-				1ECEBAAC1CB4904E00EF3628 /* LeapExample.h */,
-				1ECEBAAD1CB4904E00EF3628 /* LeapExample.m */,
-				1ECEBAAE1CB4904E00EF3628 /* LeapTest.m */,
-				1ECEBA981CB48B3F00EF3628 /* EtlExample.h */,
-				1ECEBA991CB48B3F00EF3628 /* EtlExample.m */,
-				1ECEBA9A1CB48B3F00EF3628 /* EtlTest.m */,
-				1E48E62C1CB49F370067DA05 /* PerfectNumbersExample.h */,
-				1E48E62D1CB49F370067DA05 /* PerfectNumbersExample.m */,
-				1E48E62E1CB49F370067DA05 /* PerfectNumbersTest.m */,
-				1E48E6271CB49EAA0067DA05 /* SpaceAgeExample.h */,
-				1E48E6281CB49EAA0067DA05 /* SpaceAgeExample.m */,
-				1E48E6291CB49EAA0067DA05 /* SpaceAgeTest.m */,
+				1EFACA7C1CCCAF3D006F2E69 /* AnagramExample.h */,
+				1EFACA7D1CCCAF3D006F2E69 /* AnagramExample.m */,
+				1EFACA7E1CCCAF3D006F2E69 /* AnagramTest.m */,
+				1EFACA7F1CCCAF3D006F2E69 /* BobExample.h */,
+				1EFACA801CCCAF3D006F2E69 /* BobExample.m */,
+				1EFACA811CCCAF3D006F2E69 /* BobTest.m */,
+				1EFACA821CCCAF3D006F2E69 /* EtlExample.h */,
+				1EFACA831CCCAF3D006F2E69 /* EtlExample.m */,
+				1EFACA841CCCAF3D006F2E69 /* EtlTest.m */,
+				1EFACA851CCCAF3D006F2E69 /* GradeSchoolExample.h */,
+				1EFACA861CCCAF3D006F2E69 /* GradeSchoolExample.m */,
+				1EFACA871CCCAF3D006F2E69 /* GradeSchoolTest.m */,
+				1EFACA881CCCAF3D006F2E69 /* HammingExample.h */,
+				1EFACA891CCCAF3D006F2E69 /* HammingExample.m */,
+				1EFACA8A1CCCAF3D006F2E69 /* HammingTest.m */,
+				1EFACA8B1CCCAF3D006F2E69 /* HelloWorldExample.h */,
+				1EFACA8C1CCCAF3D006F2E69 /* HelloWorldExample.m */,
+				1EFACA8D1CCCAF3D006F2E69 /* HelloWorldTest.m */,
+				1EFACA8E1CCCAF3D006F2E69 /* LeapExample.h */,
+				1EFACA8F1CCCAF3D006F2E69 /* LeapExample.m */,
+				1EFACA901CCCAF3D006F2E69 /* LeapTest.m */,
+				1EFACA911CCCAF3D006F2E69 /* NucleotideCountExample.h */,
+				1EFACA921CCCAF3D006F2E69 /* NucleotideCountExample.m */,
+				1EFACA931CCCAF3D006F2E69 /* NucleotideCountTest.m */,
+				1EFACA941CCCAF3D006F2E69 /* PerfectNumbersExample.h */,
+				1EFACA951CCCAF3D006F2E69 /* PerfectNumbersExample.m */,
+				1EFACA961CCCAF3D006F2E69 /* PerfectNumbersTest.m */,
+				1EFACA971CCCAF3D006F2E69 /* PhoneNumberExample.h */,
+				1EFACA981CCCAF3D006F2E69 /* PhoneNumberExample.m */,
+				1EFACA991CCCAF3D006F2E69 /* PhoneNumberTest.m */,
+				1EFACA9A1CCCAF3D006F2E69 /* RobotNameExample.h */,
+				1EFACA9B1CCCAF3D006F2E69 /* RobotNameExample.m */,
+				1EFACA9C1CCCAF3D006F2E69 /* RobotNameTest.m */,
+				1EFACA9D1CCCAF3D006F2E69 /* SpaceAgeExample.h */,
+				1EFACA9E1CCCAF3D006F2E69 /* SpaceAgeExample.m */,
+				1EFACA9F1CCCAF3D006F2E69 /* SpaceAgeTest.m */,
+				1EFACAA01CCCAF3D006F2E69 /* WordCountExample.h */,
+				1EFACAA11CCCAF3D006F2E69 /* WordCountExample.m */,
+				1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */,
 				1E50BD001CB465C500FC128D /* Info.plist */,
 			);
 			path = xobjectivecTest;
@@ -168,7 +148,6 @@
 		1EE9CC5B1CB462CB00C92E6D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1EE9CC5A1CB462CB00C92E6D /* ObjectiveC */,
 				1E50BCFC1CB465C500FC128D /* xobjectivecTest.xctest */,
 			);
 			name = Products;
@@ -194,23 +173,6 @@
 			productReference = 1E50BCFC1CB465C500FC128D /* xobjectivecTest.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		1EE9CC591CB462CB00C92E6D /* ObjectiveC */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 1EE9CC611CB462CB00C92E6D /* Build configuration list for PBXNativeTarget "ObjectiveC" */;
-			buildPhases = (
-				1EE9CC561CB462CB00C92E6D /* Sources */,
-				1EE9CC571CB462CB00C92E6D /* Frameworks */,
-				1EE9CC581CB462CB00C92E6D /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = ObjectiveC;
-			productName = ObjectiveC;
-			productReference = 1EE9CC5A1CB462CB00C92E6D /* ObjectiveC */;
-			productType = "com.apple.product-type.tool";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -221,9 +183,6 @@
 				ORGANIZATIONNAME = exercism;
 				TargetAttributes = {
 					1E50BCFB1CB465C500FC128D = {
-						CreatedOnToolsVersion = 7.3;
-					};
-					1EE9CC591CB462CB00C92E6D = {
 						CreatedOnToolsVersion = 7.3;
 					};
 				};
@@ -240,7 +199,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1EE9CC591CB462CB00C92E6D /* ObjectiveC */,
 				1E50BCFB1CB465C500FC128D /* xobjectivecTest */,
 			);
 		};
@@ -261,39 +219,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1ECEBA9B1CB48B3F00EF3628 /* EtlExample.m in Sources */,
-				1E50BD651CB46C7000FC128D /* BobExample.m in Sources */,
-				1E50BD661CB46C7000FC128D /* BobTest.m in Sources */,
-				1ECEBAB41CB490E200EF3628 /* NucleotideCountExample.m in Sources */,
-				1ECEBAB91CB491F400EF3628 /* PhoneNumberExample.m in Sources */,
-				1ECEBABF1CB4925D00EF3628 /* RobotNameTest.m in Sources */,
-				1ECEBAC31CB492A700EF3628 /* WordCountExample.m in Sources */,
-				1ECEBABA1CB491F400EF3628 /* PhoneNumberTest.m in Sources */,
-				1ECEBAAB1CB48FC800EF3628 /* HelloWorldTest.m in Sources */,
-				1ECEBAB51CB490E200EF3628 /* NucleotideCountTest.m in Sources */,
-				1E48E62B1CB49EAA0067DA05 /* SpaceAgeTest.m in Sources */,
-				1E48E62A1CB49EAA0067DA05 /* SpaceAgeExample.m in Sources */,
-				1ECEBA9C1CB48B3F00EF3628 /* EtlTest.m in Sources */,
-				1ECEBAA01CB48C6700EF3628 /* GradeSchoolExample.m in Sources */,
-				1E48E6301CB49F370067DA05 /* PerfectNumbersTest.m in Sources */,
-				1E50BD6A1CB4856000FC128D /* AnagramExample.m in Sources */,
-				1ECEBAB01CB4904E00EF3628 /* LeapTest.m in Sources */,
-				1ECEBABE1CB4925D00EF3628 /* RobotNameExample.m in Sources */,
-				1ECEBAC41CB492A700EF3628 /* WordCountTest.m in Sources */,
-				1ECEBAA51CB48E7F00EF3628 /* HammingExample.m in Sources */,
-				1E48E62F1CB49F370067DA05 /* PerfectNumbersExample.m in Sources */,
-				1ECEBAAA1CB48FC800EF3628 /* HelloWorldExample.m in Sources */,
-				1ECEBAA61CB48E7F00EF3628 /* HammingTest.m in Sources */,
-				1E50BD6B1CB4856000FC128D /* AnagramTest.m in Sources */,
-				1ECEBAAF1CB4904E00EF3628 /* LeapExample.m in Sources */,
-				1ECEBAA11CB48C6700EF3628 /* GradeSchoolTest.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1EE9CC561CB462CB00C92E6D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				1EFACAA71CCCAF3D006F2E69 /* EtlExample.m in Sources */,
+				1EFACAA31CCCAF3D006F2E69 /* AnagramExample.m in Sources */,
+				1EFACAA41CCCAF3D006F2E69 /* AnagramTest.m in Sources */,
+				1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */,
+				1EFACAB11CCCAF3D006F2E69 /* NucleotideCountExample.m in Sources */,
+				1EFACAB51CCCAF3D006F2E69 /* PhoneNumberExample.m in Sources */,
+				1EFACAB41CCCAF3D006F2E69 /* PerfectNumbersTest.m in Sources */,
+				1EFACAAE1CCCAF3D006F2E69 /* HelloWorldTest.m in Sources */,
+				1EFACAB21CCCAF3D006F2E69 /* NucleotideCountTest.m in Sources */,
+				1EFACAA81CCCAF3D006F2E69 /* EtlTest.m in Sources */,
+				1EFACAA91CCCAF3D006F2E69 /* GradeSchoolExample.m in Sources */,
+				1EFACABA1CCCAF3D006F2E69 /* SpaceAgeTest.m in Sources */,
+				1EFACAB91CCCAF3D006F2E69 /* SpaceAgeExample.m in Sources */,
+				1EFACAB71CCCAF3D006F2E69 /* RobotNameExample.m in Sources */,
+				1EFACAA51CCCAF3D006F2E69 /* BobExample.m in Sources */,
+				1EFACABB1CCCAF3D006F2E69 /* WordCountExample.m in Sources */,
+				1EFACAB01CCCAF3D006F2E69 /* LeapTest.m in Sources */,
+				1EFACAAB1CCCAF3D006F2E69 /* HammingExample.m in Sources */,
+				1EFACAAD1CCCAF3D006F2E69 /* HelloWorldExample.m in Sources */,
+				1EFACAB31CCCAF3D006F2E69 /* PerfectNumbersExample.m in Sources */,
+				1EFACAB61CCCAF3D006F2E69 /* PhoneNumberTest.m in Sources */,
+				1EFACAB81CCCAF3D006F2E69 /* RobotNameTest.m in Sources */,
+				1EFACAAC1CCCAF3D006F2E69 /* HammingTest.m in Sources */,
+				1EFACAA61CCCAF3D006F2E69 /* BobTest.m in Sources */,
+				1EFACAAF1CCCAF3D006F2E69 /* LeapExample.m in Sources */,
+				1EFACAAA1CCCAF3D006F2E69 /* GradeSchoolTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,7 +291,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -384,7 +335,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -400,20 +351,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-			};
-			name = Release;
-		};
-		1EE9CC621CB462CB00C92E6D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		1EE9CC631CB462CB00C92E6D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
@@ -434,15 +371,6 @@
 			buildConfigurations = (
 				1EE9CC5F1CB462CB00C92E6D /* Debug */,
 				1EE9CC601CB462CB00C92E6D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		1EE9CC611CB462CB00C92E6D /* Build configuration list for PBXNativeTarget "ObjectiveC" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				1EE9CC621CB462CB00C92E6D /* Debug */,
-				1EE9CC631CB462CB00C92E6D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
