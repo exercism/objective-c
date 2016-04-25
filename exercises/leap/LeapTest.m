@@ -1,8 +1,8 @@
 #import <XCTest/XCTest.h>
-#if __has_include("Leap.h")
-# import "Leap.h"
-# else
+#if __has_include("LeapExample.h")
 # import "LeapExample.h"
+# else
+# import "Leap.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN
@@ -15,22 +15,22 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation LeapTest
 
 - (void)testVanillaLeapYear {
-  Year *year = [[Year alloc] initWithCalendarYear:@1996];
+  Leap *year = [[Leap alloc] initWithCalendarYear:@1996];
   XCTAssert([year isLeapYear]);
 }
 
 - (void)testAnyOldYear {
-  Year *year = [[Year alloc] initWithCalendarYear:@1997];
+  Leap *year = [[Leap alloc] initWithCalendarYear:@1997];
   XCTAssertFalse([year isLeapYear]);
 }
 
 - (void)testCentury {
-  Year *year = [[Year alloc] initWithCalendarYear:@1900];
+  Leap *year = [[Leap alloc] initWithCalendarYear:@1900];
   XCTAssertFalse([year isLeapYear]);
 }
 
 - (void)testExceptionalCentury {
-  Year *year = [[Year alloc] initWithCalendarYear:@2400];
+  Leap *year = [[Leap alloc] initWithCalendarYear:@2400];
   XCTAssert([year isLeapYear]);
 }
 

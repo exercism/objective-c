@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface Year : NSObject
+@interface Leap : NSObject
 
 - (instancetype)initWithCalendarYear:(NSNumber *)calendarYear;
 - (BOOL)isLeapYear;

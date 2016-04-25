@@ -1,13 +1,13 @@
 #import <Foundation/Foundation.h>
 #import "LeapExample.h"
 
-@interface Year ()
+@interface Leap ()
 
 @property (nonatomic,strong,readwrite) NSNumber *value;
 
 @end
 
-@implementation Year
+@implementation Leap
 
 - (instancetype)initWithCalendarYear:(NSNumber *)calendarYear {
   self = [super init];
