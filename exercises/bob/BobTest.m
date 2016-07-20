@@ -1,9 +1,9 @@
 #import <XCTest/XCTest.h>
 
-#if __has_include("Bob.h")
-# import "Bob.h"
-#else
+#if __has_include("BobExample.h")
 # import "BobExample.h"
+#else
+# import "Bob.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN

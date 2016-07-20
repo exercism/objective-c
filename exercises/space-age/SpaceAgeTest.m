@@ -1,8 +1,9 @@
 #import <XCTest/XCTest.h>
-#if __has_include("SpaceAge.h")
-# import "SpaceAge.h"
-# else
+
+#if __has_include("SpaceAgeExample.h")
 # import "SpaceAgeExample.h"
+# else
+# import "SpaceAge.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN
