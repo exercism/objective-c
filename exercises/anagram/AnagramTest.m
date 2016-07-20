@@ -1,9 +1,9 @@
 #import <XCTest/XCTest.h>
 
-#if __has_include("Anagram.h")
-# import "Anagram.h"
-# else
+#if __has_include("AnagramExample.h")
 # import "AnagramExample.h"
+# else
+# import "Anagram.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN

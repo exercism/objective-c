@@ -1,8 +1,9 @@
 #import <XCTest/XCTest.h>
-#if __has_include("PhoneNumber.h")
-# import "PhoneNumber.h"
-# else
+
+#if __has_include("PhoneNumberExample.h")
 # import "PhoneNumberExample.h"
+# else
+# import "PhoneNumber.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN

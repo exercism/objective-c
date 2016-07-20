@@ -1,8 +1,9 @@
 #import <XCTest/XCTest.h>
-#if __has_include("PerfectNumbers.h")
-# import "PerfectNumbers.h"
-# else
+
+#if __has_include("PerfectNumbersExample.h")
 # import "PerfectNumbersExample.h"
+# else
+# import "PerfectNumbers.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN

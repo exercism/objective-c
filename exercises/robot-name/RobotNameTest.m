@@ -1,8 +1,9 @@
 #import <XCTest/XCTest.h>
-#if __has_include("RobotName.h")
-# import "RobotName.h"
-# else
+
+#if __has_include("RobotNameExample.h")
 # import "RobotNameExample.h"
+# else
+# import "RobotName.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN

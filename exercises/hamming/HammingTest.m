@@ -1,8 +1,9 @@
 #import <XCTest/XCTest.h>
-#if __has_include("Hamming.h")
-# import "Hamming.h"
-# else
+
+#if __has_include("HammingExample.h")
 # import "HammingExample.h"
+# else
+# import "Hamming.h"
 #endif
 
 NS_ASSUME_NONNULL_BEGIN
