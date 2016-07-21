@@ -7,7 +7,7 @@ before_install:
   - brew tap oclint/formulae
   - brew install oclint
 script:
-  - xcodebuild | tee xcodebuild.log
+  - xcodebuild -project 'xcodeProject/ObjectiveC.xcodeproj' -scheme 'OCLint' -sdk macosx10.11 | tee xcodebuild.log
   - oclint-xcodebuild
   - oclint-json-compilation-database
   - xcodebuild test -project 'xcodeProject/ObjectiveC.xcodeproj' -scheme 'xobjectivecTest' -sdk macosx10.11
