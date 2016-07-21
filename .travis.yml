@@ -2,8 +2,14 @@ language: objective-c
 osx_image: xcode7.3
 xcode_project: 'xcodeProject/ObjectiveC.xcodeproj'
 xcode_scheme: 'xobjectivecTest'
-
+before_install:
+  - brew cask uninstall oclint
+  - brew tap oclint/formulae
+  - brew install oclint
 script:
+  - xcodebuild | tee xcodebuild.log
+  - oclint-xcodebuild
+  - oclint-json-compilation-database
   - xcodebuild test -project 'xcodeProject/ObjectiveC.xcodeproj' -scheme 'xobjectivecTest' -sdk macosx10.11
   - bin/fetch-configlet
   - bin/configlet .

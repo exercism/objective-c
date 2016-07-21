@@ -6,6 +6,21 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		1E1068C41D408EE30019B25B /* OCLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 1E1068C71D408EE30019B25B /* Build configuration list for PBXAggregateTarget "OCLint" */;
+			buildPhases = (
+				1E1068C81D408F900019B25B /* ShellScript */,
+			);
+			dependencies = (
+				1E1068CA1D4092BC0019B25B /* PBXTargetDependency */,
+			);
+			name = OCLint;
+			productName = OCLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		1EFACAA31CCCAF3D006F2E69 /* AnagramExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA7D1CCCAF3D006F2E69 /* AnagramExample.m */; };
 		1EFACAA41CCCAF3D006F2E69 /* AnagramTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA7E1CCCAF3D006F2E69 /* AnagramTest.m */; };
@@ -34,6 +49,16 @@
 		1EFACABB1CCCAF3D006F2E69 /* WordCountExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACAA11CCCAF3D006F2E69 /* WordCountExample.m */; };
 		1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1E1068C91D4092BC0019B25B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1EE9CC521CB462CB00C92E6D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1E50BCFB1CB465C500FC128D;
+			remoteInfo = xobjectivecTest;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1E50BCFC1CB465C500FC128D /* xobjectivecTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xobjectivecTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -182,6 +207,9 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = exercism;
 				TargetAttributes = {
+					1E1068C41D408EE30019B25B = {
+						CreatedOnToolsVersion = 7.3;
+					};
 					1E50BCFB1CB465C500FC128D = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -200,6 +228,7 @@
 			projectRoot = "";
 			targets = (
 				1E50BCFB1CB465C500FC128D /* xobjectivecTest */,
+				1E1068C41D408EE30019B25B /* OCLint */,
 			);
 		};
 /* End PBXProject section */
@@ -213,6 +242,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E1068C81D408F900019B25B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ -f ~/.bash_profile ]; then\nsource ~/.bash_profile\nfi\n\nhash oclint &> /dev/null\nif [ $? -eq 1 ]; then\necho >&2 \"oclint not found, analyzing stopped\"\nexit 1\nfi\n\nif [ ! -f \"${TARGET_TEMP_DIR}\"/xcodebuild.log ]; then\necho \"[*] xcodebuild.log not found, possibly clean was performed\"\necho \"[*] starting xcodebuild to rebuild the project..\"\n\ncd \"${SRCROOT}\"\n\nxcodebuild clean -configuration \"${CONFIGURATION}\" -project \"${PROJECT_NAME}\".xcodeproj\n\n#build xcodebuild.log\nxcodebuild -configuration \"${CONFIGURATION}\" -project \"${PROJECT_NAME}\".xcodeproj | tee \"${TARGET_TEMP_DIR}\"/xcodebuild.log\nfi\n\ncd \"${TARGET_TEMP_DIR}\"\n\necho \"[*] transforming xcodebuild.log into compile_commands.json...\"\n#transform it into compile_commands.json\noclint-xcodebuild\n\necho \"[*] starting analyzing\"\noclint-json-compilation-database -- -p \"${TARGET_TEMP_DIR}\" | sed -E 's/(.*\\.(c|m{1,2}):[0-9]*:[0-9]*:)/\\1 warning:/'";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1E50BCF81CB465C500FC128D /* Sources */ = {
@@ -250,7 +295,29 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		1E1068CA1D4092BC0019B25B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1E50BCFB1CB465C500FC128D /* xobjectivecTest */;
+			targetProxy = 1E1068C91D4092BC0019B25B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		1E1068C51D408EE30019B25B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1E1068C61D408EE30019B25B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		1E50BD021CB465C500FC128D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -357,6 +424,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		1E1068C71D408EE30019B25B /* Build configuration list for PBXAggregateTarget "OCLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1E1068C51D408EE30019B25B /* Debug */,
+				1E1068C61D408EE30019B25B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		1E50BD011CB465C500FC128D /* Build configuration list for PBXNativeTarget "xobjectivecTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
