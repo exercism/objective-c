@@ -33,6 +33,8 @@
 		1EFACABA1CCCAF3D006F2E69 /* SpaceAgeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA9F1CCCAF3D006F2E69 /* SpaceAgeTest.m */; };
 		1EFACABB1CCCAF3D006F2E69 /* WordCountExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACAA11CCCAF3D006F2E69 /* WordCountExample.m */; };
 		1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */; };
+		E94ACA131D41760300D56CC2 /* AllYourBaseExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E94ACA121D41760300D56CC2 /* AllYourBaseExample.m */; };
+		E94ACA151D41763800D56CC2 /* AllYourBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E94ACA141D41763800D56CC2 /* AllYourBaseTest.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +79,9 @@
 		1EFACAA01CCCAF3D006F2E69 /* WordCountExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordCountExample.h; path = "../../exercises/word-count/WordCountExample.h"; sourceTree = "<group>"; };
 		1EFACAA11CCCAF3D006F2E69 /* WordCountExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordCountExample.m; path = "../../exercises/word-count/WordCountExample.m"; sourceTree = "<group>"; };
 		1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordCountTest.m; path = "../../exercises/word-count/WordCountTest.m"; sourceTree = "<group>"; };
+		E94ACA111D4175C600D56CC2 /* AllYourBaseExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AllYourBaseExample.h; path = "../../exercises/all-your-base/AllYourBaseExample.h"; sourceTree = "<group>"; };
+		E94ACA121D41760300D56CC2 /* AllYourBaseExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllYourBaseExample.m; path = "../../exercises/all-your-base/AllYourBaseExample.m"; sourceTree = "<group>"; };
+		E94ACA141D41763800D56CC2 /* AllYourBaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllYourBaseTest.m; path = "../../exercises/all-your-base/AllYourBaseTest.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +98,9 @@
 		1E50BCFD1CB465C500FC128D /* xobjectivecTest */ = {
 			isa = PBXGroup;
 			children = (
+				E94ACA111D4175C600D56CC2 /* AllYourBaseExample.h */,
+				E94ACA121D41760300D56CC2 /* AllYourBaseExample.m */,
+				E94ACA141D41763800D56CC2 /* AllYourBaseTest.m */,
 				1EFACA7C1CCCAF3D006F2E69 /* AnagramExample.h */,
 				1EFACA7D1CCCAF3D006F2E69 /* AnagramExample.m */,
 				1EFACA7E1CCCAF3D006F2E69 /* AnagramTest.m */,
@@ -221,6 +229,8 @@
 			files = (
 				1EFACAA71CCCAF3D006F2E69 /* EtlExample.m in Sources */,
 				1EFACAA31CCCAF3D006F2E69 /* AnagramExample.m in Sources */,
+				E94ACA131D41760300D56CC2 /* AllYourBaseExample.m in Sources */,
+				E94ACA151D41763800D56CC2 /* AllYourBaseTest.m in Sources */,
 				1EFACAA41CCCAF3D006F2E69 /* AnagramTest.m in Sources */,
 				1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */,
 				1EFACAB11CCCAF3D006F2E69 /* NucleotideCountExample.m in Sources */,
