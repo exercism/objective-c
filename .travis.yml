@@ -2,8 +2,15 @@ language: objective-c
 osx_image: xcode7.3
 xcode_project: 'xcodeProject/ObjectiveC.xcodeproj'
 xcode_scheme: 'xobjectivecTest'
-
+before_install:
+  - brew cask uninstall oclint
+  - brew tap oclint/formulae
+  - brew install oclint
 script:
-  - xcodebuild test -project 'xcodeProject/ObjectiveC.xcodeproj' -scheme 'xobjectivecTest' -sdk macosx10.11
   - bin/fetch-configlet
   - bin/configlet .
+  - xctool test -project 'xcodeProject/ObjectiveC.xcodeproj' -scheme 'xobjectivecTest' -sdk macosx10.11 -reporter json-compilation-database:compile_commands.json -reporter pretty
+after_success:
+  - oclint-json-compilation-database -- -max-priority-1=100000 -max-priority-2=100000 -max-priority-3=100000 -rc LONG_LINE=150 -report-type json -o .oclint.json
+  - ls -al
+  - python -m json.tool .oclint.json
