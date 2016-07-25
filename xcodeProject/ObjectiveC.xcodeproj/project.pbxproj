@@ -14,7 +14,6 @@
 				1E1068C81D408F900019B25B /* ShellScript */,
 			);
 			dependencies = (
-				1E1068CA1D4092BC0019B25B /* PBXTargetDependency */,
 			);
 			name = OCLint;
 			productName = OCLint;
@@ -51,16 +50,6 @@
 		E94ACA131D41760300D56CC2 /* AllYourBaseExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E94ACA121D41760300D56CC2 /* AllYourBaseExample.m */; };
 		E94ACA151D41763800D56CC2 /* AllYourBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E94ACA141D41763800D56CC2 /* AllYourBaseTest.m */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		1E1068C91D4092BC0019B25B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 1EE9CC521CB462CB00C92E6D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 1E50BCFB1CB465C500FC128D;
-			remoteInfo = xobjectivecTest;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		1E50BCFC1CB465C500FC128D /* xobjectivecTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = xobjectivecTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -263,7 +252,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -f ~/.bash_profile ]; then\nsource ~/.bash_profile\nfi\n\nhash oclint &> /dev/null\nif [ $? -eq 1 ]; then\necho >&2 \"oclint not found, analyzing stopped\"\nexit 1\nfi\n\nif [ ! -f \"${TARGET_TEMP_DIR}\"/xcodebuild.log ]; then\necho \"[*] xcodebuild.log not found, possibly clean was performed\"\necho \"[*] starting xcodebuild to rebuild the project..\"\n\ncd \"${SRCROOT}\"\n\nxcodebuild clean -configuration \"${CONFIGURATION}\" -project \"${PROJECT_NAME}\".xcodeproj\n\n#build xcodebuild.log\nxcodebuild -configuration \"${CONFIGURATION}\" -project \"${PROJECT_NAME}\".xcodeproj | tee \"${TARGET_TEMP_DIR}\"/xcodebuild.log\nfi\n\ncd \"${TARGET_TEMP_DIR}\"\n\necho \"[*] transforming xcodebuild.log into compile_commands.json...\"\n#transform it into compile_commands.json\noclint-xcodebuild\n\necho \"[*] starting analyzing\"\noclint-json-compilation-database -- -p \"${TARGET_TEMP_DIR}\" | sed -E 's/(.*\\.(c|m{1,2}):[0-9]*:[0-9]*:)/\\1 warning:/'";
+			shellScript = "if [ -f ~/.bash_profile ]; then\nsource ~/.bash_profile\nfi\n\nhash oclint &> /dev/null\nif [ $? -eq 1 ]; then\necho >&2 \"oclint not found, analyzing stopped\"\nexit 1\nfi\n\nif [ ! -f \"${TARGET_TEMP_DIR}\"/xcodebuild.log ]; then\necho \"[*] xcodebuild.log not found, possibly clean was performed\"\necho \"[*] starting xcodebuild to rebuild the project..\"\n\ncd \"${SRCROOT}\"\n\nxcodebuild clean -configuration \"${CONFIGURATION}\" -project \"${PROJECT_NAME}\".xcodeproj\n\n#build xcodebuild.log\nxcodebuild -configuration \"${CONFIGURATION}\" -project \"${PROJECT_NAME}\".xcodeproj | tee \"${TARGET_TEMP_DIR}\"/xcodebuild.log\nfi\n\ncd \"${TARGET_TEMP_DIR}\"\n\necho \"[*] transforming xcodebuild.log into compile_commands.json...\"\n#transform it into compile_commands.json\noclint-xcodebuild\n\necho \"[*] starting analyzing\"\noclint-json-compilation-database -- \\\n    -p \"${TARGET_TEMP_DIR}\" \\\n    | sed -E 's/(.*\\.(c|m{1,2}):[0-9]*:[0-9]*:)/\\1 warning:/'";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -304,14 +293,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		1E1068CA1D4092BC0019B25B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 1E50BCFB1CB465C500FC128D /* xobjectivecTest */;
-			targetProxy = 1E1068C91D4092BC0019B25B /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1E1068C51D408EE30019B25B /* Debug */ = {

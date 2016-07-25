@@ -1,6 +1,0 @@
-rule-configurations:
-  - key: THRESHOLD_2
-    value: 100
-  - key: THRESHOLD_3
-    value: 200
-    
