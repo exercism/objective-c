@@ -117,51 +117,21 @@
 		1E50BCFD1CB465C500FC128D /* xobjectivecTest */ = {
 			isa = PBXGroup;
 			children = (
-				E951B6B51D4294E6009EB5B6 /* AllergiesExample.h */,
-				E951B6B61D4294E6009EB5B6 /* AllergiesExample.m */,
-				E951B6B81D429550009EB5B6 /* AllergiesTest.m */,
-				E94ACA111D4175C600D56CC2 /* AllYourBaseExample.h */,
-				E94ACA121D41760300D56CC2 /* AllYourBaseExample.m */,
-				E94ACA141D41763800D56CC2 /* AllYourBaseTest.m */,
-				1EFACA7C1CCCAF3D006F2E69 /* AnagramExample.h */,
-				1EFACA7D1CCCAF3D006F2E69 /* AnagramExample.m */,
-				1EFACA7E1CCCAF3D006F2E69 /* AnagramTest.m */,
-				1EFACA7F1CCCAF3D006F2E69 /* BobExample.h */,
-				1EFACA801CCCAF3D006F2E69 /* BobExample.m */,
-				1EFACA811CCCAF3D006F2E69 /* BobTest.m */,
-				1EFACA821CCCAF3D006F2E69 /* EtlExample.h */,
-				1EFACA831CCCAF3D006F2E69 /* EtlExample.m */,
-				1EFACA841CCCAF3D006F2E69 /* EtlTest.m */,
-				1EFACA851CCCAF3D006F2E69 /* GradeSchoolExample.h */,
-				1EFACA861CCCAF3D006F2E69 /* GradeSchoolExample.m */,
-				1EFACA871CCCAF3D006F2E69 /* GradeSchoolTest.m */,
-				1EFACA881CCCAF3D006F2E69 /* HammingExample.h */,
-				1EFACA891CCCAF3D006F2E69 /* HammingExample.m */,
-				1EFACA8A1CCCAF3D006F2E69 /* HammingTest.m */,
-				1EFACA8B1CCCAF3D006F2E69 /* HelloWorldExample.h */,
-				1EFACA8C1CCCAF3D006F2E69 /* HelloWorldExample.m */,
-				1EFACA8D1CCCAF3D006F2E69 /* HelloWorldTest.m */,
-				1EFACA8E1CCCAF3D006F2E69 /* LeapExample.h */,
-				1EFACA8F1CCCAF3D006F2E69 /* LeapExample.m */,
-				1EFACA901CCCAF3D006F2E69 /* LeapTest.m */,
-				1EFACA911CCCAF3D006F2E69 /* NucleotideCountExample.h */,
-				1EFACA921CCCAF3D006F2E69 /* NucleotideCountExample.m */,
-				1EFACA931CCCAF3D006F2E69 /* NucleotideCountTest.m */,
-				1EFACA941CCCAF3D006F2E69 /* PerfectNumbersExample.h */,
-				1EFACA951CCCAF3D006F2E69 /* PerfectNumbersExample.m */,
-				1EFACA961CCCAF3D006F2E69 /* PerfectNumbersTest.m */,
-				1EFACA971CCCAF3D006F2E69 /* PhoneNumberExample.h */,
-				1EFACA981CCCAF3D006F2E69 /* PhoneNumberExample.m */,
-				1EFACA991CCCAF3D006F2E69 /* PhoneNumberTest.m */,
-				1EFACA9A1CCCAF3D006F2E69 /* RobotNameExample.h */,
-				1EFACA9B1CCCAF3D006F2E69 /* RobotNameExample.m */,
-				1EFACA9C1CCCAF3D006F2E69 /* RobotNameTest.m */,
-				1EFACA9D1CCCAF3D006F2E69 /* SpaceAgeExample.h */,
-				1EFACA9E1CCCAF3D006F2E69 /* SpaceAgeExample.m */,
-				1EFACA9F1CCCAF3D006F2E69 /* SpaceAgeTest.m */,
-				1EFACAA01CCCAF3D006F2E69 /* WordCountExample.h */,
-				1EFACAA11CCCAF3D006F2E69 /* WordCountExample.m */,
-				1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */,
+				E9E8B6E91D519DDB0012F12C /* Allergies */,
+				E9E8B6EA1D519DE10012F12C /* AllYourBase */,
+				E9E8B6EB1D519DE70012F12C /* Anagram */,
+				E9E8B6EC1D519DEF0012F12C /* Bob */,
+				E9E8B6ED1D519DF50012F12C /* Etl */,
+				E9E8B6EE1D519DFE0012F12C /* GradeSchool */,
+				E9E8B6EF1D519E040012F12C /* Hamming */,
+				E9E8B6F01D519E0B0012F12C /* HelloWorld */,
+				E9E8B6F11D519E120012F12C /* Leap */,
+				E9E8B6F21D519E180012F12C /* NucleotideCount */,
+				E9E8B6F31D519E200012F12C /* PerfectNumbers */,
+				E9E8B6F41D519E270012F12C /* PhoneNumber */,
+				E9E8B6F51D519E2E0012F12C /* RobotName */,
+				E9E8B6F61D519E340012F12C /* SpaceAge */,
+				E9E8B6F71D519E3A0012F12C /* WordCount */,
 				1E50BD001CB465C500FC128D /* Info.plist */,
 			);
 			path = xobjectivecTest;
@@ -181,6 +151,156 @@
 				1E50BCFC1CB465C500FC128D /* xobjectivecTest.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E9E8B6E91D519DDB0012F12C /* Allergies */ = {
+			isa = PBXGroup;
+			children = (
+				E951B6B51D4294E6009EB5B6 /* AllergiesExample.h */,
+				E951B6B61D4294E6009EB5B6 /* AllergiesExample.m */,
+				E951B6B81D429550009EB5B6 /* AllergiesTest.m */,
+			);
+			name = Allergies;
+			sourceTree = "<group>";
+		};
+		E9E8B6EA1D519DE10012F12C /* AllYourBase */ = {
+			isa = PBXGroup;
+			children = (
+				E94ACA111D4175C600D56CC2 /* AllYourBaseExample.h */,
+				E94ACA121D41760300D56CC2 /* AllYourBaseExample.m */,
+				E94ACA141D41763800D56CC2 /* AllYourBaseTest.m */,
+			);
+			name = AllYourBase;
+			sourceTree = "<group>";
+		};
+		E9E8B6EB1D519DE70012F12C /* Anagram */ = {
+			isa = PBXGroup;
+			children = (
+				1EFACA7C1CCCAF3D006F2E69 /* AnagramExample.h */,
+				1EFACA7D1CCCAF3D006F2E69 /* AnagramExample.m */,
+				1EFACA7E1CCCAF3D006F2E69 /* AnagramTest.m */,
+			);
+			name = Anagram;
+			sourceTree = "<group>";
+		};
+		E9E8B6EC1D519DEF0012F12C /* Bob */ = {
+			isa = PBXGroup;
+			children = (
+				1EFACA7F1CCCAF3D006F2E69 /* BobExample.h */,
+				1EFACA801CCCAF3D006F2E69 /* BobExample.m */,
+				1EFACA811CCCAF3D006F2E69 /* BobTest.m */,
+			);
+			name = Bob;
+			sourceTree = "<group>";
+		};
+		E9E8B6ED1D519DF50012F12C /* Etl */ = {
+			isa = PBXGroup;
+			children = (
+				1EFACA821CCCAF3D006F2E69 /* EtlExample.h */,
+				1EFACA831CCCAF3D006F2E69 /* EtlExample.m */,
+				1EFACA841CCCAF3D006F2E69 /* EtlTest.m */,
+			);
+			name = Etl;
+			sourceTree = "<group>";
+		};
+		E9E8B6EE1D519DFE0012F12C /* GradeSchool */ = {
+			isa = PBXGroup;
+			children = (
+				1EFACA851CCCAF3D006F2E69 /* GradeSchoolExample.h */,
+				1EFACA861CCCAF3D006F2E69 /* GradeSchoolExample.m */,
+				1EFACA871CCCAF3D006F2E69 /* GradeSchoolTest.m */,
+			);
+			name = GradeSchool;
+			sourceTree = "<group>";
+		};
+		E9E8B6EF1D519E040012F12C /* Hamming */ = {
+			isa = PBXGroup;
+			children = (
+				1EFACA881CCCAF3D006F2E69 /* HammingExample.h */,
+				1EFACA891CCCAF3D006F2E69 /* HammingExample.m */,
+				1EFACA8A1CCCAF3D006F2E69 /* HammingTest.m */,
+			);
+			name = Hamming;
+			sourceTree = "<group>";
+		};
+		E9E8B6F01D519E0B0012F12C /* HelloWorld */ = {
+			isa = PBXGroup;
+			children = (
+				1EFACA8B1CCCAF3D006F2E69 /* HelloWorldExample.h */,
+				1EFACA8C1CCCAF3D006F2E69 /* HelloWorldExample.m */,
+				1EFACA8D1CCCAF3D006F2E69 /* HelloWorldTest.m */,
+			);
+			name = HelloWorld;
+			sourceTree = "<group>";
+		};
+		E9E8B6F11D519E120012F12C /* Leap */ = {
+			isa = PBXGroup;
+			children = (
+				1EFACA8E1CCCAF3D006F2E69 /* LeapExample.h */,
+				1EFACA8F1CCCAF3D006F2E69 /* LeapExample.m */,
+				1EFACA901CCCAF3D006F2E69 /* LeapTest.m */,
+			);
+			name = Leap;
+			sourceTree = "<group>";
+		};
+		E9E8B6F21D519E180012F12C /* NucleotideCount */ = {
+			isa = PBXGroup;
+			children = (
+				1EFACA911CCCAF3D006F2E69 /* NucleotideCountExample.h */,
+				1EFACA921CCCAF3D006F2E69 /* NucleotideCountExample.m */,
+				1EFACA931CCCAF3D006F2E69 /* NucleotideCountTest.m */,
+			);
+			name = NucleotideCount;
+			sourceTree = "<group>";
+		};
+		E9E8B6F31D519E200012F12C /* PerfectNumbers */ = {
+			isa = PBXGroup;
+			children = (
+				1EFACA941CCCAF3D006F2E69 /* PerfectNumbersExample.h */,
+				1EFACA951CCCAF3D006F2E69 /* PerfectNumbersExample.m */,
+				1EFACA961CCCAF3D006F2E69 /* PerfectNumbersTest.m */,
+			);
+			name = PerfectNumbers;
+			sourceTree = "<group>";
+		};
+		E9E8B6F41D519E270012F12C /* PhoneNumber */ = {
+			isa = PBXGroup;
+			children = (
+				1EFACA971CCCAF3D006F2E69 /* PhoneNumberExample.h */,
+				1EFACA981CCCAF3D006F2E69 /* PhoneNumberExample.m */,
+				1EFACA991CCCAF3D006F2E69 /* PhoneNumberTest.m */,
+			);
+			name = PhoneNumber;
+			sourceTree = "<group>";
+		};
+		E9E8B6F51D519E2E0012F12C /* RobotName */ = {
+			isa = PBXGroup;
+			children = (
+				1EFACA9A1CCCAF3D006F2E69 /* RobotNameExample.h */,
+				1EFACA9B1CCCAF3D006F2E69 /* RobotNameExample.m */,
+				1EFACA9C1CCCAF3D006F2E69 /* RobotNameTest.m */,
+			);
+			name = RobotName;
+			sourceTree = "<group>";
+		};
+		E9E8B6F61D519E340012F12C /* SpaceAge */ = {
+			isa = PBXGroup;
+			children = (
+				1EFACA9D1CCCAF3D006F2E69 /* SpaceAgeExample.h */,
+				1EFACA9E1CCCAF3D006F2E69 /* SpaceAgeExample.m */,
+				1EFACA9F1CCCAF3D006F2E69 /* SpaceAgeTest.m */,
+			);
+			name = SpaceAge;
+			sourceTree = "<group>";
+		};
+		E9E8B6F71D519E3A0012F12C /* WordCount */ = {
+			isa = PBXGroup;
+			children = (
+				1EFACAA01CCCAF3D006F2E69 /* WordCountExample.h */,
+				1EFACAA11CCCAF3D006F2E69 /* WordCountExample.m */,
+				1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */,
+			);
+			name = WordCount;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
