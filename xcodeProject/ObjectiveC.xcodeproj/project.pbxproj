@@ -51,6 +51,8 @@
 		E94ACA151D41763800D56CC2 /* AllYourBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E94ACA141D41763800D56CC2 /* AllYourBaseTest.m */; };
 		E951B6B71D4294E6009EB5B6 /* AllergiesExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E951B6B61D4294E6009EB5B6 /* AllergiesExample.m */; };
 		E951B6B91D429550009EB5B6 /* AllergiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E951B6B81D429550009EB5B6 /* AllergiesTest.m */; };
+		E99D1D811D5533BF0006A303 /* SumOfMultiplesExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E99D1D801D5533BF0006A303 /* SumOfMultiplesExample.m */; };
+		E99D1D831D5533D80006A303 /* SumOfMultiplesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E99D1D821D5533D80006A303 /* SumOfMultiplesTest.m */; };
 		E9FDCA191D5407D2004EE8DB /* RomanNumeralsExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FDCA181D5407D2004EE8DB /* RomanNumeralsExample.m */; };
 		E9FDCA1B1D540801004EE8DB /* RomanNumeralsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FDCA1A1D540801004EE8DB /* RomanNumeralsTest.m */; };
 /* End PBXBuildFile section */
@@ -103,6 +105,9 @@
 		E951B6B51D4294E6009EB5B6 /* AllergiesExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllergiesExample.h; path = ../../exercises/allergies/AllergiesExample.h; sourceTree = "<group>"; };
 		E951B6B61D4294E6009EB5B6 /* AllergiesExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllergiesExample.m; path = ../../exercises/allergies/AllergiesExample.m; sourceTree = "<group>"; };
 		E951B6B81D429550009EB5B6 /* AllergiesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllergiesTest.m; path = ../../exercises/allergies/AllergiesTest.m; sourceTree = "<group>"; };
+		E99D1D7F1D5533BF0006A303 /* SumOfMultiplesExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SumOfMultiplesExample.h; path = "../../exercises/sum-of-multiples/SumOfMultiplesExample.h"; sourceTree = "<group>"; };
+		E99D1D801D5533BF0006A303 /* SumOfMultiplesExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SumOfMultiplesExample.m; path = "../../exercises/sum-of-multiples/SumOfMultiplesExample.m"; sourceTree = "<group>"; };
+		E99D1D821D5533D80006A303 /* SumOfMultiplesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SumOfMultiplesTest.m; path = "../../exercises/sum-of-multiples/SumOfMultiplesTest.m"; sourceTree = "<group>"; };
 		E9FDCA171D5407D2004EE8DB /* RomanNumeralsExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RomanNumeralsExample.h; path = "../../exercises/roman-numerals/RomanNumeralsExample.h"; sourceTree = "<group>"; };
 		E9FDCA181D5407D2004EE8DB /* RomanNumeralsExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RomanNumeralsExample.m; path = "../../exercises/roman-numerals/RomanNumeralsExample.m"; sourceTree = "<group>"; };
 		E9FDCA1A1D540801004EE8DB /* RomanNumeralsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RomanNumeralsTest.m; sourceTree = "<group>"; };
@@ -137,6 +142,7 @@
 				E9E8B6F51D519E2E0012F12C /* RobotName */,
 				E9FDCA161D540793004EE8DB /* RomanNumerals */,
 				E9E8B6F61D519E340012F12C /* SpaceAge */,
+				E99D1D7B1D5532C50006A303 /* SumOfMultiples */,
 				E9E8B6F71D519E3A0012F12C /* WordCount */,
 				1E50BD001CB465C500FC128D /* Info.plist */,
 			);
@@ -157,6 +163,16 @@
 				1E50BCFC1CB465C500FC128D /* xobjectivecTest.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		E99D1D7B1D5532C50006A303 /* SumOfMultiples */ = {
+			isa = PBXGroup;
+			children = (
+				E99D1D7F1D5533BF0006A303 /* SumOfMultiplesExample.h */,
+				E99D1D801D5533BF0006A303 /* SumOfMultiplesExample.m */,
+				E99D1D821D5533D80006A303 /* SumOfMultiplesTest.m */,
+			);
+			name = SumOfMultiples;
 			sourceTree = "<group>";
 		};
 		E9E8B6E91D519DDB0012F12C /* Allergies */ = {
@@ -414,6 +430,7 @@
 				1EFACAB11CCCAF3D006F2E69 /* NucleotideCountExample.m in Sources */,
 				1EFACAB51CCCAF3D006F2E69 /* PhoneNumberExample.m in Sources */,
 				E951B6B91D429550009EB5B6 /* AllergiesTest.m in Sources */,
+				E99D1D811D5533BF0006A303 /* SumOfMultiplesExample.m in Sources */,
 				1EFACAB41CCCAF3D006F2E69 /* PerfectNumbersTest.m in Sources */,
 				E9FDCA191D5407D2004EE8DB /* RomanNumeralsExample.m in Sources */,
 				1EFACAAE1CCCAF3D006F2E69 /* HelloWorldTest.m in Sources */,
@@ -436,6 +453,7 @@
 				1EFACAAC1CCCAF3D006F2E69 /* HammingTest.m in Sources */,
 				1EFACAA61CCCAF3D006F2E69 /* BobTest.m in Sources */,
 				1EFACAAF1CCCAF3D006F2E69 /* LeapExample.m in Sources */,
+				E99D1D831D5533D80006A303 /* SumOfMultiplesTest.m in Sources */,
 				1EFACAAA1CCCAF3D006F2E69 /* GradeSchoolTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
