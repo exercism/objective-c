@@ -47,7 +47,7 @@
 		1EFACABA1CCCAF3D006F2E69 /* SpaceAgeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA9F1CCCAF3D006F2E69 /* SpaceAgeTest.m */; };
 		1EFACABB1CCCAF3D006F2E69 /* WordCountExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACAA11CCCAF3D006F2E69 /* WordCountExample.m */; };
 		1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */; };
-		E907D0CA1D6B731600106C42 /* Gigasecond.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D0C91D6B731600106C42 /* Gigasecond.m */; };
+		E907D0CA1D6B731600106C42 /* GigasecondExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D0C91D6B731600106C42 /* GigasecondExample.m */; };
 		E907D0CC1D6B734800106C42 /* GigasecondTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D0CB1D6B734800106C42 /* GigasecondTest.m */; };
 		E94ACA131D41760300D56CC2 /* AllYourBaseExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E94ACA121D41760300D56CC2 /* AllYourBaseExample.m */; };
 		E94ACA151D41763800D56CC2 /* AllYourBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E94ACA141D41763800D56CC2 /* AllYourBaseTest.m */; };
@@ -101,8 +101,8 @@
 		1EFACAA01CCCAF3D006F2E69 /* WordCountExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordCountExample.h; path = "../../exercises/word-count/WordCountExample.h"; sourceTree = "<group>"; };
 		1EFACAA11CCCAF3D006F2E69 /* WordCountExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordCountExample.m; path = "../../exercises/word-count/WordCountExample.m"; sourceTree = "<group>"; };
 		1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordCountTest.m; path = "../../exercises/word-count/WordCountTest.m"; sourceTree = "<group>"; };
-		E907D0C81D6B731600106C42 /* Gigasecond.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Gigasecond.h; path = ../../exercises/gigasecond/Gigasecond.h; sourceTree = "<group>"; };
-		E907D0C91D6B731600106C42 /* Gigasecond.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Gigasecond.m; path = ../../exercises/gigasecond/Gigasecond.m; sourceTree = "<group>"; };
+		E907D0C81D6B731600106C42 /* GigasecondExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GigasecondExample.h; path = ../../exercises/gigasecond/GigasecondExample.h; sourceTree = "<group>"; };
+		E907D0C91D6B731600106C42 /* GigasecondExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GigasecondExample.m; path = ../../exercises/gigasecond/GigasecondExample.m; sourceTree = "<group>"; };
 		E907D0CB1D6B734800106C42 /* GigasecondTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GigasecondTest.m; path = ../../exercises/gigasecond/GigasecondTest.m; sourceTree = "<group>"; };
 		E94ACA111D4175C600D56CC2 /* AllYourBaseExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AllYourBaseExample.h; path = "../../exercises/all-your-base/AllYourBaseExample.h"; sourceTree = "<group>"; };
 		E94ACA121D41760300D56CC2 /* AllYourBaseExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllYourBaseExample.m; path = "../../exercises/all-your-base/AllYourBaseExample.m"; sourceTree = "<group>"; };
@@ -174,8 +174,8 @@
 		E907D0C71D6B72B600106C42 /* Gigasecond */ = {
 			isa = PBXGroup;
 			children = (
-				E907D0C81D6B731600106C42 /* Gigasecond.h */,
-				E907D0C91D6B731600106C42 /* Gigasecond.m */,
+				E907D0C81D6B731600106C42 /* GigasecondExample.h */,
+				E907D0C91D6B731600106C42 /* GigasecondExample.m */,
 				E907D0CB1D6B734800106C42 /* GigasecondTest.m */,
 			);
 			name = Gigasecond;
@@ -446,7 +446,7 @@
 				1EFACAB11CCCAF3D006F2E69 /* NucleotideCountExample.m in Sources */,
 				1EFACAB51CCCAF3D006F2E69 /* PhoneNumberExample.m in Sources */,
 				E951B6B91D429550009EB5B6 /* AllergiesTest.m in Sources */,
-				E907D0CA1D6B731600106C42 /* Gigasecond.m in Sources */,
+				E907D0CA1D6B731600106C42 /* GigasecondExample.m in Sources */,
 				E99D1D811D5533BF0006A303 /* SumOfMultiplesExample.m in Sources */,
 				1EFACAB41CCCAF3D006F2E69 /* PerfectNumbersTest.m in Sources */,
 				E9FDCA191D5407D2004EE8DB /* RomanNumeralsExample.m in Sources */,

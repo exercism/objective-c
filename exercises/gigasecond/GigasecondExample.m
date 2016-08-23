@@ -1,4 +1,4 @@
-#import "Gigasecond.h"
+#import "GigasecondExample.h"
 
 @implementation Gigasecond {
     NSDate *_startDate;
