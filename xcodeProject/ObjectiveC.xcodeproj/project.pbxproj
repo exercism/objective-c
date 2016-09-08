@@ -49,6 +49,8 @@
 		1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */; };
 		E907D0CA1D6B731600106C42 /* GigasecondExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D0C91D6B731600106C42 /* GigasecondExample.m */; };
 		E907D0CC1D6B734800106C42 /* GigasecondTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D0CB1D6B734800106C42 /* GigasecondTest.m */; };
+		E947A4DE1D81FE0F00633720 /* TriangleExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E947A4DD1D81FE0F00633720 /* TriangleExample.m */; };
+		E947A4E01D81FE3A00633720 /* TriangleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E947A4DF1D81FE3A00633720 /* TriangleTest.m */; };
 		E94ACA131D41760300D56CC2 /* AllYourBaseExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E94ACA121D41760300D56CC2 /* AllYourBaseExample.m */; };
 		E94ACA151D41763800D56CC2 /* AllYourBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E94ACA141D41763800D56CC2 /* AllYourBaseTest.m */; };
 		E951B6B71D4294E6009EB5B6 /* AllergiesExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E951B6B61D4294E6009EB5B6 /* AllergiesExample.m */; };
@@ -104,6 +106,9 @@
 		E907D0C81D6B731600106C42 /* GigasecondExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GigasecondExample.h; path = ../../exercises/gigasecond/GigasecondExample.h; sourceTree = "<group>"; };
 		E907D0C91D6B731600106C42 /* GigasecondExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GigasecondExample.m; path = ../../exercises/gigasecond/GigasecondExample.m; sourceTree = "<group>"; };
 		E907D0CB1D6B734800106C42 /* GigasecondTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GigasecondTest.m; path = ../../exercises/gigasecond/GigasecondTest.m; sourceTree = "<group>"; };
+		E947A4DC1D81FE0F00633720 /* TriangleExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TriangleExample.h; path = ../../exercises/triangle/TriangleExample.h; sourceTree = "<group>"; };
+		E947A4DD1D81FE0F00633720 /* TriangleExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TriangleExample.m; path = ../../exercises/triangle/TriangleExample.m; sourceTree = "<group>"; };
+		E947A4DF1D81FE3A00633720 /* TriangleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TriangleTest.m; path = ../../exercises/triangle/TriangleTest.m; sourceTree = "<group>"; };
 		E94ACA111D4175C600D56CC2 /* AllYourBaseExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AllYourBaseExample.h; path = "../../exercises/all-your-base/AllYourBaseExample.h"; sourceTree = "<group>"; };
 		E94ACA121D41760300D56CC2 /* AllYourBaseExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllYourBaseExample.m; path = "../../exercises/all-your-base/AllYourBaseExample.m"; sourceTree = "<group>"; };
 		E94ACA141D41763800D56CC2 /* AllYourBaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllYourBaseTest.m; path = "../../exercises/all-your-base/AllYourBaseTest.m"; sourceTree = "<group>"; };
@@ -149,6 +154,7 @@
 				E9FDCA161D540793004EE8DB /* RomanNumerals */,
 				E9E8B6F61D519E340012F12C /* SpaceAge */,
 				E99D1D7B1D5532C50006A303 /* SumOfMultiples */,
+				E947A4DB1D81FDDA00633720 /* Triangle */,
 				E9E8B6F71D519E3A0012F12C /* WordCount */,
 				1E50BD001CB465C500FC128D /* Info.plist */,
 			);
@@ -179,6 +185,16 @@
 				E907D0CB1D6B734800106C42 /* GigasecondTest.m */,
 			);
 			name = Gigasecond;
+			sourceTree = "<group>";
+		};
+		E947A4DB1D81FDDA00633720 /* Triangle */ = {
+			isa = PBXGroup;
+			children = (
+				E947A4DC1D81FE0F00633720 /* TriangleExample.h */,
+				E947A4DD1D81FE0F00633720 /* TriangleExample.m */,
+				E947A4DF1D81FE3A00633720 /* TriangleTest.m */,
+			);
+			name = Triangle;
 			sourceTree = "<group>";
 		};
 		E99D1D7B1D5532C50006A303 /* SumOfMultiples */ = {
@@ -454,6 +470,7 @@
 				1EFACAB21CCCAF3D006F2E69 /* NucleotideCountTest.m in Sources */,
 				E907D0CC1D6B734800106C42 /* GigasecondTest.m in Sources */,
 				1EFACAA81CCCAF3D006F2E69 /* EtlTest.m in Sources */,
+				E947A4E01D81FE3A00633720 /* TriangleTest.m in Sources */,
 				1EFACAA91CCCAF3D006F2E69 /* GradeSchoolExample.m in Sources */,
 				1EFACABA1CCCAF3D006F2E69 /* SpaceAgeTest.m in Sources */,
 				1EFACAB91CCCAF3D006F2E69 /* SpaceAgeExample.m in Sources */,
@@ -468,6 +485,7 @@
 				1EFACAB31CCCAF3D006F2E69 /* PerfectNumbersExample.m in Sources */,
 				1EFACAB61CCCAF3D006F2E69 /* PhoneNumberTest.m in Sources */,
 				1EFACAB81CCCAF3D006F2E69 /* RobotNameTest.m in Sources */,
+				E947A4DE1D81FE0F00633720 /* TriangleExample.m in Sources */,
 				1EFACAAC1CCCAF3D006F2E69 /* HammingTest.m in Sources */,
 				1EFACAA61CCCAF3D006F2E69 /* BobTest.m in Sources */,
 				1EFACAAF1CCCAF3D006F2E69 /* LeapExample.m in Sources */,
