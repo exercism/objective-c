@@ -49,6 +49,8 @@
 		1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */; };
 		E907D0CA1D6B731600106C42 /* GigasecondExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D0C91D6B731600106C42 /* GigasecondExample.m */; };
 		E907D0CC1D6B734800106C42 /* GigasecondTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D0CB1D6B734800106C42 /* GigasecondTest.m */; };
+		E92FCC0D1D78F30D00061017 /* MeetupExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E92FCC0C1D78F30D00061017 /* MeetupExample.m */; };
+		E92FCC0F1D78F3B600061017 /* MeetupTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E92FCC0E1D78F3B600061017 /* MeetupTest.m */; };
 		E94ACA131D41760300D56CC2 /* AllYourBaseExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E94ACA121D41760300D56CC2 /* AllYourBaseExample.m */; };
 		E94ACA151D41763800D56CC2 /* AllYourBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E94ACA141D41763800D56CC2 /* AllYourBaseTest.m */; };
 		E951B6B71D4294E6009EB5B6 /* AllergiesExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E951B6B61D4294E6009EB5B6 /* AllergiesExample.m */; };
@@ -104,6 +106,9 @@
 		E907D0C81D6B731600106C42 /* GigasecondExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GigasecondExample.h; path = ../../exercises/gigasecond/GigasecondExample.h; sourceTree = "<group>"; };
 		E907D0C91D6B731600106C42 /* GigasecondExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GigasecondExample.m; path = ../../exercises/gigasecond/GigasecondExample.m; sourceTree = "<group>"; };
 		E907D0CB1D6B734800106C42 /* GigasecondTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GigasecondTest.m; path = ../../exercises/gigasecond/GigasecondTest.m; sourceTree = "<group>"; };
+		E92FCC0B1D78F30D00061017 /* MeetupExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeetupExample.h; path = ../../exercises/meetup/MeetupExample.h; sourceTree = "<group>"; };
+		E92FCC0C1D78F30D00061017 /* MeetupExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetupExample.m; path = ../../exercises/meetup/MeetupExample.m; sourceTree = "<group>"; };
+		E92FCC0E1D78F3B600061017 /* MeetupTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetupTest.m; path = ../../exercises/meetup/MeetupTest.m; sourceTree = "<group>"; };
 		E94ACA111D4175C600D56CC2 /* AllYourBaseExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AllYourBaseExample.h; path = "../../exercises/all-your-base/AllYourBaseExample.h"; sourceTree = "<group>"; };
 		E94ACA121D41760300D56CC2 /* AllYourBaseExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllYourBaseExample.m; path = "../../exercises/all-your-base/AllYourBaseExample.m"; sourceTree = "<group>"; };
 		E94ACA141D41763800D56CC2 /* AllYourBaseTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllYourBaseTest.m; path = "../../exercises/all-your-base/AllYourBaseTest.m"; sourceTree = "<group>"; };
@@ -142,6 +147,7 @@
 				E9E8B6EF1D519E040012F12C /* Hamming */,
 				E9E8B6F01D519E0B0012F12C /* HelloWorld */,
 				E9E8B6F11D519E120012F12C /* Leap */,
+				E92FCC0A1D78F2AA00061017 /* Meetup */,
 				E9E8B6F21D519E180012F12C /* NucleotideCount */,
 				E9E8B6F31D519E200012F12C /* PerfectNumbers */,
 				E9E8B6F41D519E270012F12C /* PhoneNumber */,
@@ -179,6 +185,16 @@
 				E907D0CB1D6B734800106C42 /* GigasecondTest.m */,
 			);
 			name = Gigasecond;
+			sourceTree = "<group>";
+		};
+		E92FCC0A1D78F2AA00061017 /* Meetup */ = {
+			isa = PBXGroup;
+			children = (
+				E92FCC0B1D78F30D00061017 /* MeetupExample.h */,
+				E92FCC0C1D78F30D00061017 /* MeetupExample.m */,
+				E92FCC0E1D78F3B600061017 /* MeetupTest.m */,
+			);
+			name = Meetup;
 			sourceTree = "<group>";
 		};
 		E99D1D7B1D5532C50006A303 /* SumOfMultiples */ = {
@@ -448,6 +464,7 @@
 				E951B6B91D429550009EB5B6 /* AllergiesTest.m in Sources */,
 				E907D0CA1D6B731600106C42 /* GigasecondExample.m in Sources */,
 				E99D1D811D5533BF0006A303 /* SumOfMultiplesExample.m in Sources */,
+				E92FCC0F1D78F3B600061017 /* MeetupTest.m in Sources */,
 				1EFACAB41CCCAF3D006F2E69 /* PerfectNumbersTest.m in Sources */,
 				E9FDCA191D5407D2004EE8DB /* RomanNumeralsExample.m in Sources */,
 				1EFACAAE1CCCAF3D006F2E69 /* HelloWorldTest.m in Sources */,
@@ -464,6 +481,7 @@
 				1EFACABB1CCCAF3D006F2E69 /* WordCountExample.m in Sources */,
 				1EFACAB01CCCAF3D006F2E69 /* LeapTest.m in Sources */,
 				1EFACAAB1CCCAF3D006F2E69 /* HammingExample.m in Sources */,
+				E92FCC0D1D78F30D00061017 /* MeetupExample.m in Sources */,
 				1EFACAAD1CCCAF3D006F2E69 /* HelloWorldExample.m in Sources */,
 				1EFACAB31CCCAF3D006F2E69 /* PerfectNumbersExample.m in Sources */,
 				1EFACAB61CCCAF3D006F2E69 /* PhoneNumberTest.m in Sources */,
