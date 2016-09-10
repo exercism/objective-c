@@ -23,8 +23,9 @@ require "json"
 if contents.to_s == '' 
 	contents = "[]"
 end 
-# json = JSON.parse contents
-# violations = json["violation"]
+json = JSON.parse contents
+violations = json["violation"]
+puts violations
 # violations.each do |object|
 #    shortFilePath =  object["path"]
 #    shortFilePath ["/Users/travis/build/exercism/xobjective-c/"] = "/"
@@ -36,7 +37,7 @@ jsonpath2 = "compile_commands.json"
 contents2 = File.read jsonpath2
 json2 = JSON.parse contents2
 
-puts json2
+
 # firstStrinInArray = json2["tests_summary_messages"][0]
 # message(firstStrinInArray)
 
