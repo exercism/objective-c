@@ -30,10 +30,8 @@ violations.each do |object|
    shortFilePath ["/Users/travis/build/exercism/xobjective-c/"] = "/"
    line = object["startLine"]
    message = object["rule"]
-   puts shortFilePath
-   puts line
-   puts message
-   warn(message: message, file: shortFilePath, line: line)
+   warn(message: message, file: shortFilePath, line: line) unless shortFilePath == "/exercises/robot-name/RobotNameTest.m"
+end
 end
 
 # Reports if the test passed
