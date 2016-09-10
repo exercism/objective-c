@@ -23,20 +23,22 @@ require "json"
 if contents.to_s == '' 
 	contents = "[]"
 end 
-json = JSON.parse contents
-violations = json["violation"]
-violations.each do |object|
-   shortFilePath =  object["path"]
-   shortFilePath ["/Users/travis/build/exercism/xobjective-c/"] = "/"
-   warn(message: object["rule"], file: shortFilePath, line: object["startLine"])
-end
+# json = JSON.parse contents
+# violations = json["violation"]
+# violations.each do |object|
+#    shortFilePath =  object["path"]
+#    shortFilePath ["/Users/travis/build/exercism/xobjective-c/"] = "/"
+#    warn(message: object["rule"], file: shortFilePath, line: object["startLine"])
+# end
 
 # Reports if the test passed
 jsonpath2 = "compile_commands.json"
 contents2 = File.read jsonpath2
-#json2 = JSON.parse contents2
-#firstStrinInArray = json2["tests_summary_messages"][0]
-#message(firstStrinInArray)
+json2 = JSON.parse contents2
+
+puts json2
+# firstStrinInArray = json2["tests_summary_messages"][0]
+# message(firstStrinInArray)
 
 
 #.oclint.json
