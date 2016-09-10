@@ -25,12 +25,16 @@ if contents.to_s == ''
 end 
 json = JSON.parse contents
 violations = json["violation"]
-puts violations
-# violations.each do |object|
-#    shortFilePath =  object["path"]
-#    shortFilePath ["/Users/travis/build/exercism/xobjective-c/"] = "/"
-#    warn(message: object["rule"], file: shortFilePath, line: object["startLine"])
-# end
+violations.each do |object|
+   shortFilePath =  object["path"]
+   shortFilePath ["/Users/travis/build/exercism/xobjective-c/"] = "/"
+   line = object["startLine"]
+   message = object["rule"]
+   puts shortFilePath
+   puts line
+   puts message
+   warn(message: message, file: shortFilePath, line: line)
+end
 
 # Reports if the test passed
 jsonpath2 = "compile_commands.json"
