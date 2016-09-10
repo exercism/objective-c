@@ -32,7 +32,6 @@ violations.each do |object|
    message = object["rule"]
    warn(message: message, file: shortFilePath, line: line) unless shortFilePath == "/exercises/robot-name/RobotNameTest.m"
 end
-end
 
 # Reports if the test passed
 jsonpath2 = "compile_commands.json"
