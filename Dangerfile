@@ -27,7 +27,7 @@ json = JSON.parse contents
 violations = json["violation"]
 violations.each do |object|
    shortFilePath =  object["path"]
-   shortFilePath ["/Users/travis/build/exercism/xswift/"] = "/"
+   shortFilePath ["/Users/travis/build/exercism/xobjective-c/"] = "/"
    warn(message: object["rule"], file: shortFilePath, line: object["startLine"])
 end
 
