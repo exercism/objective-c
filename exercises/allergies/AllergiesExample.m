@@ -18,6 +18,7 @@
     return self;
 }
 
+
 - (BOOL)hasAllergy:(Allergen)allergen {
     if ((allergen & self.score) == allergen) {
         return true;

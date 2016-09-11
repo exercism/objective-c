@@ -31,15 +31,16 @@ violations.each do |object|
    shortFile = shortFile.to_s || ''
    message = object["rule"].to_s || ''
    line = object["startLine"] || 1
-   warn(message, file: shortFile, line: line)
+   #only warn for files that were editing in this PR. 
+   if git.modified_files.include? shortFile
+   	warn(message, file: shortFile, line: line)
+   else
+   	message(message, file: shortFile, line: line)
+   end
 end
 
+Reports if the test passed
+contentsLastLine = File.read "lastline.txt"
+message(contentsLastLine)
 
-# Reports if the test passed
-# jsonpath2 = "compile_commands.json"
-# contents2 = File.read jsonpath2
-# json2 = JSON.parse contents2
-# firstStrinInArray = json2["tests_summary_messages"][0]
-# message(firstStrinInArray)
-#.oclint.json
-#compile_commands.json
+puts git.modified_files
