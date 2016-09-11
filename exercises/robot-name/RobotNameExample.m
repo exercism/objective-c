@@ -32,7 +32,9 @@
 }
 
 - (NSArray *)characters {
-  return @[ @"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J", @"K", @"L", @"M", @"N", @"O", @"P", @"Q", @"R", @"S", @"T", @"U", @"V", @"W", @"X", @"Y", @"Z" ];
+  return @[ @"A", @"B", @"C", @"D", @"E", @"F", @"G", @"H", @"I", @"J",
+  @"K", @"L", @"M", @"N", @"O", @"P", @"Q", @"R", @"S", @"T", @"U", @"V",
+  @"W", @"X", @"Y", @"Z" ];
 }
 
 - (NSArray *)digits {
@@ -43,7 +45,7 @@
   long randomValue = random();
   unsigned long randomCharacterIndex = randomValue % [array count];
 
-  return [array objectAtIndex:randomCharacterIndex];
+  return array[randomCharacterIndex];
 }
 
 @end

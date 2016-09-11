@@ -19,7 +19,6 @@ static const double AgeAccuracy = 0.01;
 - (void)testAgeInSeconds {
     SpaceAge *age = [[SpaceAge alloc] initWithSeconds:1000000];
     XCTAssertEqual(1000000, [age seconds]);
-    
 }
 
 - (void)testAgeInEarthYears {
