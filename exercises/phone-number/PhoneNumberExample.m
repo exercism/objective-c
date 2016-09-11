@@ -24,9 +24,9 @@
     return cleanNumber;
   } else if ([cleanNumber length] == 11 && [cleanNumber hasPrefix:@"1"]) {
     return [cleanNumber substringFromIndex:1];
-  } else {
-    return [self defaultInvalidPhoneNumber];
   }
+  return [self defaultInvalidPhoneNumber];
+
 }
 
 - (NSString *)cleanNumber {
