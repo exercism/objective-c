@@ -39,7 +39,7 @@ violations.each do |object|
    end
 end
 
-Reports if the test passed
+#Reports if the test passed
 contentsLastLine = File.read "lastline.txt"
 message(contentsLastLine)
 
