@@ -33,6 +33,7 @@ violations.each do |object|
    line = object["startLine"] || 1
    #only warn for files that were edited in this PR. 
    if git.modified_files.include? shortFile
+   	msg.prepend("/")  # get away from doing inline comments since they are buggy right now
    	warn(msg, file: shortFile, line: line)
    else
    	message(msg, file: shortFile, line: line)
