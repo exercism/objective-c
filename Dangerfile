@@ -26,25 +26,20 @@ end
 json = JSON.parse contents
 violations = json["violation"]
 violations.each do |object|
-   shortFilePath =  object["path"]
-   shortFilePath ["/Users/travis/build/exercism/xobjective-c/"] = "/"
-   line = object["startLine"]
-   message = object["rule"]
-   warn(message: message.to_s, file: shortFilePath.to_s, line: line)
+   shortFile =  object["path"]
+   shortFile.sub! "/Users/travis/build/exercism/xobjective-c/", '/'
+   shortFile = shortFile.to_s || ''
+   message = object["rule"].to_s || ''
+   line = object["startLine"] || 1
+   warn(message, file: shortFile, line: line)
 end
 
+
 # Reports if the test passed
-jsonpath2 = "compile_commands.json"
-contents2 = File.read jsonpath2
-json2 = JSON.parse contents2
-
-
+# jsonpath2 = "compile_commands.json"
+# contents2 = File.read jsonpath2
+# json2 = JSON.parse contents2
 # firstStrinInArray = json2["tests_summary_messages"][0]
 # message(firstStrinInArray)
-
-
 #.oclint.json
 #compile_commands.json
-
-
-

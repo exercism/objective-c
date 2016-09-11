@@ -10,11 +10,11 @@ before_install:
 script:
   - bin/fetch-configlet
   - bin/configlet .
-  - xctool test -project 'xcodeProject/ObjectiveC.xcodeproj' -scheme 'xobjectivecTest' -sdk macosx10.11 -reporter json-compilation-database:compile_commands.json -reporter pretty
+  - xctool test -project 'xcodeProject/ObjectiveC.xcodeproj' -scheme 'xobjectivecTest' -sdk macosx10.11 -reporter json-compilation-database:compile_commands.json -reporte plain:plain-output.txt -reporter pretty
 
 after_success:
   - oclint-json-compilation-database -- -max-priority-1=100000 -max-priority-2=100000 -max-priority-3=100000 -rc LONG_LINE=150 -report-type json -o .oclint.json
   - danger
   - ls -al
   - python -m json.tool .oclint.json
-  - python -m json.tool compile_commands.json  
+  - cat plain-output.txt
