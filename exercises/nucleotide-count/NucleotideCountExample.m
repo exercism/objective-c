@@ -23,7 +23,7 @@
 
 - (NSUInteger)count:(NSString *)nucleotide {
   [self validateNucleotide:nucleotide];
-  return [[[self nucleotideCounts] objectForKey:nucleotide] unsignedIntegerValue];
+  return [self.nucleotideCounts[nucleotide] unsignedIntegerValue];
 }
 
 - (void)validateStrand:(NSString *)strand {
@@ -63,7 +63,7 @@
     }
 
     NSNumber *currentCount = [nucleotideCounts objectForKey:obj];
-    NSNumber *updatedCount = [NSNumber numberWithInt:([currentCount intValue] + 1)];
+    NSNumber *updatedCount = [NSNumber numberWithInt:currentCount.intValue + 1];
     nucleotideCounts[obj] = updatedCount;
 
   }];

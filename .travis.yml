@@ -14,7 +14,7 @@ script:
 
 after_success:
   - tail -3 plain-output.txt >> lastline.txt
-  - oclint-json-compilation-database -- -max-priority-1=100000 -max-priority-2=100000 -max-priority-3=100000 -rc -disable-rule LongLine -report-type json -o .oclint.json
+  - oclint-json-compilation-database -- -max-priority-1=100000 -max-priority-2=100000 -max-priority-3=100000 -rc LONG_LINE=200 -report-type json -o .oclint.json
   - danger
   - ls -al
   - cat lastline.txt

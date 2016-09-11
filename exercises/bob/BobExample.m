@@ -21,9 +21,8 @@
     else if ([input isQuestion]) {
         return  @"Sure.";
     }
-    else {
-        return @"Whatever.";
-    }
+    return @"Whatever.";
+    
 }
 
 @end
