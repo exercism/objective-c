@@ -27,11 +27,11 @@ json = JSON.parse contents
 violations = json["violation"]
 violations.each do |object|
    shortFile =  object["path"]
-   shortFile.sub! "/Users/travis/build/exercism/xobjective-c/", '/'
+   shortFile.sub! "/Users/travis/build/exercism/xobjective-c/", ''
    shortFile = shortFile.to_s || ''
    msg = object["rule"].to_s || ''
    line = object["startLine"] || 1
-   #only warn for files that were editing in this PR. 
+   #only warn for files that were edited in this PR. 
    if git.modified_files.include? shortFile
    	warn(msg, file: shortFile, line: line)
    else
