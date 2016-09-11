@@ -29,13 +29,13 @@ violations.each do |object|
    shortFile =  object["path"]
    shortFile.sub! "/Users/travis/build/exercism/xobjective-c/", '/'
    shortFile = shortFile.to_s || ''
-   message = object["rule"].to_s || ''
+   msg = object["rule"].to_s || ''
    line = object["startLine"] || 1
    #only warn for files that were editing in this PR. 
    if git.modified_files.include? shortFile
-   	warn(message, file: shortFile, line: line)
+   	warn(msg, file: shortFile, line: line)
    else
-   	message(message, file: shortFile, line: line)
+   	message(msg, file: shortFile, line: line)
    end
 end
 
