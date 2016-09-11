@@ -50,6 +50,7 @@
     }
 }
 
+
 - (NSArray<NSString *> *)sortedLettersFor:(NSString *)word {
     NSArray<NSString *> *letters = [self letterArrayFor:[word lowercaseString]];
     
