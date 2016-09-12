@@ -24,7 +24,7 @@
     
     if (!studentsInGrade) {
         studentsInGrade = [NSMutableArray array];
-        [[self db] setObject:studentsInGrade forKey:grade];
+        self.db[grade] = studentsInGrade;
     }
     
     return studentsInGrade;
@@ -34,7 +34,7 @@
     NSMutableDictionary *sortedDB = [NSMutableDictionary dictionary];
     
     [[self allGradesOrdered] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        [sortedDB setObject:[self studentsInGradeOrdered:obj] forKey:obj];
+        sortedDB[obj] = [self studentsInGradeOrdered:obj];
     }];
     
     return sortedDB;
@@ -47,9 +47,9 @@
             return NSOrderedSame;
         } else if (obj1 < obj2) {
             return NSOrderedDescending;
-        } else {
-            return NSOrderedAscending;
         }
+        return NSOrderedAscending;
+        
     }];
 }
 
@@ -63,9 +63,9 @@
             return NSOrderedSame;
         } else if (obj1 < obj2) {
             return NSOrderedDescending;
-        } else {
-            return NSOrderedAscending;
         }
+        return NSOrderedAscending;
+        
     }];
 }
 

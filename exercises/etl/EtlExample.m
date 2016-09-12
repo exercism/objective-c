@@ -10,11 +10,11 @@
     NSMutableDictionary *transformed = [NSMutableDictionary dictionary];
     
     [keys enumerateObjectsUsingBlock:^(id key, NSUInteger keyIdx, BOOL *keyStop) {
-        NSArray *values = [original objectForKey:key];
+        NSArray *values = original[key];
         
         [values enumerateObjectsUsingBlock:^(id value, NSUInteger valueIdx, BOOL *valueStop) {
             NSString *lowercasedString = [value lowercaseString];
-            [transformed setObject:key forKey:lowercasedString];
+            transformed[lowercasedString] = key;
         }];
     }];
     

@@ -45,10 +45,11 @@
 - (BOOL)isString:(NSString *)string equalToString:(NSString *)other ignoreCase:(BOOL)ignoreCase {
     if (ignoreCase) {
         return [[string lowercaseString] isEqualToString:[other lowercaseString]];
-    } else {
-        return [string isEqualToString:other];
     }
+    return [string isEqualToString:other];
+
 }
+
 
 - (NSArray<NSString *> *)sortedLettersFor:(NSString *)word {
     NSArray<NSString *> *letters = [self letterArrayFor:[word lowercaseString]];
@@ -58,9 +59,9 @@
             return (NSComparisonResult)NSOrderedAscending;
         } else if (first < second) {
             return (NSComparisonResult)NSOrderedDescending;
-        } else {
-            return (NSComparisonResult)NSOrderedSame;
         }
+        return (NSComparisonResult)NSOrderedSame;
+
     }];
     
     return sortedLetters;

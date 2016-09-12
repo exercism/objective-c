@@ -23,7 +23,7 @@
 
 - (NSUInteger)count:(NSString *)nucleotide {
   [self validateNucleotide:nucleotide];
-  return [[[self nucleotideCounts] objectForKey:nucleotide] unsignedIntegerValue];
+  return [self.nucleotideCounts[nucleotide] unsignedIntegerValue];
 }
 
 - (void)validateStrand:(NSString *)strand {
@@ -59,12 +59,12 @@
   [nucleotides enumerateObjectsUsingBlock:^(id obj, NSUInteger index, BOOL *stop) {
 
     if ( ! [nucleotideCounts objectForKey:obj]) {
-      [nucleotideCounts setObject:@0 forKey:obj];
+      nucleotideCounts[obj] = @0;
     }
 
     NSNumber *currentCount = [nucleotideCounts objectForKey:obj];
-    NSNumber *updatedCount = [NSNumber numberWithInt:([currentCount intValue] + 1)];
-    [nucleotideCounts setObject:updatedCount forKey:obj];
+    NSNumber *updatedCount = [NSNumber numberWithInt:currentCount.intValue + 1];
+    nucleotideCounts[obj] = updatedCount;
 
   }];
 
@@ -78,10 +78,10 @@
 - (NSMutableDictionary *)baselineNucleotideCounts {
   NSMutableDictionary *nucleotideCounts = [NSMutableDictionary dictionary];
 
-  [nucleotideCounts setObject:@0 forKey:@"A"];
-  [nucleotideCounts setObject:@0 forKey:@"T"];
-  [nucleotideCounts setObject:@0 forKey:@"C"];
-  [nucleotideCounts setObject:@0 forKey:@"G"];
+  nucleotideCounts[@"A"] = @0;
+  nucleotideCounts[@"T"] = @0;
+  nucleotideCounts[@"C"] = @0;
+  nucleotideCounts[@"G"] = @0;
 
   return nucleotideCounts;
 }

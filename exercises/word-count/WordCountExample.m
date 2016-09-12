@@ -32,7 +32,7 @@
         
         if (![(NSString *) obj isEqual: @""] ) {
             
-            [countDictionary setObject:[NSNumber numberWithInt:((int)[count integerValue] + 1)] forKey:obj];
+            countDictionary[obj] = [NSNumber numberWithInt: count.intValue + 1];
         }
     }];
     

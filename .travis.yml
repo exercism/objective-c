@@ -3,14 +3,19 @@ osx_image: xcode7.3
 xcode_project: 'xcodeProject/ObjectiveC.xcodeproj'
 xcode_scheme: 'xobjectivecTest'
 before_install:
+  - gem install danger
   - brew cask uninstall oclint
   - brew tap oclint/formulae
   - brew install oclint
 script:
   - bin/fetch-configlet
   - bin/configlet .
-  - xctool test -project 'xcodeProject/ObjectiveC.xcodeproj' -scheme 'xobjectivecTest' -sdk macosx10.11 -reporter json-compilation-database:compile_commands.json -reporter pretty
+  - xctool test -project 'xcodeProject/ObjectiveC.xcodeproj' -scheme 'xobjectivecTest' -sdk macosx10.11 -reporter json-compilation-database:compile_commands.json -reporter plain:plain-output.txt -reporter pretty
+
 after_success:
-  - oclint-json-compilation-database -- -max-priority-1=100000 -max-priority-2=100000 -max-priority-3=100000 -rc LONG_LINE=150 -report-type json -o .oclint.json
+  - tail -3 plain-output.txt >> lastline.txt
+  - oclint-json-compilation-database -- -rc LONG_LINE=200 -disable-rule UselessParentheses -disable-rule ConstantConditionalOperator -disable-rule DoubleNegative -disable-rule MultipleUnaryOperator -max-priority-1=100000 -max-priority-2=100000 -max-priority-3=100000 -report-type json -o .oclint.json
+  - danger
   - ls -al
+  - cat lastline.txt
   - python -m json.tool .oclint.json
