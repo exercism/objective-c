@@ -49,6 +49,8 @@
 		1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */; };
 		E907D0CA1D6B731600106C42 /* GigasecondExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D0C91D6B731600106C42 /* GigasecondExample.m */; };
 		E907D0CC1D6B734800106C42 /* GigasecondTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D0CB1D6B734800106C42 /* GigasecondTest.m */; };
+		E92FCC0D1D78F30D00061017 /* MeetupExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E92FCC0C1D78F30D00061017 /* MeetupExample.m */; };
+		E92FCC0F1D78F3B600061017 /* MeetupTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E92FCC0E1D78F3B600061017 /* MeetupTest.m */; };
 		E947A4DE1D81FE0F00633720 /* TriangleExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E947A4DD1D81FE0F00633720 /* TriangleExample.m */; };
 		E947A4E01D81FE3A00633720 /* TriangleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E947A4DF1D81FE3A00633720 /* TriangleTest.m */; };
 		E94ACA131D41760300D56CC2 /* AllYourBaseExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E94ACA121D41760300D56CC2 /* AllYourBaseExample.m */; };
@@ -106,6 +108,9 @@
 		E907D0C81D6B731600106C42 /* GigasecondExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GigasecondExample.h; path = ../../exercises/gigasecond/GigasecondExample.h; sourceTree = "<group>"; };
 		E907D0C91D6B731600106C42 /* GigasecondExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GigasecondExample.m; path = ../../exercises/gigasecond/GigasecondExample.m; sourceTree = "<group>"; };
 		E907D0CB1D6B734800106C42 /* GigasecondTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GigasecondTest.m; path = ../../exercises/gigasecond/GigasecondTest.m; sourceTree = "<group>"; };
+		E92FCC0B1D78F30D00061017 /* MeetupExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeetupExample.h; path = ../../exercises/meetup/MeetupExample.h; sourceTree = "<group>"; };
+		E92FCC0C1D78F30D00061017 /* MeetupExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetupExample.m; path = ../../exercises/meetup/MeetupExample.m; sourceTree = "<group>"; };
+		E92FCC0E1D78F3B600061017 /* MeetupTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetupTest.m; path = ../../exercises/meetup/MeetupTest.m; sourceTree = "<group>"; };
 		E947A4DC1D81FE0F00633720 /* TriangleExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TriangleExample.h; path = ../../exercises/triangle/TriangleExample.h; sourceTree = "<group>"; };
 		E947A4DD1D81FE0F00633720 /* TriangleExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TriangleExample.m; path = ../../exercises/triangle/TriangleExample.m; sourceTree = "<group>"; };
 		E947A4DF1D81FE3A00633720 /* TriangleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TriangleTest.m; path = ../../exercises/triangle/TriangleTest.m; sourceTree = "<group>"; };
@@ -188,6 +193,16 @@
 			name = Gigasecond;
 			sourceTree = "<group>";
 		};
+        E92FCC0A1D78F2AA00061017 /* Meetup */ = {
+            isa = PBXGroup;
+            children = (
+                E92FCC0B1D78F30D00061017 /* MeetupExample.h */,
+                E92FCC0C1D78F30D00061017 /* MeetupExample.m */,
+                E92FCC0E1D78F3B600061017 /* MeetupTest.m */,
+            );
+            name = Meetup;
+            sourceTree = "<group>";
+        };
 		E947A4DB1D81FDDA00633720 /* Triangle */ = {
 			isa = PBXGroup;
 			children = (
