@@ -125,7 +125,7 @@
 		E99D1D821D5533D80006A303 /* SumOfMultiplesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SumOfMultiplesTest.m; path = "../../exercises/sum-of-multiples/SumOfMultiplesTest.m"; sourceTree = "<group>"; };
 		E9FDCA171D5407D2004EE8DB /* RomanNumeralsExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RomanNumeralsExample.h; path = "../../exercises/roman-numerals/RomanNumeralsExample.h"; sourceTree = "<group>"; };
 		E9FDCA181D5407D2004EE8DB /* RomanNumeralsExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RomanNumeralsExample.m; path = "../../exercises/roman-numerals/RomanNumeralsExample.m"; sourceTree = "<group>"; };
-		E9FDCA1A1D540801004EE8DB /* RomanNumeralsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RomanNumeralsTest.m; sourceTree = "<group>"; };
+		E9FDCA1A1D540801004EE8DB /* RomanNumeralsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RomanNumeralsTest.m; path = "../../exercises/roman-numerals/RomanNumeralsTest.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,16 +193,16 @@
 			name = Gigasecond;
 			sourceTree = "<group>";
 		};
-    E92FCC0A1D78F2AA00061017 /* Meetup */ = {
-        isa = PBXGroup;
-        children = (
-            E92FCC0B1D78F30D00061017 /* MeetupExample.h */,
-            E92FCC0C1D78F30D00061017 /* MeetupExample.m */,
-            E92FCC0E1D78F3B600061017 /* MeetupTest.m */,
-        );
-        name = Meetup;
-        sourceTree = "<group>";
-    };
+		E92FCC0A1D78F2AA00061017 /* Meetup */ = {
+			isa = PBXGroup;
+			children = (
+				E92FCC0B1D78F30D00061017 /* MeetupExample.h */,
+				E92FCC0C1D78F30D00061017 /* MeetupExample.m */,
+				E92FCC0E1D78F3B600061017 /* MeetupTest.m */,
+			);
+			name = Meetup;
+			sourceTree = "<group>";
+		};
 		E947A4DB1D81FDDA00633720 /* Triangle */ = {
 			isa = PBXGroup;
 			children = (
