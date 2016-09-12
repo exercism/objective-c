@@ -1,6 +1,6 @@
 #import <XCTest/XCTest.h>
 
-#if __has_include("RobotNameExample.h")
+#if __has_include("RomanNumeralsExample.h")
 # import "RomanNumeralsExample.h"
 # else
 # import "RomanNumerals.h"
