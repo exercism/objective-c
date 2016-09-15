@@ -49,6 +49,8 @@
 		1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */; };
 		E907D0CA1D6B731600106C42 /* GigasecondExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D0C91D6B731600106C42 /* GigasecondExample.m */; };
 		E907D0CC1D6B734800106C42 /* GigasecondTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D0CB1D6B734800106C42 /* GigasecondTest.m */; };
+		E907FE921D87547D00B93DA9 /* ScrabbleScoreExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E907FE911D87547D00B93DA9 /* ScrabbleScoreExample.m */; };
+		E907FE941D87554500B93DA9 /* ScrabbleScoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E907FE931D87554500B93DA9 /* ScrabbleScoreTest.m */; };
 		E92FCC0D1D78F30D00061017 /* MeetupExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E92FCC0C1D78F30D00061017 /* MeetupExample.m */; };
 		E92FCC0F1D78F3B600061017 /* MeetupTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E92FCC0E1D78F3B600061017 /* MeetupTest.m */; };
 		E947A4DE1D81FE0F00633720 /* TriangleExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E947A4DD1D81FE0F00633720 /* TriangleExample.m */; };
@@ -108,6 +110,9 @@
 		E907D0C81D6B731600106C42 /* GigasecondExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GigasecondExample.h; path = ../../exercises/gigasecond/GigasecondExample.h; sourceTree = "<group>"; };
 		E907D0C91D6B731600106C42 /* GigasecondExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GigasecondExample.m; path = ../../exercises/gigasecond/GigasecondExample.m; sourceTree = "<group>"; };
 		E907D0CB1D6B734800106C42 /* GigasecondTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GigasecondTest.m; path = ../../exercises/gigasecond/GigasecondTest.m; sourceTree = "<group>"; };
+		E907FE901D87547D00B93DA9 /* ScrabbleScoreExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrabbleScoreExample.h; path = "../../exercises/scrabble-score/ScrabbleScoreExample.h"; sourceTree = "<group>"; };
+		E907FE911D87547D00B93DA9 /* ScrabbleScoreExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScrabbleScoreExample.m; path = "../../exercises/scrabble-score/ScrabbleScoreExample.m"; sourceTree = "<group>"; };
+		E907FE931D87554500B93DA9 /* ScrabbleScoreTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScrabbleScoreTest.m; path = "../../exercises/scrabble-score/ScrabbleScoreTest.m"; sourceTree = "<group>"; };
 		E92FCC0B1D78F30D00061017 /* MeetupExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeetupExample.h; path = ../../exercises/meetup/MeetupExample.h; sourceTree = "<group>"; };
 		E92FCC0C1D78F30D00061017 /* MeetupExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetupExample.m; path = ../../exercises/meetup/MeetupExample.m; sourceTree = "<group>"; };
 		E92FCC0E1D78F3B600061017 /* MeetupTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetupTest.m; path = ../../exercises/meetup/MeetupTest.m; sourceTree = "<group>"; };
@@ -158,6 +163,7 @@
 				E9E8B6F41D519E270012F12C /* PhoneNumber */,
 				E9E8B6F51D519E2E0012F12C /* RobotName */,
 				E9FDCA161D540793004EE8DB /* RomanNumerals */,
+				E907FE8F1D87545300B93DA9 /* ScrabbleScore */,
 				E9E8B6F61D519E340012F12C /* SpaceAge */,
 				E99D1D7B1D5532C50006A303 /* SumOfMultiples */,
 				E947A4DB1D81FDDA00633720 /* Triangle */,
@@ -191,6 +197,16 @@
 				E907D0CB1D6B734800106C42 /* GigasecondTest.m */,
 			);
 			name = Gigasecond;
+			sourceTree = "<group>";
+		};
+		E907FE8F1D87545300B93DA9 /* ScrabbleScore */ = {
+			isa = PBXGroup;
+			children = (
+				E907FE901D87547D00B93DA9 /* ScrabbleScoreExample.h */,
+				E907FE911D87547D00B93DA9 /* ScrabbleScoreExample.m */,
+				E907FE931D87554500B93DA9 /* ScrabbleScoreTest.m */,
+			);
+			name = ScrabbleScore;
 			sourceTree = "<group>";
 		};
 		E92FCC0A1D78F2AA00061017 /* Meetup */ = {
@@ -474,8 +490,10 @@
 				E94ACA131D41760300D56CC2 /* AllYourBaseExample.m in Sources */,
 				E94ACA151D41763800D56CC2 /* AllYourBaseTest.m in Sources */,
 				1EFACAA41CCCAF3D006F2E69 /* AnagramTest.m in Sources */,
+				E907FE921D87547D00B93DA9 /* ScrabbleScoreExample.m in Sources */,
 				1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */,
 				1EFACAB11CCCAF3D006F2E69 /* NucleotideCountExample.m in Sources */,
+				E907FE941D87554500B93DA9 /* ScrabbleScoreTest.m in Sources */,
 				1EFACAB51CCCAF3D006F2E69 /* PhoneNumberExample.m in Sources */,
 				E951B6B91D429550009EB5B6 /* AllergiesTest.m in Sources */,
 				E907D0CA1D6B731600106C42 /* GigasecondExample.m in Sources */,
