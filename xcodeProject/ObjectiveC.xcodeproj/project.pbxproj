@@ -55,6 +55,8 @@
 		E92FCC0F1D78F3B600061017 /* MeetupTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E92FCC0E1D78F3B600061017 /* MeetupTest.m */; };
 		E9381D461D8EDFFA003F22A1 /* DifferenceOfSquaresExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9381D451D8EDFFA003F22A1 /* DifferenceOfSquaresExample.m */; };
 		E9381D481D8EE00C003F22A1 /* DifferenceOfSquaresTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9381D471D8EE00C003F22A1 /* DifferenceOfSquaresTest.m */; };
+		E9381D4C1D8F2969003F22A1 /* RaindropsExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9381D4B1D8F2969003F22A1 /* RaindropsExample.m */; };
+		E9381D4E1D8F2982003F22A1 /* RaindropsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9381D4D1D8F2982003F22A1 /* RaindropsTest.m */; };
 		E947A4DE1D81FE0F00633720 /* TriangleExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E947A4DD1D81FE0F00633720 /* TriangleExample.m */; };
 		E947A4E01D81FE3A00633720 /* TriangleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E947A4DF1D81FE3A00633720 /* TriangleTest.m */; };
 		E94ACA131D41760300D56CC2 /* AllYourBaseExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E94ACA121D41760300D56CC2 /* AllYourBaseExample.m */; };
@@ -121,6 +123,9 @@
 		E9381D441D8EDFFA003F22A1 /* DifferenceOfSquaresExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DifferenceOfSquaresExample.h; path = "../../exercises/difference-of-squares/DifferenceOfSquaresExample.h"; sourceTree = "<group>"; };
 		E9381D451D8EDFFA003F22A1 /* DifferenceOfSquaresExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DifferenceOfSquaresExample.m; path = "../../exercises/difference-of-squares/DifferenceOfSquaresExample.m"; sourceTree = "<group>"; };
 		E9381D471D8EE00C003F22A1 /* DifferenceOfSquaresTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DifferenceOfSquaresTest.m; path = "../../exercises/difference-of-squares/DifferenceOfSquaresTest.m"; sourceTree = "<group>"; };
+		E9381D4A1D8F2969003F22A1 /* RaindropsExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RaindropsExample.h; path = ../../exercises/raindrops/RaindropsExample.h; sourceTree = "<group>"; };
+		E9381D4B1D8F2969003F22A1 /* RaindropsExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RaindropsExample.m; path = ../../exercises/raindrops/RaindropsExample.m; sourceTree = "<group>"; };
+		E9381D4D1D8F2982003F22A1 /* RaindropsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RaindropsTest.m; path = ../../exercises/raindrops/RaindropsTest.m; sourceTree = "<group>"; };
 		E947A4DC1D81FE0F00633720 /* TriangleExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TriangleExample.h; path = ../../exercises/triangle/TriangleExample.h; sourceTree = "<group>"; };
 		E947A4DD1D81FE0F00633720 /* TriangleExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TriangleExample.m; path = ../../exercises/triangle/TriangleExample.m; sourceTree = "<group>"; };
 		E947A4DF1D81FE3A00633720 /* TriangleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TriangleTest.m; path = ../../exercises/triangle/TriangleTest.m; sourceTree = "<group>"; };
@@ -167,6 +172,7 @@
 				E9E8B6F21D519E180012F12C /* NucleotideCount */,
 				E9E8B6F31D519E200012F12C /* PerfectNumbers */,
 				E9E8B6F41D519E270012F12C /* PhoneNumber */,
+				E9381D491D8F293C003F22A1 /* Raindrops */,
 				E9E8B6F51D519E2E0012F12C /* RobotName */,
 				E9FDCA161D540793004EE8DB /* RomanNumerals */,
 				E907FE8F1D87545300B93DA9 /* ScrabbleScore */,
@@ -233,6 +239,16 @@
 				E9381D471D8EE00C003F22A1 /* DifferenceOfSquaresTest.m */,
 			);
 			name = DifferenceOfSquares;
+			sourceTree = "<group>";
+		};
+		E9381D491D8F293C003F22A1 /* Raindrops */ = {
+			isa = PBXGroup;
+			children = (
+				E9381D4A1D8F2969003F22A1 /* RaindropsExample.h */,
+				E9381D4B1D8F2969003F22A1 /* RaindropsExample.m */,
+				E9381D4D1D8F2982003F22A1 /* RaindropsTest.m */,
+			);
+			name = Raindrops;
 			sourceTree = "<group>";
 		};
 		E947A4DB1D81FDDA00633720 /* Triangle */ = {
@@ -517,6 +533,7 @@
 				E907D0CA1D6B731600106C42 /* GigasecondExample.m in Sources */,
 				E99D1D811D5533BF0006A303 /* SumOfMultiplesExample.m in Sources */,
 				E92FCC0F1D78F3B600061017 /* MeetupTest.m in Sources */,
+				E9381D4E1D8F2982003F22A1 /* RaindropsTest.m in Sources */,
 				1EFACAB41CCCAF3D006F2E69 /* PerfectNumbersTest.m in Sources */,
 				E9FDCA191D5407D2004EE8DB /* RomanNumeralsExample.m in Sources */,
 				1EFACAAE1CCCAF3D006F2E69 /* HelloWorldTest.m in Sources */,
@@ -535,6 +552,7 @@
 				1EFACAB01CCCAF3D006F2E69 /* LeapTest.m in Sources */,
 				1EFACAAB1CCCAF3D006F2E69 /* HammingExample.m in Sources */,
 				E92FCC0D1D78F30D00061017 /* MeetupExample.m in Sources */,
+				E9381D4C1D8F2969003F22A1 /* RaindropsExample.m in Sources */,
 				1EFACAAD1CCCAF3D006F2E69 /* HelloWorldExample.m in Sources */,
 				1EFACAB31CCCAF3D006F2E69 /* PerfectNumbersExample.m in Sources */,
 				1EFACAB61CCCAF3D006F2E69 /* PhoneNumberTest.m in Sources */,
