@@ -70,4 +70,8 @@
     return [[self description] isEqualToString:[clock description]];
 }
 
+-(NSUInteger)hash {
+    return [[self description] hash];
+}
+
 @end
