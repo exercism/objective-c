@@ -67,6 +67,8 @@
 		E951B6B91D429550009EB5B6 /* AllergiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E951B6B81D429550009EB5B6 /* AllergiesTest.m */; };
 		E99D1D811D5533BF0006A303 /* SumOfMultiplesExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E99D1D801D5533BF0006A303 /* SumOfMultiplesExample.m */; };
 		E99D1D831D5533D80006A303 /* SumOfMultiplesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E99D1D821D5533D80006A303 /* SumOfMultiplesTest.m */; };
+		E9C1C0231D9D993E0015E86E /* SecretHandshakeExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1C0221D9D993E0015E86E /* SecretHandshakeExample.m */; };
+		E9C1C0251D9D99620015E86E /* SecretHandshakeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1C0241D9D99620015E86E /* SecretHandshakeTest.m */; };
 		E9FDCA191D5407D2004EE8DB /* RomanNumeralsExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FDCA181D5407D2004EE8DB /* RomanNumeralsExample.m */; };
 		E9FDCA1B1D540801004EE8DB /* RomanNumeralsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FDCA1A1D540801004EE8DB /* RomanNumeralsTest.m */; };
 /* End PBXBuildFile section */
@@ -143,6 +145,9 @@
 		E99D1D7F1D5533BF0006A303 /* SumOfMultiplesExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SumOfMultiplesExample.h; path = "../../exercises/sum-of-multiples/SumOfMultiplesExample.h"; sourceTree = "<group>"; };
 		E99D1D801D5533BF0006A303 /* SumOfMultiplesExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SumOfMultiplesExample.m; path = "../../exercises/sum-of-multiples/SumOfMultiplesExample.m"; sourceTree = "<group>"; };
 		E99D1D821D5533D80006A303 /* SumOfMultiplesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SumOfMultiplesTest.m; path = "../../exercises/sum-of-multiples/SumOfMultiplesTest.m"; sourceTree = "<group>"; };
+		E9C1C0211D9D993E0015E86E /* SecretHandshakeExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecretHandshakeExample.h; path = "../../exercises/secret-handshake/SecretHandshakeExample.h"; sourceTree = "<group>"; };
+		E9C1C0221D9D993E0015E86E /* SecretHandshakeExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecretHandshakeExample.m; path = "../../exercises/secret-handshake/SecretHandshakeExample.m"; sourceTree = "<group>"; };
+		E9C1C0241D9D99620015E86E /* SecretHandshakeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecretHandshakeTest.m; path = "../../exercises/secret-handshake/SecretHandshakeTest.m"; sourceTree = "<group>"; };
 		E9FDCA171D5407D2004EE8DB /* RomanNumeralsExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RomanNumeralsExample.h; path = "../../exercises/roman-numerals/RomanNumeralsExample.h"; sourceTree = "<group>"; };
 		E9FDCA181D5407D2004EE8DB /* RomanNumeralsExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RomanNumeralsExample.m; path = "../../exercises/roman-numerals/RomanNumeralsExample.m"; sourceTree = "<group>"; };
 		E9FDCA1A1D540801004EE8DB /* RomanNumeralsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RomanNumeralsTest.m; path = "../../exercises/roman-numerals/RomanNumeralsTest.m"; sourceTree = "<group>"; };
@@ -182,6 +187,7 @@
 				E9E8B6F51D519E2E0012F12C /* RobotName */,
 				E9FDCA161D540793004EE8DB /* RomanNumerals */,
 				E907FE8F1D87545300B93DA9 /* ScrabbleScore */,
+				E9C1C0201D9D98B80015E86E /* SecretHandshake */,
 				E9E8B6F61D519E340012F12C /* SpaceAge */,
 				E99D1D7B1D5532C50006A303 /* SumOfMultiples */,
 				E947A4DB1D81FDDA00633720 /* Triangle */,
@@ -285,6 +291,16 @@
 				E99D1D821D5533D80006A303 /* SumOfMultiplesTest.m */,
 			);
 			name = SumOfMultiples;
+			sourceTree = "<group>";
+		};
+		E9C1C0201D9D98B80015E86E /* SecretHandshake */ = {
+			isa = PBXGroup;
+			children = (
+				E9C1C0211D9D993E0015E86E /* SecretHandshakeExample.h */,
+				E9C1C0221D9D993E0015E86E /* SecretHandshakeExample.m */,
+				E9C1C0241D9D99620015E86E /* SecretHandshakeTest.m */,
+			);
+			name = SecretHandshake;
 			sourceTree = "<group>";
 		};
 		E9E8B6E91D519DDB0012F12C /* Allergies */ = {
@@ -564,6 +580,7 @@
 				1EFACAB91CCCAF3D006F2E69 /* SpaceAgeExample.m in Sources */,
 				E951B6B71D4294E6009EB5B6 /* AllergiesExample.m in Sources */,
 				E9FDCA1B1D540801004EE8DB /* RomanNumeralsTest.m in Sources */,
+				E9C1C0231D9D993E0015E86E /* SecretHandshakeExample.m in Sources */,
 				1EFACAB71CCCAF3D006F2E69 /* RobotNameExample.m in Sources */,
 				1EFACAA51CCCAF3D006F2E69 /* BobExample.m in Sources */,
 				1EFACABB1CCCAF3D006F2E69 /* WordCountExample.m in Sources */,
@@ -579,6 +596,7 @@
 				1EFACAAC1CCCAF3D006F2E69 /* HammingTest.m in Sources */,
 				1EFACAA61CCCAF3D006F2E69 /* BobTest.m in Sources */,
 				1EFACAAF1CCCAF3D006F2E69 /* LeapExample.m in Sources */,
+				E9C1C0251D9D99620015E86E /* SecretHandshakeTest.m in Sources */,
 				E99D1D831D5533D80006A303 /* SumOfMultiplesTest.m in Sources */,
 				1EFACAAA1CCCAF3D006F2E69 /* GradeSchoolTest.m in Sources */,
 			);
