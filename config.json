@@ -30,6 +30,7 @@
     ,"clock"
     ,"secret-handshake"
     ,"acronym"
+    ,"run-length-encoding"
   ],
   "deprecated": [
 

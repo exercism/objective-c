@@ -71,6 +71,8 @@
 		E9C1C0251D9D99620015E86E /* SecretHandshakeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1C0241D9D99620015E86E /* SecretHandshakeTest.m */; };
 		E9C1C0291D9DB16B0015E86E /* AcronymExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1C0281D9DB16B0015E86E /* AcronymExample.m */; };
 		E9C1C02B1D9DB1830015E86E /* AcronymTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1C02A1D9DB1830015E86E /* AcronymTest.m */; };
+		E9C1C02F1D9EC1130015E86E /* RunLengthEncodingExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1C02E1D9EC1130015E86E /* RunLengthEncodingExample.m */; };
+		E9C1C0311D9EC1270015E86E /* RunLengthEncodingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1C0301D9EC1270015E86E /* RunLengthEncodingTest.m */; };
 		E9FDCA191D5407D2004EE8DB /* RomanNumeralsExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FDCA181D5407D2004EE8DB /* RomanNumeralsExample.m */; };
 		E9FDCA1B1D540801004EE8DB /* RomanNumeralsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FDCA1A1D540801004EE8DB /* RomanNumeralsTest.m */; };
 /* End PBXBuildFile section */
@@ -153,6 +155,9 @@
 		E9C1C0271D9DB16B0015E86E /* AcronymExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AcronymExample.h; path = ../../exercises/acronym/AcronymExample.h; sourceTree = "<group>"; };
 		E9C1C0281D9DB16B0015E86E /* AcronymExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AcronymExample.m; path = ../../exercises/acronym/AcronymExample.m; sourceTree = "<group>"; };
 		E9C1C02A1D9DB1830015E86E /* AcronymTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AcronymTest.m; path = ../../exercises/acronym/AcronymTest.m; sourceTree = "<group>"; };
+		E9C1C02D1D9EC1130015E86E /* RunLengthEncodingExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RunLengthEncodingExample.h; path = "../../exercises/run-length-encoding/RunLengthEncodingExample.h"; sourceTree = "<group>"; };
+		E9C1C02E1D9EC1130015E86E /* RunLengthEncodingExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RunLengthEncodingExample.m; path = "../../exercises/run-length-encoding/RunLengthEncodingExample.m"; sourceTree = "<group>"; };
+		E9C1C0301D9EC1270015E86E /* RunLengthEncodingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RunLengthEncodingTest.m; path = "../../exercises/run-length-encoding/RunLengthEncodingTest.m"; sourceTree = "<group>"; };
 		E9FDCA171D5407D2004EE8DB /* RomanNumeralsExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RomanNumeralsExample.h; path = "../../exercises/roman-numerals/RomanNumeralsExample.h"; sourceTree = "<group>"; };
 		E9FDCA181D5407D2004EE8DB /* RomanNumeralsExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RomanNumeralsExample.m; path = "../../exercises/roman-numerals/RomanNumeralsExample.m"; sourceTree = "<group>"; };
 		E9FDCA1A1D540801004EE8DB /* RomanNumeralsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RomanNumeralsTest.m; path = "../../exercises/roman-numerals/RomanNumeralsTest.m"; sourceTree = "<group>"; };
@@ -192,6 +197,7 @@
 				E9381D491D8F293C003F22A1 /* Raindrops */,
 				E9E8B6F51D519E2E0012F12C /* RobotName */,
 				E9FDCA161D540793004EE8DB /* RomanNumerals */,
+				E9C1C02C1D9EC0E50015E86E /* RunLengthEncoding */,
 				E907FE8F1D87545300B93DA9 /* ScrabbleScore */,
 				E9C1C0201D9D98B80015E86E /* SecretHandshake */,
 				E9E8B6F61D519E340012F12C /* SpaceAge */,
@@ -317,6 +323,16 @@
 				E9C1C02A1D9DB1830015E86E /* AcronymTest.m */,
 			);
 			name = Acronym;
+			sourceTree = "<group>";
+		};
+		E9C1C02C1D9EC0E50015E86E /* RunLengthEncoding */ = {
+			isa = PBXGroup;
+			children = (
+				E9C1C02D1D9EC1130015E86E /* RunLengthEncodingExample.h */,
+				E9C1C02E1D9EC1130015E86E /* RunLengthEncodingExample.m */,
+				E9C1C0301D9EC1270015E86E /* RunLengthEncodingTest.m */,
+			);
+			name = RunLengthEncoding;
 			sourceTree = "<group>";
 		};
 		E9E8B6E91D519DDB0012F12C /* Allergies */ = {
@@ -582,6 +598,7 @@
 				E907D0CA1D6B731600106C42 /* GigasecondExample.m in Sources */,
 				E9381D521D8F2DCC003F22A1 /* ClockExample.m in Sources */,
 				E99D1D811D5533BF0006A303 /* SumOfMultiplesExample.m in Sources */,
+				E9C1C02F1D9EC1130015E86E /* RunLengthEncodingExample.m in Sources */,
 				E92FCC0F1D78F3B600061017 /* MeetupTest.m in Sources */,
 				E9381D4E1D8F2982003F22A1 /* RaindropsTest.m in Sources */,
 				E9381D541D8F2DE1003F22A1 /* ClockTest.m in Sources */,
@@ -590,6 +607,7 @@
 				1EFACAAE1CCCAF3D006F2E69 /* HelloWorldTest.m in Sources */,
 				1EFACAB21CCCAF3D006F2E69 /* NucleotideCountTest.m in Sources */,
 				E907D0CC1D6B734800106C42 /* GigasecondTest.m in Sources */,
+				E9C1C0311D9EC1270015E86E /* RunLengthEncodingTest.m in Sources */,
 				1EFACAA81CCCAF3D006F2E69 /* EtlTest.m in Sources */,
 				E947A4E01D81FE3A00633720 /* TriangleTest.m in Sources */,
 				1EFACAA91CCCAF3D006F2E69 /* GradeSchoolExample.m in Sources */,
