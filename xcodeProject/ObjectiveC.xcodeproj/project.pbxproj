@@ -67,6 +67,12 @@
 		E951B6B91D429550009EB5B6 /* AllergiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E951B6B81D429550009EB5B6 /* AllergiesTest.m */; };
 		E99D1D811D5533BF0006A303 /* SumOfMultiplesExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E99D1D801D5533BF0006A303 /* SumOfMultiplesExample.m */; };
 		E99D1D831D5533D80006A303 /* SumOfMultiplesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E99D1D821D5533D80006A303 /* SumOfMultiplesTest.m */; };
+		E9C1C0231D9D993E0015E86E /* SecretHandshakeExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1C0221D9D993E0015E86E /* SecretHandshakeExample.m */; };
+		E9C1C0251D9D99620015E86E /* SecretHandshakeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1C0241D9D99620015E86E /* SecretHandshakeTest.m */; };
+		E9C1C0291D9DB16B0015E86E /* AcronymExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1C0281D9DB16B0015E86E /* AcronymExample.m */; };
+		E9C1C02B1D9DB1830015E86E /* AcronymTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1C02A1D9DB1830015E86E /* AcronymTest.m */; };
+		E9C1C02F1D9EC1130015E86E /* RunLengthEncodingExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1C02E1D9EC1130015E86E /* RunLengthEncodingExample.m */; };
+		E9C1C0311D9EC1270015E86E /* RunLengthEncodingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1C0301D9EC1270015E86E /* RunLengthEncodingTest.m */; };
 		E9FDCA191D5407D2004EE8DB /* RomanNumeralsExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FDCA181D5407D2004EE8DB /* RomanNumeralsExample.m */; };
 		E9FDCA1B1D540801004EE8DB /* RomanNumeralsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FDCA1A1D540801004EE8DB /* RomanNumeralsTest.m */; };
 /* End PBXBuildFile section */
@@ -143,6 +149,15 @@
 		E99D1D7F1D5533BF0006A303 /* SumOfMultiplesExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SumOfMultiplesExample.h; path = "../../exercises/sum-of-multiples/SumOfMultiplesExample.h"; sourceTree = "<group>"; };
 		E99D1D801D5533BF0006A303 /* SumOfMultiplesExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SumOfMultiplesExample.m; path = "../../exercises/sum-of-multiples/SumOfMultiplesExample.m"; sourceTree = "<group>"; };
 		E99D1D821D5533D80006A303 /* SumOfMultiplesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SumOfMultiplesTest.m; path = "../../exercises/sum-of-multiples/SumOfMultiplesTest.m"; sourceTree = "<group>"; };
+		E9C1C0211D9D993E0015E86E /* SecretHandshakeExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecretHandshakeExample.h; path = "../../exercises/secret-handshake/SecretHandshakeExample.h"; sourceTree = "<group>"; };
+		E9C1C0221D9D993E0015E86E /* SecretHandshakeExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecretHandshakeExample.m; path = "../../exercises/secret-handshake/SecretHandshakeExample.m"; sourceTree = "<group>"; };
+		E9C1C0241D9D99620015E86E /* SecretHandshakeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecretHandshakeTest.m; path = "../../exercises/secret-handshake/SecretHandshakeTest.m"; sourceTree = "<group>"; };
+		E9C1C0271D9DB16B0015E86E /* AcronymExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AcronymExample.h; path = ../../exercises/acronym/AcronymExample.h; sourceTree = "<group>"; };
+		E9C1C0281D9DB16B0015E86E /* AcronymExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AcronymExample.m; path = ../../exercises/acronym/AcronymExample.m; sourceTree = "<group>"; };
+		E9C1C02A1D9DB1830015E86E /* AcronymTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AcronymTest.m; path = ../../exercises/acronym/AcronymTest.m; sourceTree = "<group>"; };
+		E9C1C02D1D9EC1130015E86E /* RunLengthEncodingExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RunLengthEncodingExample.h; path = "../../exercises/run-length-encoding/RunLengthEncodingExample.h"; sourceTree = "<group>"; };
+		E9C1C02E1D9EC1130015E86E /* RunLengthEncodingExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RunLengthEncodingExample.m; path = "../../exercises/run-length-encoding/RunLengthEncodingExample.m"; sourceTree = "<group>"; };
+		E9C1C0301D9EC1270015E86E /* RunLengthEncodingTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RunLengthEncodingTest.m; path = "../../exercises/run-length-encoding/RunLengthEncodingTest.m"; sourceTree = "<group>"; };
 		E9FDCA171D5407D2004EE8DB /* RomanNumeralsExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RomanNumeralsExample.h; path = "../../exercises/roman-numerals/RomanNumeralsExample.h"; sourceTree = "<group>"; };
 		E9FDCA181D5407D2004EE8DB /* RomanNumeralsExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RomanNumeralsExample.m; path = "../../exercises/roman-numerals/RomanNumeralsExample.m"; sourceTree = "<group>"; };
 		E9FDCA1A1D540801004EE8DB /* RomanNumeralsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RomanNumeralsTest.m; path = "../../exercises/roman-numerals/RomanNumeralsTest.m"; sourceTree = "<group>"; };
@@ -162,6 +177,7 @@
 		1E50BCFD1CB465C500FC128D /* xobjectivecTest */ = {
 			isa = PBXGroup;
 			children = (
+				E9C1C0261D9DB1430015E86E /* Acronym */,
 				E9E8B6E91D519DDB0012F12C /* Allergies */,
 				E9E8B6EA1D519DE10012F12C /* AllYourBase */,
 				E9E8B6EB1D519DE70012F12C /* Anagram */,
@@ -181,7 +197,9 @@
 				E9381D491D8F293C003F22A1 /* Raindrops */,
 				E9E8B6F51D519E2E0012F12C /* RobotName */,
 				E9FDCA161D540793004EE8DB /* RomanNumerals */,
+				E9C1C02C1D9EC0E50015E86E /* RunLengthEncoding */,
 				E907FE8F1D87545300B93DA9 /* ScrabbleScore */,
+				E9C1C0201D9D98B80015E86E /* SecretHandshake */,
 				E9E8B6F61D519E340012F12C /* SpaceAge */,
 				E99D1D7B1D5532C50006A303 /* SumOfMultiples */,
 				E947A4DB1D81FDDA00633720 /* Triangle */,
@@ -285,6 +303,36 @@
 				E99D1D821D5533D80006A303 /* SumOfMultiplesTest.m */,
 			);
 			name = SumOfMultiples;
+			sourceTree = "<group>";
+		};
+		E9C1C0201D9D98B80015E86E /* SecretHandshake */ = {
+			isa = PBXGroup;
+			children = (
+				E9C1C0211D9D993E0015E86E /* SecretHandshakeExample.h */,
+				E9C1C0221D9D993E0015E86E /* SecretHandshakeExample.m */,
+				E9C1C0241D9D99620015E86E /* SecretHandshakeTest.m */,
+			);
+			name = SecretHandshake;
+			sourceTree = "<group>";
+		};
+		E9C1C0261D9DB1430015E86E /* Acronym */ = {
+			isa = PBXGroup;
+			children = (
+				E9C1C0271D9DB16B0015E86E /* AcronymExample.h */,
+				E9C1C0281D9DB16B0015E86E /* AcronymExample.m */,
+				E9C1C02A1D9DB1830015E86E /* AcronymTest.m */,
+			);
+			name = Acronym;
+			sourceTree = "<group>";
+		};
+		E9C1C02C1D9EC0E50015E86E /* RunLengthEncoding */ = {
+			isa = PBXGroup;
+			children = (
+				E9C1C02D1D9EC1130015E86E /* RunLengthEncodingExample.h */,
+				E9C1C02E1D9EC1130015E86E /* RunLengthEncodingExample.m */,
+				E9C1C0301D9EC1270015E86E /* RunLengthEncodingTest.m */,
+			);
+			name = RunLengthEncoding;
 			sourceTree = "<group>";
 		};
 		E9E8B6E91D519DDB0012F12C /* Allergies */ = {
@@ -537,6 +585,7 @@
 				1EFACAA31CCCAF3D006F2E69 /* AnagramExample.m in Sources */,
 				E94ACA131D41760300D56CC2 /* AllYourBaseExample.m in Sources */,
 				E94ACA151D41763800D56CC2 /* AllYourBaseTest.m in Sources */,
+				E9C1C0291D9DB16B0015E86E /* AcronymExample.m in Sources */,
 				1EFACAA41CCCAF3D006F2E69 /* AnagramTest.m in Sources */,
 				E907FE921D87547D00B93DA9 /* ScrabbleScoreExample.m in Sources */,
 				1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */,
@@ -549,6 +598,7 @@
 				E907D0CA1D6B731600106C42 /* GigasecondExample.m in Sources */,
 				E9381D521D8F2DCC003F22A1 /* ClockExample.m in Sources */,
 				E99D1D811D5533BF0006A303 /* SumOfMultiplesExample.m in Sources */,
+				E9C1C02F1D9EC1130015E86E /* RunLengthEncodingExample.m in Sources */,
 				E92FCC0F1D78F3B600061017 /* MeetupTest.m in Sources */,
 				E9381D4E1D8F2982003F22A1 /* RaindropsTest.m in Sources */,
 				E9381D541D8F2DE1003F22A1 /* ClockTest.m in Sources */,
@@ -557,6 +607,7 @@
 				1EFACAAE1CCCAF3D006F2E69 /* HelloWorldTest.m in Sources */,
 				1EFACAB21CCCAF3D006F2E69 /* NucleotideCountTest.m in Sources */,
 				E907D0CC1D6B734800106C42 /* GigasecondTest.m in Sources */,
+				E9C1C0311D9EC1270015E86E /* RunLengthEncodingTest.m in Sources */,
 				1EFACAA81CCCAF3D006F2E69 /* EtlTest.m in Sources */,
 				E947A4E01D81FE3A00633720 /* TriangleTest.m in Sources */,
 				1EFACAA91CCCAF3D006F2E69 /* GradeSchoolExample.m in Sources */,
@@ -564,6 +615,7 @@
 				1EFACAB91CCCAF3D006F2E69 /* SpaceAgeExample.m in Sources */,
 				E951B6B71D4294E6009EB5B6 /* AllergiesExample.m in Sources */,
 				E9FDCA1B1D540801004EE8DB /* RomanNumeralsTest.m in Sources */,
+				E9C1C0231D9D993E0015E86E /* SecretHandshakeExample.m in Sources */,
 				1EFACAB71CCCAF3D006F2E69 /* RobotNameExample.m in Sources */,
 				1EFACAA51CCCAF3D006F2E69 /* BobExample.m in Sources */,
 				1EFACABB1CCCAF3D006F2E69 /* WordCountExample.m in Sources */,
@@ -572,6 +624,7 @@
 				E92FCC0D1D78F30D00061017 /* MeetupExample.m in Sources */,
 				E9381D4C1D8F2969003F22A1 /* RaindropsExample.m in Sources */,
 				1EFACAAD1CCCAF3D006F2E69 /* HelloWorldExample.m in Sources */,
+				E9C1C02B1D9DB1830015E86E /* AcronymTest.m in Sources */,
 				1EFACAB31CCCAF3D006F2E69 /* PerfectNumbersExample.m in Sources */,
 				1EFACAB61CCCAF3D006F2E69 /* PhoneNumberTest.m in Sources */,
 				1EFACAB81CCCAF3D006F2E69 /* RobotNameTest.m in Sources */,
@@ -579,6 +632,7 @@
 				1EFACAAC1CCCAF3D006F2E69 /* HammingTest.m in Sources */,
 				1EFACAA61CCCAF3D006F2E69 /* BobTest.m in Sources */,
 				1EFACAAF1CCCAF3D006F2E69 /* LeapExample.m in Sources */,
+				E9C1C0251D9D99620015E86E /* SecretHandshakeTest.m in Sources */,
 				E99D1D831D5533D80006A303 /* SumOfMultiplesTest.m in Sources */,
 				1EFACAAA1CCCAF3D006F2E69 /* GradeSchoolTest.m in Sources */,
 			);
