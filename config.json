@@ -31,6 +31,231 @@
     ,"secret-handshake"
     ,"acronym"
     ,"run-length-encoding"
+    ,"largest-series-product"
+  ],
+  "exercises": [
+    {
+        "difficulty": 1,
+        "slug": "hello-world",
+        "topics": [
+            "Text formatting",
+            "Optional values"
+        ]
+    },
+    {
+        "difficulty": 1,
+        "slug": "bob",
+        "topics": [
+            "Strings",
+            "Control-flow (if-else statements)"
+        ]
+    },
+    {
+        "difficulty": 1,
+        "slug": "leap",
+        "topics": [
+            "Integers"
+        ]
+    },
+    {
+        "difficulty": 1,
+        "slug": "gigasecond",
+        "topics": [
+            "Dates"
+        ]
+    },
+    {
+        "difficulty": 1,
+        "slug": "difference-of-squares",
+        "topics": [
+            "Integers"
+        ]
+    },
+    {
+        "difficulty": 1,
+        "slug": "sum-of-multiples",
+        "topics": [
+            "Lists",
+            "Transforming"
+        ]
+    },
+    {
+        "difficulty": 1,
+        "slug": "space-age",
+        "topics": [
+            "Discriminated unions",
+            "Floating-point numbers"
+        ]
+    },
+    {
+        "difficulty": 2,
+        "slug": "hamming",
+        "topics": [
+            "Strings",
+            "Filtering"
+        ]
+    },
+    {
+        "difficulty": 2,
+        "slug": "nucleotide-count",
+        "topics": [
+            "Maps",
+            "Strings"
+        ]
+    },
+    {
+        "difficulty": 2,
+        "slug": "raindrops",
+        "topics": [
+            "Text formatting",
+            "Filtering"
+        ]
+    },
+    {
+        "difficulty": 2,
+        "slug": "grade-school",
+        "topics": [
+            "Maps",
+            "Sorting"
+        ]
+    },
+    {
+        "difficulty": 2,
+        "slug": "etl",
+        "topics": [
+            "Maps",
+            "Transforming"
+        ]
+    },
+    {
+        "difficulty": 3,
+        "slug": "clock",
+        "topics": [
+            "Time",
+            "Structural equality"
+        ]
+    },
+    {
+        "difficulty": 3,
+        "slug": "triangle",
+        "topics": [
+            "Integers",
+            "Discriminated unions"
+        ]
+    },
+    {
+        "difficulty": 3,
+        "slug": "robot-name",
+        "topics": [
+            "Randomness",
+            "Strings"
+        ]
+    },
+    {
+        "difficulty": 3,
+        "slug": "scrabble-score",
+        "topics": [
+            "Transforming"
+        ]
+    },
+    {
+        "difficulty": 3,
+        "slug": "phone-number",
+        "topics": [
+            "Parsing",
+            "Transforming"
+        ]
+    },
+    {
+        "difficulty": 3,
+        "slug": "perfect-numbers",
+        "topics": [
+            "Integers",
+            "Discriminated unions"
+        ]
+    },
+    {
+        "difficulty": 3,
+        "slug": "secret-handshake",
+        "topics": [
+            "Bitwise operations",
+            "Lists"
+        ]
+    },
+    {
+        "difficulty": 4,
+        "slug": "word-count",
+        "topics": [
+            "Strings",
+            "Maps",
+            "Transforming"
+        ]
+    },
+    {
+        "difficulty": 4,
+        "slug": "allergies",
+        "topics": [
+            "Enumerations",
+            "Bitwise operations",
+            "Filtering"
+        ]
+    },
+    {
+        "difficulty": 4,
+        "slug": "meetup",
+        "topics": [
+            "Dates"
+        ]
+    },
+    {
+        "difficulty": 4,
+        "slug": "anagram",
+        "topics": [
+            "Strings",
+            "Filtering"
+        ]
+    },
+    {
+        "difficulty": 4,
+        "slug": "acronym",
+        "topics": [
+            "Strings",
+            "Transforming"
+        ]
+    },
+    {
+        "difficulty": 4,
+        "slug": "all-your-base",
+        "topics": [
+            "Integers",
+            "Transforming"
+        ]
+    },
+    {
+        "difficulty": 4,
+        "slug": "largest-series-product",
+        "topics": [
+            "Strings",
+            "Integers",
+            "Transforming"
+        ]
+    },
+    {
+        "difficulty": 5,
+        "slug": "roman-numerals",
+        "topics": [
+            "Recursion",
+            "Transforming"
+        ]
+    },
+    {
+        "difficulty": 5,
+        "slug": "run-length-encoding",
+        "topics": [
+            "Algorithms",
+            "Transforming"
+        ]
+    }
   ],
   "deprecated": [
 
