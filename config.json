@@ -32,6 +32,7 @@
     ,"acronym"
     ,"run-length-encoding"
     ,"largest-series-product"
+    ,"pangram"
   ],
   "exercises": [
     {
@@ -239,6 +240,15 @@
             "Integers",
             "Transforming"
         ]
+    },
+    {
+      "difficulty": 4,
+      "slug": "pangram",
+      "topics": [
+          "Strings",
+          "Searching",
+          "Transforming"
+      ]
     },
     {
         "difficulty": 5,
