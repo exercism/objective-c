@@ -5,7 +5,13 @@ if git.commits.any? { |c| c.message =~ /^Merge branch '#{github.branch_for_base}
   fail('Please rebase to get rid of the merge commits in this PR')
 end
 can_merge = github.pr_json["mergeable"]
-warn("This PR cannot be merged yet.", sticky: false) unless can_merge
+is_merged = github.pr_json["merged"]
+
+if is_merged
+  warn("This PR was merged before CI was done.", sticky: false)
+else
+  warn("This PR cannot be merged yet.", sticky: false) unless can_merge
+end
 
 # Make it more obvious that a PR is a work in progress and shouldn't be merged yet
 warn("PR is classed as Work in Progress") if github.pr_title.include? "[WIP]"
