@@ -65,6 +65,8 @@
 		E94ACA151D41763800D56CC2 /* AllYourBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E94ACA141D41763800D56CC2 /* AllYourBaseTest.m */; };
 		E951B6B71D4294E6009EB5B6 /* AllergiesExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E951B6B61D4294E6009EB5B6 /* AllergiesExample.m */; };
 		E951B6B91D429550009EB5B6 /* AllergiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E951B6B81D429550009EB5B6 /* AllergiesTest.m */; };
+		E96993981DF60E1E009EA223 /* TransposeExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E96993971DF60E1E009EA223 /* TransposeExample.m */; };
+		E969939A1DF60E5F009EA223 /* TransposeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E96993991DF60E5F009EA223 /* TransposeTest.m */; };
 		E99D1D811D5533BF0006A303 /* SumOfMultiplesExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E99D1D801D5533BF0006A303 /* SumOfMultiplesExample.m */; };
 		E99D1D831D5533D80006A303 /* SumOfMultiplesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E99D1D821D5533D80006A303 /* SumOfMultiplesTest.m */; };
 		E9A7B2F71DA5AC37009056B6 /* LargestSeriesProductExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A7B2F61DA5AC37009056B6 /* LargestSeriesProductExample.m */; };
@@ -150,6 +152,9 @@
 		E951B6B51D4294E6009EB5B6 /* AllergiesExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllergiesExample.h; path = ../../exercises/allergies/AllergiesExample.h; sourceTree = "<group>"; };
 		E951B6B61D4294E6009EB5B6 /* AllergiesExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllergiesExample.m; path = ../../exercises/allergies/AllergiesExample.m; sourceTree = "<group>"; };
 		E951B6B81D429550009EB5B6 /* AllergiesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllergiesTest.m; path = ../../exercises/allergies/AllergiesTest.m; sourceTree = "<group>"; };
+		E96993961DF60E1E009EA223 /* TransposeExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransposeExample.h; path = ../../exercises/transpose/TransposeExample.h; sourceTree = "<group>"; };
+		E96993971DF60E1E009EA223 /* TransposeExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransposeExample.m; path = ../../exercises/transpose/TransposeExample.m; sourceTree = "<group>"; };
+		E96993991DF60E5F009EA223 /* TransposeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransposeTest.m; path = ../../exercises/transpose/TransposeTest.m; sourceTree = "<group>"; };
 		E99D1D7F1D5533BF0006A303 /* SumOfMultiplesExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SumOfMultiplesExample.h; path = "../../exercises/sum-of-multiples/SumOfMultiplesExample.h"; sourceTree = "<group>"; };
 		E99D1D801D5533BF0006A303 /* SumOfMultiplesExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SumOfMultiplesExample.m; path = "../../exercises/sum-of-multiples/SumOfMultiplesExample.m"; sourceTree = "<group>"; };
 		E99D1D821D5533D80006A303 /* SumOfMultiplesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SumOfMultiplesTest.m; path = "../../exercises/sum-of-multiples/SumOfMultiplesTest.m"; sourceTree = "<group>"; };
@@ -214,6 +219,7 @@
 				E9C1C0201D9D98B80015E86E /* SecretHandshake */,
 				E9E8B6F61D519E340012F12C /* SpaceAge */,
 				E99D1D7B1D5532C50006A303 /* SumOfMultiples */,
+				E96993951DF60DF1009EA223 /* Transpose */,
 				E947A4DB1D81FDDA00633720 /* Triangle */,
 				E9E8B6F71D519E3A0012F12C /* WordCount */,
 				1E50BD001CB465C500FC128D /* Info.plist */,
@@ -305,6 +311,16 @@
 				E947A4DF1D81FE3A00633720 /* TriangleTest.m */,
 			);
 			name = Triangle;
+			sourceTree = "<group>";
+		};
+		E96993951DF60DF1009EA223 /* Transpose */ = {
+			isa = PBXGroup;
+			children = (
+				E96993961DF60E1E009EA223 /* TransposeExample.h */,
+				E96993971DF60E1E009EA223 /* TransposeExample.m */,
+				E96993991DF60E5F009EA223 /* TransposeTest.m */,
+			);
+			name = Transpose;
 			sourceTree = "<group>";
 		};
 		E99D1D7B1D5532C50006A303 /* SumOfMultiples */ = {
@@ -617,6 +633,7 @@
 				1EFACAA31CCCAF3D006F2E69 /* AnagramExample.m in Sources */,
 				E94ACA131D41760300D56CC2 /* AllYourBaseExample.m in Sources */,
 				E94ACA151D41763800D56CC2 /* AllYourBaseTest.m in Sources */,
+				E96993981DF60E1E009EA223 /* TransposeExample.m in Sources */,
 				E9C1C0291D9DB16B0015E86E /* AcronymExample.m in Sources */,
 				1EFACAA41CCCAF3D006F2E69 /* AnagramTest.m in Sources */,
 				E907FE921D87547D00B93DA9 /* ScrabbleScoreExample.m in Sources */,
@@ -669,6 +686,7 @@
 				E9A7B2F91DA5AC55009056B6 /* LargestSeriesProductTest.m in Sources */,
 				1EFACAAF1CCCAF3D006F2E69 /* LeapExample.m in Sources */,
 				E9C1C0251D9D99620015E86E /* SecretHandshakeTest.m in Sources */,
+				E969939A1DF60E5F009EA223 /* TransposeTest.m in Sources */,
 				E99D1D831D5533D80006A303 /* SumOfMultiplesTest.m in Sources */,
 				1EFACAAA1CCCAF3D006F2E69 /* GradeSchoolTest.m in Sources */,
 			);

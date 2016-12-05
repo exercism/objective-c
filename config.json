@@ -219,6 +219,14 @@
           "Transforming"
       ]
     },
+	{
+      "difficulty": 4,
+      "slug": "transpose",
+      "topics": [
+          "Strings",
+          "Transforming"
+      ]
+    },
     {
         "difficulty": 5,
         "slug": "roman-numerals",
