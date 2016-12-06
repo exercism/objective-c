@@ -10,7 +10,7 @@ before_install:
 script:
   - bin/fetch-configlet
   - bin/configlet .
-  - xctool test -project 'xcodeProject/ObjectiveC.xcodeproj' -scheme 'xobjectivecTest' -sdk macosx10.11 -reporter json-compilation-database:compile_commands.json -reporter plain:plain-output.txt -reporter pretty
+  - xctool test -project 'xcodeProject/ObjectiveC.xcodeproj' -scheme 'xobjectivecTest' -reporter json-compilation-database:compile_commands.json -reporter plain:plain-output.txt -reporter pretty
 
 after_success:
   - tail -3 plain-output.txt >> lastline.txt
