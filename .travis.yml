@@ -3,6 +3,8 @@ osx_image: xcode7.3
 xcode_project: 'xcodeProject/ObjectiveC.xcodeproj'
 xcode_scheme: 'xobjectivecTest'
 before_install:
+  - gem uninstall bundler -v1.13
+  - gem install bundler -v 1.12
   - gem install danger
   - brew cask uninstall oclint
   - brew tap oclint/formulae
