@@ -42,6 +42,6 @@ Run the tests with:
 $ objc ExerciseName
 ```
 
-The objc utility uses the exercise name to find the test file, `ExerciseNameTest.m`, the header file, `ExerciseName.h` and source file `ExerciseNameTest.m`. The files are inserted into a temporary Xcode Project and then `xctool` is used to run the tests for the project.
+The objc utility uses the exercise name to find the test file, `ExerciseNameTest.m`, the header file, `ExerciseName.h` and source file `ExerciseName.m`. The files are inserted into a temporary Xcode Project and then `xctool` is used to run the tests for the project.
 
 While `objc` makes it so you never have to launch Xcode to complete these exercises, the error messages and feedback through the command-line are not as clear as through the Xcode user interface.
