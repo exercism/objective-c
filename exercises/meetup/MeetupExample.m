@@ -14,7 +14,7 @@
     return self;
 }
 
-- (NSDate *)dayForDayOfWeek:(MeetupDayOfWeek)dayOfWeek andOptions:(MeetupOptions)options {
+- (NSDate *)dayForDayOfWeek:(MeetupDayOfWeek)dayOfWeek andOptions:(MeetupOptions)options { //!OCLINT
     NSDateComponents *components = [[NSDateComponents alloc] init];
     components.year = _year;
     components.month = _month;
@@ -38,8 +38,6 @@
             break;
         case MeetupOptionsTeenth:
             components.day = 13;
-            break;
-        default:
             break;
     }
     

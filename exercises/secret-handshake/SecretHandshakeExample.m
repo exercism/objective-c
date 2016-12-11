@@ -13,27 +13,26 @@
 + (NSArray<NSString *> *)commandsForNumber:(int)number {
     NSMutableArray *result = [[NSMutableArray alloc] init];
     
-    if (number & 1 << 0) {
+    if (number & 1 << 0) { //!OCLINT
         [result addObject:@"wink"];
     }
     
-    if (number & 1 << 1) {
+    if (number & 1 << 1) { //!OCLINT
         [result addObject:@"double blink"];
     }
     
-    if (number & 1 << 2) {
+    if (number & 1 << 2) { //!OCLINT
         [result addObject:@"close your eyes"];
     }
     
-    if (number & 1 << 3) {
+    if (number & 1 << 3) { //!OCLINT
         [result addObject:@"jump"];
     }
     
-    if (number & 1 << 4) {
+    if (number & 1 << 4) { //!OCLINT
         return [[result reverseObjectEnumerator] allObjects];
-    } else {
-        return result;
     }
+    return result;
 }
 
 @end

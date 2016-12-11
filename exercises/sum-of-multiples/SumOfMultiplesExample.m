@@ -10,7 +10,7 @@
             continue;
         }
         
-        int x = 1;
+        int x = 1; //!OCLint
         
         while (x * [multiple intValue] < [limit intValue]) {
             [multiplesFound addObject:@(x * [multiple intValue])];

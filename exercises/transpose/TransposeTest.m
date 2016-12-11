@@ -70,7 +70,7 @@
     XCTAssertEqualObjects([Transpose transpose:input], expected);
 }
 
-- (void)testManyLines {
+- (void)testManyLines { //!OCLINT
     NSArray<NSString *> *input = @[@"Chor. Two households, both alike in dignity,",
                                    @"In fair Verona, where we lay our scene,",
                                    @"From ancient grudge break to new mutiny,",

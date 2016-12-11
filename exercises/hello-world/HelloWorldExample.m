@@ -3,8 +3,8 @@
 
 @implementation HelloWorld
 - (NSString *)hello:(NSString *)name {
-  if(!name) {
-    name = @"World";
+  if (!name) {
+    name = @"World"; //!OCLINT
   }
   return [NSString stringWithFormat:@"Hello, %@!", name];
 }
