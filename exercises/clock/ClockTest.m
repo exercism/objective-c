@@ -10,7 +10,7 @@
 
 @end
 
-@implementation ClockTest
+@implementation ClockTest //!OCLint
 
 #pragma mark - Create: Test creating a new clock with an initial time.
 

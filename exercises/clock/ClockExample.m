@@ -1,8 +1,13 @@
 #import "ClockExample.h"
 
-@implementation Clock {
-    int _hours, _minutes;
-}
+@interface Clock ()
+
+@property (nonatomic, assign) int hours;
+@property (nonatomic, assign) int minutes;
+
+@end
+
+@implementation Clock
 
 + (Clock *)clockWithHours:(int)hours minutes:(int)minutes {
     return [[Clock alloc] initWithHours:hours minutes:minutes];
@@ -23,27 +28,27 @@
 }
 
 - (void)normalize {
-    if (_minutes >= 60) {
-        _hours += _minutes / 60;
-        _minutes = _minutes % 60;
+    if (self.minutes >= 60) {
+        self.hours += self.minutes / 60;
+        self.minutes = self.minutes % 60;
     }
     
-    while (_minutes < 0) {
-        _hours -= 1;
-        _minutes += 60;
+    while (self.minutes < 0) {
+        self.hours -= 1;
+        self.minutes += 60;
     }
     
-    if (_hours >= 24) {
-        _hours = _hours % 24;
+    if (self.hours >= 24) {
+        self.hours = self.hours % 24;
     }
     
-    while (_hours < 0) {
-        _hours += 24;
+    while (self.hours < 0) {
+        self.hours += 24;
     }
 }
 
 - (Clock *)addMinutes:(int)minutes {
-    return [Clock clockWithHours: _hours minutes: _minutes + minutes];
+    return [Clock clockWithHours: self.hours minutes: self.minutes + minutes];
 }
 
 - (Clock *)subtractMinutes:(int)minutes {
@@ -51,7 +56,7 @@
 }
 
 - (NSString *)description {
-    return [NSString stringWithFormat:@"%.2d:%.2d", _hours, _minutes];
+    return [NSString stringWithFormat:@"%.2d:%.2d", self.hours, self.minutes];
 }
 
 - (BOOL)isEqual:(id)object {

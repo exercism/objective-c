@@ -5,7 +5,7 @@
 }
 
 - (instancetype)initWithNumberString:(NSString *)numberString {
-    if (self = [super init]) {
+    if (self = [super init]) { //!OCLint
         NSMutableArray<NSNumber *> *numbers = [[NSMutableArray alloc] initWithCapacity:[numberString length]];
         NSCharacterSet *decimalSet = [NSCharacterSet decimalDigitCharacterSet];
         

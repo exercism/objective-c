@@ -23,3 +23,4 @@ DerivedData
 *.hmap
 *.ipa
 *.xcuserstate
+compile_commands.json

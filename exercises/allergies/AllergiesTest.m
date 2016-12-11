@@ -16,28 +16,28 @@
     return @[@(AllergenEggs), @(AllergenPeanuts), @(AllergenShellfish), @(AllergenStrawberries), @(AllergenTomatoes), @(AllergenChocolate), @(AllergenPollen), @(AllergenCats)];
 }
 
-- (void)testAllergicToEggs {
+- (void)testAllergicToEggs { //!OCLint
     Allergies *allergies = [[Allergies alloc] initWithScore:1];
     XCTAssertTrue([allergies hasAllergy:AllergenEggs]);
     XCTAssertFalse([allergies hasAllergy:AllergenPeanuts]);
     XCTAssertFalse([allergies hasAllergy:AllergenPollen]);
 }
 
-- (void)testAllergicToChocolate {
+- (void)testAllergicToChocolate { //!OCLint
     Allergies *allergies = [[Allergies alloc] initWithScore:32];
     XCTAssertTrue([allergies hasAllergy:AllergenChocolate]);
     XCTAssertFalse([allergies hasAllergy:AllergenEggs]);
     XCTAssertFalse([allergies hasAllergy:AllergenTomatoes]);
 }
 
-- (void)testBob {
+- (void)testBob { //!OCLint
     Allergies *allergies = [[Allergies alloc] initWithScore:34];
     XCTAssertTrue([allergies hasAllergy:AllergenPeanuts], "Bob is allergic to peanuts");
     XCTAssertTrue([allergies hasAllergy:AllergenChocolate], "Bob is allergic to chocolate");
     XCTAssertFalse([allergies hasAllergy:AllergenCats], "Bob is not allergic to cats");
 }
 
-- (void)testEggsAndCats {
+- (void)testEggsAndCats { //!OCLint
     Allergies *allergies = [[Allergies alloc] initWithScore:129];
     XCTAssertTrue([allergies hasAllergy:AllergenEggs]);
     XCTAssertTrue([allergies hasAllergy:AllergenCats]);

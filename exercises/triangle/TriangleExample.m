@@ -2,7 +2,7 @@
 
 @implementation Triangle
 
-+ (TriangleKind)kindForSides:(double)a :(double)b :(double)c {
++ (TriangleKind)kindForSides:(double)a :(double)b :(double)c { //!OCLINT
     if (a <= 0 || b <= 0 || c <= 0) {
         @throw [NSException exceptionWithName:@"Invalid triangle" reason:@"All lengths must be positive" userInfo:nil];
     } else if (a + b <= c || b + c <= a || a + c <= b) {
@@ -13,7 +13,7 @@
         return TriangleKindEquilateral;
     } else if (a == b || b == c || a == c) {
         return TriangleKindIsosceles;
-    } else {
+    } else { //!OCLINT
         return TriangleKindScalene;
     }
 }
