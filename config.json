@@ -161,6 +161,15 @@
         ]
     },
     {
+        "difficulty": 3,
+        "slug": "atbash-cipher",
+        "topics": [
+            "Strings",
+            "Maps",
+            "Transforming"
+        ]
+    },
+    {
         "difficulty": 4,
         "slug": "word-count",
         "topics": [
