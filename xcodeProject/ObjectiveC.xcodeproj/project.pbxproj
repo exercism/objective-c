@@ -59,6 +59,8 @@
 		E9381D4E1D8F2982003F22A1 /* RaindropsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9381D4D1D8F2982003F22A1 /* RaindropsTest.m */; };
 		E9381D521D8F2DCC003F22A1 /* ClockExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9381D511D8F2DCC003F22A1 /* ClockExample.m */; };
 		E9381D541D8F2DE1003F22A1 /* ClockTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9381D531D8F2DE1003F22A1 /* ClockTest.m */; };
+		E9386EEE1E0B692D0009A414 /* AtbashCipherExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9386EED1E0B692D0009A414 /* AtbashCipherExample.m */; };
+		E9386EF01E0B694D0009A414 /* AtbashCipherTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9386EEF1E0B694D0009A414 /* AtbashCipherTest.m */; };
 		E947A4DE1D81FE0F00633720 /* TriangleExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E947A4DD1D81FE0F00633720 /* TriangleExample.m */; };
 		E947A4E01D81FE3A00633720 /* TriangleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E947A4DF1D81FE3A00633720 /* TriangleTest.m */; };
 		E94ACA131D41760300D56CC2 /* AllYourBaseExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E94ACA121D41760300D56CC2 /* AllYourBaseExample.m */; };
@@ -145,6 +147,9 @@
 		E9381D501D8F2DCC003F22A1 /* ClockExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClockExample.h; path = ../../exercises/clock/ClockExample.h; sourceTree = "<group>"; };
 		E9381D511D8F2DCC003F22A1 /* ClockExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClockExample.m; path = ../../exercises/clock/ClockExample.m; sourceTree = "<group>"; };
 		E9381D531D8F2DE1003F22A1 /* ClockTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClockTest.m; path = ../../exercises/clock/ClockTest.m; sourceTree = "<group>"; };
+		E9386EEC1E0B692D0009A414 /* AtbashCipherExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AtbashCipherExample.h; path = "../../exercises/atbash-cipher/AtbashCipherExample.h"; sourceTree = "<group>"; };
+		E9386EED1E0B692D0009A414 /* AtbashCipherExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtbashCipherExample.m; path = "../../exercises/atbash-cipher/AtbashCipherExample.m"; sourceTree = "<group>"; };
+		E9386EEF1E0B694D0009A414 /* AtbashCipherTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AtbashCipherTest.m; path = "../../exercises/atbash-cipher/AtbashCipherTest.m"; sourceTree = "<group>"; };
 		E947A4DC1D81FE0F00633720 /* TriangleExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TriangleExample.h; path = ../../exercises/triangle/TriangleExample.h; sourceTree = "<group>"; };
 		E947A4DD1D81FE0F00633720 /* TriangleExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TriangleExample.m; path = ../../exercises/triangle/TriangleExample.m; sourceTree = "<group>"; };
 		E947A4DF1D81FE3A00633720 /* TriangleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TriangleTest.m; path = ../../exercises/triangle/TriangleTest.m; sourceTree = "<group>"; };
@@ -201,6 +206,7 @@
 				E9E8B6E91D519DDB0012F12C /* Allergies */,
 				E9E8B6EA1D519DE10012F12C /* AllYourBase */,
 				E9E8B6EB1D519DE70012F12C /* Anagram */,
+				E9386EEB1E0B68F90009A414 /* AtbashCipher */,
 				E9E8B6EC1D519DEF0012F12C /* Bob */,
 				E9381D4F1D8F2DA4003F22A1 /* Clock */,
 				E9381D431D8EDFB8003F22A1 /* DifferenceOfSquares */,
@@ -307,6 +313,16 @@
 				E9381D531D8F2DE1003F22A1 /* ClockTest.m */,
 			);
 			name = Clock;
+			sourceTree = "<group>";
+		};
+		E9386EEB1E0B68F90009A414 /* AtbashCipher */ = {
+			isa = PBXGroup;
+			children = (
+				E9386EEC1E0B692D0009A414 /* AtbashCipherExample.h */,
+				E9386EED1E0B692D0009A414 /* AtbashCipherExample.m */,
+				E9386EEF1E0B694D0009A414 /* AtbashCipherTest.m */,
+			);
+			name = AtbashCipher;
 			sourceTree = "<group>";
 		};
 		E947A4DB1D81FDDA00633720 /* Triangle */ = {
@@ -699,10 +715,12 @@
 				1EFACAB81CCCAF3D006F2E69 /* RobotNameTest.m in Sources */,
 				E947A4DE1D81FE0F00633720 /* TriangleExample.m in Sources */,
 				1EFACAAC1CCCAF3D006F2E69 /* HammingTest.m in Sources */,
+				E9386EEE1E0B692D0009A414 /* AtbashCipherExample.m in Sources */,
 				1EFACAA61CCCAF3D006F2E69 /* BobTest.m in Sources */,
 				E9B345FA1DB93839006EFBE2 /* PangramTest.m in Sources */,
 				E9A7B2F91DA5AC55009056B6 /* LargestSeriesProductTest.m in Sources */,
 				1EFACAAF1CCCAF3D006F2E69 /* LeapExample.m in Sources */,
+				E9386EF01E0B694D0009A414 /* AtbashCipherTest.m in Sources */,
 				E9C1C0251D9D99620015E86E /* SecretHandshakeTest.m in Sources */,
 				E969939A1DF60E5F009EA223 /* TransposeTest.m in Sources */,
 				E99D1D831D5533D80006A303 /* SumOfMultiplesTest.m in Sources */,
