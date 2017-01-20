@@ -47,6 +47,8 @@
 		1EFACABA1CCCAF3D006F2E69 /* SpaceAgeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA9F1CCCAF3D006F2E69 /* SpaceAgeTest.m */; };
 		1EFACABB1CCCAF3D006F2E69 /* WordCountExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACAA11CCCAF3D006F2E69 /* WordCountExample.m */; };
 		1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */; };
+		A065F5781E3098080048E337 /* BeerSongExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A065F5761E3098080048E337 /* BeerSongExample.m */; };
+		A065F5791E3098080048E337 /* BeerSongTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A065F5771E3098080048E337 /* BeerSongTest.m */; };
 		E907D0CA1D6B731600106C42 /* GigasecondExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D0C91D6B731600106C42 /* GigasecondExample.m */; };
 		E907D0CC1D6B734800106C42 /* GigasecondTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D0CB1D6B734800106C42 /* GigasecondTest.m */; };
 		E907FE921D87547D00B93DA9 /* ScrabbleScoreExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E907FE911D87547D00B93DA9 /* ScrabbleScoreExample.m */; };
@@ -129,6 +131,9 @@
 		1EFACAA01CCCAF3D006F2E69 /* WordCountExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordCountExample.h; path = "../../exercises/word-count/WordCountExample.h"; sourceTree = "<group>"; };
 		1EFACAA11CCCAF3D006F2E69 /* WordCountExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordCountExample.m; path = "../../exercises/word-count/WordCountExample.m"; sourceTree = "<group>"; };
 		1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordCountTest.m; path = "../../exercises/word-count/WordCountTest.m"; sourceTree = "<group>"; };
+		A065F5751E3098080048E337 /* BeerSongExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeerSongExample.h; path = "../../exercises/beer-song/BeerSongExample.h"; sourceTree = "<group>"; };
+		A065F5761E3098080048E337 /* BeerSongExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeerSongExample.m; path = "../../exercises/beer-song/BeerSongExample.m"; sourceTree = "<group>"; };
+		A065F5771E3098080048E337 /* BeerSongTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeerSongTest.m; path = "../../exercises/beer-song/BeerSongTest.m"; sourceTree = "<group>"; };
 		E907D0C81D6B731600106C42 /* GigasecondExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GigasecondExample.h; path = ../../exercises/gigasecond/GigasecondExample.h; sourceTree = "<group>"; };
 		E907D0C91D6B731600106C42 /* GigasecondExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GigasecondExample.m; path = ../../exercises/gigasecond/GigasecondExample.m; sourceTree = "<group>"; };
 		E907D0CB1D6B734800106C42 /* GigasecondTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GigasecondTest.m; path = ../../exercises/gigasecond/GigasecondTest.m; sourceTree = "<group>"; };
@@ -207,6 +212,7 @@
 				E9E8B6EA1D519DE10012F12C /* AllYourBase */,
 				E9E8B6EB1D519DE70012F12C /* Anagram */,
 				E9386EEB1E0B68F90009A414 /* AtbashCipher */,
+				A0CE03811E2F994200669F42 /* BeerSong */,
 				E9E8B6EC1D519DEF0012F12C /* Bob */,
 				E9381D4F1D8F2DA4003F22A1 /* Clock */,
 				E9381D431D8EDFB8003F22A1 /* DifferenceOfSquares */,
@@ -253,6 +259,16 @@
 				1E50BCFC1CB465C500FC128D /* xobjectivecTest.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		A0CE03811E2F994200669F42 /* BeerSong */ = {
+			isa = PBXGroup;
+			children = (
+				A065F5751E3098080048E337 /* BeerSongExample.h */,
+				A065F5761E3098080048E337 /* BeerSongExample.m */,
+				A065F5771E3098080048E337 /* BeerSongTest.m */,
+			);
+			name = BeerSong;
 			sourceTree = "<group>";
 		};
 		E907D0C71D6B72B600106C42 /* Gigasecond */ = {
@@ -601,7 +617,7 @@
 		1EE9CC521CB462CB00C92E6D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = exercism;
 				TargetAttributes = {
 					1E1068C41D408EE30019B25B = {
@@ -675,8 +691,10 @@
 				E907FE941D87554500B93DA9 /* ScrabbleScoreTest.m in Sources */,
 				1EFACAB51CCCAF3D006F2E69 /* PhoneNumberExample.m in Sources */,
 				E951B6B91D429550009EB5B6 /* AllergiesTest.m in Sources */,
+				A065F5791E3098080048E337 /* BeerSongTest.m in Sources */,
 				E9381D461D8EDFFA003F22A1 /* DifferenceOfSquaresExample.m in Sources */,
 				E9A7B2F71DA5AC37009056B6 /* LargestSeriesProductExample.m in Sources */,
+				A065F5781E3098080048E337 /* BeerSongExample.m in Sources */,
 				E907D0CA1D6B731600106C42 /* GigasecondExample.m in Sources */,
 				E9381D521D8F2DCC003F22A1 /* ClockExample.m in Sources */,
 				E99D1D811D5533BF0006A303 /* SumOfMultiplesExample.m in Sources */,
@@ -781,8 +799,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -825,8 +845,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
