@@ -245,6 +245,15 @@
       ]
     },
     {
+      "difficulty": 5,
+      "slug": “bracket-push”,
+      "topics": [
+          "Strings",
+          "Conditionals",
+          "Looping"
+      ]
+    },
+    {
         "difficulty": 5,
         "slug": "roman-numerals",
         "topics": [
