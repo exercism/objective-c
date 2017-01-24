@@ -238,6 +238,10 @@ static bool roundAndSquarePaired = false;
 
 + (BOOL)checkNestingOfBracketsTwoAtATime:(NSString*)bracketTypeString{
     
+    int opener1Occurence = 0;
+    int closer1Occurence = 0;
+    int opener2Occurence = 0;
+    int closer2Occurence = 0;
     NSScanner *opener1 = [NSScanner scannerWithString:inputString];
     NSScanner *closer1= [NSScanner scannerWithString:inputString];
     NSScanner *opener2= [NSScanner scannerWithString:inputString];
@@ -254,10 +258,15 @@ static bool roundAndSquarePaired = false;
     [closer2 scanUpToString:closingBracket2 intoString:nil];
     
           while(!opener1.isAtEnd && !opener2.isAtEnd && !closer1.isAtEnd && !closer2.isAtEnd){
-                
+              
+              opener1Occurence++;
+              opener2Occurence++;
+              closer1Occurence++;
+              closer2Occurence++;
+              
                 if(opener1.scanLocation < opener2.scanLocation){
                     
-                    if(closer2.scanLocation != opener2.scanLocation + 1 && closer2.scanLocation > closer1.scanLocation){
+                    if(closer2.scanLocation != opener2.scanLocation + 1 && closer2.scanLocation > closer1.scanLocation && opener2Occurence == 1){
                                                                                                                                                               
                                                                                                                                                               
                      return false;
@@ -267,7 +276,7 @@ static bool roundAndSquarePaired = false;
                
                 }else{
                     
-                    if(closer1.scanLocation > closer2.scanLocation && closer1.scanLocation != opener1.scanLocation + 1){
+                    if(closer1.scanLocation > closer2.scanLocation && closer1.scanLocation != opener1.scanLocation + 1 && opener1Occurence == 1){
                         
                         return false;
                         
@@ -326,7 +335,7 @@ static bool roundAndSquarePaired = false;
         [scanner3 scanUpToString:closer3 intoString:nil];
     }
     
-    return [BracketPushExample checkNestingOfBracketsTwoAtATime:[NSString stringWithFormat:@"%@%@%@%@",opener2,closer2,opener3,closer3]];
+    return [BracketPushExample checkNestingOfBracketsTwoAtATime:[NSString stringWithFormat:@"%@%@",opener2,opener3]];
     
 }
 
