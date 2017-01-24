@@ -255,7 +255,7 @@
     },
     {
       "difficulty": 5,
-      "slug": “bracket-push”,
+      "slug": "bracket-push",
       "topics": [
           "Strings",
           "Conditionals",
