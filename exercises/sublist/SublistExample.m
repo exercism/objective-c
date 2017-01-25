@@ -2,7 +2,7 @@
 
 @implementation SublistExample
 
-+(NSString*)classifier:(NSArray *)firstArray andSecondArray:(NSArray *)secondArray{
++(NSString*)classifierForFirstList:(NSArray *)firstArray andSecondList:(NSArray *)secondArray{
     
     if([firstArray isEqualToArray:secondArray]){
         

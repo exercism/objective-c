@@ -2,6 +2,6 @@
 
 @interface SublistExample : NSObject
 
-+(NSString*)classifier:(NSArray*)firstArray andSecondArray:(NSArray*)secondArray;
++(NSString*)classifierForFirstList:(NSArray*)firstArray andSecondList:(NSArray*)secondArray;
 
 @end
