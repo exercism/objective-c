@@ -47,9 +47,23 @@
 		1EFACABA1CCCAF3D006F2E69 /* SpaceAgeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA9F1CCCAF3D006F2E69 /* SpaceAgeTest.m */; };
 		1EFACABB1CCCAF3D006F2E69 /* WordCountExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACAA11CCCAF3D006F2E69 /* WordCountExample.m */; };
 		1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */; };
+
 		A09A4C031E38761A00FEFB7A /* FlattenArrayExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A09A4C021E38761A00FEFB7A /* FlattenArrayExample.m */; };
 		A09A4C051E38763300FEFB7A /* FlattenArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A09A4C041E38763300FEFB7A /* FlattenArrayTest.m */; };
 		E907D0CA1D6B731600106C42 /* GigasecondExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D0C91D6B731600106C42 /* GigasecondExample.m */; };
+
+
+		A0BBFCBF1E37719800230071 /* SublistExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BBFCBE1E37719800230071 /* SublistExample.m */; };
+		A0BBFCC31E37728100230071 /* SublistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BBFCC21E37728100230071 /* SublistTest.m */; };
+
+
+		A097D40F1E363C2700EAF2C2 /* BracketPushExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A097D40D1E363C2700EAF2C2 /* BracketPushExample.m */; };
+		A097D4101E363C2700EAF2C2 /* BracketPushTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A097D40E1E363C2700EAF2C2 /* BracketPushTest.m */; };
+
+		A065F5781E3098080048E337 /* BeerSongExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A065F5761E3098080048E337 /* BeerSongExample.m */; };
+		A065F5791E3098080048E337 /* BeerSongTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A065F5771E3098080048E337 /* BeerSongTest.m */; };
+
+        E907D0CA1D6B731600106C42 /* GigasecondExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D0C91D6B731600106C42 /* GigasecondExample.m */; };
 		E907D0CC1D6B734800106C42 /* GigasecondTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D0CB1D6B734800106C42 /* GigasecondTest.m */; };
 		E907FE921D87547D00B93DA9 /* ScrabbleScoreExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E907FE911D87547D00B93DA9 /* ScrabbleScoreExample.m */; };
 		E907FE941D87554500B93DA9 /* ScrabbleScoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E907FE931D87554500B93DA9 /* ScrabbleScoreTest.m */; };
@@ -131,9 +145,27 @@
 		1EFACAA01CCCAF3D006F2E69 /* WordCountExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordCountExample.h; path = "../../exercises/word-count/WordCountExample.h"; sourceTree = "<group>"; };
 		1EFACAA11CCCAF3D006F2E69 /* WordCountExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordCountExample.m; path = "../../exercises/word-count/WordCountExample.m"; sourceTree = "<group>"; };
 		1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordCountTest.m; path = "../../exercises/word-count/WordCountTest.m"; sourceTree = "<group>"; };
+
 		A09A4C011E38761A00FEFB7A /* FlattenArrayExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlattenArrayExample.h; path = "../../exercises/flatten-array/FlattenArrayExample.h"; sourceTree = "<group>"; };
 		A09A4C021E38761A00FEFB7A /* FlattenArrayExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlattenArrayExample.m; path = "../../exercises/flatten-array/FlattenArrayExample.m"; sourceTree = "<group>"; };
 		A09A4C041E38763300FEFB7A /* FlattenArrayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlattenArrayTest.m; path = "../../exercises/flatten-array/FlattenArrayTest.m"; sourceTree = "<group>"; };
+
+
+        A0BBFCBD1E37719800230071 /* SublistExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SublistExample.h; path = ../../exercises/sublist/SublistExample.h; sourceTree = "<group>"; };
+		A0BBFCBE1E37719800230071 /* SublistExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SublistExample.m; path = ../../exercises/sublist/SublistExample.m; sourceTree = "<group>"; };
+		A0BBFCC21E37728100230071 /* SublistTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SublistTest.m; path = ../../exercises/sublist/SublistTest.m; sourceTree = "<group>"; };
+
+
+		A097D40C1E363C1A00EAF2C2 /* BracketPushExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BracketPushExample.h; path = "../../exercises/bracket-push/BracketPushExample.h"; sourceTree = "<group>"; };
+		A097D40D1E363C2700EAF2C2 /* BracketPushExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BracketPushExample.m; path = "../../exercises/bracket-push/BracketPushExample.m"; sourceTree = "<group>"; };
+		A097D40E1E363C2700EAF2C2 /* BracketPushTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BracketPushTest.m; path = "../../exercises/bracket-push/BracketPushTest.m"; sourceTree = "<group>"; };
+
+		A065F5751E3098080048E337 /* BeerSongExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeerSongExample.h; path = "../../exercises/beer-song/BeerSongExample.h"; sourceTree = "<group>"; };
+		A065F5761E3098080048E337 /* BeerSongExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeerSongExample.m; path = "../../exercises/beer-song/BeerSongExample.m"; sourceTree = "<group>"; };
+		A065F5771E3098080048E337 /* BeerSongTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeerSongTest.m; path = "../../exercises/beer-song/BeerSongTest.m"; sourceTree = "<group>"; };
+
+
+
 		E907D0C81D6B731600106C42 /* GigasecondExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GigasecondExample.h; path = ../../exercises/gigasecond/GigasecondExample.h; sourceTree = "<group>"; };
 		E907D0C91D6B731600106C42 /* GigasecondExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GigasecondExample.m; path = ../../exercises/gigasecond/GigasecondExample.m; sourceTree = "<group>"; };
 		E907D0CB1D6B734800106C42 /* GigasecondTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GigasecondTest.m; path = ../../exercises/gigasecond/GigasecondTest.m; sourceTree = "<group>"; };
@@ -212,7 +244,9 @@
 				E9E8B6EA1D519DE10012F12C /* AllYourBase */,
 				E9E8B6EB1D519DE70012F12C /* Anagram */,
 				E9386EEB1E0B68F90009A414 /* AtbashCipher */,
+				A0CE03811E2F994200669F42 /* BeerSong */,
 				E9E8B6EC1D519DEF0012F12C /* Bob */,
+				A09A906D1E28C1380087CCB7 /* BracketPush */,
 				E9381D4F1D8F2DA4003F22A1 /* Clock */,
 				E9381D431D8EDFB8003F22A1 /* DifferenceOfSquares */,
 				E9E8B6ED1D519DF50012F12C /* Etl */,
@@ -236,6 +270,7 @@
 				E907FE8F1D87545300B93DA9 /* ScrabbleScore */,
 				E9C1C0201D9D98B80015E86E /* SecretHandshake */,
 				E9E8B6F61D519E340012F12C /* SpaceAge */,
+				A0BBFCBC1E37703D00230071 /* Sublist */,
 				E99D1D7B1D5532C50006A303 /* SumOfMultiples */,
 				E96993951DF60DF1009EA223 /* Transpose */,
 				E947A4DB1D81FDDA00633720 /* Triangle */,
@@ -261,6 +296,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+
 		A09A4C001E3875C200FEFB7A /* FlattenArray */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +307,44 @@
 			name = FlattenArray;
 			sourceTree = "<group>";
 		};
+
+
+		A0BBFCBC1E37703D00230071 /* Sublist */ = {
+			isa = PBXGroup;
+			children = (
+				A0BBFCBD1E37719800230071 /* SublistExample.h */,
+				A0BBFCBE1E37719800230071 /* SublistExample.m */,
+				A0BBFCC21E37728100230071 /* SublistTest.m */,
+			);
+			name = Sublist;
+			sourceTree = "<group>";
+		};
+
+
+		A09A906D1E28C1380087CCB7 /* BracketPush */ = {
+			isa = PBXGroup;
+			children = (
+				A097D40C1E363C1A00EAF2C2 /* BracketPushExample.h */,
+				A097D40D1E363C2700EAF2C2 /* BracketPushExample.m */,
+				A097D40E1E363C2700EAF2C2 /* BracketPushTest.m */,
+			);
+			name = BracketPush;
+            sourceTree = "<group>";
+        };
+
+		A0CE03811E2F994200669F42 /* BeerSong */ = {
+			isa = PBXGroup;
+			children = (
+				A065F5751E3098080048E337 /* BeerSongExample.h */,
+				A065F5761E3098080048E337 /* BeerSongExample.m */,
+				A065F5771E3098080048E337 /* BeerSongTest.m */,
+			);
+			name = BeerSong;
+            sourceTree = "<group>";
+		};
+
+
+
 		E907D0C71D6B72B600106C42 /* Gigasecond */ = {
 			isa = PBXGroup;
 			children = (
@@ -617,7 +691,7 @@
 		1EE9CC521CB462CB00C92E6D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = exercism;
 				TargetAttributes = {
 					1E1068C41D408EE30019B25B = {
@@ -685,20 +759,31 @@
 				E9C1C0291D9DB16B0015E86E /* AcronymExample.m in Sources */,
 				1EFACAA41CCCAF3D006F2E69 /* AnagramTest.m in Sources */,
 				E907FE921D87547D00B93DA9 /* ScrabbleScoreExample.m in Sources */,
+
 				A09A4C051E38763300FEFB7A /* FlattenArrayTest.m in Sources */,
+
+				A097D4101E363C2700EAF2C2 /* BracketPushTest.m in Sources */,
+
 				1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */,
 				1EFACAB11CCCAF3D006F2E69 /* NucleotideCountExample.m in Sources */,
 				E9381D481D8EE00C003F22A1 /* DifferenceOfSquaresTest.m in Sources */,
 				E907FE941D87554500B93DA9 /* ScrabbleScoreTest.m in Sources */,
 				1EFACAB51CCCAF3D006F2E69 /* PhoneNumberExample.m in Sources */,
+				A0BBFCBF1E37719800230071 /* SublistExample.m in Sources */,
 				E951B6B91D429550009EB5B6 /* AllergiesTest.m in Sources */,
+				A065F5791E3098080048E337 /* BeerSongTest.m in Sources */,
 				E9381D461D8EDFFA003F22A1 /* DifferenceOfSquaresExample.m in Sources */,
 				E9A7B2F71DA5AC37009056B6 /* LargestSeriesProductExample.m in Sources */,
+				A065F5781E3098080048E337 /* BeerSongExample.m in Sources */,
 				E907D0CA1D6B731600106C42 /* GigasecondExample.m in Sources */,
 				E9381D521D8F2DCC003F22A1 /* ClockExample.m in Sources */,
 				E99D1D811D5533BF0006A303 /* SumOfMultiplesExample.m in Sources */,
 				E9F390071DFCA337005C5F46 /* IsogramExample.m in Sources */,
+
 				A09A4C031E38761A00FEFB7A /* FlattenArrayExample.m in Sources */,
+
+				A0BBFCC31E37728100230071 /* SublistTest.m in Sources */,
+
 				E9C1C02F1D9EC1130015E86E /* RunLengthEncodingExample.m in Sources */,
 				E92FCC0F1D78F3B600061017 /* MeetupTest.m in Sources */,
 				E9381D4E1D8F2982003F22A1 /* RaindropsTest.m in Sources */,
@@ -711,6 +796,7 @@
 				E907D0CC1D6B734800106C42 /* GigasecondTest.m in Sources */,
 				E9C1C0311D9EC1270015E86E /* RunLengthEncodingTest.m in Sources */,
 				1EFACAA81CCCAF3D006F2E69 /* EtlTest.m in Sources */,
+				A097D40F1E363C2700EAF2C2 /* BracketPushExample.m in Sources */,
 				E947A4E01D81FE3A00633720 /* TriangleTest.m in Sources */,
 				1EFACAA91CCCAF3D006F2E69 /* GradeSchoolExample.m in Sources */,
 				1EFACABA1CCCAF3D006F2E69 /* SpaceAgeTest.m in Sources */,
@@ -799,8 +885,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -843,8 +931,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "";

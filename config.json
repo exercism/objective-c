@@ -117,6 +117,14 @@
 
     {
         "difficulty": 3,
+        "slug": "sublist",
+        "topics": [
+            "Looping",
+            "Lists"
+        ]
+    },
+    {
+        "difficulty": 3,
         "slug": "clock",
         "topics": [
             "Time",
@@ -177,6 +185,15 @@
             "Strings",
             "Maps",
             "Transforming"
+        ]
+    },
+    {
+        "difficulty": 4,
+        "slug": "beer-song",
+        "topics": [
+            "Looping",
+            "Conditionals",
+            "Strings"
         ]
     },
     {
@@ -252,6 +269,15 @@
       "topics": [
           "Strings",
           "Transforming"
+      ]
+    },
+    {
+      "difficulty": 5,
+      "slug": "bracket-push",
+      "topics": [
+          "Strings",
+          "Conditionals",
+          "Looping"
       ]
     },
     {
