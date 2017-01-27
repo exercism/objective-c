@@ -48,6 +48,11 @@
 		1EFACABB1CCCAF3D006F2E69 /* WordCountExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACAA11CCCAF3D006F2E69 /* WordCountExample.m */; };
 		1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */; };
 
+		A09A4C031E38761A00FEFB7A /* FlattenArrayExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A09A4C021E38761A00FEFB7A /* FlattenArrayExample.m */; };
+		A09A4C051E38763300FEFB7A /* FlattenArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A09A4C041E38763300FEFB7A /* FlattenArrayTest.m */; };
+		E907D0CA1D6B731600106C42 /* GigasecondExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D0C91D6B731600106C42 /* GigasecondExample.m */; };
+
+
 		A0BBFCBF1E37719800230071 /* SublistExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BBFCBE1E37719800230071 /* SublistExample.m */; };
 		A0BBFCC31E37728100230071 /* SublistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BBFCC21E37728100230071 /* SublistTest.m */; };
 
@@ -141,6 +146,11 @@
 		1EFACAA11CCCAF3D006F2E69 /* WordCountExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordCountExample.m; path = "../../exercises/word-count/WordCountExample.m"; sourceTree = "<group>"; };
 		1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordCountTest.m; path = "../../exercises/word-count/WordCountTest.m"; sourceTree = "<group>"; };
 
+		A09A4C011E38761A00FEFB7A /* FlattenArrayExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlattenArrayExample.h; path = "../../exercises/flatten-array/FlattenArrayExample.h"; sourceTree = "<group>"; };
+		A09A4C021E38761A00FEFB7A /* FlattenArrayExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlattenArrayExample.m; path = "../../exercises/flatten-array/FlattenArrayExample.m"; sourceTree = "<group>"; };
+		A09A4C041E38763300FEFB7A /* FlattenArrayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlattenArrayTest.m; path = "../../exercises/flatten-array/FlattenArrayTest.m"; sourceTree = "<group>"; };
+
+
         A0BBFCBD1E37719800230071 /* SublistExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SublistExample.h; path = ../../exercises/sublist/SublistExample.h; sourceTree = "<group>"; };
 		A0BBFCBE1E37719800230071 /* SublistExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SublistExample.m; path = ../../exercises/sublist/SublistExample.m; sourceTree = "<group>"; };
 		A0BBFCC21E37728100230071 /* SublistTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SublistTest.m; path = ../../exercises/sublist/SublistTest.m; sourceTree = "<group>"; };
@@ -153,6 +163,7 @@
 		A065F5751E3098080048E337 /* BeerSongExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeerSongExample.h; path = "../../exercises/beer-song/BeerSongExample.h"; sourceTree = "<group>"; };
 		A065F5761E3098080048E337 /* BeerSongExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeerSongExample.m; path = "../../exercises/beer-song/BeerSongExample.m"; sourceTree = "<group>"; };
 		A065F5771E3098080048E337 /* BeerSongTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeerSongTest.m; path = "../../exercises/beer-song/BeerSongTest.m"; sourceTree = "<group>"; };
+
 
 
 		E907D0C81D6B731600106C42 /* GigasecondExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GigasecondExample.h; path = ../../exercises/gigasecond/GigasecondExample.h; sourceTree = "<group>"; };
@@ -239,6 +250,7 @@
 				E9381D4F1D8F2DA4003F22A1 /* Clock */,
 				E9381D431D8EDFB8003F22A1 /* DifferenceOfSquares */,
 				E9E8B6ED1D519DF50012F12C /* Etl */,
+				A09A4C001E3875C200FEFB7A /* FlattenArray */,
 				E907D0C71D6B72B600106C42 /* Gigasecond */,
 				E9E8B6EE1D519DFE0012F12C /* GradeSchool */,
 				E9E8B6EF1D519E040012F12C /* Hamming */,
@@ -285,6 +297,18 @@
 			sourceTree = "<group>";
 		};
 
+		A09A4C001E3875C200FEFB7A /* FlattenArray */ = {
+			isa = PBXGroup;
+			children = (
+				A09A4C011E38761A00FEFB7A /* FlattenArrayExample.h */,
+				A09A4C021E38761A00FEFB7A /* FlattenArrayExample.m */,
+				A09A4C041E38763300FEFB7A /* FlattenArrayTest.m */,
+			);
+			name = FlattenArray;
+			sourceTree = "<group>";
+		};
+
+
 		A0BBFCBC1E37703D00230071 /* Sublist */ = {
 			isa = PBXGroup;
 			children = (
@@ -318,6 +342,7 @@
 			name = BeerSong;
             sourceTree = "<group>";
 		};
+
 
 
 		E907D0C71D6B72B600106C42 /* Gigasecond */ = {
@@ -734,7 +759,11 @@
 				E9C1C0291D9DB16B0015E86E /* AcronymExample.m in Sources */,
 				1EFACAA41CCCAF3D006F2E69 /* AnagramTest.m in Sources */,
 				E907FE921D87547D00B93DA9 /* ScrabbleScoreExample.m in Sources */,
+
+				A09A4C051E38763300FEFB7A /* FlattenArrayTest.m in Sources */,
+
 				A097D4101E363C2700EAF2C2 /* BracketPushTest.m in Sources */,
+
 				1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */,
 				1EFACAB11CCCAF3D006F2E69 /* NucleotideCountExample.m in Sources */,
 				E9381D481D8EE00C003F22A1 /* DifferenceOfSquaresTest.m in Sources */,
@@ -750,7 +779,11 @@
 				E9381D521D8F2DCC003F22A1 /* ClockExample.m in Sources */,
 				E99D1D811D5533BF0006A303 /* SumOfMultiplesExample.m in Sources */,
 				E9F390071DFCA337005C5F46 /* IsogramExample.m in Sources */,
+
+				A09A4C031E38761A00FEFB7A /* FlattenArrayExample.m in Sources */,
+
 				A0BBFCC31E37728100230071 /* SublistTest.m in Sources */,
+
 				E9C1C02F1D9EC1130015E86E /* RunLengthEncodingExample.m in Sources */,
 				E92FCC0F1D78F3B600061017 /* MeetupTest.m in Sources */,
 				E9381D4E1D8F2982003F22A1 /* RaindropsTest.m in Sources */,
