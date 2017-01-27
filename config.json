@@ -106,6 +106,16 @@
         ]
     },
     {
+        "difficulty": 2,
+        "slug": "flatten-array",
+        "topics": [
+            "Searching",
+            "Looping",
+            "Lists"
+        ]
+    },
+
+    {
         "difficulty": 3,
         "slug": "clock",
         "topics": [
