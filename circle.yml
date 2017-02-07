@@ -3,4 +3,4 @@ machine:
     version: "8.2"
 test:
   override:
-    -echo 'i am working'
+    -xctool test -project 'xcodeProject/ObjectiveC.xcodeproj' -scheme 'xobjectivecTest' -sdk macosx10.11 -reporter json-compilation-database:compile_commands.json -reporter plain:plain-output.txt -reporter pretty
