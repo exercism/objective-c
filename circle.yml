@@ -3,4 +3,4 @@ machine:
     version: "8.2"
 test:
   override:
-    - xctool test -project 'xcodeProject/ObjectiveC.xcodeproj' -scheme 'xobjectivecTest' -sdk macosx10.12 -reporter json-compilation-database:compile_commands.json  -reporter plain:plain-output.txt
+    - xctool test -project 'xcodeProject/ObjectiveC.xcodeproj' -scheme 'xobjectivecTest' -sdk macosx10.12
