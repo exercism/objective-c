@@ -75,8 +75,8 @@
 		E94ACA151D41763800D56CC2 /* AllYourBaseTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E94ACA141D41763800D56CC2 /* AllYourBaseTest.m */; };
 		E951B6B71D4294E6009EB5B6 /* AllergiesExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E951B6B61D4294E6009EB5B6 /* AllergiesExample.m */; };
 		E951B6B91D429550009EB5B6 /* AllergiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E951B6B81D429550009EB5B6 /* AllergiesTest.m */; };
-		E95C524B1E806BD80095D321 /* BinarySearchExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E95C524A1E806BD80095D321 /* BinarySearchExample.m */; };
-		E95C524D1E806BF50095D321 /* BinarySearchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E95C524C1E806BF50095D321 /* BinarySearchTest.m */; };
+		E95C52551E81C82A0095D321 /* BinarySearchExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E95C52531E81C82A0095D321 /* BinarySearchExample.m */; };
+		E95C52561E81C82A0095D321 /* BinarySearchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E95C52541E81C82A0095D321 /* BinarySearchTest.m */; };
 		E96993981DF60E1E009EA223 /* TransposeExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E96993971DF60E1E009EA223 /* TransposeExample.m */; };
 		E969939A1DF60E5F009EA223 /* TransposeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E96993991DF60E5F009EA223 /* TransposeTest.m */; };
 		E99D1D811D5533BF0006A303 /* SumOfMultiplesExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E99D1D801D5533BF0006A303 /* SumOfMultiplesExample.m */; };
@@ -181,9 +181,9 @@
 		E951B6B51D4294E6009EB5B6 /* AllergiesExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AllergiesExample.h; path = ../../exercises/allergies/AllergiesExample.h; sourceTree = "<group>"; };
 		E951B6B61D4294E6009EB5B6 /* AllergiesExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllergiesExample.m; path = ../../exercises/allergies/AllergiesExample.m; sourceTree = "<group>"; };
 		E951B6B81D429550009EB5B6 /* AllergiesTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AllergiesTest.m; path = ../../exercises/allergies/AllergiesTest.m; sourceTree = "<group>"; };
-		E95C52491E806BD80095D321 /* BinarySearchExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinarySearchExample.h; sourceTree = "<group>"; };
-		E95C524A1E806BD80095D321 /* BinarySearchExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearchExample.m; sourceTree = "<group>"; };
-		E95C524C1E806BF50095D321 /* BinarySearchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearchTest.m; sourceTree = "<group>"; };
+		E95C52521E81C82A0095D321 /* BinarySearchExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinarySearchExample.h; sourceTree = "<group>"; };
+		E95C52531E81C82A0095D321 /* BinarySearchExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearchExample.m; sourceTree = "<group>"; };
+		E95C52541E81C82A0095D321 /* BinarySearchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BinarySearchTest.m; sourceTree = "<group>"; };
 		E96993961DF60E1E009EA223 /* TransposeExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransposeExample.h; path = ../../exercises/transpose/TransposeExample.h; sourceTree = "<group>"; };
 		E96993971DF60E1E009EA223 /* TransposeExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransposeExample.m; path = ../../exercises/transpose/TransposeExample.m; sourceTree = "<group>"; };
 		E96993991DF60E5F009EA223 /* TransposeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransposeTest.m; path = ../../exercises/transpose/TransposeTest.m; sourceTree = "<group>"; };
@@ -408,9 +408,9 @@
 		E95C52481E806BA20095D321 /* BinarySearch */ = {
 			isa = PBXGroup;
 			children = (
-				E95C52491E806BD80095D321 /* BinarySearchExample.h */,
-				E95C524A1E806BD80095D321 /* BinarySearchExample.m */,
-				E95C524C1E806BF50095D321 /* BinarySearchTest.m */,
+				E95C52521E81C82A0095D321 /* BinarySearchExample.h */,
+				E95C52531E81C82A0095D321 /* BinarySearchExample.m */,
+				E95C52541E81C82A0095D321 /* BinarySearchTest.m */,
 			);
 			name = BinarySearch;
 			sourceTree = "<group>";
@@ -751,7 +751,7 @@
 				E907FE921D87547D00B93DA9 /* ScrabbleScoreExample.m in Sources */,
 				A09A4C051E38763300FEFB7A /* FlattenArrayTest.m in Sources */,
 				A097D4101E363C2700EAF2C2 /* BracketPushTest.m in Sources */,
-				E95C524B1E806BD80095D321 /* BinarySearchExample.m in Sources */,
+				E95C52551E81C82A0095D321 /* BinarySearchExample.m in Sources */,
 				1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */,
 				1EFACAB11CCCAF3D006F2E69 /* NucleotideCountExample.m in Sources */,
 				E9381D481D8EE00C003F22A1 /* DifferenceOfSquaresTest.m in Sources */,
@@ -813,7 +813,7 @@
 				E9C1C0251D9D99620015E86E /* SecretHandshakeTest.m in Sources */,
 				E969939A1DF60E5F009EA223 /* TransposeTest.m in Sources */,
 				E99D1D831D5533D80006A303 /* SumOfMultiplesTest.m in Sources */,
-				E95C524D1E806BF50095D321 /* BinarySearchTest.m in Sources */,
+				E95C52561E81C82A0095D321 /* BinarySearchTest.m in Sources */,
 				1EFACAAA1CCCAF3D006F2E69 /* GradeSchoolTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
