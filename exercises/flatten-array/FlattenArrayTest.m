@@ -10,12 +10,12 @@
 
 @end
 
-@implementation FlattenArrayTest {
-    NSNull *_nullValue;
-}
+static NSNull *nullValue;
+
+@implementation FlattenArrayTest
 
 - (void)setUp {
-    _nullValue = [NSNull null];
+    nullValue = [NSNull null];
 }
 
 - (void)testFlattenArrayWithJustIntegers {
@@ -37,25 +37,25 @@
 }
 
 - (void)testSixLevelNestingWithNullValues {
-    NSArray *inputArray = @[@0, @2, @[@[@2, @3], @8, @[@[@100]], _nullValue, @[@[_nullValue]]], @-2];
+    NSArray *inputArray = @[@0, @2, @[@[@2, @3], @8, @[@[@100]], nullValue, @[@[nullValue]]], @-2];
     NSArray *expected = @[@0, @2, @2, @3, @8, @100, @-2];
     XCTAssertEqualObjects(expected, [FlattenArrayExample flattenArray:inputArray]);
 }
 
 - (void)testAllValuesInNestedListAreNull {
-    NSArray *inputArray = @[_nullValue, @[@[@[@[_nullValue]]]], _nullValue, _nullValue, @[@[_nullValue, _nullValue], _nullValue], _nullValue];
+    NSArray *inputArray = @[nullValue, @[@[@[@[nullValue]]]], nullValue, nullValue, @[@[nullValue, nullValue], nullValue], nullValue];
     NSArray *expected = @[];
     XCTAssertEqualObjects(expected, [FlattenArrayExample flattenArray:inputArray]);
 }
 
 - (void)testFiveLevelDeepNestedListWithDoubleValuesAndNullValues {
-    NSArray *inputArray = @[@0.085, @2.8844557, @[@[@2.00005, @3.13], @8.4, @100, @4.8, @[@[@[_nullValue]]]], @-2.5];
+    NSArray *inputArray = @[@0.085, @2.8844557, @[@[@2.00005, @3.13], @8.4, @100, @4.8, @[@[@[nullValue]]]], @-2.5];
     NSArray *expected = @[@0.085, @2.8844557, @2.00005, @3.13, @8.4, @100, @4.8, @-2.5];
     XCTAssertEqualObjects(expected, [FlattenArrayExample flattenArray:inputArray]);
 }
 
 - (void)testSixLevelDeepNestedListWithStringsAndNullValues {
-    NSArray *inputArray = @[@"Zero", @"two", @[@[@[@"Two", @"three"]], @"eight", @[@[@"One Hundred"]], _nullValue, @[@[_nullValue]]], @"minus two"];
+    NSArray *inputArray = @[@"Zero", @"two", @[@[@[@"Two", @"three"]], @"eight", @[@[@"One Hundred"]], nullValue, @[@[nullValue]]], @"minus two"];
     NSArray *expected = @[@"Zero", @"two", @"Two", @"three", @"eight", @"One Hundred", @"minus two"];
     XCTAssertEqualObjects(expected, [FlattenArrayExample flattenArray:inputArray]);
 }
