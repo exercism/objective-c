@@ -12,127 +12,103 @@
 
 @implementation SublistTest
 
-
 - (void)testEmptyLists {
-    
     XCTAssertEqualObjects(@"equal", [SublistExample classifierForFirstList:@[] andSecondList:@[]]);
 }
     
-- (void)testEmptyListWithinNonEmptyList{
-    
-    NSArray *secondList = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:3], nil];
+- (void)testEmptyListWithinNonEmptyList {
+    NSArray *secondList = @[@1, @2, @3];
     XCTAssertEqualObjects(@"sublist", [SublistExample classifierForFirstList:@[] andSecondList:secondList]);
 
 }
     
-- (void)testNonEmptyListContainsEmptyList{
-    
-    NSArray *firstList = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:3], nil];
+- (void)testNonEmptyListContainsEmptyList {
+    NSArray *firstList = @[@1, @2, @3];
     XCTAssertEqualObjects(@"superlist", [SublistExample classifierForFirstList:firstList andSecondList:@[]]);
 }
     
-- (void)testListEqualsItself{
-    
-    NSArray *firstList = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:3], nil];
-    NSArray *secondList = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:3], nil];
+- (void)testListEqualsItself {
+    NSArray *firstList = @[@1, @2, @3];
+    NSArray *secondList = @[@1, @2, @3];
     XCTAssertEqualObjects(@"equal", [SublistExample classifierForFirstList:firstList andSecondList:secondList]);
 }
     
--(void)testDifferentLists{
-    
-    NSArray *firstList = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:3], nil];
-    NSArray *secondList = [NSArray arrayWithObjects:[NSNumber numberWithInt:2],[NSNumber numberWithInt:3],[NSNumber numberWithInt:4], nil];
+- (void)testDifferentLists {
+    NSArray *firstList = @[@1, @2, @3];
+    NSArray *secondList = @[@2, @3, @4];
     XCTAssertEqualObjects(@"unequal", [SublistExample classifierForFirstList:firstList andSecondList:secondList]);
 }
     
--(void)testFalseStart{
-    
-    NSArray *firstList = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:5], nil];
-    NSArray *secondList = [NSArray arrayWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:3],[NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:5],[NSNumber numberWithInt:6], nil];
+- (void)testFalseStart {
+    NSArray *firstList = @[@1, @2, @5];
+    NSArray *secondList = @[@0, @1, @2, @3, @1, @2, @5, @6];
     XCTAssertEqualObjects(@"sublist", [SublistExample classifierForFirstList:firstList andSecondList:secondList]);
 }
     
--(void)testConsecutive{
-    
-    NSArray *firstList = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:1],[NSNumber numberWithInt:2], nil];
-    NSArray *secondList = [NSArray arrayWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:1],[NSNumber numberWithInt:1],[NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:1],[NSNumber numberWithInt:2], nil];
+- (void)testConsecutive {
+    NSArray *firstList = @[@1, @1, @2];
+    NSArray *secondList = @[@0, @1, @1, @1, @2, @1, @2];
     XCTAssertEqualObjects(@"sublist", [SublistExample classifierForFirstList:firstList andSecondList:secondList]);
 }
     
--(void)testSublistAtStart{
-    
-    NSArray *firstList = [NSArray arrayWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:1],[NSNumber numberWithInt:2], nil];
-    NSArray *secondList = [NSArray arrayWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:3],[NSNumber numberWithInt:4],[NSNumber numberWithInt:5], nil];
+- (void)testSublistAtStart {
+    NSArray *firstList = @[@0, @1, @2];
+    NSArray *secondList = @[@0, @1, @2, @3, @4, @5];
     XCTAssertEqualObjects(@"sublist", [SublistExample classifierForFirstList:firstList andSecondList:secondList]);
 }
     
--(void)testSublistInMiddle{
+- (void)testSublistInMiddle{
     
-    NSArray *firstList = [NSArray arrayWithObjects:[NSNumber numberWithInt:2],[NSNumber numberWithInt:3],[NSNumber numberWithInt:4], nil];
-    NSArray *secondList = [NSArray arrayWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:3],[NSNumber numberWithInt:4],[NSNumber numberWithInt:5], nil];
+    NSArray *firstList = @[@2, @3, @4];
+    NSArray *secondList = @[@0, @1, @2, @3, @4, @5];
     XCTAssertEqualObjects(@"sublist", [SublistExample classifierForFirstList:firstList andSecondList:secondList]);
 }
     
--(void)testSublistAtEnd{
-    
-    NSArray *firstList = [NSArray arrayWithObjects:[NSNumber numberWithInt:3],[NSNumber numberWithInt:4],[NSNumber numberWithInt:5], nil];
-    NSArray *secondList = [NSArray arrayWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:3],[NSNumber numberWithInt:4],[NSNumber numberWithInt:5], nil];
+- (void)testSublistAtEnd {
+    NSArray *firstList = @[@3, @4, @5];
+    NSArray *secondList = @[@0, @1, @2, @3, @4, @5];
     XCTAssertEqualObjects(@"sublist", [SublistExample classifierForFirstList:firstList andSecondList:secondList]);
 }
     
--(void)testAtStartOfSuperlist{
-    
-    NSArray *firstList = [NSArray arrayWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:3],[NSNumber numberWithInt:4],[NSNumber numberWithInt:5], nil];
-    NSArray *secondList = [NSArray arrayWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:1],[NSNumber numberWithInt:2], nil];
-;
+- (void)testAtStartOfSuperlist {
+    NSArray *firstList = @[@0, @1, @2, @3, @4, @5];
+    NSArray *secondList = @[@0, @1, @2];
     XCTAssertEqualObjects(@"superlist", [SublistExample classifierForFirstList:firstList andSecondList:secondList]);
 }
     
--(void)testAtMiddleOfSuperlist{
-    
-    NSArray *firstList = [NSArray arrayWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:3],[NSNumber numberWithInt:4],[NSNumber numberWithInt:5], nil];
-    NSArray *secondList = [NSArray arrayWithObjects:[NSNumber numberWithInt:2],[NSNumber numberWithInt:3], nil];
-    ;
+- (void)testAtMiddleOfSuperlist {
+    NSArray *firstList = @[@0, @1, @2, @3, @4, @5];
+    NSArray *secondList = @[@2, @3];
     XCTAssertEqualObjects(@"superlist", [SublistExample classifierForFirstList:firstList andSecondList:secondList]);
 }
 
--(void)testAtEndOfSuperlist{
-    
-    NSArray *firstList = [NSArray arrayWithObjects:[NSNumber numberWithInt:0],[NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:3],[NSNumber numberWithInt:4],[NSNumber numberWithInt:5], nil];
-    NSArray *secondList = [NSArray arrayWithObjects:[NSNumber numberWithInt:3],[NSNumber numberWithInt:4],[NSNumber numberWithInt:5], nil];
-    ;
+- (void)testAtEndOfSuperlist {
+    NSArray *firstList = @[@0, @1, @2, @3, @4, @5];
+    NSArray *secondList = @[@3, @4, @5];
     XCTAssertEqualObjects(@"superlist", [SublistExample classifierForFirstList:firstList andSecondList:secondList]);
 }
     
--(void)testFirstListMissingElementFromSecondList{
-    
-    NSArray *firstList = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:3], nil];
-    NSArray *secondList = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:3], nil];
-    ;
+- (void)testFirstListMissingElementFromSecondList {
+    NSArray *firstList = @[@1, @3];
+    NSArray *secondList = @[@1, @2, @3];
     XCTAssertEqualObjects(@"unequal", [SublistExample classifierForFirstList:firstList andSecondList:secondList]);
 }
     
--(void)testSecondListMissingOneElementFromFirstList{
-    
-    NSArray *firstList = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:3], nil];
-    NSArray *secondList = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:3], nil];
-    ;
+- (void)testSecondListMissingOneElementFromFirstList {
+    NSArray *firstList = @[@1, @2, @3];
+    NSArray *secondList = @[@1, @3];
     XCTAssertEqualObjects(@"unequal", [SublistExample classifierForFirstList:firstList andSecondList:secondList]);
 }
     
--(void)testOrderMattersToAList{
-    
-    NSArray *firstList = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:2],[NSNumber numberWithInt:3],nil];
-    NSArray *secondList = [NSArray arrayWithObjects:[NSNumber numberWithInt:3],[NSNumber numberWithInt:2],[NSNumber numberWithInt:1], nil];
-    ;
+- (void)testOrderMattersToAList {
+    NSArray *firstList = @[@1, @2, @3];
+    NSArray *secondList = @[@3, @2, @1];
     XCTAssertEqualObjects(@"unequal", [SublistExample classifierForFirstList:firstList andSecondList:secondList]);
 }
     
--(void)testSameDigitsButDifferentNumbers{
-    
-    NSArray *firstList = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:0],[NSNumber numberWithInt:1],nil];
-    NSArray *secondList = [NSArray arrayWithObjects:[NSNumber numberWithInt:10],[NSNumber numberWithInt:1], nil];
-    ;
+- (void)testSameDigitsButDifferentNumbers {
+    NSArray *firstList = @[@1, @0, @1];
+    NSArray *secondList = @[@10, @1];
     XCTAssertEqualObjects(@"unequal", [SublistExample classifierForFirstList:firstList andSecondList:secondList]);
 }
 
