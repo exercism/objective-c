@@ -2,5 +2,6 @@
 
 @interface FlattenArrayExample : NSObject
 
-+ (NSArray*)flattenArray:(NSArray*) list;
++ (NSArray *)flattenArray:(NSArray *)list;
+
 @end
