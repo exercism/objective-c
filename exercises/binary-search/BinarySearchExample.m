@@ -32,7 +32,7 @@
         }
         
         return [binary searchFor:number];
-    } else {
+    } else { //!OCLint
         NSUInteger length = self.list.count - middleIndex;
         NSArray *sublist = [self.list subarrayWithRange:NSMakeRange(middleIndex, length)];
         if ([sublist isEqualToArray:self.list]) {

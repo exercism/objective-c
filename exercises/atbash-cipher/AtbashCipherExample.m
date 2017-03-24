@@ -27,7 +27,7 @@ static NSDictionary<NSString *, NSString *> *cipherDictionary;
 }
 
 + (NSString *)encode:(NSString *)input {
-    input = [input lowercaseString];
+    input = [input lowercaseString]; //!OCLint
     
     NSCharacterSet *characterSet = [NSCharacterSet alphanumericCharacterSet];
     NSMutableString *result = [[NSMutableString alloc] init];

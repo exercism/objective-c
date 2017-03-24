@@ -32,7 +32,7 @@
     
     while(numberOfBottles <= 2){
         
-        switch(numberOfBottles){
+        switch (numberOfBottles) { //!OCLint
                 
             case 2: [verses appendFormat:@"%d bottles of beer on the wall, %d bottles of beer.\n",numberOfBottles,numberOfBottles];
                 numberOfBottles--;
