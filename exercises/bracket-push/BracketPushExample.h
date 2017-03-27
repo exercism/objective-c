@@ -4,5 +4,4 @@
 
 + (BOOL)validateBracketPairingAndNestingInString:(NSString*)string;
 
-
 @end
