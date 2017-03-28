@@ -2,66 +2,51 @@
 
 @implementation SublistExample
 
-+(NSString*)classifierForFirstList:(NSArray *)firstArray andSecondList:(NSArray *)secondArray{
++ (SublistKind)classifierForFirstList:(NSArray *)firstArray andSecondList:(NSArray *)secondArray { //!OCLint
     
-    if([firstArray isEqualToArray:secondArray]){
-        
-        return @"equal";
-    
-    }else if(firstArray.count == 0 || secondArray.count == 0){
-        
-        if(firstArray.count == 0){
-            
-            return @"sublist";
+    if ([firstArray isEqualToArray:secondArray]){
+        return SublistKindEqual;
+    } else if (firstArray.count == 0 || secondArray.count == 0) {
+        if (firstArray.count == 0) {
+            return SublistKindSublist;
         }
         
-        return @"superlist";
-    
-    }else if(firstArray.count != secondArray.count){
-        
-        int i = 0;
+        return SublistKindSuperlist;
+    } else if (firstArray.count != secondArray.count) {
+        int i = 0; //!OCLint
         int count = 0;
         NSMutableArray *smallerArray = [NSMutableArray array];
         
-        int iterations = 0;
-        iterations = MAX((int)firstArray.count, (int)secondArray.count) - ((MIN((int)firstArray.count, (int)secondArray.count)-1));
+        unsigned long iterations = 0;
+        iterations = MAX(firstArray.count, secondArray.count) - ((MIN(firstArray.count, secondArray.count) - 1));
         
-        while(iterations > 0){
+        while (iterations > 0) {
+            int j = i; //!OCLint
             
-            int j = i;
-            while(count <= (MIN(firstArray.count, secondArray.count) - 1)){
-                
-                if(firstArray.count > secondArray.count){
-                    
-                    [smallerArray addObject:[firstArray objectAtIndex:j]];
-                }else{
-                    
-                    [smallerArray addObject:[secondArray objectAtIndex:j]];
+            while (count <= (MIN(firstArray.count, secondArray.count) - 1)) {
+                if (firstArray.count > secondArray.count) {
+                    [smallerArray addObject:firstArray[j]];
+                } else {
+                    [smallerArray addObject:secondArray[j]];
                 }
+                
                 j++;
                 count++;
             }
             
-            if([smallerArray isEqualToArray:firstArray]){
-                
-                return @"sublist";
-            
-            }else if([smallerArray isEqualToArray:secondArray]){
-                
-                return @"superlist";
-            }else{
-                
-                [smallerArray removeAllObjects];
-                i++;
-                count=0;
+            if ([smallerArray isEqualToArray:firstArray]) {
+                return SublistKindSublist;
+            } else if ([smallerArray isEqualToArray:secondArray]) {
+                return SublistKindSuperlist;
             }
             
-            
+            [smallerArray removeAllObjects];
+            i++;
+            count = 0;
             iterations--;
         }
-        
     }
     
-        return @"unequal";
+    return SublistKindUnequal;
 }
 @end
