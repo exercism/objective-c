@@ -11,74 +11,54 @@
 @implementation BracketPushTest
 
 - (void)testPairedSquareBrackets {
-    
     XCTAssertTrue([BracketPushExample validateBracketPairingAndNestingInString:@"[]"]);
 }
 
--(void)testEmptyString{
-    
+- (void)testEmptyString {
     XCTAssertTrue([BracketPushExample validateBracketPairingAndNestingInString:@""]);
-
 }
 
--(void)testUnpairedBrackets{
-    
+- (void)testUnpairedBrackets {
     XCTAssertFalse([BracketPushExample validateBracketPairingAndNestingInString:@"[["]);
-
 }
 
--(void)testWrongOrderedBrackets{
-    
+- (void)testWrongOrderedBrackets {
     XCTAssertFalse([BracketPushExample validateBracketPairingAndNestingInString:@"}{"]);
-
 }
 
--(void)testPairedWithWhitespace{
-    
+- (void)testPairedWithWhitespace {
     XCTAssertTrue([BracketPushExample validateBracketPairingAndNestingInString:@"{ }"]);
-
 }
 
--(void)testSimpleNestedBrackets{
-    
+- (void)testSimpleNestedBrackets {
     XCTAssertTrue([BracketPushExample validateBracketPairingAndNestingInString:@"{[]}"]);
-
 }
 
--(void)testSeveralPairedBrackets{
-    
+- (void)testSeveralPairedBrackets {
     XCTAssertTrue([BracketPushExample validateBracketPairingAndNestingInString:@"{}[]"]);
 }
 
--(void)testPairedAndNestedBrackets{
-    
+- (void)testPairedAndNestedBrackets {
     XCTAssertTrue([BracketPushExample validateBracketPairingAndNestingInString:@"([{}({}[])])"]);
 }
 
--(void)testUnopenedClosingBrackets{
-    
+- (void)testUnopenedClosingBrackets {
     XCTAssertFalse([BracketPushExample validateBracketPairingAndNestingInString:@"{[)][]}"]);
-    
 }
 
--(void)testUnpairedAndNestedBrackets{
-    
+- (void)testUnpairedAndNestedBrackets {
     XCTAssertFalse([BracketPushExample validateBracketPairingAndNestingInString:@"([{])"]);
 }
 
--(void)testPairedAndWrongNestedBrackets{
-    
+- (void)testPairedAndWrongNestedBrackets {
     XCTAssertFalse([BracketPushExample validateBracketPairingAndNestingInString:@"[({]})"]);
-
 }
 
--(void)testMathExpression{
-    
+- (void)testMathExpression {
     XCTAssertTrue([BracketPushExample validateBracketPairingAndNestingInString:@"(((185 + 223.85) * 15) - 543)/2"]);
 }
 
--(void)testComplexLatexExpression{
-    
+- (void)testComplexLatexExpression {
     XCTAssertTrue([BracketPushExample validateBracketPairingAndNestingInString:@"\\left(\\begin{array}{cc} \\frac{1}{3} & x\\\\ \\mathrm{e}^{x} &... x^2 \\end{array}\\right)"]);
 }
 @end
