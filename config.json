@@ -281,6 +281,15 @@
       ]
     },
     {
+      "difficulty": 4,
+      "slug": "crypto-square",
+      "topics": [
+          "Looping",
+          "Transforming",
+          "Strings"
+      ]
+    },
+    {
       "difficulty": 5,
       "slug": "bracket-push",
       "topics": [
