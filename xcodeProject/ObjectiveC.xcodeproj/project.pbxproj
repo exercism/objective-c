@@ -95,6 +95,8 @@
 		E9C1C0311D9EC1270015E86E /* RunLengthEncodingTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1C0301D9EC1270015E86E /* RunLengthEncodingTest.m */; };
 		E9F390071DFCA337005C5F46 /* IsogramExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F390061DFCA337005C5F46 /* IsogramExample.m */; };
 		E9F390091DFCA350005C5F46 /* IsogramTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9F390081DFCA350005C5F46 /* IsogramTest.m */; };
+		E9FCFED31E98333D003080C0 /* PascalsTriangleExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FCFED21E98333D003080C0 /* PascalsTriangleExample.m */; };
+		E9FCFED51E983361003080C0 /* PascalsTriangleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FCFED41E983361003080C0 /* PascalsTriangleTest.m */; };
 		E9FDCA191D5407D2004EE8DB /* RomanNumeralsExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FDCA181D5407D2004EE8DB /* RomanNumeralsExample.m */; };
 		E9FDCA1B1D540801004EE8DB /* RomanNumeralsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9FDCA1A1D540801004EE8DB /* RomanNumeralsTest.m */; };
 /* End PBXBuildFile section */
@@ -213,6 +215,9 @@
 		E9F390051DFCA337005C5F46 /* IsogramExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IsogramExample.h; path = ../../exercises/isogram/IsogramExample.h; sourceTree = "<group>"; };
 		E9F390061DFCA337005C5F46 /* IsogramExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IsogramExample.m; path = ../../exercises/isogram/IsogramExample.m; sourceTree = "<group>"; };
 		E9F390081DFCA350005C5F46 /* IsogramTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = IsogramTest.m; path = ../../exercises/isogram/IsogramTest.m; sourceTree = "<group>"; };
+		E9FCFED11E98333D003080C0 /* PascalsTriangleExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PascalsTriangleExample.h; path = "../../exercises/pascals-triangle/PascalsTriangleExample.h"; sourceTree = "<group>"; };
+		E9FCFED21E98333D003080C0 /* PascalsTriangleExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PascalsTriangleExample.m; path = "../../exercises/pascals-triangle/PascalsTriangleExample.m"; sourceTree = "<group>"; };
+		E9FCFED41E983361003080C0 /* PascalsTriangleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PascalsTriangleTest.m; path = "../../exercises/pascals-triangle/PascalsTriangleTest.m"; sourceTree = "<group>"; };
 		E9FDCA171D5407D2004EE8DB /* RomanNumeralsExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RomanNumeralsExample.h; path = "../../exercises/roman-numerals/RomanNumeralsExample.h"; sourceTree = "<group>"; };
 		E9FDCA181D5407D2004EE8DB /* RomanNumeralsExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RomanNumeralsExample.m; path = "../../exercises/roman-numerals/RomanNumeralsExample.m"; sourceTree = "<group>"; };
 		E9FDCA1A1D540801004EE8DB /* RomanNumeralsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RomanNumeralsTest.m; path = "../../exercises/roman-numerals/RomanNumeralsTest.m"; sourceTree = "<group>"; };
@@ -256,6 +261,7 @@
 				E92FCC0A1D78F2AA00061017 /* Meetup */,
 				E9E8B6F21D519E180012F12C /* NucleotideCount */,
 				E9B345F51DB937E5006EFBE2 /* Pangram */,
+				E9FCFED01E9832B2003080C0 /* PascalsTriangle */,
 				E9E8B6F31D519E200012F12C /* PerfectNumbers */,
 				E9E8B6F41D519E270012F12C /* PhoneNumber */,
 				E9381D491D8F293C003F22A1 /* Raindrops */,
@@ -661,6 +667,16 @@
 			name = Isogram;
 			sourceTree = "<group>";
 		};
+		E9FCFED01E9832B2003080C0 /* PascalsTriangle */ = {
+			isa = PBXGroup;
+			children = (
+				E9FCFED11E98333D003080C0 /* PascalsTriangleExample.h */,
+				E9FCFED21E98333D003080C0 /* PascalsTriangleExample.m */,
+				E9FCFED41E983361003080C0 /* PascalsTriangleTest.m */,
+			);
+			name = PascalsTriangle;
+			sourceTree = "<group>";
+		};
 		E9FDCA161D540793004EE8DB /* RomanNumerals */ = {
 			isa = PBXGroup;
 			children = (
@@ -762,6 +778,7 @@
 				E94ACA131D41760300D56CC2 /* AllYourBaseExample.m in Sources */,
 				E94ACA151D41763800D56CC2 /* AllYourBaseTest.m in Sources */,
 				E96993981DF60E1E009EA223 /* TransposeExample.m in Sources */,
+				E9FCFED51E983361003080C0 /* PascalsTriangleTest.m in Sources */,
 				E9C1C0291D9DB16B0015E86E /* AcronymExample.m in Sources */,
 				1EFACAA41CCCAF3D006F2E69 /* AnagramTest.m in Sources */,
 				E907FE921D87547D00B93DA9 /* ScrabbleScoreExample.m in Sources */,
@@ -808,6 +825,7 @@
 				E9FDCA1B1D540801004EE8DB /* RomanNumeralsTest.m in Sources */,
 				E9C1C0231D9D993E0015E86E /* SecretHandshakeExample.m in Sources */,
 				1EFACAB71CCCAF3D006F2E69 /* RobotNameExample.m in Sources */,
+				E9FCFED31E98333D003080C0 /* PascalsTriangleExample.m in Sources */,
 				1EFACAA51CCCAF3D006F2E69 /* BobExample.m in Sources */,
 				1EFACABB1CCCAF3D006F2E69 /* WordCountExample.m in Sources */,
 				1EFACAB01CCCAF3D006F2E69 /* LeapTest.m in Sources */,

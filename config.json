@@ -290,6 +290,15 @@
       ]
     },
     {
+        "difficulty": 4,
+        "slug": "pascals-triangle",
+        "topics": [
+            "Recursion",
+            "Lists",
+            "Mathematics"
+        ]
+    },
+    {
       "difficulty": 5,
       "slug": "bracket-push",
       "topics": [
