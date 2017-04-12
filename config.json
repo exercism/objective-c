@@ -188,6 +188,14 @@
         ]
     },
     {
+        "difficulty": 3,
+        "slug": "sieve",
+        "topics": [
+            "Filtering",
+            "Mathematics"
+        ]
+    },
+    {
         "difficulty": 4,
         "slug": "beer-song",
         "topics": [

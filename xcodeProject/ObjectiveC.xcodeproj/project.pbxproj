@@ -79,12 +79,14 @@
 		E95C52561E81C82A0095D321 /* BinarySearchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E95C52541E81C82A0095D321 /* BinarySearchTest.m */; };
 		E96993981DF60E1E009EA223 /* TransposeExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E96993971DF60E1E009EA223 /* TransposeExample.m */; };
 		E969939A1DF60E5F009EA223 /* TransposeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E96993991DF60E5F009EA223 /* TransposeTest.m */; };
+		E973200C1E9DA0A900ABEE5C /* SieveExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E973200B1E9DA0A900ABEE5C /* SieveExample.m */; };
 		E9895B6E1E8DA8E8006AD25D /* CryptoSquareExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9895B6D1E8DA8E8006AD25D /* CryptoSquareExample.m */; };
 		E9895B701E8DA914006AD25D /* CryptoSquareTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9895B6F1E8DA914006AD25D /* CryptoSquareTest.m */; };
 		E99D1D811D5533BF0006A303 /* SumOfMultiplesExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E99D1D801D5533BF0006A303 /* SumOfMultiplesExample.m */; };
 		E99D1D831D5533D80006A303 /* SumOfMultiplesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E99D1D821D5533D80006A303 /* SumOfMultiplesTest.m */; };
 		E9A7B2F71DA5AC37009056B6 /* LargestSeriesProductExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A7B2F61DA5AC37009056B6 /* LargestSeriesProductExample.m */; };
 		E9A7B2F91DA5AC55009056B6 /* LargestSeriesProductTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9A7B2F81DA5AC55009056B6 /* LargestSeriesProductTest.m */; };
+		E9B062201E9E7C6D000BE589 /* SieveTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B0621F1E9E7C6D000BE589 /* SieveTest.m */; };
 		E9B345F81DB93822006EFBE2 /* PangramExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B345F71DB93822006EFBE2 /* PangramExample.m */; };
 		E9B345FA1DB93839006EFBE2 /* PangramTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B345F91DB93839006EFBE2 /* PangramTest.m */; };
 		E9C1C0231D9D993E0015E86E /* SecretHandshakeExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1C0221D9D993E0015E86E /* SecretHandshakeExample.m */; };
@@ -191,6 +193,8 @@
 		E96993961DF60E1E009EA223 /* TransposeExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TransposeExample.h; path = ../../exercises/transpose/TransposeExample.h; sourceTree = "<group>"; };
 		E96993971DF60E1E009EA223 /* TransposeExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransposeExample.m; path = ../../exercises/transpose/TransposeExample.m; sourceTree = "<group>"; };
 		E96993991DF60E5F009EA223 /* TransposeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TransposeTest.m; path = ../../exercises/transpose/TransposeTest.m; sourceTree = "<group>"; };
+		E973200A1E9DA0A900ABEE5C /* SieveExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SieveExample.h; path = ../../exercises/sieve/SieveExample.h; sourceTree = "<group>"; };
+		E973200B1E9DA0A900ABEE5C /* SieveExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SieveExample.m; path = ../../exercises/sieve/SieveExample.m; sourceTree = "<group>"; };
 		E9895B6C1E8DA8E8006AD25D /* CryptoSquareExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CryptoSquareExample.h; path = "../../exercises/crypto-square/CryptoSquareExample.h"; sourceTree = "<group>"; };
 		E9895B6D1E8DA8E8006AD25D /* CryptoSquareExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CryptoSquareExample.m; path = "../../exercises/crypto-square/CryptoSquareExample.m"; sourceTree = "<group>"; };
 		E9895B6F1E8DA914006AD25D /* CryptoSquareTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CryptoSquareTest.m; path = "../../exercises/crypto-square/CryptoSquareTest.m"; sourceTree = "<group>"; };
@@ -200,6 +204,7 @@
 		E9A7B2F51DA5AC37009056B6 /* LargestSeriesProductExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LargestSeriesProductExample.h; path = "../../exercises/largest-series-product/LargestSeriesProductExample.h"; sourceTree = "<group>"; };
 		E9A7B2F61DA5AC37009056B6 /* LargestSeriesProductExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LargestSeriesProductExample.m; path = "../../exercises/largest-series-product/LargestSeriesProductExample.m"; sourceTree = "<group>"; };
 		E9A7B2F81DA5AC55009056B6 /* LargestSeriesProductTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LargestSeriesProductTest.m; path = "../../exercises/largest-series-product/LargestSeriesProductTest.m"; sourceTree = "<group>"; };
+		E9B0621F1E9E7C6D000BE589 /* SieveTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SieveTest.m; path = ../../exercises/sieve/SieveTest.m; sourceTree = "<group>"; };
 		E9B345F61DB93822006EFBE2 /* PangramExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PangramExample.h; path = ../../exercises/pangram/PangramExample.h; sourceTree = "<group>"; };
 		E9B345F71DB93822006EFBE2 /* PangramExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PangramExample.m; path = ../../exercises/pangram/PangramExample.m; sourceTree = "<group>"; };
 		E9B345F91DB93839006EFBE2 /* PangramTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PangramTest.m; path = ../../exercises/pangram/PangramTest.m; sourceTree = "<group>"; };
@@ -270,6 +275,7 @@
 				E9C1C02C1D9EC0E50015E86E /* RunLengthEncoding */,
 				E907FE8F1D87545300B93DA9 /* ScrabbleScore */,
 				E9C1C0201D9D98B80015E86E /* SecretHandshake */,
+				E97320091E9DA06500ABEE5C /* Sieve */,
 				E9E8B6F61D519E340012F12C /* SpaceAge */,
 				A0BBFCBC1E37703D00230071 /* Sublist */,
 				E99D1D7B1D5532C50006A303 /* SumOfMultiples */,
@@ -435,6 +441,16 @@
 				E96993991DF60E5F009EA223 /* TransposeTest.m */,
 			);
 			name = Transpose;
+			sourceTree = "<group>";
+		};
+		E97320091E9DA06500ABEE5C /* Sieve */ = {
+			isa = PBXGroup;
+			children = (
+				E973200A1E9DA0A900ABEE5C /* SieveExample.h */,
+				E973200B1E9DA0A900ABEE5C /* SieveExample.m */,
+				E9B0621F1E9E7C6D000BE589 /* SieveTest.m */,
+			);
+			name = Sieve;
 			sourceTree = "<group>";
 		};
 		E9895B6B1E8DA8AA006AD25D /* CryptoSquare */ = {
@@ -775,6 +791,7 @@
 			files = (
 				1EFACAA71CCCAF3D006F2E69 /* EtlExample.m in Sources */,
 				1EFACAA31CCCAF3D006F2E69 /* AnagramExample.m in Sources */,
+				E9B062201E9E7C6D000BE589 /* SieveTest.m in Sources */,
 				E94ACA131D41760300D56CC2 /* AllYourBaseExample.m in Sources */,
 				E94ACA151D41763800D56CC2 /* AllYourBaseTest.m in Sources */,
 				E96993981DF60E1E009EA223 /* TransposeExample.m in Sources */,
@@ -808,6 +825,7 @@
 				E9381D4E1D8F2982003F22A1 /* RaindropsTest.m in Sources */,
 				E9381D541D8F2DE1003F22A1 /* ClockTest.m in Sources */,
 				1EFACAB41CCCAF3D006F2E69 /* PerfectNumbersTest.m in Sources */,
+				E973200C1E9DA0A900ABEE5C /* SieveExample.m in Sources */,
 				E9FDCA191D5407D2004EE8DB /* RomanNumeralsExample.m in Sources */,
 				E9B345F81DB93822006EFBE2 /* PangramExample.m in Sources */,
 				1EFACAAE1CCCAF3D006F2E69 /* HelloWorldTest.m in Sources */,
