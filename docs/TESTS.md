@@ -41,7 +41,7 @@ Run the tests with:
 $ objc -x ExerciseName
 ```
 
-(Note the `-x`/`--xcodebuild` flag, which specifies using `xcodebuild` instead of `xctool`, which does not work with Xcode's latest releases.)
+(Note the `-x`/`--xcodebuild` flag, which specifies using `xcodebuild` instead of `xctool`. The latter does not work with Xcode's latest releases.)
 
 The objc utility uses the exercise name to find the test file, `ExerciseNameTest.m`, the header file, `ExerciseName.h` and source file `ExerciseName.m`. The files are inserted into a temporary Xcode Project and then `xcodebuild` is used to run the tests for the project.
 
