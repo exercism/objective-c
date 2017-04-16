@@ -29,19 +29,20 @@ __Note:__ If you receive the error "No visible `@interface` for ExerciseName dec
 
 ### A Test Runner
 
-An alternative to manually generating the project file is to use a test runner utility, written in ruby, that will create a project file for you with the test file, header file and source file.
+An alternative to manually generating the project file is to use a test runner utility written in ruby, [`objc`](https://rubygems.org/gems/objc/), that will create a project file for you with the test file, header file and source file.
 
 ```bash
 $ gem install objc
-$ brew install xctool
 ```
 
 Run the tests with:
 
 ```bash
-$ objc ExerciseName
+$ objc -x ExerciseName
 ```
 
-The objc utility uses the exercise name to find the test file, `ExerciseNameTest.m`, the header file, `ExerciseName.h` and source file `ExerciseName.m`. The files are inserted into a temporary Xcode Project and then `xctool` is used to run the tests for the project.
+(Note the `-x`/`--xcodebuild` flag, which specifies using `xcodebuild` instead of `xctool`. The latter does not work with Xcode's latest releases.)
+
+The objc utility uses the exercise name to find the test file, `ExerciseNameTest.m`, the header file, `ExerciseName.h` and source file `ExerciseName.m`. The files are inserted into a temporary Xcode Project and then `xcodebuild` is used to run the tests for the project.
 
 While `objc` makes it so you never have to launch Xcode to complete these exercises, the error messages and feedback through the command-line are not as clear as through the Xcode user interface.
