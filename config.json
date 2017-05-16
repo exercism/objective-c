@@ -330,6 +330,15 @@
             "Algorithms",
             "Transforming"
         ]
+    },
+    {
+        "difficulty": 5,
+        "slug": "luhn",
+        "topics": [
+            "Strings",
+            "Algorithms",
+            "Transforming"
+        ]
     }
   ],
   "deprecated": [
