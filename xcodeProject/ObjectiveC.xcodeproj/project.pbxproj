@@ -89,6 +89,8 @@
 		E9B062201E9E7C6D000BE589 /* SieveTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B0621F1E9E7C6D000BE589 /* SieveTest.m */; };
 		E9B345F81DB93822006EFBE2 /* PangramExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B345F71DB93822006EFBE2 /* PangramExample.m */; };
 		E9B345FA1DB93839006EFBE2 /* PangramTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B345F91DB93839006EFBE2 /* PangramTest.m */; };
+		E9B9F2D41E9EB39C00214076 /* LuhnExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9F2D31E9EB39C00214076 /* LuhnExample.m */; };
+		E9B9F2D61E9EB50B00214076 /* LuhnTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9B9F2D51E9EB50B00214076 /* LuhnTest.m */; };
 		E9C1C0231D9D993E0015E86E /* SecretHandshakeExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1C0221D9D993E0015E86E /* SecretHandshakeExample.m */; };
 		E9C1C0251D9D99620015E86E /* SecretHandshakeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1C0241D9D99620015E86E /* SecretHandshakeTest.m */; };
 		E9C1C0291D9DB16B0015E86E /* AcronymExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9C1C0281D9DB16B0015E86E /* AcronymExample.m */; };
@@ -208,6 +210,9 @@
 		E9B345F61DB93822006EFBE2 /* PangramExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PangramExample.h; path = ../../exercises/pangram/PangramExample.h; sourceTree = "<group>"; };
 		E9B345F71DB93822006EFBE2 /* PangramExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PangramExample.m; path = ../../exercises/pangram/PangramExample.m; sourceTree = "<group>"; };
 		E9B345F91DB93839006EFBE2 /* PangramTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PangramTest.m; path = ../../exercises/pangram/PangramTest.m; sourceTree = "<group>"; };
+		E9B9F2D21E9EB39C00214076 /* LuhnExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LuhnExample.h; path = ../../exercises/luhn/LuhnExample.h; sourceTree = "<group>"; };
+		E9B9F2D31E9EB39C00214076 /* LuhnExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LuhnExample.m; path = ../../exercises/luhn/LuhnExample.m; sourceTree = "<group>"; };
+		E9B9F2D51E9EB50B00214076 /* LuhnTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LuhnTest.m; path = ../../exercises/luhn/LuhnTest.m; sourceTree = "<group>"; };
 		E9C1C0211D9D993E0015E86E /* SecretHandshakeExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecretHandshakeExample.h; path = "../../exercises/secret-handshake/SecretHandshakeExample.h"; sourceTree = "<group>"; };
 		E9C1C0221D9D993E0015E86E /* SecretHandshakeExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecretHandshakeExample.m; path = "../../exercises/secret-handshake/SecretHandshakeExample.m"; sourceTree = "<group>"; };
 		E9C1C0241D9D99620015E86E /* SecretHandshakeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecretHandshakeTest.m; path = "../../exercises/secret-handshake/SecretHandshakeTest.m"; sourceTree = "<group>"; };
@@ -263,6 +268,7 @@
 				E9F390041DFCA307005C5F46 /* Isogram */,
 				E9A7B2F41DA5ABA3009056B6 /* LargestSeriesProduct */,
 				E9E8B6F11D519E120012F12C /* Leap */,
+				E9B9F2D11E9EB37A00214076 /* Luhn */,
 				E92FCC0A1D78F2AA00061017 /* Meetup */,
 				E9E8B6F21D519E180012F12C /* NucleotideCount */,
 				E9B345F51DB937E5006EFBE2 /* Pangram */,
@@ -491,6 +497,16 @@
 				E9B345F91DB93839006EFBE2 /* PangramTest.m */,
 			);
 			name = Pangram;
+			sourceTree = "<group>";
+		};
+		E9B9F2D11E9EB37A00214076 /* Luhn */ = {
+			isa = PBXGroup;
+			children = (
+				E9B9F2D21E9EB39C00214076 /* LuhnExample.h */,
+				E9B9F2D31E9EB39C00214076 /* LuhnExample.m */,
+				E9B9F2D51E9EB50B00214076 /* LuhnTest.m */,
+			);
+			name = Luhn;
 			sourceTree = "<group>";
 		};
 		E9C1C0201D9D98B80015E86E /* SecretHandshake */ = {
@@ -851,6 +867,7 @@
 				E92FCC0D1D78F30D00061017 /* MeetupExample.m in Sources */,
 				E9381D4C1D8F2969003F22A1 /* RaindropsExample.m in Sources */,
 				1EFACAAD1CCCAF3D006F2E69 /* HelloWorldExample.m in Sources */,
+				E9B9F2D61E9EB50B00214076 /* LuhnTest.m in Sources */,
 				E9C1C02B1D9DB1830015E86E /* AcronymTest.m in Sources */,
 				1EFACAB31CCCAF3D006F2E69 /* PerfectNumbersExample.m in Sources */,
 				1EFACAB61CCCAF3D006F2E69 /* PhoneNumberTest.m in Sources */,
@@ -861,6 +878,7 @@
 				1EFACAA61CCCAF3D006F2E69 /* BobTest.m in Sources */,
 				E9B345FA1DB93839006EFBE2 /* PangramTest.m in Sources */,
 				E9895B701E8DA914006AD25D /* CryptoSquareTest.m in Sources */,
+				E9B9F2D41E9EB39C00214076 /* LuhnExample.m in Sources */,
 				E9A7B2F91DA5AC55009056B6 /* LargestSeriesProductTest.m in Sources */,
 				1EFACAAF1CCCAF3D006F2E69 /* LeapExample.m in Sources */,
 				E9386EF01E0B694D0009A414 /* AtbashCipherTest.m in Sources */,
