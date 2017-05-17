@@ -13,7 +13,7 @@
 }
 
 + (BOOL)validateString:(NSString *)string {
-    string = [string stringByReplacingOccurrencesOfString:@" " withString:@""];
+    string = [string stringByReplacingOccurrencesOfString:@" " withString:@""]; //!OCLint
     
     if (string.length < 2) {
         return NO;
