@@ -343,11 +343,6 @@
   "deprecated": [
 
   ],
-  "ignored": [
-    "docs",
-    "img",
-    "xcodeProject"
-  ],
   "foregone": [
 
   ]
