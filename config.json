@@ -1,7 +1,7 @@
 {
   "slug": "objective-c",
   "language": "Objective-C",
-  "repository": "https://github.com/exercism/xobjective-c",
+  "repository": "https://github.com/exercism/objective-c",
   "active": true,
   "exercises": [
     {

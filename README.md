@@ -1,4 +1,4 @@
-# xObjective-C
+# Exercism Objective-C Track
 
 Exercism exercises in Objective-C
 
