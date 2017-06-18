@@ -31,7 +31,7 @@ json = JSON.parse contents
 violations = json["violation"]
 violations.each do |object|
    shortFile =  object["path"]
-   shortFile.sub! "/Users/travis/build/exercism/xobjective-c/", ''
+   shortFile.sub! "/Users/travis/build/exercism/objective-c/", ''
    shortFile = shortFile.to_s || ''
    msg = object["rule"].to_s || ''
    line = object["startLine"] || 1
