@@ -12,8 +12,8 @@
     NSArray *dnaKeys = [dnaToRNADict allKeys];
     NSString *dnaKeyString = [dnaKeys componentsJoinedByString:@""];
     NSCharacterSet *invertedSet = [[NSCharacterSet characterSetWithCharactersInString:dnaKeyString] invertedSet];
-    NSRange invertedSetMemberRange = [dnaStrand rangeOfCharacterFromSet:invertedSet];
-    if (invertedSetMemberRange.location != NSNotFound) {
+    NSRange invertedSetRange = [dnaStrand rangeOfCharacterFromSet:invertedSet];
+    if (invertedSetRange.location != NSNotFound) {
         return nil;
     }
     
