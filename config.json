@@ -338,6 +338,17 @@
         "Algorithms",
         "Transforming"
       ]
+    },
+    {
+      "difficulty": 8,
+      "slug": "rna-transcription",
+      "topics": [
+        "Strings",
+        "Conditionals",
+        "Maps",
+        "RegularExpressions",
+        "Transforming"
+      ]
     }
   ],
   "deprecated": [
