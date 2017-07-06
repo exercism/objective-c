@@ -281,7 +281,7 @@
 				E9E8B6F31D519E200012F12C /* PerfectNumbers */,
 				E9E8B6F41D519E270012F12C /* PhoneNumber */,
 				E9381D491D8F293C003F22A1 /* Raindrops */,
-				6F409F8B1F0DBD1500217758 /* RNATrancription */,
+				6F409F8B1F0DBD1500217758 /* RNATranscription */,
 				E9E8B6F51D519E2E0012F12C /* RobotName */,
 				E9FDCA161D540793004EE8DB /* RomanNumerals */,
 				E9C1C02C1D9EC0E50015E86E /* RunLengthEncoding */,
@@ -315,15 +315,15 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6F409F8B1F0DBD1500217758 /* RNATrancription */ = {
+		6F409F8B1F0DBD1500217758 /* RNATranscription */ = {
 			isa = PBXGroup;
 			children = (
 				6F409F8E1F0DBF2800217758 /* RNATranscriptionExample.h */,
 				6F409F8F1F0DBF2800217758 /* RNATranscriptionExample.m */,
 				6F409F8C1F0DBF0A00217758 /* RNATranscriptionTest.m */,
 			);
-			name = RNATrancription;
-			path = "../../exercises/rna-trancription";
+			name = RNATranscription;
+			path = "../../exercises/rna-transcription";
 			sourceTree = "<group>";
 		};
 		A09A4C001E3875C200FEFB7A /* FlattenArray */ = {
