@@ -47,6 +47,8 @@
 		1EFACABA1CCCAF3D006F2E69 /* SpaceAgeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACA9F1CCCAF3D006F2E69 /* SpaceAgeTest.m */; };
 		1EFACABB1CCCAF3D006F2E69 /* WordCountExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACAA11CCCAF3D006F2E69 /* WordCountExample.m */; };
 		1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */; };
+		6F409F8D1F0DBF0A00217758 /* RNATranscriptionTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F409F8C1F0DBF0A00217758 /* RNATranscriptionTest.m */; };
+		6F409F901F0DBF2800217758 /* RNATranscriptionExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F409F8F1F0DBF2800217758 /* RNATranscriptionExample.m */; };
 		A065F5781E3098080048E337 /* BeerSongExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A065F5761E3098080048E337 /* BeerSongExample.m */; };
 		A065F5791E3098080048E337 /* BeerSongTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A065F5771E3098080048E337 /* BeerSongTest.m */; };
 		A097D40F1E363C2700EAF2C2 /* BracketPushExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A097D40D1E363C2700EAF2C2 /* BracketPushExample.m */; };
@@ -147,6 +149,9 @@
 		1EFACAA01CCCAF3D006F2E69 /* WordCountExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WordCountExample.h; path = "../../exercises/word-count/WordCountExample.h"; sourceTree = "<group>"; };
 		1EFACAA11CCCAF3D006F2E69 /* WordCountExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordCountExample.m; path = "../../exercises/word-count/WordCountExample.m"; sourceTree = "<group>"; };
 		1EFACAA21CCCAF3D006F2E69 /* WordCountTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WordCountTest.m; path = "../../exercises/word-count/WordCountTest.m"; sourceTree = "<group>"; };
+		6F409F8C1F0DBF0A00217758 /* RNATranscriptionTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNATranscriptionTest.m; sourceTree = "<group>"; };
+		6F409F8E1F0DBF2800217758 /* RNATranscriptionExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNATranscriptionExample.h; sourceTree = "<group>"; };
+		6F409F8F1F0DBF2800217758 /* RNATranscriptionExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNATranscriptionExample.m; sourceTree = "<group>"; };
 		A065F5751E3098080048E337 /* BeerSongExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeerSongExample.h; path = "../../exercises/beer-song/BeerSongExample.h"; sourceTree = "<group>"; };
 		A065F5761E3098080048E337 /* BeerSongExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeerSongExample.m; path = "../../exercises/beer-song/BeerSongExample.m"; sourceTree = "<group>"; };
 		A065F5771E3098080048E337 /* BeerSongTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeerSongTest.m; path = "../../exercises/beer-song/BeerSongTest.m"; sourceTree = "<group>"; };
@@ -276,6 +281,7 @@
 				E9E8B6F31D519E200012F12C /* PerfectNumbers */,
 				E9E8B6F41D519E270012F12C /* PhoneNumber */,
 				E9381D491D8F293C003F22A1 /* Raindrops */,
+				6F409F8B1F0DBD1500217758 /* RNATrancription */,
 				E9E8B6F51D519E2E0012F12C /* RobotName */,
 				E9FDCA161D540793004EE8DB /* RomanNumerals */,
 				E9C1C02C1D9EC0E50015E86E /* RunLengthEncoding */,
@@ -307,6 +313,17 @@
 				1E50BCFC1CB465C500FC128D /* xobjectivecTest.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		6F409F8B1F0DBD1500217758 /* RNATrancription */ = {
+			isa = PBXGroup;
+			children = (
+				6F409F8E1F0DBF2800217758 /* RNATranscriptionExample.h */,
+				6F409F8F1F0DBF2800217758 /* RNATranscriptionExample.m */,
+				6F409F8C1F0DBF0A00217758 /* RNATranscriptionTest.m */,
+			);
+			name = RNATrancription;
+			path = "../../exercises/rna-trancription";
 			sourceTree = "<group>";
 		};
 		A09A4C001E3875C200FEFB7A /* FlattenArray */ = {
@@ -830,6 +847,7 @@
 				E9A7B2F71DA5AC37009056B6 /* LargestSeriesProductExample.m in Sources */,
 				A065F5781E3098080048E337 /* BeerSongExample.m in Sources */,
 				E907D0CA1D6B731600106C42 /* GigasecondExample.m in Sources */,
+				6F409F901F0DBF2800217758 /* RNATranscriptionExample.m in Sources */,
 				E9381D521D8F2DCC003F22A1 /* ClockExample.m in Sources */,
 				E99D1D811D5533BF0006A303 /* SumOfMultiplesExample.m in Sources */,
 				E9F390071DFCA337005C5F46 /* IsogramExample.m in Sources */,
@@ -883,6 +901,7 @@
 				1EFACAAF1CCCAF3D006F2E69 /* LeapExample.m in Sources */,
 				E9386EF01E0B694D0009A414 /* AtbashCipherTest.m in Sources */,
 				E9C1C0251D9D99620015E86E /* SecretHandshakeTest.m in Sources */,
+				6F409F8D1F0DBF0A00217758 /* RNATranscriptionTest.m in Sources */,
 				E969939A1DF60E5F009EA223 /* TransposeTest.m in Sources */,
 				E99D1D831D5533D80006A303 /* SumOfMultiplesTest.m in Sources */,
 				E95C52561E81C82A0095D321 /* BinarySearchTest.m in Sources */,
