@@ -4,6 +4,31 @@
 
 - (NSString *)rnaFromDNAStrand:(NSString *)dnaStrand
 {
+    return [self rnaFromDNAStrandSimple:dnaStrand];
+}
+
+- (NSString *)rnaFromDNAStrandSimple:(NSString *)dnaStrand
+{
+    NSDictionary *dnaToRNADict = @{ @"G" : @"C",
+                                    @"C" : @"G",
+                                    @"T" : @"A",
+                                    @"A" : @"U" };
+        
+    NSMutableString *rnaStrand = [NSMutableString stringWithString:dnaStrand];
+    
+    for (NSUInteger i = 0; i < [dnaStrand length]; i++) {
+        NSRange charRange = [dnaStrand rangeOfComposedCharacterSequenceAtIndex:i];
+        NSString *dnaNucleotide = [dnaStrand substringWithRange:charRange];
+        NSString *rnaNucleotide = dnaToRNADict[dnaNucleotide];
+        if (!rnaNucleotide) return nil;
+        [rnaStrand replaceCharactersInRange:charRange withString:rnaNucleotide];
+    }
+    
+    return [rnaStrand copy];
+}
+
+- (NSString *)rnaFromDNAStrandComplex:(NSString *)dnaStrand
+{
     NSDictionary *dnaToRNADict = @{ @"G" : @"C",
                                     @"C" : @"G",
                                     @"T" : @"A",
