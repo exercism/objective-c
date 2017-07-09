@@ -10,7 +10,7 @@ before_install:
   - brew install oclint
 script:
   - bin/fetch-configlet
-  - bin/configlet .
+  - bin/configlet lint .
   - xctool test -project 'xcodeProject/ObjectiveC.xcodeproj' -scheme 'xobjectivecTest' -sdk macosx10.11 -reporter json-compilation-database:compile_commands.json -reporter plain:plain-output.txt -reporter pretty
 
 after_success:
