@@ -465,12 +465,11 @@
       "slug": "rna-transcription",
       "core": false,
       "unlocked_by": null,
-      "difficulty": 8,
+      "difficulty": 2,
       "topics": [
         "Strings",
         "Conditionals",
-        "Maps",
-        "RegularExpressions",
+        "Loops",
         "Transforming"
       ]
     }
