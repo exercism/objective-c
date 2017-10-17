@@ -472,6 +472,18 @@
         "Loops",
         "Transforming"
       ]
+    },
+    {
+      "uuid": "8e3d974c-0020-3880-e92e-af4fedd478e00ce788a",
+      "slug": "nth-prime",
+      "core": false,
+      "unlocked_by": null,
+      "difficulty": 4,
+      "topics": [
+        "Loops",
+        "Integers",
+        "Mathematics"
+      ]
     }
   ],
   "foregone": [
