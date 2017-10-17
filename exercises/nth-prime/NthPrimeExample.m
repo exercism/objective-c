@@ -1,13 +1,13 @@
 #import "NthPrimeExample.h"
 @implementation NthPrime : NSObject
 
-+(int)primeNo:(int)primeNo {
-	if (primeNo == 0) {
++(int)primeNum:(int)primeNum {
+	if (primeNum == 0) {
 		return 0;
 	}
 	int currentPrime = 0;
 	int i = 0;
-	while (currentPrime <= primeNo) {
+	while (currentPrime <= primeNum) {
 		i += 1;
 		if ([self isPrime:i]){
 			currentPrime += 1;

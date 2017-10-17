@@ -15,37 +15,37 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation NthPrimeTest
 
 - (void)testFirstPrime {
-	int primeNo = 1;
+	int primeNum = 1;
 	int expected = 2;
-	int result = [NthPrime primeNo:primeNo];
+	int result = [NthPrime primeNum:primeNum];
 	XCTAssertEqual(expected, result);
 }
 
 - (void)testSecondPrime {
-	int primeNo = 2;
+	int primeNum = 2;
 	int expected = 3;
-	int result = [NthPrime primeNo:primeNo];
+	int result = [NthPrime primeNum:primeNum];
 	XCTAssertEqual(expected, result);
 }
 
 - (void)testSixthPrime {
-	int primeNo = 6;
+	int primeNum = 6;
 	int expected = 13;
-	int result = [NthPrime primeNo:primeNo];
+	int result = [NthPrime primeNum:primeNum];
 	XCTAssertEqual(expected, result);
 }
 
 - (void)testBigPrime {
-	int primeNo = 10001;
+	int primeNum = 10001;
 	int expected = 104743;
-	int result = [NthPrime primeNo:primeNo];
+	int result = [NthPrime primeNum:primeNum];
 	XCTAssertEqual(expected, result);
 }
 
 - (void)testZeroPrime {
-	int primeNo = 0;
+	int primeNum = 0;
 	int expected = 0;
-	int result = [NthPrime primeNo:primeNo];
+	int result = [NthPrime primeNum:primeNum];
 	XCTAssertEqual(expected, result);
 }
 

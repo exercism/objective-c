@@ -1,6 +1,6 @@
 @interface NthPrime : NSObject {
 
 }
-+(int)primeNo:(int)primeNo;
++(int)primeNum:(int)primeNum;
 +(BOOL)isPrime:(int)i;
 @end
