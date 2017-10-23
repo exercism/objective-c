@@ -477,22 +477,22 @@
       "difficulty": 3,
       "slug": "grains",
       "topics": [
-          "integers"
+        "integers"
       ],
       "unlocked_by": null,
       "uuid": "f64b5655-0256-0580-a1dc-5b114910f0f36f0c255"
     },
     {
-      "uuid": "8e3d974c-0020-3880-e92e-af4fedd478e00ce788a",
-      "slug": "nth-prime",
       "core": false,
-      "unlocked_by": null,
       "difficulty": 4,
+      "slug": "nth-prime",
       "topics": [
-        "Loops",
-        "Integers",
-        "Mathematics"
-      ]
+        "integers",
+        "loops",
+        "mathematics"
+      ],
+      "unlocked_by": null,
+      "uuid": "8e3d974c-0020-3880-e92e-af4fedd478e00ce788a"
     }
   ],
   "foregone": [],
