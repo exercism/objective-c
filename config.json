@@ -415,6 +415,19 @@
     },
     {
       "core": false,
+      "difficulty": 4,
+      "slug": "say",
+      "topics": [
+        "loops",
+        "parsing",
+        "transforming",
+        "text_formatting"
+      ],
+      "unlocked_by": null,
+      "uuid": "9292d37e-2b5f-45a2-b995-ebcce9d90376"
+    },
+    {
+      "core": false,
       "difficulty": 5,
       "slug": "bracket-push",
       "topics": [
