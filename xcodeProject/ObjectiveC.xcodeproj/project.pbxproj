@@ -79,6 +79,8 @@
 		E951B6B91D429550009EB5B6 /* AllergiesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E951B6B81D429550009EB5B6 /* AllergiesTest.m */; };
 		E95C52551E81C82A0095D321 /* BinarySearchExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E95C52531E81C82A0095D321 /* BinarySearchExample.m */; };
 		E95C52561E81C82A0095D321 /* BinarySearchTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E95C52541E81C82A0095D321 /* BinarySearchTest.m */; };
+		E9630C491FD07A880024EE90 /* TwoFerExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9630C481FD07A880024EE90 /* TwoFerExample.m */; };
+		E9630C4B1FD07AA10024EE90 /* TwoFerTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9630C4A1FD07AA10024EE90 /* TwoFerTest.m */; };
 		E964F68F1FBF9CA6000114D9 /* SayExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E964F68E1FBF9CA6000114D9 /* SayExample.m */; };
 		E964F6911FBF9CC6000114D9 /* SayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E964F6901FBF9CC6000114D9 /* SayTest.m */; };
 		E96993981DF60E1E009EA223 /* TransposeExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E96993971DF60E1E009EA223 /* TransposeExample.m */; };
@@ -199,6 +201,9 @@
 		E95C52521E81C82A0095D321 /* BinarySearchExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BinarySearchExample.h; path = "../../exercises/binary-search/BinarySearchExample.h"; sourceTree = "<group>"; };
 		E95C52531E81C82A0095D321 /* BinarySearchExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BinarySearchExample.m; path = "../../exercises/binary-search/BinarySearchExample.m"; sourceTree = "<group>"; };
 		E95C52541E81C82A0095D321 /* BinarySearchTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BinarySearchTest.m; path = "../../exercises/binary-search/BinarySearchTest.m"; sourceTree = "<group>"; };
+		E9630C471FD07A880024EE90 /* TwoFerExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TwoFerExample.h; path = "../../exercises/two-fer/TwoFerExample.h"; sourceTree = "<group>"; };
+		E9630C481FD07A880024EE90 /* TwoFerExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TwoFerExample.m; path = "../../exercises/two-fer/TwoFerExample.m"; sourceTree = "<group>"; };
+		E9630C4A1FD07AA10024EE90 /* TwoFerTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TwoFerTest.m; path = "../../exercises/two-fer/TwoFerTest.m"; sourceTree = "<group>"; };
 		E964F68D1FBF9CA6000114D9 /* SayExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SayExample.h; path = ../../exercises/say/SayExample.h; sourceTree = "<group>"; };
 		E964F68E1FBF9CA6000114D9 /* SayExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SayExample.m; path = ../../exercises/say/SayExample.m; sourceTree = "<group>"; };
 		E964F6901FBF9CC6000114D9 /* SayTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SayTest.m; path = ../../exercises/say/SayTest.m; sourceTree = "<group>"; };
@@ -299,6 +304,7 @@
 				E99D1D7B1D5532C50006A303 /* SumOfMultiples */,
 				E96993951DF60DF1009EA223 /* Transpose */,
 				E947A4DB1D81FDDA00633720 /* Triangle */,
+				E9630C441FD07A390024EE90 /* TwoFer */,
 				E9E8B6F71D519E3A0012F12C /* WordCount */,
 				1E50BD001CB465C500FC128D /* Info.plist */,
 			);
@@ -460,6 +466,16 @@
 				E95C52541E81C82A0095D321 /* BinarySearchTest.m */,
 			);
 			name = BinarySearch;
+			sourceTree = "<group>";
+		};
+		E9630C441FD07A390024EE90 /* TwoFer */ = {
+			isa = PBXGroup;
+			children = (
+				E9630C471FD07A880024EE90 /* TwoFerExample.h */,
+				E9630C481FD07A880024EE90 /* TwoFerExample.m */,
+				E9630C4A1FD07AA10024EE90 /* TwoFerTest.m */,
+			);
+			name = TwoFer;
 			sourceTree = "<group>";
 		};
 		E964F68C1FBF9B6B000114D9 /* Say */ = {
@@ -852,6 +868,7 @@
 				A097D4101E363C2700EAF2C2 /* BracketPushTest.m in Sources */,
 				E95C52551E81C82A0095D321 /* BinarySearchExample.m in Sources */,
 				1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */,
+				E9630C4B1FD07AA10024EE90 /* TwoFerTest.m in Sources */,
 				1EFACAB11CCCAF3D006F2E69 /* NucleotideCountExample.m in Sources */,
 				E9381D481D8EE00C003F22A1 /* DifferenceOfSquaresTest.m in Sources */,
 				E907FE941D87554500B93DA9 /* ScrabbleScoreTest.m in Sources */,
@@ -888,6 +905,7 @@
 				1EFACAA91CCCAF3D006F2E69 /* GradeSchoolExample.m in Sources */,
 				1EFACABA1CCCAF3D006F2E69 /* SpaceAgeTest.m in Sources */,
 				1EFACAB91CCCAF3D006F2E69 /* SpaceAgeExample.m in Sources */,
+				E9630C491FD07A880024EE90 /* TwoFerExample.m in Sources */,
 				E9F390091DFCA350005C5F46 /* IsogramTest.m in Sources */,
 				E964F6911FBF9CC6000114D9 /* SayTest.m in Sources */,
 				E951B6B71D4294E6009EB5B6 /* AllergiesExample.m in Sources */,
