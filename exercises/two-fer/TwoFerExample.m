@@ -12,7 +12,7 @@
 
 + (NSString *)twoFerWithName:(NSString *)name {
     if (!name) {
-        name = @"you";
+        name = @"you"; // !OCLint
     }
     
     return [NSString stringWithFormat:@"One for %@, one for me.", name];
