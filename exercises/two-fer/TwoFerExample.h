@@ -10,6 +10,6 @@
 
 @interface TwoFer : NSObject
 
-+ (NSString *)twoFerWithName:(NSString *)name;
++ (nonnull NSString *)twoFerWithName:(nullable NSString *)name;
 
 @end

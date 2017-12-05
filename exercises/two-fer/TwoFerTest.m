@@ -12,6 +12,8 @@
 
 @implementation TwoFerTest
 
+NS_ASSUME_NONNULL_BEGIN
+    
 - (void)testNoNameGiven {
     XCTAssertEqualObjects([TwoFer twoFerWithName:nil], @"One for you, one for me.");
 }
@@ -24,4 +26,6 @@
     XCTAssertEqualObjects([TwoFer twoFerWithName:@"Bob"], @"One for Bob, one for me.");
 }
 
+NS_ASSUME_NONNULL_END
+    
 @end
