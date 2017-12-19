@@ -15,6 +15,17 @@
     {
       "core": false,
       "difficulty": 1,
+      "slug": "two-fer",
+      "topics": [
+        "optional_values",
+        "text_formatting"
+      ],
+      "unlocked_by": null,
+      "uuid": "46da53f3-a39b-4f19-8ade-87f434cf12ec"
+    },
+    {
+      "core": false,
+      "difficulty": 1,
       "slug": "bob",
       "topics": [
         "control_flow_if_else_statements",
