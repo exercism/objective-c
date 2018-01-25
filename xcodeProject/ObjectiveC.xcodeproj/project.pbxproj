@@ -63,6 +63,8 @@
 		E907FE941D87554500B93DA9 /* ScrabbleScoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E907FE931D87554500B93DA9 /* ScrabbleScoreTest.m */; };
 		E92FCC0D1D78F30D00061017 /* MeetupExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E92FCC0C1D78F30D00061017 /* MeetupExample.m */; };
 		E92FCC0F1D78F3B600061017 /* MeetupTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E92FCC0E1D78F3B600061017 /* MeetupTest.m */; };
+		E9340D06201975C9009FDEF4 /* CollatzConjectureExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9340D05201975C9009FDEF4 /* CollatzConjectureExample.m */; };
+		E9340D08201975E5009FDEF4 /* CollatzConjectureTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9340D07201975E5009FDEF4 /* CollatzConjectureTest.m */; };
 		E9381D461D8EDFFA003F22A1 /* DifferenceOfSquaresExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9381D451D8EDFFA003F22A1 /* DifferenceOfSquaresExample.m */; };
 		E9381D481D8EE00C003F22A1 /* DifferenceOfSquaresTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E9381D471D8EE00C003F22A1 /* DifferenceOfSquaresTest.m */; };
 		E9381D4C1D8F2969003F22A1 /* RaindropsExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9381D4B1D8F2969003F22A1 /* RaindropsExample.m */; };
@@ -177,6 +179,9 @@
 		E92FCC0B1D78F30D00061017 /* MeetupExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeetupExample.h; path = ../../exercises/meetup/MeetupExample.h; sourceTree = "<group>"; };
 		E92FCC0C1D78F30D00061017 /* MeetupExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetupExample.m; path = ../../exercises/meetup/MeetupExample.m; sourceTree = "<group>"; };
 		E92FCC0E1D78F3B600061017 /* MeetupTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetupTest.m; path = ../../exercises/meetup/MeetupTest.m; sourceTree = "<group>"; };
+		E9340D04201975C9009FDEF4 /* CollatzConjectureExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CollatzConjectureExample.h; path = "../../exercises/collatz-conjecture/CollatzConjectureExample.h"; sourceTree = "<group>"; };
+		E9340D05201975C9009FDEF4 /* CollatzConjectureExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CollatzConjectureExample.m; path = "../../exercises/collatz-conjecture/CollatzConjectureExample.m"; sourceTree = "<group>"; };
+		E9340D07201975E5009FDEF4 /* CollatzConjectureTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CollatzConjectureTest.m; path = "../../exercises/collatz-conjecture/CollatzConjectureTest.m"; sourceTree = "<group>"; };
 		E9381D441D8EDFFA003F22A1 /* DifferenceOfSquaresExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DifferenceOfSquaresExample.h; path = "../../exercises/difference-of-squares/DifferenceOfSquaresExample.h"; sourceTree = "<group>"; };
 		E9381D451D8EDFFA003F22A1 /* DifferenceOfSquaresExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DifferenceOfSquaresExample.m; path = "../../exercises/difference-of-squares/DifferenceOfSquaresExample.m"; sourceTree = "<group>"; };
 		E9381D471D8EE00C003F22A1 /* DifferenceOfSquaresTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DifferenceOfSquaresTest.m; path = "../../exercises/difference-of-squares/DifferenceOfSquaresTest.m"; sourceTree = "<group>"; };
@@ -272,6 +277,7 @@
 				E9E8B6EC1D519DEF0012F12C /* Bob */,
 				A09A906D1E28C1380087CCB7 /* BracketPush */,
 				E9381D4F1D8F2DA4003F22A1 /* Clock */,
+				E9340D0320197513009FDEF4 /* CollatzConjecture */,
 				E9895B6B1E8DA8AA006AD25D /* CryptoSquare */,
 				E9381D431D8EDFB8003F22A1 /* DifferenceOfSquares */,
 				E9E8B6ED1D519DF50012F12C /* Etl */,
@@ -406,6 +412,16 @@
 				E92FCC0E1D78F3B600061017 /* MeetupTest.m */,
 			);
 			name = Meetup;
+			sourceTree = "<group>";
+		};
+		E9340D0320197513009FDEF4 /* CollatzConjecture */ = {
+			isa = PBXGroup;
+			children = (
+				E9340D04201975C9009FDEF4 /* CollatzConjectureExample.h */,
+				E9340D05201975C9009FDEF4 /* CollatzConjectureExample.m */,
+				E9340D07201975E5009FDEF4 /* CollatzConjectureTest.m */,
+			);
+			name = CollatzConjecture;
 			sourceTree = "<group>";
 		};
 		E9381D431D8EDFB8003F22A1 /* DifferenceOfSquares */ = {
@@ -794,7 +810,7 @@
 		1EE9CC521CB462CB00C92E6D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = exercism;
 				TargetAttributes = {
 					1E1068C41D408EE30019B25B = {
@@ -875,6 +891,7 @@
 				1EFACAB51CCCAF3D006F2E69 /* PhoneNumberExample.m in Sources */,
 				A0BBFCBF1E37719800230071 /* SublistExample.m in Sources */,
 				E951B6B91D429550009EB5B6 /* AllergiesTest.m in Sources */,
+				E9340D06201975C9009FDEF4 /* CollatzConjectureExample.m in Sources */,
 				A065F5791E3098080048E337 /* BeerSongTest.m in Sources */,
 				E9381D461D8EDFFA003F22A1 /* DifferenceOfSquaresExample.m in Sources */,
 				E9A7B2F71DA5AC37009056B6 /* LargestSeriesProductExample.m in Sources */,
@@ -936,6 +953,7 @@
 				E9A7B2F91DA5AC55009056B6 /* LargestSeriesProductTest.m in Sources */,
 				1EFACAAF1CCCAF3D006F2E69 /* LeapExample.m in Sources */,
 				E9386EF01E0B694D0009A414 /* AtbashCipherTest.m in Sources */,
+				E9340D08201975E5009FDEF4 /* CollatzConjectureTest.m in Sources */,
 				E9C1C0251D9D99620015E86E /* SecretHandshakeTest.m in Sources */,
 				6F409F8D1F0DBF0A00217758 /* RNATranscriptionTest.m in Sources */,
 				E969939A1DF60E5F009EA223 /* TransposeTest.m in Sources */,
@@ -993,14 +1011,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -1039,14 +1063,20 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
