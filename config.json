@@ -276,6 +276,17 @@
     },
     {
       "core": false,
+      "difficulty": 3,
+      "slug": "collatz-conjecture",
+      "topics": [
+        "integers",
+        "mathematics"
+      ],
+      "unlocked_by": null,
+      "uuid": "d7d66773-e07f-4da1-932b-9431437d34d6"
+    },
+    {
+      "core": false,
       "difficulty": 4,
       "slug": "beer-song",
       "topics": [
