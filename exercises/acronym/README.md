@@ -7,7 +7,6 @@ Techies love their TLA (Three Letter Acronyms)!
 Help generate some jargon by writing a program that converts a long name
 like Portable Network Graphics to its acronym (PNG).
 
-
 ## Setup
 
 There are two different methods of getting set up to run the tests with Objective-C:
