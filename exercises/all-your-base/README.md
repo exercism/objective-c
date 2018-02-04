@@ -47,6 +47,5 @@ When submitting an exercise, make sure your solution file is in the same directo
 
 For example, if you're submitting `Bob.m` for the Bob exercise, the submit command would be something like `exercism submit <path_to_exercism_dir>/objective-c/bob/Bob.m`.
 
-
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
