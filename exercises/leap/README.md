@@ -4,7 +4,7 @@ Given a year, report if it is a leap year.
 
 The tricky thing here is that a leap year in the Gregorian calendar occurs:
 
-```plain
+```text
 on every year that is evenly divisible by 4
   except every year that is evenly divisible by 100
     unless the year is also evenly divisible by 400
@@ -35,12 +35,18 @@ There are two different methods of getting set up to run the tests with Objectiv
 
 Both are described in more detail here: http://exercism.io/languages/objective-c
 
-
 ### Submitting Exercises
 
 When submitting an exercise, make sure your solution file is in the same directory as the test code.
 
-For example, if you're submitting `Bob.m` for the Bob exercise, the submit command would be something like `exercism submit <path_to_exercism_dir>/objective-c/bob/Bob.m`.
+The submit command will look something like:
+
+```shell
+exercism submit <path-to-exercism-workspace>/objective-c/leap/Leap.m
+```
+
+You can find the Exercism workspace by running `exercism debug` and looking for the line beginning
+with Workspace.
 
 ## Source
 

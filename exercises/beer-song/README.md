@@ -1,10 +1,10 @@
 # Beer Song
 
-Produce the lyrics to that beloved classic, that field-trip favorite: 99 Bottles of Beer on the Wall.
+Recite the lyrics to that beloved classic, that field-trip favorite: 99 Bottles of Beer on the Wall.
 
 Note that not all verses are identical.
 
-```plain
+```text
 99 bottles of beer on the wall, 99 bottles of beer.
 Take one down and pass it around, 98 bottles of beer on the wall.
 
@@ -329,12 +329,18 @@ There are two different methods of getting set up to run the tests with Objectiv
 
 Both are described in more detail here: http://exercism.io/languages/objective-c
 
-
 ### Submitting Exercises
 
 When submitting an exercise, make sure your solution file is in the same directory as the test code.
 
-For example, if you're submitting `Bob.m` for the Bob exercise, the submit command would be something like `exercism submit <path_to_exercism_dir>/objective-c/bob/Bob.m`.
+The submit command will look something like:
+
+```shell
+exercism submit <path-to-exercism-workspace>/objective-c/beer-song/BeerSong.m
+```
+
+You can find the Exercism workspace by running `exercism debug` and looking for the line beginning
+with Workspace.
 
 ## Source
 

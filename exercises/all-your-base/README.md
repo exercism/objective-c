@@ -6,6 +6,7 @@ Implement general base conversion. Given a number in base **a**,
 represented as a sequence of digits, convert it to base **b**.
 
 ## Note
+
 - Try to implement the conversion yourself.
   Do not use something else to perform the conversion for you.
 
@@ -28,7 +29,6 @@ The number 1120, *in base 3*, means:
 
 I think you got the idea!
 
-
 *Yes. Those three numbers above are exactly the same. Congratulations!*
 
 ## Setup
@@ -40,13 +40,18 @@ There are two different methods of getting set up to run the tests with Objectiv
 
 Both are described in more detail here: http://exercism.io/languages/objective-c
 
-
 ### Submitting Exercises
 
 When submitting an exercise, make sure your solution file is in the same directory as the test code.
 
-For example, if you're submitting `Bob.m` for the Bob exercise, the submit command would be something like `exercism submit <path_to_exercism_dir>/objective-c/bob/Bob.m`.
+The submit command will look something like:
 
+```shell
+exercism submit <path-to-exercism-workspace>/objective-c/all-your-base/AllYourBase.m
+```
+
+You can find the Exercism workspace by running `exercism debug` and looking for the line beginning
+with Workspace.
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

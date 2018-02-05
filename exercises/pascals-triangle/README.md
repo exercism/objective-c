@@ -1,11 +1,11 @@
-# Pascals Triangle
+# Pascal's Triangle
 
 Compute Pascal's triangle up to a given number of rows.
 
 In Pascal's Triangle each number is computed by adding the numbers to
 the right and left of the current position in the previous row.
 
-```plain
+```text
     1
    1 1
   1 2 1
@@ -23,12 +23,18 @@ There are two different methods of getting set up to run the tests with Objectiv
 
 Both are described in more detail here: http://exercism.io/languages/objective-c
 
-
 ### Submitting Exercises
 
 When submitting an exercise, make sure your solution file is in the same directory as the test code.
 
-For example, if you're submitting `Bob.m` for the Bob exercise, the submit command would be something like `exercism submit <path_to_exercism_dir>/objective-c/bob/Bob.m`.
+The submit command will look something like:
+
+```shell
+exercism submit <path-to-exercism-workspace>/objective-c/pascals-triangle/PascalsTriangle.m
+```
+
+You can find the Exercism workspace by running `exercism debug` and looking for the line beginning
+with Workspace.
 
 ## Source
 

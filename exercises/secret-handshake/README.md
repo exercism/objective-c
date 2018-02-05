@@ -6,7 +6,7 @@
 You and your fellow cohort of those in the "know" when it comes to
 binary decide to come up with a secret "handshake".
 
-```
+```text
 1 = wink
 10 = double blink
 100 = close your eyes
@@ -37,16 +37,22 @@ There are two different methods of getting set up to run the tests with Objectiv
 
 Both are described in more detail here: http://exercism.io/languages/objective-c
 
-
 ### Submitting Exercises
 
 When submitting an exercise, make sure your solution file is in the same directory as the test code.
 
-For example, if you're submitting `Bob.m` for the Bob exercise, the submit command would be something like `exercism submit <path_to_exercism_dir>/objective-c/bob/Bob.m`.
+The submit command will look something like:
+
+```shell
+exercism submit <path-to-exercism-workspace>/objective-c/secret-handshake/SecretHandshake.m
+```
+
+You can find the Exercism workspace by running `exercism debug` and looking for the line beginning
+with Workspace.
 
 ## Source
 
-Bert, in Mary Poppins [http://www.imdb.com/character/ch0011238/quotes](http://www.imdb.com/character/ch0011238/quotes)
+Bert, in Mary Poppins [http://www.imdb.com/title/tt0058331/quotes/qt0437047](http://www.imdb.com/title/tt0058331/quotes/qt0437047)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

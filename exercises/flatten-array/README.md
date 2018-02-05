@@ -3,13 +3,12 @@
 Take a nested list and return a single flattened list with all values except nil/null.
 
 The challenge is to write a function that accepts an arbitrarily-deep nested list-like structure and returns a flattened structure without any nil/null values.
- 
+
 For Example
 
 input: [1,[2,3,null,4],[null],5]
 
 output: [1,2,3,4,5]
-
 
 ## Setup
 
@@ -20,12 +19,18 @@ There are two different methods of getting set up to run the tests with Objectiv
 
 Both are described in more detail here: http://exercism.io/languages/objective-c
 
-
 ### Submitting Exercises
 
 When submitting an exercise, make sure your solution file is in the same directory as the test code.
 
-For example, if you're submitting `Bob.m` for the Bob exercise, the submit command would be something like `exercism submit <path_to_exercism_dir>/objective-c/bob/Bob.m`.
+The submit command will look something like:
+
+```shell
+exercism submit <path-to-exercism-workspace>/objective-c/flatten-array/FlattenArray.m
+```
+
+You can find the Exercism workspace by running `exercism debug` and looking for the line beginning
+with Workspace.
 
 ## Source
 
