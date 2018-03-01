@@ -166,6 +166,17 @@
     },
     {
       "core": false,
+      "difficulty": 2,
+      "slug": "prime-factors",
+      "topics": [
+        "integers",
+        "looping"
+      ],
+      "unlocked_by": null,
+      "uuid": "1ab06e01-0a06-4d00-995f-078182fd97ec"
+    },
+    {
+      "core": false,
       "difficulty": 3,
       "slug": "sublist",
       "topics": [
