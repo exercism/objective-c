@@ -298,6 +298,18 @@
     },
     {
       "core": false,
+      "difficulty": 3,
+      "slug": "series",
+      "topics": [
+        "lists",
+        "looping",
+        "integers"
+      ],
+      "unlocked_by": null,
+      "uuid": "a56e3c85-715e-4730-966f-cc46616aaa95"
+    },
+    {
+      "core": false,
       "difficulty": 4,
       "slug": "beer-song",
       "topics": [

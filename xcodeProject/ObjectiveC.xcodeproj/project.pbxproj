@@ -63,6 +63,8 @@
 		E907D0CC1D6B734800106C42 /* GigasecondTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D0CB1D6B734800106C42 /* GigasecondTest.m */; };
 		E907FE921D87547D00B93DA9 /* ScrabbleScoreExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E907FE911D87547D00B93DA9 /* ScrabbleScoreExample.m */; };
 		E907FE941D87554500B93DA9 /* ScrabbleScoreTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E907FE931D87554500B93DA9 /* ScrabbleScoreTest.m */; };
+		E90E59CA204891DD008C0FB5 /* SeriesExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E90E59C9204891DD008C0FB5 /* SeriesExample.m */; };
+		E90E59CC204891F7008C0FB5 /* SeriesTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E90E59CB204891F7008C0FB5 /* SeriesTest.m */; };
 		E92FCC0D1D78F30D00061017 /* MeetupExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E92FCC0C1D78F30D00061017 /* MeetupExample.m */; };
 		E92FCC0F1D78F3B600061017 /* MeetupTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E92FCC0E1D78F3B600061017 /* MeetupTest.m */; };
 		E9340D06201975C9009FDEF4 /* CollatzConjectureExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E9340D05201975C9009FDEF4 /* CollatzConjectureExample.m */; };
@@ -181,6 +183,9 @@
 		E907FE901D87547D00B93DA9 /* ScrabbleScoreExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScrabbleScoreExample.h; path = "../../exercises/scrabble-score/ScrabbleScoreExample.h"; sourceTree = "<group>"; };
 		E907FE911D87547D00B93DA9 /* ScrabbleScoreExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScrabbleScoreExample.m; path = "../../exercises/scrabble-score/ScrabbleScoreExample.m"; sourceTree = "<group>"; };
 		E907FE931D87554500B93DA9 /* ScrabbleScoreTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScrabbleScoreTest.m; path = "../../exercises/scrabble-score/ScrabbleScoreTest.m"; sourceTree = "<group>"; };
+		E90E59C8204891DD008C0FB5 /* SeriesExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SeriesExample.h; path = ../../exercises/series/SeriesExample.h; sourceTree = "<group>"; };
+		E90E59C9204891DD008C0FB5 /* SeriesExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SeriesExample.m; path = ../../exercises/series/SeriesExample.m; sourceTree = "<group>"; };
+		E90E59CB204891F7008C0FB5 /* SeriesTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SeriesTest.m; path = ../../exercises/series/SeriesTest.m; sourceTree = "<group>"; };
 		E92FCC0B1D78F30D00061017 /* MeetupExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MeetupExample.h; path = ../../exercises/meetup/MeetupExample.h; sourceTree = "<group>"; };
 		E92FCC0C1D78F30D00061017 /* MeetupExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetupExample.m; path = ../../exercises/meetup/MeetupExample.m; sourceTree = "<group>"; };
 		E92FCC0E1D78F3B600061017 /* MeetupTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MeetupTest.m; path = ../../exercises/meetup/MeetupTest.m; sourceTree = "<group>"; };
@@ -310,6 +315,7 @@
 				E964F68C1FBF9B6B000114D9 /* Say */,
 				E907FE8F1D87545300B93DA9 /* ScrabbleScore */,
 				E9C1C0201D9D98B80015E86E /* SecretHandshake */,
+				E90E59C720489199008C0FB5 /* Series */,
 				E97320091E9DA06500ABEE5C /* Sieve */,
 				E9E8B6F61D519E340012F12C /* SpaceAge */,
 				A0BBFCBC1E37703D00230071 /* Sublist */,
@@ -418,6 +424,16 @@
 				E907FE931D87554500B93DA9 /* ScrabbleScoreTest.m */,
 			);
 			name = ScrabbleScore;
+			sourceTree = "<group>";
+		};
+		E90E59C720489199008C0FB5 /* Series */ = {
+			isa = PBXGroup;
+			children = (
+				E90E59C8204891DD008C0FB5 /* SeriesExample.h */,
+				E90E59C9204891DD008C0FB5 /* SeriesExample.m */,
+				E90E59CB204891F7008C0FB5 /* SeriesTest.m */,
+			);
+			name = Series;
 			sourceTree = "<group>";
 		};
 		E92FCC0A1D78F2AA00061017 /* Meetup */ = {
@@ -947,6 +963,7 @@
 				1EFACAB71CCCAF3D006F2E69 /* RobotNameExample.m in Sources */,
 				E9FCFED31E98333D003080C0 /* PascalsTriangleExample.m in Sources */,
 				1EFACAA51CCCAF3D006F2E69 /* BobExample.m in Sources */,
+				E90E59CA204891DD008C0FB5 /* SeriesExample.m in Sources */,
 				1EFACABB1CCCAF3D006F2E69 /* WordCountExample.m in Sources */,
 				1EFACAB01CCCAF3D006F2E69 /* LeapTest.m in Sources */,
 				1EFACAAB1CCCAF3D006F2E69 /* HammingExample.m in Sources */,
@@ -969,6 +986,7 @@
 				E90343B62041F989006F1833 /* PrimeFactorsExample.m in Sources */,
 				E9B9F2D41E9EB39C00214076 /* LuhnExample.m in Sources */,
 				E9A7B2F91DA5AC55009056B6 /* LargestSeriesProductTest.m in Sources */,
+				E90E59CC204891F7008C0FB5 /* SeriesTest.m in Sources */,
 				1EFACAAF1CCCAF3D006F2E69 /* LeapExample.m in Sources */,
 				E9386EF01E0B694D0009A414 /* AtbashCipherTest.m in Sources */,
 				E9340D08201975E5009FDEF4 /* CollatzConjectureTest.m in Sources */,
