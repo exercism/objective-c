@@ -1,11 +1,3 @@
-//
-//  StrainTest.m
-//  xobjectivecTest
-//
-//  Created by Alwyn Savio Concessao on 12/03/18.
-//  Copyright © 2018 exercism. All rights reserved.
-//
-
 #import <XCTest/XCTest.h>
 
 #if __has_include("StrainExample.h")
