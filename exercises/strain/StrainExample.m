@@ -3,7 +3,7 @@
 
 @implementation NSArray (StrainExample)
 
--(NSArray*)keep:(BOOL)compare where:(BOOL (^)(id _Nonnull arrayElement))completionHandler{
+-(instancetype)keep:(BOOL)compare where:(BOOL (^)(id _Nonnull arrayElement))completionHandler{
     
     NSMutableArray *filteredArray = [NSMutableArray array];
     
@@ -22,7 +22,7 @@
     
 }
 
--(NSArray*)discard:(BOOL (^)(id _Nonnull arrayElement))completionHandler{
+-(instancetype)discard:(BOOL (^)(id _Nonnull arrayElement))completionHandler{
     
     return [self keep:false where:completionHandler];
 }

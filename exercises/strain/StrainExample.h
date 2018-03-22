@@ -2,9 +2,9 @@
 
 @interface NSArray (StrainExample)
 
--(NSArray*)keep:(BOOL)compare where:(BOOL (^_Nonnull)(id _Nonnull arrayElement))completionHandler;
+-(instancetype _Nonnull)keep:(BOOL)compare where:(BOOL (^_Nonnull)(id _Nonnull arrayElement))completionHandler;
 
--(NSArray* _Nullable)discard:(BOOL (^_Nonnull)(id _Nonnull arrayElement))completionHandler;
+-(instancetype _Nonnull)discard:(BOOL (^_Nonnull)(id _Nonnull arrayElement))completionHandler;
 
 
 @end
