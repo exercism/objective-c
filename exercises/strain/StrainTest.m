@@ -68,9 +68,9 @@
     
     XCTAssertEqualObjects(expectedArray, [inputArray keep:true where:^BOOL(id  _Nonnull arrayElement) {
         
-        NSNumber *n = (NSNumber*)arrayElement;
-        int i = n.intValue;
-        return i % 2 != 0;
+        NSNumber *number = (NSNumber*)arrayElement;
+        int integerNumber = number.intValue;
+        return integerNumber % 2 != 0;
         
     }]);
 }
@@ -83,9 +83,9 @@
     
     XCTAssertEqualObjects(expectedArray, [inputArray keep:true where:^BOOL(id  _Nonnull arrayElement) {
         
-        NSNumber *n = (NSNumber*)arrayElement;
-        int i = n.intValue;
-        return i % 2 == 0;
+        NSNumber *number = (NSNumber*)arrayElement;
+        int integerNumber = number.intValue;
+        return integerNumber % 2 == 0;
         
     }]);
 }
@@ -98,9 +98,9 @@
     
     XCTAssertEqualObjects(expectedArray, [inputArray keep:true where:^BOOL(id  _Nonnull arrayElement) {
         
-        NSString *s = (NSString*)arrayElement;
+        NSString *string = (NSString*)arrayElement;
         
-        return ([s rangeOfString:@"z"].location != NSNotFound || [s rangeOfString:@"Z"].location != NSNotFound);
+        return ([string rangeOfString:@"z"].location != NSNotFound || [string rangeOfString:@"Z"].location != NSNotFound);
         
     }]);
 }
@@ -113,8 +113,8 @@
     
     XCTAssertEqualObjects(expectedArray, [inputArray keep:true where:^BOOL(id  _Nonnull arrayElement) {
         
-        NSArray *a = (NSArray*)arrayElement;
-        return [a containsObject:@5];
+        NSArray *nestedArray = (NSArray*)arrayElement;
+        return [nestedArray containsObject:@5];
         
     }]);
    
@@ -128,9 +128,9 @@
     
     XCTAssertEqualObjects(expectedArray, [inputArray discard:^BOOL(id  _Nonnull arrayElement) {
         
-        NSNumber *n = (NSNumber*)arrayElement;
-        int i = n.intValue;
-        return i < 10;
+        NSNumber *number = (NSNumber*)arrayElement;
+        int integerNumber = number.intValue;
+        return integerNumber < 10;
         
     }]);
     
@@ -144,9 +144,9 @@
     
     XCTAssertEqualObjects(expectedArray, [inputArray discard:^BOOL(id  _Nonnull arrayElement) {
         
-        NSNumber *n = (NSNumber*)arrayElement;
-        int i = n.intValue;
-        return i > 10;
+        NSNumber *number = (NSNumber*)arrayElement;
+        int integerNumber = number.intValue;
+        return integerNumber > 10;
         
     }]);
 }
@@ -159,9 +159,9 @@
     
     XCTAssertEqualObjects(expectedArray, [inputArray discard:^BOOL(id  _Nonnull arrayElement) {
         
-        NSNumber *n = (NSNumber*)arrayElement;
-        int i = n.intValue;
-        return i % 2 != 0;
+        NSNumber *number = (NSNumber*)arrayElement;
+        int integerNumber = number.intValue;
+        return integerNumber % 2 != 0;
         
     }]);
 }
@@ -174,9 +174,9 @@
     
     XCTAssertEqualObjects(expectedArray, [inputArray discard:^BOOL(id  _Nonnull arrayElement) {
         
-        NSNumber *n = (NSNumber*)arrayElement;
-        int i = n.intValue;
-        return i % 2 == 0;
+        NSNumber *number = (NSNumber*)arrayElement;
+        int integerNumber = number.intValue;
+        return integerNumber % 2 == 0;
         
     }]);
 }
@@ -189,9 +189,9 @@
     
     XCTAssertEqualObjects(expectedArray, [inputArray discard:^BOOL(id  _Nonnull arrayElement) {
         
-        NSString *s = (NSString*)arrayElement;
+        NSString *string = (NSString*)arrayElement;
         
-        return ([s rangeOfString:@"z"].location != NSNotFound || [s rangeOfString:@"Z"].location != NSNotFound);
+        return ([string rangeOfString:@"z"].location != NSNotFound || [string rangeOfString:@"Z"].location != NSNotFound);
       
     }]);
 }
@@ -204,8 +204,8 @@
     
     XCTAssertEqualObjects(expectedArray, [inputArray discard:^BOOL(id  _Nonnull arrayElement) {
         
-        NSArray *a = (NSArray*)arrayElement;
-        return [a containsObject:@5];
+        NSArray *nestedArray = (NSArray*)arrayElement;
+        return [nestedArray containsObject:@5];
         
     }]);
 }
@@ -218,8 +218,8 @@
     
     XCTAssertEqualObjects(expectedArray, [inputArray keep:true where:^BOOL(id  _Nonnull arrayElement) {
         
-        NSArray *a = (NSArray*)arrayElement;
-        return [a containsObject:@5];
+        NSArray *nestedArray = (NSArray*)arrayElement;
+        return [nestedArray containsObject:@5];
         
     }]);
 }
@@ -232,8 +232,8 @@
     
     XCTAssertEqualObjects(expectedArray, [inputArray discard:^BOOL(id  _Nonnull arrayElement) {
         
-        NSArray *a = (NSArray*)arrayElement;
-        return [a containsObject:@5];
+        NSArray *nestedArray = (NSArray*)arrayElement;
+        return [nestedArray containsObject:@5];
         
     }]);
 }
