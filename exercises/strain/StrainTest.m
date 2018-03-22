@@ -32,37 +32,39 @@
 
 - (void)testEmptyKeep {
     
-    NSArray *inputArray = [NSArray array];
+    NSArray *inputArray = @[];
     
     NSArray *expectedArray = inputArray;
     
     XCTAssertEqualObjects(expectedArray, [inputArray keep:true where:^BOOL(id  _Nonnull arrayElement) {
         
-        return arrayElement < 10;
+        NSNumber *number = (NSNumber*)arrayElement;
+        int integerNumber = number.intValue;
+        return integerNumber < 10;
         
     }]);
 }
 
 - (void)testKeepEverything {
     
-    NSArray *inputArray = [NSArray arrayWithObjects:@1,@2,@3, nil];
+    NSArray *inputArray = @[@1,@2,@3];
     
     NSArray *expectedArray = inputArray;
     
     XCTAssertEqualObjects(expectedArray, [inputArray keep:true where:^BOOL(id  _Nonnull arrayElement) {
         
-        NSNumber *n = (NSNumber*)arrayElement;
-        int i = n.intValue;
-        return i < 10;
+        NSNumber *number = (NSNumber*)arrayElement;
+        int integerNumber = number.intValue;
+        return integerNumber < 10;
         
     }]);
 }
 
 -(void)testKeepFirstAndLastElements {
     
-    NSArray *inputArray = [NSArray arrayWithObjects:@1,@2,@3, nil];
+    NSArray *inputArray = @[@1,@2,@3];
     
-    NSArray *expectedArray = [NSArray arrayWithObjects:@1,@3, nil];
+    NSArray *expectedArray = @[@1,@3];
     
     XCTAssertEqualObjects(expectedArray, [inputArray keep:true where:^BOOL(id  _Nonnull arrayElement) {
         
@@ -75,9 +77,9 @@
 
 -(void)testKeepNeitherFirstNorLastElement {
     
-    NSArray *inputArray = [NSArray arrayWithObjects:@1,@2,@3,@4,@5, nil];
+    NSArray *inputArray = @[@1,@2,@3,@4,@5];
     
-    NSArray *expectedArray = [NSArray arrayWithObjects:@2,@4, nil];
+    NSArray *expectedArray = @[@2,@4];
     
     XCTAssertEqualObjects(expectedArray, [inputArray keep:true where:^BOOL(id  _Nonnull arrayElement) {
         
@@ -90,9 +92,9 @@
 
 -(void)testKeepStrings {
     
-    NSArray *inputArray = [NSArray arrayWithObjects:@"apple",@"zebra",@"banana",@"Zombies",@"cherimoya",@"zealot", nil];
+    NSArray *inputArray = @[@"apple",@"zebra",@"banana",@"Zombies",@"cherimoya",@"zealot"];
     
-    NSArray *expectedArray = [NSArray arrayWithObjects:@"zebra",@"Zombies",@"zealot", nil];
+    NSArray *expectedArray = @[@"zebra",@"Zombies",@"zealot"];
     
     XCTAssertEqualObjects(expectedArray, [inputArray keep:true where:^BOOL(id  _Nonnull arrayElement) {
         
@@ -105,9 +107,9 @@
 
 -(void)testKeepArrays {
     
-    NSArray *inputArray = [NSArray arrayWithObjects:@[@1,@2,@3],@[@5,@5,@5],@[@5,@1,@2],@[@2,@1,@2],@[@1,@5,@2],@[@2,@2,@1],@[@1,@2,@5], nil];
+    NSArray *inputArray = @[@[@1,@2,@3],@[@5,@5,@5],@[@5,@1,@2],@[@2,@1,@2],@[@1,@5,@2],@[@2,@2,@1],@[@1,@2,@5]];
     
-    NSArray *expectedArray = [NSArray arrayWithObjects:@[@5,@5,@5],@[@5,@1,@2],@[@1,@5,@2],@[@1,@2,@5], nil];
+    NSArray *expectedArray = @[@[@5,@5,@5],@[@5,@1,@2],@[@1,@5,@2],@[@1,@2,@5]];
     
     XCTAssertEqualObjects(expectedArray, [inputArray keep:true where:^BOOL(id  _Nonnull arrayElement) {
         
@@ -120,7 +122,7 @@
 
 -(void)testDiscardEmptyArray {
     
-    NSArray *inputArray = [NSArray array];
+    NSArray *inputArray = @[];
     
     NSArray *expectedArray = inputArray;
     
@@ -136,7 +138,7 @@
 
 -(void)testDiscardNothing {
     
-    NSArray *inputArray = [NSArray arrayWithObjects:@1,@2,@3, nil];
+    NSArray *inputArray = @[@1,@2,@3];
     
     NSArray *expectedArray = inputArray;
     
@@ -151,9 +153,9 @@
 
 -(void)testDiscardFirstAndLastElements {
     
-    NSArray *inputArray = [NSArray arrayWithObjects:@1,@2,@3, nil];
+    NSArray *inputArray = @[@1,@2,@3];
     
-    NSArray *expectedArray = [NSArray arrayWithObjects:@2, nil];
+    NSArray *expectedArray = @[@2];
     
     XCTAssertEqualObjects(expectedArray, [inputArray discard:^BOOL(id  _Nonnull arrayElement) {
         
@@ -166,9 +168,9 @@
 
 -(void)testDiscardNeitherFirstNorLastElement {
     
-    NSArray *inputArray = [NSArray arrayWithObjects:@1,@2,@3,@4,@5, nil];
+    NSArray *inputArray = @[@1,@2,@3,@4,@5];
     
-    NSArray *expectedArray = [NSArray arrayWithObjects:@1,@3,@5, nil];
+    NSArray *expectedArray = @[@1,@3,@5];
     
     XCTAssertEqualObjects(expectedArray, [inputArray discard:^BOOL(id  _Nonnull arrayElement) {
         
@@ -181,9 +183,9 @@
 
 -(void)testDiscardStrings {
     
-    NSArray *inputArray = [NSArray arrayWithObjects:@"apple",@"zebra",@"banana",@"Zombies",@"cherimoya",@"zealot", nil];
+    NSArray *inputArray = @[@"apple",@"zebra",@"banana",@"Zombies",@"cherimoya",@"zealot"];
     
-    NSArray *expectedArray = [NSArray arrayWithObjects:@"apple",@"banana",@"cherimoya", nil];
+    NSArray *expectedArray = @[@"apple",@"banana",@"cherimoya"];
     
     XCTAssertEqualObjects(expectedArray, [inputArray discard:^BOOL(id  _Nonnull arrayElement) {
         
@@ -196,9 +198,9 @@
 
 -(void)testDiscardArrays {
     
-    NSArray *inputArray = [NSArray arrayWithObjects:@[@1,@2,@3],@[@5,@5,@5],@[@5,@1,@2],@[@2,@1,@2],@[@1,@5,@2],@[@2,@2,@1],@[@1,@2,@5], nil];
+    NSArray *inputArray = @[@[@1,@2,@3],@[@5,@5,@5],@[@5,@1,@2],@[@2,@1,@2],@[@1,@5,@2],@[@2,@2,@1],@[@1,@2,@5]];
     
-    NSArray *expectedArray = [NSArray arrayWithObjects:@[@1,@2,@3],@[@2,@1,@2],@[@2,@2,@1], nil];
+    NSArray *expectedArray = @[@[@1,@2,@3],@[@2,@1,@2],@[@2,@2,@1]];
     
     XCTAssertEqualObjects(expectedArray, [inputArray discard:^BOOL(id  _Nonnull arrayElement) {
         
@@ -212,7 +214,7 @@
     
     NSMutableArray *inputArray = [NSMutableArray arrayWithObjects:@[@1,@2,@3],@[@5,@5,@5],@[@5,@1,@2],@[@2,@1,@2],@[@1,@5,@2],@[@2,@2,@1],@[@1,@2,@5], nil];
     
-    NSArray *expectedArray = [NSArray arrayWithObjects:@[@5,@5,@5],@[@5,@1,@2],@[@1,@5,@2],@[@1,@2,@5], nil];
+    NSArray *expectedArray = @[@[@5,@5,@5],@[@5,@1,@2],@[@1,@5,@2],@[@1,@2,@5]];
     
     XCTAssertEqualObjects(expectedArray, [inputArray keep:true where:^BOOL(id  _Nonnull arrayElement) {
         
@@ -226,7 +228,7 @@
     
     NSMutableArray *inputArray = [NSMutableArray arrayWithObjects:@[@1,@2,@3],@[@5,@5,@5],@[@5,@1,@2],@[@2,@1,@2],@[@1,@5,@2],@[@2,@2,@1],@[@1,@2,@5], nil];
     
-    NSArray *expectedArray = [NSArray arrayWithObjects:@[@1,@2,@3],@[@2,@1,@2],@[@2,@2,@1], nil];
+    NSArray *expectedArray = @[@[@1,@2,@3],@[@2,@1,@2],@[@2,@2,@1]];
     
     XCTAssertEqualObjects(expectedArray, [inputArray discard:^BOOL(id  _Nonnull arrayElement) {
         
