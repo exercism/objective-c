@@ -301,12 +301,23 @@
       "difficulty": 3,
       "slug": "series",
       "topics": [
+        "integers",
         "lists",
-        "looping",
-        "integers"
+        "looping"
       ],
       "unlocked_by": null,
       "uuid": "a56e3c85-715e-4730-966f-cc46616aaa95"
+    },
+    {
+      "core": false,
+      "difficulty": 3,
+      "slug": "strain",
+      "topics": [
+        "filtering",
+        "sequences"
+      ],
+      "unlocked_by": null,
+      "uuid": "052e5eaa-8d36-4e9a-95c2-2e350852967d"
     },
     {
       "core": false,
@@ -465,8 +476,8 @@
       "topics": [
         "loops",
         "parsing",
-        "transforming",
-        "text_formatting"
+        "text_formatting",
+        "transforming"
       ],
       "unlocked_by": null,
       "uuid": "9292d37e-2b5f-45a2-b995-ebcce9d90376"
