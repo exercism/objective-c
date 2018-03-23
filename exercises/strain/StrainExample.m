@@ -5,7 +5,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation NSArray (StrainExample)
 
--(instancetype)keep:(BOOL)compare where:(BOOL (^)(id arrayElement))completionHandler{
+-(instancetype)keep:(BOOL)compare where:(BOOL (^)(id))completionHandler{
     
     NSMutableArray *filteredArray = [NSMutableArray array];
     
@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
     
 }
 
--(instancetype)discard:(BOOL (^)(id arrayElement))completionHandler{
+-(instancetype)discard:(BOOL (^)(id))completionHandler{
     
     return [self keep:false where:completionHandler];
 }
