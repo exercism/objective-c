@@ -57,6 +57,8 @@
 		A09A4C051E38763300FEFB7A /* FlattenArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A09A4C041E38763300FEFB7A /* FlattenArrayTest.m */; };
 		A0BBFCBF1E37719800230071 /* SublistExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BBFCBE1E37719800230071 /* SublistExample.m */; };
 		A0BBFCC31E37728100230071 /* SublistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BBFCC21E37728100230071 /* SublistTest.m */; };
+		A0CFCBF82056956B00DFE959 /* StrainExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CFCBF52056956A00DFE959 /* StrainExample.m */; };
+		A0CFCBF92056956B00DFE959 /* StrainTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CFCBF62056956A00DFE959 /* StrainTest.m */; };
 		E90343B62041F989006F1833 /* PrimeFactorsExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E90343B52041F989006F1833 /* PrimeFactorsExample.m */; };
 		E90343BC20447437006F1833 /* PrimeFactorsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = E90343BB20447437006F1833 /* PrimeFactorsTest.m */; };
 		E907D0CA1D6B731600106C42 /* GigasecondExample.m in Sources */ = {isa = PBXBuildFile; fileRef = E907D0C91D6B731600106C42 /* GigasecondExample.m */; };
@@ -174,6 +176,9 @@
 		A0BBFCBD1E37719800230071 /* SublistExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SublistExample.h; path = ../../exercises/sublist/SublistExample.h; sourceTree = "<group>"; };
 		A0BBFCBE1E37719800230071 /* SublistExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SublistExample.m; path = ../../exercises/sublist/SublistExample.m; sourceTree = "<group>"; };
 		A0BBFCC21E37728100230071 /* SublistTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SublistTest.m; path = ../../exercises/sublist/SublistTest.m; sourceTree = "<group>"; };
+		A0CFCBF52056956A00DFE959 /* StrainExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StrainExample.m; path = ../../exercises/strain/StrainExample.m; sourceTree = "<group>"; };
+		A0CFCBF62056956A00DFE959 /* StrainTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StrainTest.m; path = ../../exercises/strain/StrainTest.m; sourceTree = "<group>"; };
+		A0CFCBF72056956A00DFE959 /* StrainExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StrainExample.h; path = ../../exercises/strain/StrainExample.h; sourceTree = "<group>"; };
 		E90343B42041F989006F1833 /* PrimeFactorsExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PrimeFactorsExample.h; path = "../../exercises/prime-factors/PrimeFactorsExample.h"; sourceTree = "<group>"; };
 		E90343B52041F989006F1833 /* PrimeFactorsExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PrimeFactorsExample.m; path = "../../exercises/prime-factors/PrimeFactorsExample.m"; sourceTree = "<group>"; };
 		E90343BB20447437006F1833 /* PrimeFactorsTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = PrimeFactorsTest.m; path = "../../exercises/prime-factors/PrimeFactorsTest.m"; sourceTree = "<group>"; };
@@ -318,6 +323,7 @@
 				E90E59C720489199008C0FB5 /* Series */,
 				E97320091E9DA06500ABEE5C /* Sieve */,
 				E9E8B6F61D519E340012F12C /* SpaceAge */,
+				A0CFCBEF20568C3F00DFE959 /* Strain */,
 				A0BBFCBC1E37703D00230071 /* Sublist */,
 				E99D1D7B1D5532C50006A303 /* SumOfMultiples */,
 				E96993951DF60DF1009EA223 /* Transpose */,
@@ -394,6 +400,16 @@
 				A065F5771E3098080048E337 /* BeerSongTest.m */,
 			);
 			name = BeerSong;
+			sourceTree = "<group>";
+		};
+		A0CFCBEF20568C3F00DFE959 /* Strain */ = {
+			isa = PBXGroup;
+			children = (
+				A0CFCBF72056956A00DFE959 /* StrainExample.h */,
+				A0CFCBF52056956A00DFE959 /* StrainExample.m */,
+				A0CFCBF62056956A00DFE959 /* StrainTest.m */,
+			);
+			name = Strain;
 			sourceTree = "<group>";
 		};
 		E90343B32041F93F006F1833 /* PrimeFactors */ = {
@@ -893,7 +909,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ -f ~/.bash_profile ]; then\nsource ~/.bash_profile\nfi\n\nhash oclint &> /dev/null\nif [ $? -eq 1 ]; then\necho >&2 \"oclint not found, analyzing stopped\"\nexit 1\nfi\n\nif [ ! -f \"${TARGET_TEMP_DIR}\"/xcodebuild.log ]; then\necho \"[*] xcodebuild.log not found, possibly clean was performed\"\necho \"[*] starting xcodebuild to rebuild the project..\"\n\ncd \"${SRCROOT}\"\n\nxcodebuild clean -configuration \"${CONFIGURATION}\" -project \"${PROJECT_NAME}\".xcodeproj\n\n#build xcodebuild.log\nxcodebuild -configuration \"${CONFIGURATION}\" -project \"${PROJECT_NAME}\".xcodeproj | tee \"${TARGET_TEMP_DIR}\"/xcodebuild.log\nfi\n\ncd \"${TARGET_TEMP_DIR}\"\n\necho \"[*] transforming xcodebuild.log into compile_commands.json...\"\n#transform it into compile_commands.json\noclint-xcodebuild\n\necho \"[*] starting analyzing\"\noclint-json-compilation-database -- \\\n   -rc LONG_LINE=200 -disable-rule UselessParentheses -disable-rule ConstantConditionalOperator -disable-rule DoubleNegative -disable-rule MultipleUnaryOperator -p \"${TARGET_TEMP_DIR}\" \\\n    | sed -E 's/(.*\\.(c|m{1,2}):[0-9]*:[0-9]*:)/\\1 warning:/'";
+			shellScript = "if [ -f ~/.profile ]; then\nsource ~/.profile\nfi\n\nhash oclint &> /dev/null\nif [ $? -eq 1 ]; then\necho >&2 \"oclint not found, analyzing stopped\"\nexit 1\nfi\n\nif [ ! -f \"${TARGET_TEMP_DIR}\"/xcodebuild.log ]; then\necho \"[*] xcodebuild.log not found, possibly clean was performed\"\necho \"[*] starting xcodebuild to rebuild the project..\"\n\ncd \"${SRCROOT}\"\n\nxcodebuild clean -configuration \"${CONFIGURATION}\" -project \"${PROJECT_NAME}\".xcodeproj\n\n#build xcodebuild.log\nxcodebuild -configuration \"${CONFIGURATION}\" -project \"${PROJECT_NAME}\".xcodeproj | tee \"${TARGET_TEMP_DIR}\"/xcodebuild.log\nfi\n\ncd \"${TARGET_TEMP_DIR}\"\n\necho \"[*] transforming xcodebuild.log into compile_commands.json...\"\n#transform it into compile_commands.json\noclint-xcodebuild\n\necho \"[*] starting analyzing\"\noclint-json-compilation-database -- \\\n   -rc LONG_LINE=200 -disable-rule UselessParentheses -disable-rule ConstantConditionalOperator -disable-rule DoubleNegative -disable-rule MultipleUnaryOperator -p \"${TARGET_TEMP_DIR}\" \\\n    | sed -E 's/(.*\\.(c|m{1,2}):[0-9]*:[0-9]*:)/\\1 warning:/'";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -904,6 +920,7 @@
 			files = (
 				1EFACAA71CCCAF3D006F2E69 /* EtlExample.m in Sources */,
 				1EFACAA31CCCAF3D006F2E69 /* AnagramExample.m in Sources */,
+				A0CFCBF92056956B00DFE959 /* StrainTest.m in Sources */,
 				E9B062201E9E7C6D000BE589 /* SieveTest.m in Sources */,
 				E94ACA131D41760300D56CC2 /* AllYourBaseExample.m in Sources */,
 				E94ACA151D41763800D56CC2 /* AllYourBaseTest.m in Sources */,
@@ -950,6 +967,7 @@
 				E9C1C0311D9EC1270015E86E /* RunLengthEncodingTest.m in Sources */,
 				1EFACAA81CCCAF3D006F2E69 /* EtlTest.m in Sources */,
 				A097D40F1E363C2700EAF2C2 /* BracketPushExample.m in Sources */,
+				A0CFCBF82056956B00DFE959 /* StrainExample.m in Sources */,
 				E947A4E01D81FE3A00633720 /* TriangleTest.m in Sources */,
 				1EFACAA91CCCAF3D006F2E69 /* GradeSchoolExample.m in Sources */,
 				1EFACABA1CCCAF3D006F2E69 /* SpaceAgeTest.m in Sources */,
