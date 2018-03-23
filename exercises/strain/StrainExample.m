@@ -1,13 +1,17 @@
 #import <Foundation/Foundation.h>
 #import "StrainExample.h"
 
+NS_ASSUME_NONNULL_BEGIN
+
 @implementation NSArray (StrainExample)
 
--(instancetype)keep:(BOOL)compare where:(BOOL (^)(id _Nonnull arrayElement))completionHandler{
+-(instancetype)keep:(BOOL)compare where:(BOOL (^)(id arrayElement))completionHandler{
     
     NSMutableArray *filteredArray = [NSMutableArray array];
     
-    [self enumerateObjectsUsingBlock:^(id  _Nonnull objectInArray, NSUInteger idx, BOOL * _Nonnull stop) {
+    for(int index = 0;index < self.count;index++){
+        
+        id objectInArray = self[index];
         
         BOOL flag = completionHandler(objectInArray);
         
@@ -15,17 +19,18 @@
             
             [filteredArray addObject:objectInArray];
         }
-    }];
-    
+    }
     
     return filteredArray;
     
 }
 
--(instancetype)discard:(BOOL (^)(id _Nonnull arrayElement))completionHandler{
+-(instancetype)discard:(BOOL (^)(id arrayElement))completionHandler{
     
     return [self keep:false where:completionHandler];
 }
 
 
 @end
+
+NS_ASSUME_NONNULL_END
