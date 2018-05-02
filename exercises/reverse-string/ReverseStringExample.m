@@ -7,7 +7,7 @@
     
     NSMutableString *mutableString = [NSMutableString string];
     
-    for(int i=self.length - 1;i >= 0;i--) {
+    for(int i=(int)(self.length) - 1;i >= 0;i--) {
         
         unichar characterAtIndex = [self characterAtIndex:i];
         
@@ -15,7 +15,6 @@
         
     }
     
-    NSLog(@"Reversed string:%@",[NSString stringWithString:mutableString]);
     return [NSString stringWithString:mutableString];
     
 }
