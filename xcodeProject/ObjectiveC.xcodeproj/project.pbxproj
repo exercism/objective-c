@@ -55,6 +55,8 @@
 		A097D4101E363C2700EAF2C2 /* BracketPushTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A097D40E1E363C2700EAF2C2 /* BracketPushTest.m */; };
 		A09A4C031E38761A00FEFB7A /* FlattenArrayExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A09A4C021E38761A00FEFB7A /* FlattenArrayExample.m */; };
 		A09A4C051E38763300FEFB7A /* FlattenArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A09A4C041E38763300FEFB7A /* FlattenArrayTest.m */; };
+		A09C1763208F0D0A003CE51F /* ReverseStringExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A09C1762208F0D0A003CE51F /* ReverseStringExample.m */; };
+		A09C1765208F0D65003CE51F /* ReverseStringTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A09C1764208F0D65003CE51F /* ReverseStringTest.m */; };
 		A0BBFCBF1E37719800230071 /* SublistExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BBFCBE1E37719800230071 /* SublistExample.m */; };
 		A0BBFCC31E37728100230071 /* SublistTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A0BBFCC21E37728100230071 /* SublistTest.m */; };
 		A0CFCBF82056956B00DFE959 /* StrainExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A0CFCBF52056956A00DFE959 /* StrainExample.m */; };
@@ -173,6 +175,9 @@
 		A09A4C011E38761A00FEFB7A /* FlattenArrayExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlattenArrayExample.h; path = "../../exercises/flatten-array/FlattenArrayExample.h"; sourceTree = "<group>"; };
 		A09A4C021E38761A00FEFB7A /* FlattenArrayExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlattenArrayExample.m; path = "../../exercises/flatten-array/FlattenArrayExample.m"; sourceTree = "<group>"; };
 		A09A4C041E38763300FEFB7A /* FlattenArrayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlattenArrayTest.m; path = "../../exercises/flatten-array/FlattenArrayTest.m"; sourceTree = "<group>"; };
+		A09C1761208F0D0A003CE51F /* ReverseStringExample.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ReverseStringExample.h; path = "../../exercises/reverse-string/ReverseStringExample.h"; sourceTree = "<group>"; };
+		A09C1762208F0D0A003CE51F /* ReverseStringExample.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ReverseStringExample.m; path = "../../exercises/reverse-string/ReverseStringExample.m"; sourceTree = "<group>"; };
+		A09C1764208F0D65003CE51F /* ReverseStringTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = ReverseStringTest.m; path = "../../exercises/reverse-string/ReverseStringTest.m"; sourceTree = "<group>"; };
 		A0BBFCBD1E37719800230071 /* SublistExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SublistExample.h; path = ../../exercises/sublist/SublistExample.h; sourceTree = "<group>"; };
 		A0BBFCBE1E37719800230071 /* SublistExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SublistExample.m; path = ../../exercises/sublist/SublistExample.m; sourceTree = "<group>"; };
 		A0BBFCC21E37728100230071 /* SublistTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SublistTest.m; path = ../../exercises/sublist/SublistTest.m; sourceTree = "<group>"; };
@@ -313,6 +318,7 @@
 				E9E8B6F41D519E270012F12C /* PhoneNumber */,
 				E90343B32041F93F006F1833 /* PrimeFactors */,
 				E9381D491D8F293C003F22A1 /* Raindrops */,
+				A09C1760208F0C50003CE51F /* ReverseString */,
 				6F409F8B1F0DBD1500217758 /* RNATranscription */,
 				E9E8B6F51D519E2E0012F12C /* RobotName */,
 				E9FDCA161D540793004EE8DB /* RomanNumerals */,
@@ -380,6 +386,16 @@
 				A097D40E1E363C2700EAF2C2 /* BracketPushTest.m */,
 			);
 			name = BracketPush;
+			sourceTree = "<group>";
+		};
+		A09C1760208F0C50003CE51F /* ReverseString */ = {
+			isa = PBXGroup;
+			children = (
+				A09C1761208F0D0A003CE51F /* ReverseStringExample.h */,
+				A09C1762208F0D0A003CE51F /* ReverseStringExample.m */,
+				A09C1764208F0D65003CE51F /* ReverseStringTest.m */,
+			);
+			name = ReverseString;
 			sourceTree = "<group>";
 		};
 		A0BBFCBC1E37703D00230071 /* Sublist */ = {
@@ -968,6 +984,7 @@
 				1EFACAA81CCCAF3D006F2E69 /* EtlTest.m in Sources */,
 				A097D40F1E363C2700EAF2C2 /* BracketPushExample.m in Sources */,
 				A0CFCBF82056956B00DFE959 /* StrainExample.m in Sources */,
+				A09C1763208F0D0A003CE51F /* ReverseStringExample.m in Sources */,
 				E947A4E01D81FE3A00633720 /* TriangleTest.m in Sources */,
 				1EFACAA91CCCAF3D006F2E69 /* GradeSchoolExample.m in Sources */,
 				1EFACABA1CCCAF3D006F2E69 /* SpaceAgeTest.m in Sources */,
@@ -1008,6 +1025,7 @@
 				1EFACAAF1CCCAF3D006F2E69 /* LeapExample.m in Sources */,
 				E9386EF01E0B694D0009A414 /* AtbashCipherTest.m in Sources */,
 				E9340D08201975E5009FDEF4 /* CollatzConjectureTest.m in Sources */,
+				A09C1765208F0D65003CE51F /* ReverseStringTest.m in Sources */,
 				E9C1C0251D9D99620015E86E /* SecretHandshakeTest.m in Sources */,
 				6F409F8D1F0DBF0A00217758 /* RNATranscriptionTest.m in Sources */,
 				E969939A1DF60E5F009EA223 /* TransposeTest.m in Sources */,
