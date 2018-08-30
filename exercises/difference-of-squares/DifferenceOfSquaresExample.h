@@ -3,7 +3,7 @@
 @interface DifferenceOfSquares : NSObject
 
 - (instancetype)initWithMax:(int)max;
-- (int)squareOfSums;
+- (int)squareOfSum;
 - (int)sumOfSquares;
 - (int)differenceOfSquares;
 

@@ -12,39 +12,39 @@
 
 @implementation DifferenceOfSquaresTest
 
-- (void)testSquareOfSumsTo5 {
-    XCTAssertEqual(225, [[[DifferenceOfSquares alloc] initWithMax:5] squareOfSums]);
+- (void)testSquareOfSumTo5 {
+    XCTAssertEqual(225, [[[DifferenceOfSquares alloc] initWithMax:5] squareOfSum]);
 }
 
 - (void)testSumOfSquaresTo5 {
     XCTAssertEqual(55, [[[DifferenceOfSquares alloc] initWithMax:5] sumOfSquares]);
 }
 
-- (void)testDifferenceOfSquaresOfSumsTo5 {
+- (void)testDifferenceOfSquaresOfSumTo5 {
     XCTAssertEqual(170, [[[DifferenceOfSquares alloc] initWithMax:5] differenceOfSquares]);
 }
 
-- (void)testSquareOfSumsTo10 {
-    XCTAssertEqual(3025, [[[DifferenceOfSquares alloc] initWithMax:10] squareOfSums]);
+- (void)testSquareOfSumTo10 {
+    XCTAssertEqual(3025, [[[DifferenceOfSquares alloc] initWithMax:10] squareOfSum]);
 }
 
 - (void)testSumOfSquaresTo10 {
     XCTAssertEqual(385, [[[DifferenceOfSquares alloc] initWithMax:10] sumOfSquares]);
 }
 
-- (void)testDifferenceOfSquaresOfSumsTo10 {
+- (void)testDifferenceOfSquaresOfSumTo10 {
     XCTAssertEqual(2640, [[[DifferenceOfSquares alloc] initWithMax:10] differenceOfSquares]);
 }
 
-- (void)testSquareOfSumsTo100 {
-    XCTAssertEqual(25502500, [[[DifferenceOfSquares alloc] initWithMax:100] squareOfSums]);
+- (void)testSquareOfSumTo100 {
+    XCTAssertEqual(25502500, [[[DifferenceOfSquares alloc] initWithMax:100] squareOfSum]);
 }
 
 - (void)testSumOfSquaresTo100 {
     XCTAssertEqual(338350, [[[DifferenceOfSquares alloc] initWithMax:100] sumOfSquares]);
 }
 
-- (void)testDifferenceOfSquaresOfSumsTo100 {
+- (void)testDifferenceOfSquaresOfSumTo100 {
     XCTAssertEqual(25164150, [[[DifferenceOfSquares alloc] initWithMax:100] differenceOfSquares]);
 }
 

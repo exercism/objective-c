@@ -12,7 +12,7 @@
     return self;
 }
 
-- (int)squareOfSums {
+- (int)squareOfSum {
     int sum = 0;
     for (int i = 1; i <= _max; i++) {
         sum += i;
@@ -31,7 +31,7 @@
 }
 
 - (int)differenceOfSquares {
-    return [self squareOfSums] - [self sumOfSquares];
+    return [self squareOfSum] - [self sumOfSquares];
 }
 
 @end
