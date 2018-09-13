@@ -1,7 +1,7 @@
 {
   "language": "Objective-C",
   "active": true,
-  "blurb": "",
+  "blurb": "Objective-C is a strict superset of C. Everything that you are able to do in C, Objective-C supports. Strictly speaking, Objective-C a set of language extensions that add support for classes and messaging (among others), significant enough to be considered a different language. The extensions can also be imposed on C++, producing a language called Objective-C++ (with some limitations). ",
   "exercises": [
     {
       "slug": "hello-world",
