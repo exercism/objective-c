@@ -1,8 +1,10 @@
 # Reverse String
 
-Reverse a string.
+Reverse a string
 
-For example: input: "cool" output: "looc"
+For example:
+input: "cool"
+output: "looc"
 
 ## Setup
 
@@ -20,7 +22,7 @@ When submitting an exercise, make sure your solution file is in the same directo
 The submit command will look something like:
 
 ```shell
-exercism submit <path-to-exercism-workspace>/objective-c/robot-name/RobotName.m
+exercism submit <path-to-exercism-workspace>/objective-c/reverse-string/ReverseString.m
 ```
 
 You can find the Exercism workspace by running `exercism debug` and looking for the line beginning
@@ -28,7 +30,7 @@ with Workspace.
 
 ## Source
 
-A debugging session with Paul Blackwell at gSchool. [http://gschool.it](http://gschool.it)
+Introductory challenge to reverse an input string [https://medium.freecodecamp.org/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb](https://medium.freecodecamp.org/how-to-reverse-a-string-in-javascript-in-3-different-ways-75e4763c68cb)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

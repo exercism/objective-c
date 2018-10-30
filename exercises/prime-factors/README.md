@@ -12,10 +12,10 @@ What are the prime factors of 60?
 
 - Our first divisor is 2. 2 goes into 60, leaving 30.
 - 2 goes into 30, leaving 15.
-- 2 doesn't go cleanly into 15. So let's move on to our next divisor, 3.
+  - 2 doesn't go cleanly into 15. So let's move on to our next divisor, 3.
 - 3 goes cleanly into 15, leaving 5.
-- 3 does not go cleanly into 5. The next possible factor is 4.
-- 4 does not go cleanly into 5. The next possible factor is 5.
+  - 3 does not go cleanly into 5. The next possible factor is 4.
+  - 4 does not go cleanly into 5. The next possible factor is 5.
 - 5 does go cleanly into 5.
 - We're left only with 1, so now, we're done.
 
@@ -45,14 +45,15 @@ When submitting an exercise, make sure your solution file is in the same directo
 The submit command will look something like:
 
 ```shell
-exercism submit <path-to-exercism-workspace>/objective-c/all-your-base/AllYourBase.m
+exercism submit <path-to-exercism-workspace>/objective-c/prime-factors/PrimeFactors.m
 ```
 
 You can find the Exercism workspace by running `exercism debug` and looking for the line beginning
 with Workspace.
 
+## Source
+
+The Prime Factors Kata by Uncle Bob [http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata](http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata)
+
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
-
-## Source
-The Prime Factors Kata by Uncle Bob [http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata](http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata)
