@@ -12,10 +12,10 @@ What are the prime factors of 60?
 
 - Our first divisor is 2. 2 goes into 60, leaving 30.
 - 2 goes into 30, leaving 15.
-- 2 doesn't go cleanly into 15. So let's move on to our next divisor, 3.
+  - 2 doesn't go cleanly into 15. So let's move on to our next divisor, 3.
 - 3 goes cleanly into 15, leaving 5.
-- 3 does not go cleanly into 5. The next possible factor is 4.
-- 4 does not go cleanly into 5. The next possible factor is 5.
+  - 3 does not go cleanly into 5. The next possible factor is 4.
+  - 4 does not go cleanly into 5. The next possible factor is 5.
 - 5 does go cleanly into 5.
 - We're left only with 1, so now, we're done.
 
@@ -29,14 +29,12 @@ You can check this yourself:
 - = 60
 - Success!
 
-## Setup
+## Getting Started
 
-There are two different methods of getting set up to run the tests with Objective-C:
-
-- Create an Xcode project with a test target which will run the tests.
-- Use the ruby gem `objc` as a test runner utility.
-
-Both are described in more detail here: http://exercism.io/languages/objective-c
+Make sure you have read the [Installing](https://exercism.io/tracks/objective-c/installation) and
+[Running the Tests](https://exercism.io/tracks/objective-c/tests) pages for Objective-C on exercism.io.
+This covers the basic information on setting up the development
+environment expected by the exercises.
 
 ### Submitting Exercises
 
@@ -45,14 +43,16 @@ When submitting an exercise, make sure your solution file is in the same directo
 The submit command will look something like:
 
 ```shell
-exercism submit <path-to-exercism-workspace>/objective-c/all-your-base/AllYourBase.m
+exercism submit <path-to-exercism-workspace>/objective-c/prime-factors/PrimeFactors.m
 ```
 
 You can find the Exercism workspace by running `exercism debug` and looking for the line beginning
-with Workspace.
+with `Workspace:`.
+
+
+## Source
+
+The Prime Factors Kata by Uncle Bob [http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata](http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.
-
-## Source
-The Prime Factors Kata by Uncle Bob [http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata](http://butunclebob.com/ArticleS.UncleBob.ThePrimeFactorsKata)

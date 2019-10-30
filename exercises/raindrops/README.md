@@ -1,30 +1,26 @@
 # Raindrops
 
-Convert a number to a string, the contents of which depend on the number's factors.
+Your task is to convert a number into a string that contains raindrop sounds corresponding to certain potential factors. A factor is a number that evenly divides into another number, leaving no remainder. The simplest way to test if a one number is a factor of another is to use the [modulo operation](https://en.wikipedia.org/wiki/Modulo_operation).
 
-- If the number has 3 as a factor, output 'Pling'.
-- If the number has 5 as a factor, output 'Plang'.
-- If the number has 7 as a factor, output 'Plong'.
-- If the number does not have 3, 5, or 7 as a factor,
-  just pass the number's digits straight through.
+The rules of `raindrops` are that if a given number:
+
+- has 3 as a factor, add 'Pling' to the result.
+- has 5 as a factor, add 'Plang' to the result.
+- has 7 as a factor, add 'Plong' to the result.
+- _does not_ have any of 3, 5, or 7 as a factor, the result should be the digits of the number.
 
 ## Examples
 
-- 28's factors are 1, 2, 4, **7**, 14, 28.
-  - In raindrop-speak, this would be a simple "Plong".
-- 30's factors are 1, 2, **3**, **5**, 6, 10, 15, 30.
-  - In raindrop-speak, this would be a "PlingPlang".
-- 34 has four factors: 1, 2, 17, and 34.
-  - In raindrop-speak, this would be "34".
+- 28 has 7 as a factor, but not 3 or 5, so the result would be "Plong".
+- 30 has both 3 and 5 as factors, but not 7, so the result would be "PlingPlang".
+- 34 is not factored by 3, 5, or 7, so the result would be "34".
 
-## Setup
+## Getting Started
 
-There are two different methods of getting set up to run the tests with Objective-C:
-
-- Create an Xcode project with a test target which will run the tests.
-- Use the ruby gem `objc` as a test runner utility.
-
-Both are described in more detail here: http://exercism.io/languages/objective-c
+Make sure you have read the [Installing](https://exercism.io/tracks/objective-c/installation) and
+[Running the Tests](https://exercism.io/tracks/objective-c/tests) pages for Objective-C on exercism.io.
+This covers the basic information on setting up the development
+environment expected by the exercises.
 
 ### Submitting Exercises
 
@@ -37,11 +33,12 @@ exercism submit <path-to-exercism-workspace>/objective-c/raindrops/Raindrops.m
 ```
 
 You can find the Exercism workspace by running `exercism debug` and looking for the line beginning
-with Workspace.
+with `Workspace:`.
+
 
 ## Source
 
-A variation on a famous interview question intended to weed out potential candidates. [http://jumpstartlab.com](http://jumpstartlab.com)
+A variation on FizzBuzz, a famous technical interview question that is intended to weed out potential candidates. That question is itself derived from Fizz Buzz, a popular children's game for teaching division. [https://en.wikipedia.org/wiki/Fizz_buzz](https://en.wikipedia.org/wiki/Fizz_buzz)
 
 ## Submitting Incomplete Solutions
 It's possible to submit an incomplete solution so you can see how others have completed the exercise.

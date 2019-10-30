@@ -2,27 +2,25 @@
 
 Manage robot factory settings.
 
-When robots come off the factory floor, they have no name.
+When a robot comes off the factory floor, it has no name.
 
-The first time you boot them up, a random name is generated in the format
+The first time you turn on a robot, a random name is generated in the format
 of two uppercase letters followed by three digits, such as RX837 or BC811.
 
 Every once in a while we need to reset a robot to its factory settings,
-which means that their name gets wiped. The next time you ask, it will
+which means that its name gets wiped. The next time you ask, that robot will
 respond with a new random name.
 
 The names must be random: they should not follow a predictable sequence.
-Random names means a risk of collisions. Your solution must ensure that
+Using random names means a risk of collisions. Your solution must ensure that
 every existing robot has a unique name.
 
-## Setup
+## Getting Started
 
-There are two different methods of getting set up to run the tests with Objective-C:
-
-- Create an Xcode project with a test target which will run the tests.
-- Use the ruby gem `objc` as a test runner utility.
-
-Both are described in more detail here: http://exercism.io/languages/objective-c
+Make sure you have read the [Installing](https://exercism.io/tracks/objective-c/installation) and
+[Running the Tests](https://exercism.io/tracks/objective-c/tests) pages for Objective-C on exercism.io.
+This covers the basic information on setting up the development
+environment expected by the exercises.
 
 ### Submitting Exercises
 
@@ -35,7 +33,8 @@ exercism submit <path-to-exercism-workspace>/objective-c/robot-name/RobotName.m
 ```
 
 You can find the Exercism workspace by running `exercism debug` and looking for the line beginning
-with Workspace.
+with `Workspace:`.
+
 
 ## Source
 

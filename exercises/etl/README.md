@@ -13,7 +13,7 @@ moaning about how stupid we could possibly be.)
 
 ### The goal
 
-We're going to extract some scrabble scores from a legacy system.
+We're going to extract some Scrabble scores from a legacy system.
 
 The old system stored a list of letters per score:
 
@@ -25,7 +25,7 @@ The old system stored a list of letters per score:
 - 8 points: "J", "X",
 - 10 points: "Q", "Z",
 
-The shiny new scrabble system instead stores the score per letter, which
+The shiny new Scrabble system instead stores the score per letter, which
 makes it much faster and easier to calculate the score for a word. It
 also stores the letters in lower-case regardless of the case of the
 input letters:
@@ -46,14 +46,12 @@ variety of languages, each with its own unique scoring table. For
 example, an "E" is scored at 2 in the Māori-language version of the
 game while being scored at 4 in the Hawaiian-language version.
 
-## Setup
+## Getting Started
 
-There are two different methods of getting set up to run the tests with Objective-C:
-
-- Create an Xcode project with a test target which will run the tests.
-- Use the ruby gem `objc` as a test runner utility.
-
-Both are described in more detail here: http://exercism.io/languages/objective-c
+Make sure you have read the [Installing](https://exercism.io/tracks/objective-c/installation) and
+[Running the Tests](https://exercism.io/tracks/objective-c/tests) pages for Objective-C on exercism.io.
+This covers the basic information on setting up the development
+environment expected by the exercises.
 
 ### Submitting Exercises
 
@@ -66,7 +64,8 @@ exercism submit <path-to-exercism-workspace>/objective-c/etl/Etl.m
 ```
 
 You can find the Exercism workspace by running `exercism debug` and looking for the line beginning
-with Workspace.
+with `Workspace:`.
+
 
 ## Source
 

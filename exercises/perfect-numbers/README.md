@@ -17,14 +17,12 @@ The Greek mathematician [Nicomachus](https://en.wikipedia.org/wiki/Nicomachus) d
 
 Implement a way to determine whether a given number is **perfect**. Depending on your language track, you may also need to implement a way to determine whether a given number is **abundant** or **deficient**.
 
-## Setup
+## Getting Started
 
-There are two different methods of getting set up to run the tests with Objective-C:
-
-- Create an Xcode project with a test target which will run the tests.
-- Use the ruby gem `objc` as a test runner utility.
-
-Both are described in more detail here: http://exercism.io/languages/objective-c
+Make sure you have read the [Installing](https://exercism.io/tracks/objective-c/installation) and
+[Running the Tests](https://exercism.io/tracks/objective-c/tests) pages for Objective-C on exercism.io.
+This covers the basic information on setting up the development
+environment expected by the exercises.
 
 ### Submitting Exercises
 
@@ -37,7 +35,8 @@ exercism submit <path-to-exercism-workspace>/objective-c/perfect-numbers/Perfect
 ```
 
 You can find the Exercism workspace by running `exercism debug` and looking for the line beginning
-with Workspace.
+with `Workspace:`.
+
 
 ## Source
 
