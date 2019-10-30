@@ -12,11 +12,15 @@ regarded as forming a rectangle when printed with intervening newlines.
 
 For example, the sentence
 
-> If man was meant to stay on the ground, god would have given us roots.
+```text
+"If man was meant to stay on the ground, god would have given us roots."
+```
 
 is normalized to:
 
-> ifmanwasmeanttostayonthegroundgodwouldhavegivenusroots
+```text
+"ifmanwasmeanttostayonthegroundgodwouldhavegivenusroots"
+```
 
 The plaintext should be organized in to a rectangle.  The size of the
 rectangle (`r x c`) should be decided by the length of the message,
@@ -27,13 +31,13 @@ Our normalized text is 54 characters long, dictating a rectangle with
 `c = 8` and `r = 7`:
 
 ```text
-ifmanwas
-meanttos
-tayonthe
-groundgo
-dwouldha
-vegivenu
-sroots
+"ifmanwas"
+"meanttos"
+"tayonthe"
+"groundgo"
+"dwouldha"
+"vegivenu"
+"sroots  "
 ```
 
 The coded message is obtained by reading down the columns going left to
@@ -42,41 +46,38 @@ right.
 The message above is coded as:
 
 ```text
-imtgdvsfearwermayoogoanouuiontnnlvtwttddesaohghnsseoau
+"imtgdvsfearwermayoogoanouuiontnnlvtwttddesaohghnsseoau"
 ```
 
-Output the encoded text in chunks.  Phrases that fill perfect rectangles
-`(r X c)` should be output `c` chunks of `r` length, separated by spaces.
-Phrases that do not fill perfect rectangles will have `n` empty spaces.
-Those spaces should be distributed evenly, added to the end of the last
-`n` chunks.
+Output the encoded text in chunks that fill perfect rectangles `(r X c)`,
+with `c` chunks of `r` length, separated by spaces. For phrases that are
+`n` characters short of the perfect rectangle, pad each of the last `n`
+chunks with a single trailing space.
 
 ```text
-imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau 
+"imtgdvs fearwer mayoogo anouuio ntnnlvt wttddes aohghn  sseoau "
 ```
 
 Notice that were we to stack these, we could visually decode the
-cyphertext back in to the original message:
+ciphertext back in to the original message:
 
 ```text
-imtgdvs
-fearwer
-mayoogo
-anouuio
-ntnnlvt
-wttddes
-aohghn
-sseoau
+"imtgdvs"
+"fearwer"
+"mayoogo"
+"anouuio"
+"ntnnlvt"
+"wttddes"
+"aohghn "
+"sseoau "
 ```
 
-## Setup
+## Getting Started
 
-There are two different methods of getting set up to run the tests with Objective-C:
-
-- Create an Xcode project with a test target which will run the tests.
-- Use the ruby gem `objc` as a test runner utility.
-
-Both are described in more detail here: http://exercism.io/languages/objective-c
+Make sure you have read the [Installing](https://exercism.io/tracks/objective-c/installation) and
+[Running the Tests](https://exercism.io/tracks/objective-c/tests) pages for Objective-C on exercism.io.
+This covers the basic information on setting up the development
+environment expected by the exercises.
 
 ### Submitting Exercises
 
@@ -89,7 +90,8 @@ exercism submit <path-to-exercism-workspace>/objective-c/crypto-square/CryptoSqu
 ```
 
 You can find the Exercism workspace by running `exercism debug` and looking for the line beginning
-with Workspace.
+with `Workspace:`.
+
 
 ## Source
 

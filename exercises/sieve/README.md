@@ -5,8 +5,8 @@ number.
 
 The Sieve of Eratosthenes is a simple, ancient algorithm for finding all
 prime numbers up to any given limit. It does so by iteratively marking as
-composite (i.e. not prime) the multiples of each prime,
-starting with the multiples of 2.
+composite (i.e. not prime) the multiples of each prime, starting with the
+multiples of 2. It does not use any division or remainder operation.
 
 Create your range, starting at two and continuing up to and including the given limit. (i.e. [2, limit])
 
@@ -25,16 +25,16 @@ https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes
 
 Notice that this is a very specific algorithm, and the tests don't check
 that you've implemented the algorithm, only that you've come up with the
-correct list of primes.
+correct list of primes. A good first test is to check that you do not use
+division or remainder operations (div, /, mod or % depending on the
+language).
 
-## Setup
+## Getting Started
 
-There are two different methods of getting set up to run the tests with Objective-C:
-
-- Create an Xcode project with a test target which will run the tests.
-- Use the ruby gem `objc` as a test runner utility.
-
-Both are described in more detail here: http://exercism.io/languages/objective-c
+Make sure you have read the [Installing](https://exercism.io/tracks/objective-c/installation) and
+[Running the Tests](https://exercism.io/tracks/objective-c/tests) pages for Objective-C on exercism.io.
+This covers the basic information on setting up the development
+environment expected by the exercises.
 
 ### Submitting Exercises
 
@@ -47,7 +47,8 @@ exercism submit <path-to-exercism-workspace>/objective-c/sieve/Sieve.m
 ```
 
 You can find the Exercism workspace by running `exercism debug` and looking for the line beginning
-with Workspace.
+with `Workspace:`.
+
 
 ## Source
 
