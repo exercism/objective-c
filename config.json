@@ -1,7 +1,7 @@
 {
   "language": "Objective-C",
   "active": true,
-  "blurb": "",
+  "blurb": "C's power, Smalltalk's dynamism",
   "exercises": [
     {
       "slug": "hello-world",
