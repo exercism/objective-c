@@ -11,15 +11,14 @@ Exercism will only download a test file. You will need to manually create the he
 * Name the target ExerciseName Tests.
 * In the left pane (known as the navigator), open the Project navigator and expand the folder ExerciseName Tests and open the file ExerciseName_Tests.m.
 * Replace its contents with the test file you got from exercism.
-* In that file, replace all instances of "test_suite" with "ExerciseName_Tests".
-* Navigate to the File Template library in the right pane (or use CTRL+OPTION+CMD+1) and drag the Cocoa Class template into the ExerciseName_Tests folder in the Project navigator.
+* In the Project navigator, right click on the folder ExerciseName Tests and click on New File, then choose Cocoa Class and hit Next.
 * Name it ExerciseName and select ExerciseName Tests as its target.
 * You will now have two new files in your ExerciseName_Tests directory: ExerciseName.h and ExerciseName.m.
 * Click on your project in the Project navigator.
 * Click on ExerciseName Tests in the targets list.
 * Select Build Phases in the editor's navigation.
 * Confirm that both your .m files are in the compile sources list.
-* Use CMD+5 to navigate to the Test navigator.
+* Use CMD+6 to navigate to the Test navigator.
 * Right click the bundle named ExerciseName Tests and click Enable ExerciseName_Tests.
 * Run the tests by clicking on the right pointing triangle that appears when hovering over the bundle in the Test navigator or use CMD+U.
 
