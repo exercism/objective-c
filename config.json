@@ -19,6 +19,7 @@
       "slug": "bob",
       "name": "Bob",
       "uuid": "3438b44a-3e0e-4488-b4e1-57dadbed5f3a",
+      "prerequisites": [],
       "difficulty": 1,
       "topics": [
         "control_flow_if_else_statements",
@@ -29,6 +30,7 @@
       "slug": "difference-of-squares",
       "name": "Difference Of Squares",
       "uuid": "30cfe053-ef80-42c8-b196-3a05f61e0190",
+      "prerequisites": [],
       "difficulty": 1,
       "topics": [
         "integers",
@@ -39,6 +41,7 @@
       "slug": "gigasecond",
       "name": "Gigasecond",
       "uuid": "1ac87e91-5174-44c6-93b6-deef7c2f4438",
+      "prerequisites": [],
       "difficulty": 1,
       "topics": [
         "dates"
@@ -48,6 +51,7 @@
       "slug": "hello-world",
       "name": "Hello World",
       "uuid": "da5eb908-8cdf-4f99-93f7-c2b7dcb4fb37",
+      "prerequisites": [],
       "difficulty": 1,
       "topics": [
         "optional_values",
@@ -58,6 +62,7 @@
       "slug": "leap",
       "name": "Leap",
       "uuid": "0b3db961-0ee2-4903-8237-4333dee92b68",
+      "prerequisites": [],
       "difficulty": 1,
       "topics": [
         "integers"
@@ -67,6 +72,7 @@
       "slug": "reverse-string",
       "name": "Reverse String",
       "uuid": "f90558fe-43a3-44e5-b720-edc664b7dc5f",
+      "prerequisites": [],
       "difficulty": 1,
       "topics": [
         "strings"
@@ -76,6 +82,7 @@
       "slug": "space-age",
       "name": "Space Age",
       "uuid": "6a2ab923-5102-44f8-8d5b-4e967983766e",
+      "prerequisites": [],
       "difficulty": 1,
       "topics": [
         "discriminated_unions",
@@ -86,6 +93,7 @@
       "slug": "sum-of-multiples",
       "name": "Sum Of Multiples",
       "uuid": "e9b0efd4-9da5-4036-a03f-a6f697ae786e",
+      "prerequisites": [],
       "difficulty": 1,
       "topics": [
         "lists",
@@ -97,6 +105,7 @@
       "slug": "two-fer",
       "name": "Two Fer",
       "uuid": "46da53f3-a39b-4f19-8ade-87f434cf12ec",
+      "prerequisites": [],
       "difficulty": 1,
       "topics": [
         "optional_values",
@@ -107,6 +116,7 @@
       "slug": "etl",
       "name": "Etl",
       "uuid": "7ff9aecb-2af3-4846-818c-00eddc87bf3b",
+      "prerequisites": [],
       "difficulty": 2,
       "topics": [
         "maps",
@@ -117,6 +127,7 @@
       "slug": "flatten-array",
       "name": "Flatten Array",
       "uuid": "af3bce9f-954a-4f46-97a0-9236436e3f08",
+      "prerequisites": [],
       "difficulty": 2,
       "topics": [
         "lists",
@@ -128,6 +139,7 @@
       "slug": "grade-school",
       "name": "Grade School",
       "uuid": "5b5c4168-cffa-4d4d-94f5-d8ac7bf8a25f",
+      "prerequisites": [],
       "difficulty": 2,
       "topics": [
         "maps",
@@ -138,6 +150,7 @@
       "slug": "hamming",
       "name": "Hamming",
       "uuid": "6a5a3dd6-a1d2-490c-b781-4e781f1e3289",
+      "prerequisites": [],
       "difficulty": 2,
       "topics": [
         "filtering",
@@ -148,6 +161,7 @@
       "slug": "isogram",
       "name": "Isogram",
       "uuid": "25eb6063-e228-4862-9477-02ebcae02d3d",
+      "prerequisites": [],
       "difficulty": 2,
       "topics": [
         "filtering",
@@ -158,6 +172,7 @@
       "slug": "nucleotide-count",
       "name": "Nucleotide Count",
       "uuid": "a33b7e1b-7f37-4494-8943-719f7d7e6d28",
+      "prerequisites": [],
       "difficulty": 2,
       "topics": [
         "maps",
@@ -168,6 +183,7 @@
       "slug": "prime-factors",
       "name": "Prime Factors",
       "uuid": "1ab06e01-0a06-4d00-995f-078182fd97ec",
+      "prerequisites": [],
       "difficulty": 2,
       "topics": [
         "integers",
@@ -179,6 +195,7 @@
       "slug": "raindrops",
       "name": "Raindrops",
       "uuid": "4e16fc56-b8a8-4d48-8635-55e13795eb4d",
+      "prerequisites": [],
       "difficulty": 2,
       "topics": [
         "filtering",
@@ -189,6 +206,7 @@
       "slug": "rna-transcription",
       "name": "Rna Transcription",
       "uuid": "cdc9a509-ded9-45b8-b8b1-5903016b77ad",
+      "prerequisites": [],
       "difficulty": 2,
       "topics": [
         "conditionals",
@@ -201,6 +219,7 @@
       "slug": "atbash-cipher",
       "name": "Atbash Cipher",
       "uuid": "659b25c4-4f01-49d1-be97-7a45e762b56c",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "maps",
@@ -212,6 +231,7 @@
       "slug": "clock",
       "name": "Clock",
       "uuid": "fec4d906-3b0a-412d-ad54-b6e02bf8cabb",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "structural_equality",
@@ -222,6 +242,7 @@
       "slug": "collatz-conjecture",
       "name": "Collatz Conjecture",
       "uuid": "d7d66773-e07f-4da1-932b-9431437d34d6",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "integers",
@@ -232,6 +253,7 @@
       "slug": "grains",
       "name": "Grains",
       "uuid": "1d841c21-f251-42ff-9fbd-cc88330eb1c3",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "integers"
@@ -241,6 +263,7 @@
       "slug": "perfect-numbers",
       "name": "Perfect Numbers",
       "uuid": "6339da5d-0fe7-489c-a2fe-6b6016afef42",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "discriminated_unions",
@@ -252,6 +275,7 @@
       "slug": "phone-number",
       "name": "Phone Number",
       "uuid": "f290c133-81b1-4e94-90b0-85d665fdcfc6",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "parsing",
@@ -262,6 +286,7 @@
       "slug": "robot-name",
       "name": "Robot Name",
       "uuid": "de603240-aa3b-4f2d-8427-c442bf0067d2",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "randomness",
@@ -272,6 +297,7 @@
       "slug": "scrabble-score",
       "name": "Scrabble Score",
       "uuid": "f56b96e3-a642-4594-97a8-4bc82674547a",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "transforming"
@@ -281,6 +307,7 @@
       "slug": "secret-handshake",
       "name": "Secret Handshake",
       "uuid": "f57cb4b4-5c22-4204-9006-8642af0e4678",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "bitwise_operations",
@@ -291,6 +318,7 @@
       "slug": "series",
       "name": "Series",
       "uuid": "a56e3c85-715e-4730-966f-cc46616aaa95",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "integers",
@@ -302,6 +330,7 @@
       "slug": "sieve",
       "name": "Sieve",
       "uuid": "fd22b216-28c3-43cc-9627-e7584f4d3e27",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "filtering",
@@ -312,6 +341,7 @@
       "slug": "strain",
       "name": "Strain",
       "uuid": "052e5eaa-8d36-4e9a-95c2-2e350852967d",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "filtering",
@@ -322,6 +352,7 @@
       "slug": "sublist",
       "name": "Sublist",
       "uuid": "1f3e9399-b1fa-4dec-92d7-7abf3b64f499",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "lists",
@@ -332,6 +363,7 @@
       "slug": "triangle",
       "name": "Triangle",
       "uuid": "c90dbfe2-64ff-47d5-9b46-7827bf1cc06c",
+      "prerequisites": [],
       "difficulty": 3,
       "topics": [
         "discriminated_unions",
@@ -342,6 +374,7 @@
       "slug": "acronym",
       "name": "Acronym",
       "uuid": "1644b429-041b-4cdb-a023-e6ce74c8fc89",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "strings",
@@ -352,6 +385,7 @@
       "slug": "all-your-base",
       "name": "All Your Base",
       "uuid": "8fe580b5-23e5-4120-9b8b-bb43240da325",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "integers",
@@ -363,6 +397,7 @@
       "slug": "allergies",
       "name": "Allergies",
       "uuid": "da7c4aa4-bdaa-4006-89ef-7f93e7a0abf7",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "bitwise_operations",
@@ -374,6 +409,7 @@
       "slug": "anagram",
       "name": "Anagram",
       "uuid": "0a08a2f5-cb37-407d-9bf7-d499b0e16258",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "filtering",
@@ -384,6 +420,7 @@
       "slug": "beer-song",
       "name": "Beer Song",
       "uuid": "3f9eb775-a268-42fa-8c28-f8fd9d43bddf",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "conditionals",
@@ -395,6 +432,7 @@
       "slug": "binary-search",
       "name": "Binary Search",
       "uuid": "1674a32a-3b75-4c75-a90b-d06a9aa01b4c",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "integers",
@@ -406,6 +444,7 @@
       "slug": "crypto-square",
       "name": "Crypto Square",
       "uuid": "74b484a9-ad9e-4fc1-820c-eb1bbb1fdb82",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "looping",
@@ -417,6 +456,7 @@
       "slug": "largest-series-product",
       "name": "Largest Series Product",
       "uuid": "12c53e14-9184-42ca-86a1-fc7cb8ae8401",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "integers",
@@ -429,6 +469,7 @@
       "slug": "meetup",
       "name": "Meetup",
       "uuid": "cea2e160-2269-4dde-9063-734c72cb7255",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "dates"
@@ -438,6 +479,7 @@
       "slug": "nth-prime",
       "name": "Nth Prime",
       "uuid": "924a7103-040c-4b49-a11d-16c9e811d84b",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "integers",
@@ -449,6 +491,7 @@
       "slug": "pangram",
       "name": "Pangram",
       "uuid": "567478d0-b93b-48fe-a727-d1969f9097ad",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "searching",
@@ -460,6 +503,7 @@
       "slug": "pascals-triangle",
       "name": "Pascals Triangle",
       "uuid": "f00fe4b4-7caf-4fe0-b8e6-c1684f71c5f6",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "lists",
@@ -471,6 +515,7 @@
       "slug": "say",
       "name": "Say",
       "uuid": "9292d37e-2b5f-45a2-b995-ebcce9d90376",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "loops",
@@ -483,6 +528,7 @@
       "slug": "transpose",
       "name": "Transpose",
       "uuid": "a6b0237b-3eeb-449c-92dc-d950fd379713",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "strings",
@@ -493,6 +539,7 @@
       "slug": "word-count",
       "name": "Word Count",
       "uuid": "75cece67-bfa9-42d9-a497-2efd0862b3ef",
+      "prerequisites": [],
       "difficulty": 4,
       "topics": [
         "maps",
@@ -504,6 +551,7 @@
       "slug": "bracket-push",
       "name": "Bracket Push",
       "uuid": "5afbe74a-af64-4558-938b-d075bc4d1f61",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "conditionals",
@@ -515,6 +563,7 @@
       "slug": "luhn",
       "name": "Luhn",
       "uuid": "989aaedc-4836-4d75-8579-0ac177c58120",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "algorithms",
@@ -526,6 +575,7 @@
       "slug": "roman-numerals",
       "name": "Roman Numerals",
       "uuid": "fd0b00f9-0c19-46be-8d34-0f86564bf35e",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "recursion",
@@ -536,6 +586,7 @@
       "slug": "run-length-encoding",
       "name": "Run Length Encoding",
       "uuid": "aac1ae62-744a-468f-ba22-53be185c5a6f",
+      "prerequisites": [],
       "difficulty": 5,
       "topics": [
         "algorithms",
