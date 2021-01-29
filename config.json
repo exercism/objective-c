@@ -2,6 +2,7 @@
   "language": "Objective-C",
   "active": true,
   "blurb": "",
+  "version": 3,
   "exercises": [
     {
       "slug": "hello-world",
