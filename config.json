@@ -14,6 +14,22 @@
     "indent_style": "space",
     "indent_size": 4
   },
+  "files": {
+    "solution": [
+      "%{pascal_slug}.m",
+      "%{pascal_slug}.h"
+    ],
+    "test": [
+      "%{pascal_slug}Test.m"
+    ],
+    "example": [
+      "%{pascal_slug}Example.m"
+    ],
+    "exemplar": [
+      ".meta/%{pascal_slug}Exemplar.m",
+      ".meta/%{pascal_slug}Exemplar.h"
+    ]
+  },
   "exercises": {
     "concept": [],
     "practice": [
