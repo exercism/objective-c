@@ -1,0 +1,18 @@
+{
+  "docs": [
+    {
+      "uuid": "014402ed-4b07-4659-b007-55df6f834bc6",
+      "slug": "installation",
+      "path": "docs/INSTALLATION.md",
+      "title": "Installing Objective-C locally",
+      "blurb": "Learn how to install Objective-C locally to solve Exercism's exercises on your own machine"
+    },
+    {
+      "uuid": "1ae7054b-ad70-4ceb-9fa1-84978a4171f4",
+      "slug": "tests",
+      "path": "docs/TESTS.md",
+      "title": "Testing on the Objective-C track",
+      "blurb": "Learn how to test your Objective-C exercises on Exercism"
+    }
+  ]
+}
