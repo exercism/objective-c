@@ -1,6 +1,11 @@
 {
   "blurb": "Take input text and output it transposed.",
-  "authors": [],
+  "authors": [
+    "robtimp"
+  ],
+  "contributors": [
+    "masters3d"
+  ],
   "files": {
     "solution": [
       "Transpose.m",

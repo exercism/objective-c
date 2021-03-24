@@ -1,6 +1,10 @@
 {
   "blurb": "Convert a long phrase to its acronym",
   "authors": [],
+  "contributors": [
+    "masters3d",
+    "robtimp"
+  ],
   "files": {
     "solution": [
       "Acronym.m",

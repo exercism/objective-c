@@ -1,6 +1,10 @@
 {
   "blurb": "Calculate the date of meetups.",
   "authors": [],
+  "contributors": [
+    "masters3d",
+    "robtimp"
+  ],
   "files": {
     "solution": [
       "Meetup.m",

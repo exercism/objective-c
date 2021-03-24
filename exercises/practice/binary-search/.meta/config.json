@@ -1,6 +1,11 @@
 {
   "blurb": "Implement a binary search algorithm.",
-  "authors": [],
+  "authors": [
+    "robtimp"
+  ],
+  "contributors": [
+    "masters3d"
+  ],
   "files": {
     "solution": [
       "BinarySearch.m",

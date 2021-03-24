@@ -1,6 +1,14 @@
 {
   "blurb": "The classical introductory exercise. Just say \"Hello, World!\"",
-  "authors": [],
+  "authors": [
+    "ramonh"
+  ],
+  "contributors": [
+    "chillpop",
+    "masters3d",
+    "robtimp",
+    "skeskali"
+  ],
   "files": {
     "solution": [
       "HelloWorld.m",

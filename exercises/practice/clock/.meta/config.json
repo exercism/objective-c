@@ -1,6 +1,10 @@
 {
   "blurb": "Implement a clock that handles times without dates.",
   "authors": [],
+  "contributors": [
+    "masters3d",
+    "robtimp"
+  ],
   "files": {
     "solution": [
       "Clock.m",

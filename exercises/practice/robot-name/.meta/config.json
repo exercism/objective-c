@@ -1,6 +1,11 @@
 {
   "blurb": "Manage robot factory settings.",
   "authors": [],
+  "contributors": [
+    "chillpop",
+    "kytrinyx",
+    "masters3d"
+  ],
   "files": {
     "solution": [
       "RobotName.m",

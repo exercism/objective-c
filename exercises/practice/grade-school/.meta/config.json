@@ -1,6 +1,12 @@
 {
   "blurb": "Given students' names along with the grade that they are in, create a roster for the school",
   "authors": [],
+  "contributors": [
+    "ahalls",
+    "chillpop",
+    "kytrinyx",
+    "masters3d"
+  ],
   "files": {
     "solution": [
       "GradeSchool.m",

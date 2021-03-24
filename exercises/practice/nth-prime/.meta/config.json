@@ -1,6 +1,12 @@
 {
   "blurb": "Given a number n, determine what the nth prime is.",
-  "authors": [],
+  "authors": [
+    "mindejulian"
+  ],
+  "contributors": [
+    "kytrinyx",
+    "masters3d"
+  ],
   "files": {
     "solution": [
       "NthPrime.m",

@@ -1,6 +1,10 @@
 {
   "blurb": "Implement run-length encoding and decoding.",
   "authors": [],
+  "contributors": [
+    "masters3d",
+    "robtimp"
+  ],
   "files": {
     "solution": [
       "RunLengthEncoding.m",
