@@ -2,9 +2,16 @@
   "blurb": "Given a number, find the sum of all the multiples of particular numbers up to but not including that number.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "SumOfMultiples.m",
+      "SumOfMultiples.h"
+    ],
+    "test": [
+      "SumOfMultiplesTest.m"
+    ],
+    "example": [
+      "SumOfMultiplesExample.m"
+    ]
   },
   "source": "A variation on Problem 1 at Project Euler",
   "source_url": "http://projecteuler.net/problem=1"
