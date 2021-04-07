@@ -2,8 +2,15 @@
   "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "AllYourBase.m",
+      "AllYourBase.h"
+    ],
+    "test": [
+      "AllYourBaseTest.m"
+    ],
+    "example": [
+      "AllYourBaseExample.m"
+    ]
   }
 }

@@ -1,8 +1,15 @@
 {
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "BracketPush.m",
+      "BracketPush.h"
+    ],
+    "test": [
+      "BracketPushTest.m"
+    ],
+    "example": [
+      "BracketPushExample.m"
+    ]
   }
 }

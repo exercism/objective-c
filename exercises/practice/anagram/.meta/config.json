@@ -2,9 +2,16 @@
   "blurb": "Given a word and a list of possible anagrams, select the correct sublist.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "Anagram.m",
+      "Anagram.h"
+    ],
+    "test": [
+      "AnagramTest.m"
+    ],
+    "example": [
+      "AnagramExample.m"
+    ]
   },
   "source": "Inspired by the Extreme Startup game",
   "source_url": "https://github.com/rchatley/extreme_startup"

@@ -2,9 +2,16 @@
   "blurb": "Implement run-length encoding and decoding.",
   "authors": [],
   "files": {
-    "solution": [],
-    "test": [],
-    "example": []
+    "solution": [
+      "RunLengthEncoding.m",
+      "RunLengthEncoding.h"
+    ],
+    "test": [
+      "RunLengthEncodingTest.m"
+    ],
+    "example": [
+      "RunLengthEncodingExample.m"
+    ]
   },
   "source": "Wikipedia",
   "source_url": "https://en.wikipedia.org/wiki/Run-length_encoding"
