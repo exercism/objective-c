@@ -3,14 +3,14 @@
   "authors": [],
   "files": {
     "solution": [
-      "RnaTranscription.m",
-      "RnaTranscription.h"
+      "RNATranscription.m",
+      "RNATranscription.h"
     ],
     "test": [
-      "RnaTranscriptionTest.m"
+      "RNATranscriptionTest.m"
     ],
     "example": [
-      "RnaTranscriptionExample.m"
+      "RNATranscriptionExample.m"
     ]
   },
   "source": "Hyperphysics",
