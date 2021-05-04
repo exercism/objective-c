@@ -1,6 +1,8 @@
+# Tests
+
 Exercism will only download a test file. You will need to manually create the header and the source file associated with the exercise. You will need to generate an Xcode Project file with the test file, the header file (.h) and the source file (.m). Alternatively, you can use a test runner utility that's described below.
 
-### Creating the project in Xcode
+## Creating the project in Xcode
 
 * Start Xcode and create a new project.
 * Select OS X > Application and then Command Line Tool.
@@ -27,7 +29,7 @@ Tests will be run through Xcode.
 
 __Note:__ If you receive the error "No visible `@interface` for ExerciseName declares the selector ExerciseSelector," you followed the steps correctly, but haven't written anything in your header/implementation file(s). After you declare your method in the .h file and define it in the .m file, your tests should raise more helpful errors that will lead you towards completing the exercise. Read this [primer on Objective-C Classes](http://blog.teamtreehouse.com/beginners-guide-objective-c-classes-objects) for more in-depth information.
 
-### A Test Runner
+## A Test Runner
 
 An alternative to manually generating the project file is to use a test runner utility written in ruby, [`objc`](https://rubygems.org/gems/objc/), that will create a project file for you with the test file, header file and source file.
 
