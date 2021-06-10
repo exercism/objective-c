@@ -8,7 +8,7 @@
     "representer": false,
     "analyzer": false
   },
-  "blurb": "",
+  "blurb": "Objective-C is a combination of C-like syntax with Smalltalk-like messaging. Unlike C, Objective-C includes an (optional) garbage collector. It is best known for being the standard programming language for macOS and iOS, until the introduction of Swift in 2014.",
   "version": 3,
   "online_editor": {
     "indent_style": "space",
