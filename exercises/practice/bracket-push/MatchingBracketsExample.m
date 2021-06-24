@@ -1,16 +1,16 @@
-#import "BracketPushExample.h"
+#import "MatchingBracketsExample.h"
 
-@implementation BracketPushExample
+@implementation MatchingBracketsExample
 
 + (BOOL)validateBracketPairingAndNestingInString:(NSString *)string {
     NSDictionary *brackets = @{@")" : @"(",
                                @"]" : @"[",
                                @"}" : @"{" };
-    
+
     NSMutableArray *stack = [[NSMutableArray alloc] init];
     NSRange textRange = NSMakeRange(0, string.length);
     __block BOOL mismatch = NO;
-    
+
     [string enumerateSubstringsInRange:textRange
                                options:NSStringEnumerationByComposedCharacterSequences
                             usingBlock:^(NSString * _Nullable
@@ -23,10 +23,10 @@
              [stack addObject:substring];
          } else if ([[brackets allKeys] containsObject:substring]) {
              NSString *last = [stack lastObject];
-             
+
              if (last) {
                  [stack removeLastObject];
-                 
+
                  if (![last isEqualToString:brackets[substring]]) {
                      mismatch = YES;
                      *stop = YES;
@@ -37,11 +37,11 @@
              }
          }
      }];
-    
+
     if (mismatch) {
         return NO;
     }
-    
+
     return [stack count] == 0;
 }
 
