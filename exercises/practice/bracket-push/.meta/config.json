@@ -1,15 +1,17 @@
 {
+  "blurb": "Make sure the brackets and braces all match.",
   "authors": [],
   "files": {
     "solution": [
-      "BracketPush.m",
-      "BracketPush.h"
+      "MatchingBrackets.m",
+      "MatchingBrackets.h"
     ],
     "test": [
-      "BracketPushTest.m"
+      "MatchingBracketsTest.m"
     ],
     "example": [
-      "BracketPushExample.m"
+      "MatchingBracketsExample.m"
     ]
-  }
+  },
+  "source": "Ginna Baker"
 }
