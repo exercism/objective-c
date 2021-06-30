@@ -51,8 +51,8 @@
 		6F409F901F0DBF2800217758 /* RNATranscriptionExample.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F409F8F1F0DBF2800217758 /* RNATranscriptionExample.m */; };
 		A065F5781E3098080048E337 /* BeerSongExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A065F5761E3098080048E337 /* BeerSongExample.m */; };
 		A065F5791E3098080048E337 /* BeerSongTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A065F5771E3098080048E337 /* BeerSongTest.m */; };
-		A097D40F1E363C2700EAF2C2 /* BracketPushExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A097D40D1E363C2700EAF2C2 /* BracketPushExample.m */; };
-		A097D4101E363C2700EAF2C2 /* BracketPushTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A097D40E1E363C2700EAF2C2 /* BracketPushTest.m */; };
+		A097D40F1E363C2700EAF2C2 /* MatchingBracketsExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A097D40D1E363C2700EAF2C2 /* MatchingBracketsExample.m */; };
+		A097D4101E363C2700EAF2C2 /* MatchingBracketsTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A097D40E1E363C2700EAF2C2 /* MatchingBracketsTest.m */; };
 		A09A4C031E38761A00FEFB7A /* FlattenArrayExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A09A4C021E38761A00FEFB7A /* FlattenArrayExample.m */; };
 		A09A4C051E38763300FEFB7A /* FlattenArrayTest.m in Sources */ = {isa = PBXBuildFile; fileRef = A09A4C041E38763300FEFB7A /* FlattenArrayTest.m */; };
 		A09C1763208F0D0A003CE51F /* ReverseStringExample.m in Sources */ = {isa = PBXBuildFile; fileRef = A09C1762208F0D0A003CE51F /* ReverseStringExample.m */; };
@@ -169,9 +169,9 @@
 		A065F5751E3098080048E337 /* BeerSongExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BeerSongExample.h; path = "../../exercises/beer-song/BeerSongExample.h"; sourceTree = "<group>"; };
 		A065F5761E3098080048E337 /* BeerSongExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeerSongExample.m; path = "../../exercises/beer-song/BeerSongExample.m"; sourceTree = "<group>"; };
 		A065F5771E3098080048E337 /* BeerSongTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BeerSongTest.m; path = "../../exercises/beer-song/BeerSongTest.m"; sourceTree = "<group>"; };
-		A097D40C1E363C1A00EAF2C2 /* BracketPushExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BracketPushExample.h; path = "../../exercises/bracket-push/BracketPushExample.h"; sourceTree = "<group>"; };
-		A097D40D1E363C2700EAF2C2 /* BracketPushExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BracketPushExample.m; path = "../../exercises/bracket-push/BracketPushExample.m"; sourceTree = "<group>"; };
-		A097D40E1E363C2700EAF2C2 /* BracketPushTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BracketPushTest.m; path = "../../exercises/bracket-push/BracketPushTest.m"; sourceTree = "<group>"; };
+		A097D40C1E363C1A00EAF2C2 /* MatchingBracketsExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MatchingBracketsExample.h; path = "../../exercises/matching-brackets/MatchingBracketsExample.h"; sourceTree = "<group>"; };
+		A097D40D1E363C2700EAF2C2 /* MatchingBracketsExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MatchingBracketsExample.m; path = "../../exercises/matching-brackets/MatchingBracketsExample.m"; sourceTree = "<group>"; };
+		A097D40E1E363C2700EAF2C2 /* MatchingBracketsTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MatchingBracketsTest.m; path = "../../exercises/matching-brackets/MatchingBracketsTest.m"; sourceTree = "<group>"; };
 		A09A4C011E38761A00FEFB7A /* FlattenArrayExample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FlattenArrayExample.h; path = "../../exercises/flatten-array/FlattenArrayExample.h"; sourceTree = "<group>"; };
 		A09A4C021E38761A00FEFB7A /* FlattenArrayExample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlattenArrayExample.m; path = "../../exercises/flatten-array/FlattenArrayExample.m"; sourceTree = "<group>"; };
 		A09A4C041E38763300FEFB7A /* FlattenArrayTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FlattenArrayTest.m; path = "../../exercises/flatten-array/FlattenArrayTest.m"; sourceTree = "<group>"; };
@@ -295,7 +295,7 @@
 				A0CE03811E2F994200669F42 /* BeerSong */,
 				E95C52481E806BA20095D321 /* BinarySearch */,
 				E9E8B6EC1D519DEF0012F12C /* Bob */,
-				A09A906D1E28C1380087CCB7 /* BracketPush */,
+				A09A906D1E28C1380087CCB7 /* MatchingBrackets */,
 				E9381D4F1D8F2DA4003F22A1 /* Clock */,
 				E9340D0320197513009FDEF4 /* CollatzConjecture */,
 				E9895B6B1E8DA8AA006AD25D /* CryptoSquare */,
@@ -378,14 +378,14 @@
 			name = FlattenArray;
 			sourceTree = "<group>";
 		};
-		A09A906D1E28C1380087CCB7 /* BracketPush */ = {
+		A09A906D1E28C1380087CCB7 /* MatchingBrackets */ = {
 			isa = PBXGroup;
 			children = (
-				A097D40C1E363C1A00EAF2C2 /* BracketPushExample.h */,
-				A097D40D1E363C2700EAF2C2 /* BracketPushExample.m */,
-				A097D40E1E363C2700EAF2C2 /* BracketPushTest.m */,
+				A097D40C1E363C1A00EAF2C2 /* MatchingBracketsExample.h */,
+				A097D40D1E363C2700EAF2C2 /* MatchingBracketsExample.m */,
+				A097D40E1E363C2700EAF2C2 /* MatchingBracketsTest.m */,
 			);
-			name = BracketPush;
+			name = MatchingBrackets;
 			sourceTree = "<group>";
 		};
 		A09C1760208F0C50003CE51F /* ReverseString */ = {
@@ -946,7 +946,7 @@
 				1EFACAA41CCCAF3D006F2E69 /* AnagramTest.m in Sources */,
 				E907FE921D87547D00B93DA9 /* ScrabbleScoreExample.m in Sources */,
 				A09A4C051E38763300FEFB7A /* FlattenArrayTest.m in Sources */,
-				A097D4101E363C2700EAF2C2 /* BracketPushTest.m in Sources */,
+				A097D4101E363C2700EAF2C2 /* MatchingBracketsTest.m in Sources */,
 				E95C52551E81C82A0095D321 /* BinarySearchExample.m in Sources */,
 				1EFACABC1CCCAF3D006F2E69 /* WordCountTest.m in Sources */,
 				E9630C4B1FD07AA10024EE90 /* TwoFerTest.m in Sources */,
@@ -982,7 +982,7 @@
 				E907D0CC1D6B734800106C42 /* GigasecondTest.m in Sources */,
 				E9C1C0311D9EC1270015E86E /* RunLengthEncodingTest.m in Sources */,
 				1EFACAA81CCCAF3D006F2E69 /* EtlTest.m in Sources */,
-				A097D40F1E363C2700EAF2C2 /* BracketPushExample.m in Sources */,
+				A097D40F1E363C2700EAF2C2 /* MatchingBracketsExample.m in Sources */,
 				A0CFCBF82056956B00DFE959 /* StrainExample.m in Sources */,
 				A09C1763208F0D0A003CE51F /* ReverseStringExample.m in Sources */,
 				E947A4E01D81FE3A00633720 /* TriangleTest.m in Sources */,
