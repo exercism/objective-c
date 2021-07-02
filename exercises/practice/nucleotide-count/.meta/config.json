@@ -1,6 +1,11 @@
 {
   "blurb": "Given a DNA string, compute how many times each nucleotide occurs in the string.",
   "authors": [],
+  "contributors": [
+    "chillpop",
+    "kytrinyx",
+    "masters3d"
+  ],
   "files": {
     "solution": [
       "NucleotideCount.m",

@@ -1,6 +1,13 @@
 {
   "blurb": "Write a function to determine if a list is a sublist of another list.",
-  "authors": [],
+  "authors": [
+    "AlwynC"
+  ],
+  "contributors": [
+    "kytrinyx",
+    "masters3d",
+    "robtimp"
+  ],
   "files": {
     "solution": [
       "Sublist.m",

@@ -1,6 +1,11 @@
 {
   "blurb": "Given a year, report if it is a leap year.",
   "authors": [],
+  "contributors": [
+    "chillpop",
+    "kytrinyx",
+    "masters3d"
+  ],
   "files": {
     "solution": [
       "Leap.m",

@@ -1,6 +1,10 @@
 {
   "blurb": "Determine if a sentence is a pangram.",
   "authors": [],
+  "contributors": [
+    "masters3d",
+    "robtimp"
+  ],
   "files": {
     "solution": [
       "Pangram.m",

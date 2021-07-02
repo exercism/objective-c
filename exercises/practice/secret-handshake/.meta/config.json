@@ -1,6 +1,10 @@
 {
   "blurb": "Given a decimal number, convert it to the appropriate sequence of events for a secret handshake.",
   "authors": [],
+  "contributors": [
+    "masters3d",
+    "robtimp"
+  ],
   "files": {
     "solution": [
       "SecretHandshake.m",

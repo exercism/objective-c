@@ -1,6 +1,12 @@
 {
   "blurb": "Make sure the brackets and braces all match.",
-  "authors": [],
+  "authors": [
+    "AlwynC"
+  ],
+  "contributors": [
+    "masters3d",
+    "robtimp"
+  ],
   "files": {
     "solution": [
       "MatchingBrackets.m",

@@ -1,6 +1,12 @@
 {
   "blurb": "Produce the lyrics to that beloved classic, that field-trip favorite: 99 Bottles of Beer on the Wall.",
-  "authors": [],
+  "authors": [
+    "AlwynC"
+  ],
+  "contributors": [
+    "masters3d",
+    "robtimp"
+  ],
   "files": {
     "solution": [
       "BeerSong.m",
