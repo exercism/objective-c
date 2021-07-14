@@ -2,10 +2,7 @@
 #import "HelloWorldExample.h"
 
 @implementation HelloWorld
-- (NSString *)hello:(NSString *)name {
-  if (!name) {
-    name = @"World"; //!OCLINT
-  }
-  return [NSString stringWithFormat:@"Hello, %@!", name];
+- (NSString *)hello {
+  return @"Hello, World!";
 }
 @end
