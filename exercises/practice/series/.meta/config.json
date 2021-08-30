@@ -12,7 +12,7 @@
       "SeriesTest.m"
     ],
     "example": [
-      "SeriesExample.m"
+      ".meta/SeriesExample.m"
     ]
   },
   "source": "A subset of the Problem 8 at Project Euler",

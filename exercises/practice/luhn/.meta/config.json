@@ -15,7 +15,7 @@
       "LuhnTest.m"
     ],
     "example": [
-      "LuhnExample.m"
+      ".meta/LuhnExample.m"
     ]
   },
   "source": "The Luhn Algorithm on Wikipedia",

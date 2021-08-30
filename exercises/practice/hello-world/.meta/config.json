@@ -18,7 +18,7 @@
       "HelloWorldTest.m"
     ],
     "example": [
-      "HelloWorldExample.m"
+      ".meta/HelloWorldExample.m"
     ]
   },
   "source": "This is an exercise to introduce users to using Exercism",

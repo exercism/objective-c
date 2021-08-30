@@ -15,7 +15,7 @@
       "ScrabbleScoreTest.m"
     ],
     "example": [
-      "ScrabbleScoreExample.m"
+      ".meta/ScrabbleScoreExample.m"
     ]
   },
   "source": "Inspired by the Extreme Startup game",

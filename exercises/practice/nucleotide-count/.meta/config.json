@@ -15,7 +15,7 @@
       "NucleotideCountTest.m"
     ],
     "example": [
-      "NucleotideCountExample.m"
+      ".meta/NucleotideCountExample.m"
     ]
   },
   "source": "The Calculating DNA Nucleotides_problem at Rosalind",

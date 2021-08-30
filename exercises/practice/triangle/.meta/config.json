@@ -15,7 +15,7 @@
       "TriangleTest.m"
     ],
     "example": [
-      "TriangleExample.m"
+      ".meta/TriangleExample.m"
     ]
   },
   "source": "The Ruby Koans triangle project, parts 1 & 2",

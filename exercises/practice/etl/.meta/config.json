@@ -16,7 +16,7 @@
       "EtlTest.m"
     ],
     "example": [
-      "EtlExample.m"
+      ".meta/EtlExample.m"
     ]
   },
   "source": "The Jumpstart Lab team",

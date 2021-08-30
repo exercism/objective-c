@@ -12,7 +12,7 @@
       "PrimeFactorsTest.m"
     ],
     "example": [
-      "PrimeFactorsExample.m"
+      ".meta/PrimeFactorsExample.m"
     ]
   },
   "source": "The Prime Factors Kata by Uncle Bob",

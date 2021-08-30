@@ -12,7 +12,7 @@
       "ReverseStringTest.m"
     ],
     "example": [
-      "ReverseStringExample.m"
+      ".meta/ReverseStringExample.m"
     ]
   },
   "source": "Introductory challenge to reverse an input string",

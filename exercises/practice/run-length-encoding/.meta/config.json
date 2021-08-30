@@ -14,7 +14,7 @@
       "RunLengthEncodingTest.m"
     ],
     "example": [
-      "RunLengthEncodingExample.m"
+      ".meta/RunLengthEncodingExample.m"
     ]
   },
   "source": "Wikipedia",

@@ -15,7 +15,7 @@
       "PascalsTriangleTest.m"
     ],
     "example": [
-      "PascalsTriangleExample.m"
+      ".meta/PascalsTriangleExample.m"
     ]
   },
   "source": "Pascal's Triangle at Wolfram Math World",

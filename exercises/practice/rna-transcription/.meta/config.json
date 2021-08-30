@@ -15,7 +15,7 @@
       "RNATranscriptionTest.m"
     ],
     "example": [
-      "RNATranscriptionExample.m"
+      ".meta/RNATranscriptionExample.m"
     ]
   },
   "source": "Hyperphysics",

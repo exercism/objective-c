@@ -15,7 +15,7 @@
       "AtbashCipherTest.m"
     ],
     "example": [
-      "AtbashCipherExample.m"
+      ".meta/AtbashCipherExample.m"
     ]
   },
   "source": "Wikipedia",

@@ -16,7 +16,7 @@
       "SayTest.m"
     ],
     "example": [
-      "SayExample.m"
+      ".meta/SayExample.m"
     ]
   },
   "source": "A variation on JavaRanch CattleDrive, exercise 4a",
