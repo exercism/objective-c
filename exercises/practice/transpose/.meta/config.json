@@ -15,7 +15,7 @@
       "TransposeTest.m"
     ],
     "example": [
-      "TransposeExample.m"
+      ".meta/TransposeExample.m"
     ]
   },
   "source": "Reddit r/dailyprogrammer challenge #270 [Easy].",

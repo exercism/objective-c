@@ -14,7 +14,7 @@
       "PerfectNumbersTest.m"
     ],
     "example": [
-      "PerfectNumbersExample.m"
+      ".meta/PerfectNumbersExample.m"
     ]
   },
   "source": "Taken from Chapter 2 of Functional Thinking by Neal Ford.",

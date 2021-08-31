@@ -16,7 +16,7 @@
       "NthPrimeTest.m"
     ],
     "example": [
-      "NthPrimeExample.m"
+      ".meta/NthPrimeExample.m"
     ]
   },
   "source": "A variation on Problem 7 at Project Euler",

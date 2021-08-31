@@ -15,7 +15,7 @@
       "RomanNumeralsTest.m"
     ],
     "example": [
-      "RomanNumeralsExample.m"
+      ".meta/RomanNumeralsExample.m"
     ]
   },
   "source": "The Roman Numeral Kata",

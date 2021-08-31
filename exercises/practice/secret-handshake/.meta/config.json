@@ -14,7 +14,7 @@
       "SecretHandshakeTest.m"
     ],
     "example": [
-      "SecretHandshakeExample.m"
+      ".meta/SecretHandshakeExample.m"
     ]
   },
   "source": "Bert, in Mary Poppins",

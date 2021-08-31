@@ -15,7 +15,7 @@
       "PhoneNumberTest.m"
     ],
     "example": [
-      "PhoneNumberExample.m"
+      ".meta/PhoneNumberExample.m"
     ]
   },
   "source": "Event Manager by JumpstartLab",

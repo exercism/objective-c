@@ -15,7 +15,7 @@
       "GigasecondTest.m"
     ],
     "example": [
-      "GigasecondExample.m"
+      ".meta/GigasecondExample.m"
     ]
   },
   "source": "Chapter 9 in Chris Pine's online Learn to Program tutorial.",

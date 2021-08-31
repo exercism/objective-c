@@ -15,7 +15,7 @@
       "AllYourBaseTest.m"
     ],
     "example": [
-      "AllYourBaseExample.m"
+      ".meta/AllYourBaseExample.m"
     ]
   }
 }

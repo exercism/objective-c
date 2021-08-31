@@ -16,7 +16,7 @@
       "TwoFerTest.m"
     ],
     "example": [
-      "TwoFerExample.m"
+      ".meta/TwoFerExample.m"
     ]
   },
   "source_url": "https://github.com/exercism/problem-specifications/issues/757"

@@ -16,7 +16,7 @@
       "CollatzConjectureTest.m"
     ],
     "example": [
-      "CollatzConjectureExample.m"
+      ".meta/CollatzConjectureExample.m"
     ]
   },
   "source": "An unsolved problem in mathematics named after mathematician Lothar Collatz",

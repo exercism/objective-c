@@ -14,7 +14,7 @@
       "LargestSeriesProductTest.m"
     ],
     "example": [
-      "LargestSeriesProductExample.m"
+      ".meta/LargestSeriesProductExample.m"
     ]
   },
   "source": "A variation on Problem 8 at Project Euler",

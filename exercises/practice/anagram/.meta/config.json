@@ -15,7 +15,7 @@
       "AnagramTest.m"
     ],
     "example": [
-      "AnagramExample.m"
+      ".meta/AnagramExample.m"
     ]
   },
   "source": "Inspired by the Extreme Startup game",

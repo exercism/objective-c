@@ -14,7 +14,7 @@
       "SumOfMultiplesTest.m"
     ],
     "example": [
-      "SumOfMultiplesExample.m"
+      ".meta/SumOfMultiplesExample.m"
     ]
   },
   "source": "A variation on Problem 1 at Project Euler",

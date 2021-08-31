@@ -15,7 +15,7 @@
       "HammingTest.m"
     ],
     "example": [
-      "HammingExample.m"
+      ".meta/HammingExample.m"
     ]
   },
   "source": "The Calculating Point Mutations problem at Rosalind",
