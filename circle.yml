@@ -1,6 +1,0 @@
-machine:
-  xcode:
-    version: "8.2"
-test:
-  override:
-    - xcodebuild test -project 'xcodeProject/ObjectiveC.xcodeproj' -scheme 'xobjectivecTest' -sdk macosx10.12
