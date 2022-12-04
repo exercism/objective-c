@@ -3,13 +3,13 @@
 Exercism exercises in Objective-C
 
 ## Try it!
-If you've downloaded the [command-line client](http://exercism.io/clients/cli) and have Objective-C installed on your machine, then go ahead and fetch the first problem.
+If you've downloaded the [command-line client](https://exercism.org/docs/using/solving-exercises/working-locally) and have Objective-C installed on your machine, then go ahead and fetch the first problem.
 
 ```bash
 exercism fetch objective-c
 ```
 
-In order to be able to submit your solution, you'll need to configure the client with your [Exercism API key](http://exercism.io/account/key).
+In order to be able to submit your solution, you'll need to configure the client with your [Exercism API key](https://exercism.org/settings/api_cli).
 ```bash
 exercism configure --key=YOUR_EXERCISM_KEY
 ```
@@ -78,7 +78,7 @@ If you are new to open source, or are looking for an easy way in, feel free to c
 
 ### Help Add More Objective-C Exercises
 
-The easiest way to add new exercises is to translate existing exercises from other language tracks on Exercism. Here's the [full list of unimplemented exercises in Objective-C](http://exercism.io/languages/objective-c/todo) along with links to all the existing implementations.
+The easiest way to add new exercises is to translate existing exercises from other language tracks on Exercism. Here's the [full list of unimplemented exercises in Objective-C](http://exercism.org/languages/objective-c/todo) along with links to all the existing implementations.
 
 If you have an idea for a completely new exercise, you can follow [this guide](https://github.com/exercism/docs/blob/master/you-can-help/make-up-new-exercises.md) to add it to the site.
 
