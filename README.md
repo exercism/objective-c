@@ -3,7 +3,7 @@
 Exercism exercises in Objective-C
 
 ## Try it!
-If you've downloaded the [command-line client](http://exercism.org/clients/cli) and have Objective-C installed on your machine, then go ahead and fetch the first problem.
+If you've downloaded the [command-line client](https://exercism.org/docs/using/solving-exercises/working-locally) and have Objective-C installed on your machine, then go ahead and fetch the first problem.
 
 ```bash
 exercism fetch objective-c
