@@ -9,7 +9,7 @@ If you've downloaded the [command-line client](https://exercism.org/docs/using/s
 exercism fetch objective-c
 ```
 
-In order to be able to submit your solution, you'll need to configure the client with your [Exercism API key](http://exercism.org/account/key).
+In order to be able to submit your solution, you'll need to configure the client with your [Exercism API key](https://exercism.org/settings/api_cli).
 ```bash
 exercism configure --key=YOUR_EXERCISM_KEY
 ```
