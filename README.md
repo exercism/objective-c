@@ -67,21 +67,4 @@ The `objc` utility uses the exercise name to find the test file, ExerciseNameTes
 
 While `objc` makes it so you never have to launch Xcode to complete these exercises, the error messages and feedback through the command-line are not as clear as through the Xcode user interface.
 
-
-## Help Us Improve the Objective-C Track!
-
-Did you find a typo in the README? Is the test suite missing an edge case? We want to know about it.
-
-We always welcome GitHub issues and pull requests.
-
-If you are new to open source, or are looking for an easy way in, feel free to check out the [good first patch](https://github.com/exercism/objective-c/labels/good%20first%20patch) issues.
-
-### Help Add More Objective-C Exercises
-
-The easiest way to add new exercises is to translate existing exercises from other language tracks on Exercism. Here's the [full list of unimplemented exercises in Objective-C](http://exercism.org/languages/objective-c/todo) along with links to all the existing implementations.
-
-If you have an idea for a completely new exercise, you can follow [this guide](https://github.com/exercism/docs/blob/master/you-can-help/make-up-new-exercises.md) to add it to the site.
-
 The xcode project uses [OCLint](https://github.com/oclint/homebrew-formulae).
-Please see the [contributing guide](https://github.com/exercism/x-api/blob/master/CONTRIBUTING.md#the-exercise-data)
-
