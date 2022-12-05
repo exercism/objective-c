@@ -1,5 +1,4 @@
 {
-  "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base.",
   "authors": [],
   "contributors": [
     "chillpop",
@@ -17,5 +16,6 @@
     "example": [
       ".meta/AllYourBaseExample.m"
     ]
-  }
+  },
+  "blurb": "Convert a number, represented as a sequence of digits in one base, to any other base."
 }

@@ -1,5 +1,4 @@
 {
-  "blurb": "Make sure the brackets and braces all match.",
   "authors": [
     "AlwynC"
   ],
@@ -19,5 +18,6 @@
       ".meta/MatchingBracketsExample.m"
     ]
   },
+  "blurb": "Make sure the brackets and braces all match.",
   "source": "Ginna Baker"
 }
