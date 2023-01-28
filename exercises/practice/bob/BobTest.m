@@ -55,7 +55,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)testForcefulQuestions {
     NSString *input = @"WHAT THE HELL WERE YOU THINKING?";
-    NSString *expected = @"Whoa, chill out!";
+    NSString *expected = @"Calm down, I know what I'm doing!";
     NSString *result = [[self bob] hey:input];
     XCTAssertEqualObjects(expected, result);
 }
