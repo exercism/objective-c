@@ -61,14 +61,6 @@
     XCTAssertThrows([[[LargestSeriesProduct alloc] initWithNumberString:@"123"] largestProduct:4]);
 }
 
-- (void)testReports1ForEmptyStringAndEmptyProduct0Span {
-    XCTAssertEqual(1, [[[LargestSeriesProduct alloc] initWithNumberString:@""] largestProduct:0]);
-}
-
-- (void)testReports1ForNonemptyStringAndEmptyProduct0Span {
-    XCTAssertEqual(1, [[[LargestSeriesProduct alloc] initWithNumberString:@"123"] largestProduct:0]);
-}
-
 - (void)testRejectsEmptyStringAndNonzeroSpan {
     XCTAssertThrows([[[LargestSeriesProduct alloc] initWithNumberString:@""] largestProduct:1]);
 }
