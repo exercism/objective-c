@@ -684,7 +684,7 @@
     },
     {
       "title": "Apple Platforms",
-      "content": "Objective-C allows the usage of apple apis and frameworks, making it possible to develop for apple platforms.",
+      "content": "It can use apple frameworks and libraries, and can be used to develop for Apple platforms.",
       "icon": "productive"
     },
     {
