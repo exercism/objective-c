@@ -668,13 +668,13 @@
   "concepts": [],
   "key_features": [
     {
-      "title": "Automatic Reference Counting",
+      "title": "Reference Counting",
       "content": "Automatic Reference Counting (ARC) makes so memory is managed automatically.",
       "icon": "garbage-collected"
     },
     {
       "title": "Dynamically Typed",
-      "content": "The language determines the type of a variable at runtime.",
+      "content": "Making it flexible and easy to use.",
       "icon": "dynamically-typed"
     },
     {
@@ -684,12 +684,12 @@
     },
     {
       "title": "Apple Platforms",
-      "content": "Objective-C allows the usage of apple apis and frameworks.",
+      "content": "Objective-C allows the usage of apple apis and frameworks, making it possible to develop for apple platforms.",
       "icon": "productive"
     },
     {
       "title": "Object Oriented",
-      "content": "Objective-C is an object-oriented language.",
+      "content": "Objective-C is an object-oriented language, which is inspired by Smalltalk.",
       "icon": "embeddable"
     },
     {
