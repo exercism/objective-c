@@ -666,7 +666,38 @@
     ]
   },
   "concepts": [],
-  "key_features": [],
+  "key_features": [
+    {
+      "title": "Automatic Reference Counting",
+      "content": "Automatic Reference Counting (ARC) makes so memory is managed automatically.",
+      "icon": "garbage-collected"
+    },
+    {
+      "title": "Dynamically Typed",
+      "content": "The language determines the type of a variable at runtime.",
+      "icon": "dynamically-typed"
+    },
+    {
+      "title": "Interop",
+      "content": "Objective-C can work with C, C++, and Swift.",
+      "icon": "interop"
+    },
+    {
+      "title": "Apple Platforms",
+      "content": "Objective-C allows the usage of apple apis and frameworks.",
+      "icon": "productive"
+    },
+    {
+      "title": "object-oriented",
+      "content": "Objective-C is an object-oriented language.",
+      "icon": "embeddable"
+    },
+    {
+      "title": "Categories",
+      "content": "Allows the addition of methods to a class without subclassing or changing the actual class.",
+      "icon": "extensible"
+    }
+  ],
   "tags": [
     "paradigm/imperative",
     "paradigm/procedural",
