@@ -666,7 +666,38 @@
     ]
   },
   "concepts": [],
-  "key_features": [],
+  "key_features": [
+    {
+      "title": "Auto Memory Management",
+      "content": "Automatic Reference Counting (ARC) allows memory to be managed automatically.",
+      "icon": "garbage-collected"
+    },
+    {
+      "title": "Dynamically Typed",
+      "content": "Flexible and easy to use.",
+      "icon": "dynamically-typed"
+    },
+    {
+      "title": "Interop",
+      "content": "Objective-C can work with C, C++, and Swift.",
+      "icon": "interop"
+    },
+    {
+      "title": "Build Apple Apps",
+      "content": "Use all Apple frameworks and libraries to develop apps for Apple's platforms.",
+      "icon": "productive"
+    },
+    {
+      "title": "Object-oriented",
+      "content": "Objective-C is an object-oriented language, inspired by Smalltalk.",
+      "icon": "embeddable"
+    },
+    {
+      "title": "Categories",
+      "content": "Allows the addition of methods to a class without subclassing or changing the actual class.",
+      "icon": "extensible"
+    }
+  ],
   "tags": [
     "paradigm/imperative",
     "paradigm/procedural",
