@@ -668,7 +668,7 @@
   "concepts": [],
   "key_features": [
     {
-      "title": "Automatic Memory Management",
+      "title": "Auto Memory Management",
       "content": "Automatic Reference Counting (ARC) allows memory to be managed automatically.",
       "icon": "garbage-collected"
     },
