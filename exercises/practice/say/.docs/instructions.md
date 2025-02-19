@@ -30,8 +30,6 @@ Implement breaking a number up into chunks of thousands.
 
 So `1234567890` should yield a list like 1, 234, 567, and 890, while the far simpler `1000` should yield just 1 and 0.
 
-The program must also report any values that are out of range.
-
 ## Step 3
 
 Now handle inserting the appropriate scale word between those chunks.
@@ -48,13 +46,3 @@ Put it all together to get nothing but plain English.
 `12345` should give `twelve thousand three hundred forty-five`.
 
 The program must also report any values that are out of range.
-
-### Extensions
-
-Use _and_ (correctly) when spelling out the number in English:
-
-- 14 becomes "fourteen".
-- 100 becomes "one hundred".
-- 120 becomes "one hundred and twenty".
-- 1002 becomes "one thousand and two".
-- 1323 becomes "one thousand three hundred and twenty-three".
