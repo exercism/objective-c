@@ -614,19 +614,6 @@
         ]
       },
       {
-        "slug": "matching-brackets",
-        "name": "Matching Brackets",
-        "uuid": "5afbe74a-af64-4558-938b-d075bc4d1f61",
-        "practices": [],
-        "prerequisites": [],
-        "difficulty": 5,
-        "topics": [
-          "conditionals",
-          "looping",
-          "strings"
-        ]
-      },
-      {
         "slug": "luhn",
         "name": "Luhn",
         "uuid": "989aaedc-4836-4d75-8579-0ac177c58120",
@@ -637,6 +624,19 @@
           "algorithms",
           "strings",
           "transforming"
+        ]
+      },
+      {
+        "slug": "matching-brackets",
+        "name": "Matching Brackets",
+        "uuid": "5afbe74a-af64-4558-938b-d075bc4d1f61",
+        "practices": [],
+        "prerequisites": [],
+        "difficulty": 5,
+        "topics": [
+          "conditionals",
+          "looping",
+          "strings"
         ]
       },
       {
