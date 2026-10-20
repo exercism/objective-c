@@ -2,7 +2,7 @@
 
 #if __has_include("AllYourBaseExample.h")
 # import "AllYourBaseExample.h"
-# else
+#else
 # import "AllYourBase.h"
 #endif
 
@@ -62,19 +62,19 @@
 
 - (void)testEmptyList {
     NSArray<NSNumber *> *result = [AllYourBase outputDigitsForInputBase:2 inputDigits:@[] outputBase:10];
-    NSArray<NSNumber *> *expected = @[];
+    NSArray<NSNumber *> *expected = @[@0];
     XCTAssertEqualObjects(result, expected);
 }
 
 - (void)testSingleZero {
     NSArray<NSNumber *> *result = [AllYourBase outputDigitsForInputBase:10 inputDigits:@[@0] outputBase:2];
-    NSArray<NSNumber *> *expected = @[];
+    NSArray<NSNumber *> *expected = @[@0];
     XCTAssertEqualObjects(result, expected);
 }
 
 - (void)testMultipleZeros {
     NSArray<NSNumber *> *result = [AllYourBase outputDigitsForInputBase:10 inputDigits:@[@0, @0, @0] outputBase:2];
-    NSArray<NSNumber *> *expected = @[];
+    NSArray<NSNumber *> *expected = @[@0];
     XCTAssertEqualObjects(result, expected);
 }
 
@@ -82,6 +82,21 @@
     NSArray<NSNumber *> *result = [AllYourBase outputDigitsForInputBase:7 inputDigits:@[@0, @6, @0] outputBase:10];
     NSArray<NSNumber *> *expected = @[@4, @2];
     XCTAssertEqualObjects(result, expected);
+}
+
+- (void)testInputBaseIsOne {
+    NSArray<NSNumber *> *inputDigits = @[@0];
+    XCTAssertThrows([AllYourBase outputDigitsForInputBase:1 inputDigits:inputDigits outputBase:10]);
+}
+
+- (void)testInputBaseIsZero {
+    NSArray<NSNumber *> *inputDigits = @[];
+    XCTAssertThrows([AllYourBase outputDigitsForInputBase:0 inputDigits:inputDigits outputBase:10]);
+}
+
+- (void)testInputBaseIsNegative {
+    NSArray<NSNumber *> *inputDigits = @[@1];
+    XCTAssertThrows([AllYourBase outputDigitsForInputBase:-2 inputDigits:inputDigits outputBase:10]);
 }
 
 - (void)testNegativeDigit {
@@ -94,34 +109,24 @@
     XCTAssertThrows([AllYourBase outputDigitsForInputBase:2 inputDigits:inputDigits outputBase:10]);
 }
 
-- (void)testFirstBaseIsOne {
-    NSArray<NSNumber *> *inputDigits = @[];
-    XCTAssertThrows([AllYourBase outputDigitsForInputBase:1 inputDigits:inputDigits outputBase:10]);
-}
-
-- (void)testSecondBaseIsOne {
+- (void)testOutputBaseIsOne {
     NSArray<NSNumber *> *inputDigits = @[@1, @0, @1, @0, @1, @0];
     XCTAssertThrows([AllYourBase outputDigitsForInputBase:2 inputDigits:inputDigits outputBase:1]);
 }
 
-- (void)testFirstBaseIsZero {
-    NSArray<NSNumber *> *inputDigits = @[];
-    XCTAssertThrows([AllYourBase outputDigitsForInputBase:0 inputDigits:inputDigits outputBase:10]);
-}
-
-- (void)testSecondBaseIsZero {
+- (void)testOutputBaseIsZero {
     NSArray<NSNumber *> *inputDigits = @[@7];
     XCTAssertThrows([AllYourBase outputDigitsForInputBase:10 inputDigits:inputDigits outputBase:0]);
 }
 
-- (void)testFirstBaseIsNegative {
-    NSArray<NSNumber *> *inputDigits = @[@1];
-    XCTAssertThrows([AllYourBase outputDigitsForInputBase:-2 inputDigits:inputDigits outputBase:10]);
-}
-
-- (void)testSecondBaseIsNegative {
+- (void)testOutputBaseIsNegative {
     NSArray<NSNumber *> *inputDigits = @[@1];
     XCTAssertThrows([AllYourBase outputDigitsForInputBase:2 inputDigits:inputDigits outputBase:-7]);
+}
+
+- (void)testBothBasesAreNegative {
+    NSArray<NSNumber *> *inputDigits = @[@1];
+    XCTAssertThrows([AllYourBase outputDigitsForInputBase:-2 inputDigits:inputDigits outputBase:-7]);
 }
 
 @end

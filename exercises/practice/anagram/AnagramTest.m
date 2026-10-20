@@ -17,43 +17,43 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)testNoMatches {
     Anagram *anagram = [[Anagram alloc] initWithString:@"diaper"];
-    NSArray<NSString *> *results = [anagram match:@[@"hello",@"world",@"zombies",@"pants"]];
+    NSArray<NSString *> *results = [anagram match:@[@"hello", @"world", @"zombies", @"pants"]];
     NSArray<NSString *> *expected = @[];
     XCTAssertEqualObjects(results, expected);
 }
 
 - (void)testDetectsTwoAnagrams {
     Anagram *anagram = [[Anagram alloc] initWithString:@"solemn"];
-    NSArray<NSString *> *results = [anagram match:@[@"lemons",@"cherry",@"melons"]];
-    NSArray<NSString *> *expected = @[@"lemons",@"melons"];
+    NSArray<NSString *> *results = [anagram match:@[@"lemons", @"cherry", @"melons"]];
+    NSArray<NSString *> *expected = @[@"lemons", @"melons"];
     XCTAssertEqualObjects(results, expected);
 }
 
 - (void)testDoesNotDetectAnagramSubsets {
     Anagram *anagram = [[Anagram alloc] initWithString:@"good"];
-    NSArray<NSString *> *results = [anagram match:@[@"dog",@"goody"]];
+    NSArray<NSString *> *results = [anagram match:@[@"dog", @"goody"]];
     NSArray<NSString *> *expected = @[];
     XCTAssertEqualObjects(results, expected);
 }
 
 - (void)testDetectsAnagram {
     Anagram *anagram = [[Anagram alloc] initWithString:@"listen"];
-    NSArray<NSString *> *results = [anagram match:@[@"enlists",@"google",@"inlets",@"banana"]];
+    NSArray<NSString *> *results = [anagram match:@[@"enlists", @"google", @"inlets", @"banana"]];
     NSArray<NSString *> *expected = @[@"inlets"];
     XCTAssertEqualObjects(results, expected);
 }
 
 - (void)testDetectsThreeAnagrams {
     Anagram *anagram = [[Anagram alloc] initWithString:@"allergy"];
-    NSArray<NSString *> *results = [anagram match:@[@"gallery",@"ballerina",@"regally",@"clergy",@"largely",@"leading"]];
-    NSArray<NSString *> *expected = @[@"gallery",@"regally",@"largely"];
+    NSArray<NSString *> *results = [anagram match:@[@"gallery", @"ballerina", @"regally", @"clergy", @"largely", @"leading"]];
+    NSArray<NSString *> *expected = @[@"gallery", @"regally", @"largely"];
     XCTAssertEqualObjects(results, expected);
 }
 
 - (void)testDetectsMultipleAnagramsWithDifferentCase {
     Anagram *anagram = [[Anagram alloc] initWithString:@"nose"];
-    NSArray<NSString *> *results = [anagram match:@[@"Eons",@"ONES"]];
-    NSArray<NSString *> *expected = @[@"Eons",@"ONES"];
+    NSArray<NSString *> *results = [anagram match:@[@"Eons", @"ONES"]];
+    NSArray<NSString *> *expected = @[@"Eons", @"ONES"];
     XCTAssertEqualObjects(results, expected);
 }
 
@@ -66,21 +66,21 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)testDetectsAnagramsCaseInsensitively {
     Anagram *anagram = [[Anagram alloc] initWithString:@"Orchestra"];
-    NSArray<NSString *> *results = [anagram match:@[@"cashregister",@"Carthorse",@"radishes"]];
+    NSArray<NSString *> *results = [anagram match:@[@"cashregister", @"Carthorse", @"radishes"]];
     NSArray<NSString *> *expected = @[@"Carthorse"];
     XCTAssertEqualObjects(results, expected);
 }
 
 - (void)testDetectsAnagramsUsingCaseInsensitiveSubject {
     Anagram *anagram = [[Anagram alloc] initWithString:@"Orchestra"];
-    NSArray<NSString *> *results = [anagram match:@[@"cashregister",@"carthorse",@"radishes"]];
+    NSArray<NSString *> *results = [anagram match:@[@"cashregister", @"carthorse", @"radishes"]];
     NSArray<NSString *> *expected = @[@"carthorse"];
     XCTAssertEqualObjects(results, expected);
 }
 
 - (void)testDetectsAnagramsUsingCaseInsensitivePossibleMatches {
     Anagram *anagram = [[Anagram alloc] initWithString:@"orchestra"];
-    NSArray<NSString *> *results = [anagram match:@[@"cashregister",@"Carthorse",@"radishes"]];
+    NSArray<NSString *> *results = [anagram match:@[@"cashregister", @"Carthorse", @"radishes"]];
     NSArray<NSString *> *expected = @[@"Carthorse"];
     XCTAssertEqualObjects(results, expected);
 }
@@ -101,14 +101,14 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)testWordsAreNotAnagramsOfThemselvesCaseInsensitive {
     Anagram *anagram = [[Anagram alloc] initWithString:@"BANANA"];
-    NSArray<NSString *> *results = [anagram match:@[@"BANANA",@"Banana",@"banana"]];
+    NSArray<NSString *> *results = [anagram match:@[@"BANANA", @"Banana", @"banana"]];
     NSArray<NSString *> *expected = @[];
     XCTAssertEqualObjects(results, expected);
 }
 
 - (void)testWordsOtherThanThemselvesCanBeAnagrams {
     Anagram *anagram = [[Anagram alloc] initWithString:@"LISTEN"];
-    NSArray<NSString *> *results = [anagram match:@[@"Listen",@"Silent",@"LISTEN"]];
+    NSArray<NSString *> *results = [anagram match:@[@"Listen", @"Silent", @"LISTEN"]];
     NSArray<NSString *> *expected = @[@"Silent"];
     XCTAssertEqualObjects(results, expected);
 }

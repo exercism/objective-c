@@ -1,0 +1,26 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+#else
+# import "{{ header }}"
+#endif
+
+@interface {{ test_class }} : XCTestCase
+
+@end
+
+@implementation {{ test_class }}
+{% for case in cases %}
+- (void){{ case.func_name }} {
+{%- if not case.expect_error %}
+    NSArray<NSNumber *> *result = [{{ solution_class }} outputDigitsForInputBase:{{ case.input.inputBase }} inputDigits:{{ case.input.digits | quote }} outputBase:{{ case.input.outputBase }}];
+    NSArray<NSNumber *> *expected = {{ case.expected | quote }};
+    XCTAssertEqualObjects(result, expected);
+{%- else %}
+    NSArray<NSNumber *> *inputDigits = {{ case.input.digits | quote }};
+    XCTAssertThrows([{{ solution_class }} outputDigitsForInputBase:{{ case.input.inputBase }} inputDigits:inputDigits outputBase:{{ case.input.outputBase }}]);
+{%- endif %}
+}
+{% endfor %}
+@end
