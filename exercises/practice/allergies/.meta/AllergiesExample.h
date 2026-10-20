@@ -16,6 +16,5 @@ typedef NS_OPTIONS(NSUInteger, Allergen) {
 
 - (instancetype)initWithScore:(int)score;
 - (BOOL)hasAllergy:(Allergen)allergen;
-- (NSArray<NSString *> *)list;
 
 @end

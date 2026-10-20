@@ -212,74 +212,14 @@
     XCTAssertTrue([allergies hasAllergy:AllergenCats]);
 }
 
-- (void)testListNoAllergies {
-    NSArray<NSString *> *expected = @[];
-    Allergies *allergies = [[Allergies alloc] initWithScore:0];
-    NSArray<NSString *> *result = [allergies list];
-    XCTAssertEqualObjects(expected, result);
-}
 
-- (void)testListJustEggs {
-    NSArray<NSString *> *expected = @[@"eggs"];
-    Allergies *allergies = [[Allergies alloc] initWithScore:1];
-    NSArray<NSString *> *result = [allergies list];
-    XCTAssertEqualObjects(expected, result);
-}
 
-- (void)testListJustPeanuts {
-    NSArray<NSString *> *expected = @[@"peanuts"];
-    Allergies *allergies = [[Allergies alloc] initWithScore:2];
-    NSArray<NSString *> *result = [allergies list];
-    XCTAssertEqualObjects(expected, result);
-}
 
-- (void)testListJustStrawberries {
-    NSArray<NSString *> *expected = @[@"strawberries"];
-    Allergies *allergies = [[Allergies alloc] initWithScore:8];
-    NSArray<NSString *> *result = [allergies list];
-    XCTAssertEqualObjects(expected, result);
-}
 
-- (void)testListEggsAndPeanuts {
-    NSArray<NSString *> *expected = @[@"eggs", @"peanuts"];
-    Allergies *allergies = [[Allergies alloc] initWithScore:3];
-    NSArray<NSString *> *result = [allergies list];
-    XCTAssertEqualObjects(expected, result);
-}
 
-- (void)testListMoreThanEggsButNotPeanuts {
-    NSArray<NSString *> *expected = @[@"eggs", @"shellfish"];
-    Allergies *allergies = [[Allergies alloc] initWithScore:5];
-    NSArray<NSString *> *result = [allergies list];
-    XCTAssertEqualObjects(expected, result);
-}
 
-- (void)testListLotsOfStuff {
-    NSArray<NSString *> *expected = @[@"strawberries", @"tomatoes", @"chocolate", @"pollen", @"cats"];
-    Allergies *allergies = [[Allergies alloc] initWithScore:248];
-    NSArray<NSString *> *result = [allergies list];
-    XCTAssertEqualObjects(expected, result);
-}
 
-- (void)testListEverything {
-    NSArray<NSString *> *expected = @[@"eggs", @"peanuts", @"shellfish", @"strawberries", @"tomatoes", @"chocolate", @"pollen", @"cats"];
-    Allergies *allergies = [[Allergies alloc] initWithScore:255];
-    NSArray<NSString *> *result = [allergies list];
-    XCTAssertEqualObjects(expected, result);
-}
 
-- (void)testListNoAllergenScoreParts {
-    NSArray<NSString *> *expected = @[@"eggs", @"shellfish", @"strawberries", @"tomatoes", @"chocolate", @"pollen", @"cats"];
-    Allergies *allergies = [[Allergies alloc] initWithScore:509];
-    NSArray<NSString *> *result = [allergies list];
-    XCTAssertEqualObjects(expected, result);
-}
 
-- (void)testListNoAllergenScorePartsWithoutHighestValidScore {
-    NSArray<NSString *> *expected = @[@"eggs"];
-    Allergies *allergies = [[Allergies alloc] initWithScore:257];
-    NSArray<NSString *> *result = [allergies list];
-    XCTAssertEqualObjects(expected, result);
-}
 
 @end
