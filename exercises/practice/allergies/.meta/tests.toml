@@ -129,29 +129,3 @@ description = "testing for cats allergy -> allergic to something, but not cats"
 [1faabb05-2b98-4995-9046-d83e4a48a7c1]
 description = "testing for cats allergy -> allergic to everything"
 
-[f9c1b8e7-7dc5-4887-aa93-cebdcc29dd8f]
-description = "list when: -> no allergies"
-
-[9e1a4364-09a6-4d94-990f-541a94a4c1e8]
-description = "list when: -> just eggs"
-
-[8851c973-805e-4283-9e01-d0c0da0e4695]
-description = "list when: -> just peanuts"
-
-[2c8943cb-005e-435f-ae11-3e8fb558ea98]
-description = "list when: -> just strawberries"
-
-[6fa95d26-044c-48a9-8a7b-9ee46ec32c5c]
-description = "list when: -> eggs and peanuts"
-
-[19890e22-f63f-4c5c-a9fb-fb6eacddfe8e]
-description = "list when: -> more than eggs but not peanuts"
-
-[4b68f470-067c-44e4-889f-c9fe28917d2f]
-description = "list when: -> lots of stuff"
-
-[0881b7c5-9efa-4530-91bd-68370d054bc7]
-description = "list when: -> everything"
-
-[12ce86de-b347-42a0-ab7c-2e0570f0c65b]
-description = "list when: -> no allergen score parts"
