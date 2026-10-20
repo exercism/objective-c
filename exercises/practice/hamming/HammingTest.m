@@ -14,40 +14,34 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation HammingTest
 
-- (void)testNoDifferenceBetweenEmptyStrands {
+- (void)testEmptyStrands {
     NSUInteger result = [Hamming compute:@"" against:@""];
     NSUInteger expected = 0;
-    XCTAssertEqual(expected,result);
+    XCTAssertEqual(expected, result);
 }
 
-- (void)testNoDifferenceBetweenIdenticalStrands {
-    NSUInteger result = [Hamming compute:@"GGACTGA" against:@"GGACTGA"];
+- (void)testSingleLetterIdenticalStrands {
+    NSUInteger result = [Hamming compute:@"A" against:@"A"];
     NSUInteger expected = 0;
-    XCTAssertEqual(expected,result);
+    XCTAssertEqual(expected, result);
 }
 
-- (void)testCompleteHammingDistanceInSmallStrand {
-    NSUInteger result = [Hamming compute:@"ACT" against:@"GGA"];
-    NSUInteger expected = 3;
-    XCTAssertEqual(expected,result);
+- (void)testSingleLetterDifferentStrands {
+    NSUInteger result = [Hamming compute:@"G" against:@"T"];
+    NSUInteger expected = 1;
+    XCTAssertEqual(expected, result);
 }
 
-- (void)testHammingDistanceInOffByOneStrand {
+- (void)testLongIdenticalStrands {
+    NSUInteger result = [Hamming compute:@"GGACTGAAATCTG" against:@"GGACTGAAATCTG"];
+    NSUInteger expected = 0;
+    XCTAssertEqual(expected, result);
+}
+
+- (void)testLongDifferentStrands {
     NSUInteger result = [Hamming compute:@"GGACGGATTCTG" against:@"AGGACGGATTCT"];
     NSUInteger expected = 9;
-    XCTAssertEqual(expected,result);
-}
-
-- (void)testSmallHammingDistanceInMiddleSomewhere {
-    NSUInteger result = [Hamming compute:@"GGACG" against:@"GGTCG"];
-    NSUInteger expected = 1;
-    XCTAssertEqual(expected,result);
-}
-
-- (void)testLargerDistance {
-    NSUInteger result = [Hamming compute:@"ACCAGGG" against:@"ACTATGG"];
-    NSUInteger expected = 2;
-    XCTAssertEqual(expected,result);
+    XCTAssertEqual(expected, result);
 }
 
 @end

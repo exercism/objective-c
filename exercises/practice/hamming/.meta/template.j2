@@ -1,0 +1,24 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+# else
+# import "{{ header }}"
+#endif
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface {{ test_class }} : XCTestCase
+
+@end
+
+@implementation {{ test_class }}
+{% for case in cases %}{% if not case.expect_error %}
+- (void){{ case.func_name }} {
+    NSUInteger result = [{{ solution_class }} compute:{{ case.input.strand1 | quote }} against:{{ case.input.strand2 | quote }}];
+    NSUInteger expected = {{ case.expected }};
+    XCTAssertEqual(expected, result);
+}
+{% endif %}{% endfor %}
+@end
+NS_ASSUME_NONNULL_END
