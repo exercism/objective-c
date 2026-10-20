@@ -130,6 +130,7 @@ def generate(specs: pathlib.Path, exercise: pathlib.Path) -> None:
         "header": header,
         "example_header": example_header,
         "test_class": test_file.stem,
+        "solution_class": solution.removesuffix(".m"),
     }
 
     # Render the template.

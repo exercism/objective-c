@@ -16,8 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @implementation {{ test_class }}
 {% for case in cases %}
 - (void){{ case.func_name }} {
-    Anagram *anagram = [[Anagram alloc] initWithString:{{ case.input.subject | quote }}];
-    NSArray<NSString *> *results = [anagram match:{{ case.input.candidates | quote }}];
+    {{ solution_class }} *{{ solution_class.lower() }} = [[{{ solution_class }} alloc] initWithString:{{ case.input.subject | quote }}];
+    NSArray<NSString *> *results = [{{ solution_class.lower() }} match:{{ case.input.candidates | quote }}];
     NSArray<NSString *> *expected = {{ case.expected | quote }};
     XCTAssertEqualObjects(results, expected);
 }
