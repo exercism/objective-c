@@ -1,0 +1,29 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+#else
+# import "{{ header }}"
+#endif
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface {{ test_class }} : XCTestCase
+
+@end
+
+@implementation {{ test_class }}
+{% for case in cases %}
+- (void){{ case.func_name }} {
+	int primeNum = {{ case.given }};
+{%- if not case.expect_error %}
+	int expected = {{ case.expected }};
+{%- else %}
+	int expected = 0;
+{%- endif %}
+	int result = [{{ solution_class }} primeNum:primeNum];
+	XCTAssertEqual(expected, result);
+}
+{% endfor %}
+@end
+NS_ASSUME_NONNULL_END

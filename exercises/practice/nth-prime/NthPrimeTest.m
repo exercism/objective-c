@@ -1,6 +1,6 @@
 #import <XCTest/XCTest.h>
 
-#if __has_include("BobExample.h")
+#if __has_include("NthPrimeExample.h")
 # import "NthPrimeExample.h"
 #else
 # import "NthPrime.h"
@@ -42,7 +42,7 @@ NS_ASSUME_NONNULL_BEGIN
 	XCTAssertEqual(expected, result);
 }
 
-- (void)testZeroPrime {
+- (void)testThereIsNoZerothPrime {
 	int primeNum = 0;
 	int expected = 0;
 	int result = [NthPrime primeNum:primeNum];
