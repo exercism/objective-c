@@ -15,6 +15,9 @@
     if ([input isEmpty]) {
         return @"Fine. Be that way!";
     }
+    else if ([input isShouting] && [input isQuestion]) {
+        return @"Calm down, I know what I'm doing!";
+    }
     else if ([input isShouting]) {
         return @"Whoa, chill out!";
     }
@@ -32,7 +35,7 @@
     return  [[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] length] < 1;
 }
 -(BOOL) isQuestion {
-    return [self hasSuffix:@"?"];
+    return [[self stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] hasSuffix:@"?"];
 }
 -(BOOL) isShouting {
     return
