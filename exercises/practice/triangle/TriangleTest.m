@@ -12,60 +12,84 @@
 
 @implementation TriangleTest
 
-- (void)testEquilateralTrianglesHaveEqualSides {
+- (void)testEquilateralAllSidesAreEqual {
     XCTAssertEqual(TriangleKindEquilateral, [Triangle kindForSides:2 :2 :2]);
 }
 
-- (void)testLargerEquilateralTrianglesAlsoHaveEqualSides {
-    XCTAssertEqual(TriangleKindEquilateral, [Triangle kindForSides:10 :10 :10]);
+- (void)testEquilateralAnySideIsUnequal {
+    XCTAssertNotEqual(TriangleKindEquilateral, [Triangle kindForSides:2 :3 :2]);
 }
 
-- (void)testIsoscelesTrianglesHaveLastTwoSidesEqual {
-    XCTAssertEqual(TriangleKindIsosceles, [Triangle kindForSides:3 :4 :4]);
+- (void)testEquilateralNoSidesAreEqual {
+    XCTAssertNotEqual(TriangleKindEquilateral, [Triangle kindForSides:5 :4 :6]);
 }
 
-- (void)testIsoscelesTrianglesHaveFirstAndLastSidesEqual {
-    XCTAssertEqual(TriangleKindIsosceles, [Triangle kindForSides:4 :3 :4]);
-}
-
-- (void)testIsoscelesTrianglesHaveTwoFirstSidesEqual {
-    XCTAssertEqual(TriangleKindIsosceles, [Triangle kindForSides:4 :4 :3]);
-}
-
-- (void)testIsoscelesTrianglesHaveInFactExactlyTwoSidesEqual {
-    XCTAssertEqual(TriangleKindIsosceles, [Triangle kindForSides:10 :10 :2]);
-}
-
-- (void)testScaleneTrianglesHaveNoEqualSides {
-    XCTAssertEqual(TriangleKindScalene, [Triangle kindForSides:3 :4 :5]);
-}
-
-- (void)testScaleneTrianglesHaveNoEqualSidesAtALargerScaleToo {
-    XCTAssertEqual(TriangleKindScalene, [Triangle kindForSides:10 :11 :12]);
-}
-
-- (void)testScaleneTrianglesHaveNoEqualSidesInDescendingOrderEither {
-    XCTAssertEqual(TriangleKindScalene, [Triangle kindForSides:5 :4 :2]);
-}
-
-- (void)testVerySmallTrianglesAreLegal {
-    XCTAssertEqual(TriangleKindScalene, [Triangle kindForSides:0.4 :0.6 :0.3]);
-}
-
-- (void)testTrianglesWithNoSizeAreIllegal {
+- (void)testEquilateralAllZeroSidesAreInvalid {
     XCTAssertThrows([Triangle kindForSides:0 :0 :0]);
 }
 
-- (void)testTrianglesWithNegativeSidesAreIllegal {
-    XCTAssertThrows([Triangle kindForSides:3 :4 :-5]);
+- (void)testEquilateralSidesMayBeFloats {
+    XCTAssertEqual(TriangleKindEquilateral, [Triangle kindForSides:0.5 :0.5 :0.5]);
 }
 
-- (void)testTrianglesViolatingTriangleInequalityAreIllegal {
+- (void)testIsoscelesLastTwoSidesAreEqual {
+    XCTAssertEqual(TriangleKindIsosceles, [Triangle kindForSides:3 :4 :4]);
+}
+
+- (void)testIsoscelesFirstTwoSidesAreEqual {
+    XCTAssertEqual(TriangleKindIsosceles, [Triangle kindForSides:4 :4 :3]);
+}
+
+- (void)testIsoscelesFirstAndLastSidesAreEqual {
+    XCTAssertEqual(TriangleKindIsosceles, [Triangle kindForSides:4 :3 :4]);
+}
+
+- (void)testIsoscelesNoSidesAreEqual {
+    XCTAssertNotEqual(TriangleKindIsosceles, [Triangle kindForSides:2 :3 :4]);
+}
+
+- (void)testIsoscelesFirstTriangleInequalityViolation {
     XCTAssertThrows([Triangle kindForSides:1 :1 :3]);
 }
 
-- (void)testTrianglesViolatingTriangleInequalityAreIllegal3 {
+- (void)testIsoscelesSecondTriangleInequalityViolation {
+    XCTAssertThrows([Triangle kindForSides:1 :3 :1]);
+}
+
+- (void)testIsoscelesThirdTriangleInequalityViolation {
+    XCTAssertThrows([Triangle kindForSides:3 :1 :1]);
+}
+
+- (void)testIsoscelesSidesMayBeFloats {
+    XCTAssertEqual(TriangleKindIsosceles, [Triangle kindForSides:0.5 :0.4 :0.5]);
+}
+
+- (void)testScaleneNoSidesAreEqual {
+    XCTAssertEqual(TriangleKindScalene, [Triangle kindForSides:5 :4 :6]);
+}
+
+- (void)testScaleneAllSidesAreEqual {
+    XCTAssertNotEqual(TriangleKindScalene, [Triangle kindForSides:4 :4 :4]);
+}
+
+- (void)testScaleneFirstAndSecondSidesAreEqual {
+    XCTAssertNotEqual(TriangleKindScalene, [Triangle kindForSides:4 :4 :3]);
+}
+
+- (void)testScaleneFirstAndThirdSidesAreEqual {
+    XCTAssertNotEqual(TriangleKindScalene, [Triangle kindForSides:3 :4 :3]);
+}
+
+- (void)testScaleneSecondAndThirdSidesAreEqual {
+    XCTAssertNotEqual(TriangleKindScalene, [Triangle kindForSides:4 :3 :3]);
+}
+
+- (void)testScaleneMayNotViolateTriangleInequality {
     XCTAssertThrows([Triangle kindForSides:7 :3 :2]);
+}
+
+- (void)testScaleneSidesMayBeFloats {
+    XCTAssertEqual(TriangleKindScalene, [Triangle kindForSides:0.5 :0.4 :0.6]);
 }
 
 @end
