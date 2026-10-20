@@ -18,9 +18,9 @@ NS_ASSUME_NONNULL_BEGIN
     return [[Bob alloc] init];
 }
 
-- (void)testStatingSomething {
-    NSString *input = @"Tom-ay-to, tom-aaaah-to.";
-    NSString *expected = @"Whatever.";
+- (void)testAskingAQuestion {
+    NSString *input = @"Does this cryogenic chamber make me look fat?";
+    NSString *expected = @"Sure.";
     NSString *result = [[self bob] hey:input];
     XCTAssertEqualObjects(expected, result);
 }
@@ -32,29 +32,85 @@ NS_ASSUME_NONNULL_BEGIN
     XCTAssertEqualObjects(expected, result);
 }
 
-- (void)testAskingAQuestion {
-    NSString *input = @"Does this cryogenic chamber make me look fat?";
+- (void)testForcefulQuestion {
+    NSString *input = @"WHAT'S GOING ON?";
+    NSString *expected = @"Calm down, I know what I'm doing!";
+    NSString *result = [[self bob] hey:input];
+    XCTAssertEqualObjects(expected, result);
+}
+
+- (void)testSilence {
+    NSString *input = @"";
+    NSString *expected = @"Fine. Be that way!";
+    NSString *result = [[self bob] hey:input];
+    XCTAssertEqualObjects(expected, result);
+}
+
+- (void)testStatingSomething {
+    NSString *input = @"Tom-ay-to, tom-aaaah-to.";
+    NSString *expected = @"Whatever.";
+    NSString *result = [[self bob] hey:input];
+    XCTAssertEqualObjects(expected, result);
+}
+
+- (void)testAskingANumericQuestion {
+    NSString *input = @"You are, what, like 15?";
     NSString *expected = @"Sure.";
     NSString *result = [[self bob] hey:input];
     XCTAssertEqualObjects(expected, result);
 }
 
-- (void)testTalkingForcefully {
-    NSString *input = @"Let's go make out behind the gym!";
-    NSString *expected = @"Whatever.";
+- (void)testAskingGibberish {
+    NSString *input = @"fffbbcbeab?";
+    NSString *expected = @"Sure.";
     NSString *result = [[self bob] hey:input];
     XCTAssertEqualObjects(expected, result);
 }
 
-- (void)testUsingAcronyms {
-    NSString *input = @"It's OK if you don't want to go to the DMV.";
-    NSString *expected = @"Whatever.";
+- (void)testQuestionWithNoLetters {
+    NSString *input = @"4?";
+    NSString *expected = @"Sure.";
     NSString *result = [[self bob] hey:input];
     XCTAssertEqualObjects(expected, result);
 }
 
-- (void)testForcefulQuestions {
-    NSString *input = @"WHAT THE HELL WERE YOU THINKING?";
+- (void)testNonLettersWithQuestion {
+    NSString *input = @":) ?";
+    NSString *expected = @"Sure.";
+    NSString *result = [[self bob] hey:input];
+    XCTAssertEqualObjects(expected, result);
+}
+
+- (void)testPrattlingOn {
+    NSString *input = @"Wait! Hang on. Are you going to be OK?";
+    NSString *expected = @"Sure.";
+    NSString *result = [[self bob] hey:input];
+    XCTAssertEqualObjects(expected, result);
+}
+
+- (void)testEndingWithWhitespace {
+    NSString *input = @"Okay if like my  spacebar  quite a bit?   ";
+    NSString *expected = @"Sure.";
+    NSString *result = [[self bob] hey:input];
+    XCTAssertEqualObjects(expected, result);
+}
+
+- (void)testMultipleLineQuestion {
+    NSString *input = @"\nDoes this cryogenic chamber make\n me look fat?";
+    NSString *expected = @"Sure.";
+    NSString *result = [[self bob] hey:input];
+    XCTAssertEqualObjects(expected, result);
+}
+
+- (void)testShoutingGibberish {
+    NSString *input = @"FCECDFCAAB";
+    NSString *expected = @"Whoa, chill out!";
+    NSString *result = [[self bob] hey:input];
+    XCTAssertEqualObjects(expected, result);
+}
+
+- (void)testShoutingAStatementContainingAQuestionMark {
+    NSString *input = @"DO LIONS EAT PEOPLE? AHHHHH.";
     NSString *expected = @"Whoa, chill out!";
     NSString *result = [[self bob] hey:input];
     XCTAssertEqualObjects(expected, result);
@@ -67,19 +123,6 @@ NS_ASSUME_NONNULL_BEGIN
     XCTAssertEqualObjects(expected, result);
 }
 
-- (void)testOnlyNumbers {
-    NSString *input = @"1, 2, 3.";
-    NSString *expected = @"Whatever.";
-    NSString *result = [[self bob] hey:input];
-    XCTAssertEqualObjects(expected, result);
-}
-- (void)testQuestionWithOnlyNumbers {
-    NSString *input = @"4?";
-    NSString *expected = @"Sure.";
-    NSString *result = [[self bob] hey:input];
-    XCTAssertEqualObjects(expected, result);
-}
-
 - (void)testShoutingWithSpecialCharacters {
     NSString *input = @"ZOMG THE %^*@#$(*^ ZOMBIES ARE COMING!!11!!1!";
     NSString *expected = @"Whoa, chill out!";
@@ -87,51 +130,72 @@ NS_ASSUME_NONNULL_BEGIN
     XCTAssertEqualObjects(expected, result);
 }
 
-- (void)testShoutingWithUmlautsCharacters {
-    NSString *input = @"ÄMLÄTS!";
-    NSString *expected = @"Whoa, chill out!";
-    NSString *result = [[self bob] hey:input];
-    XCTAssertEqualObjects(expected, result);
-}
-
-- (void)testCalmlySpeakingAboutUmlauts {
-    NSString *input = @"ÄMLäTS!";
-    NSString *expected = @"Whatever.";
-    NSString *result = [[self bob] hey:input];
-    XCTAssertEqualObjects(expected, result);
-}
-
 - (void)testShoutingWithNoExclamationMark {
-    NSString *input = @"I HATE YOU";
+    NSString *input = @"I HATE THE DENTIST";
     NSString *expected = @"Whoa, chill out!";
-    NSString *result = [[self bob] hey:input];
-    XCTAssertEqualObjects(expected, result);
-}
-
-- (void)testStatementContainingQuestionsMark {
-    NSString *input = @"Ending with a ? means a question.";
-    NSString *expected = @"Whatever.";
-    NSString *result = [[self bob] hey:input];
-    XCTAssertEqualObjects(expected, result);
-}
-
-- (void)testPrattlingOn {
-    NSString *input = @"Wait! Hang on.  Are you going to be OK?";
-    NSString *expected = @"Sure.";
-    NSString *result = [[self bob] hey:input];
-    XCTAssertEqualObjects(expected, result);
-}
-
-- (void)testSilence {
-    NSString *input = @"";
-    NSString *expected = @"Fine. Be that way!";
     NSString *result = [[self bob] hey:input];
     XCTAssertEqualObjects(expected, result);
 }
 
 - (void)testProlongedSilence {
-    NSString *input = @"     ";
+    NSString *input = @"          ";
     NSString *expected = @"Fine. Be that way!";
+    NSString *result = [[self bob] hey:input];
+    XCTAssertEqualObjects(expected, result);
+}
+
+- (void)testAlternateSilence {
+    NSString *input = @"\t\t\t\t\t\t\t\t\t\t";
+    NSString *expected = @"Fine. Be that way!";
+    NSString *result = [[self bob] hey:input];
+    XCTAssertEqualObjects(expected, result);
+}
+
+- (void)testOtherWhitespace {
+    NSString *input = @"\n\r \t";
+    NSString *expected = @"Fine. Be that way!";
+    NSString *result = [[self bob] hey:input];
+    XCTAssertEqualObjects(expected, result);
+}
+
+- (void)testTalkingForcefully {
+    NSString *input = @"Hi there!";
+    NSString *expected = @"Whatever.";
+    NSString *result = [[self bob] hey:input];
+    XCTAssertEqualObjects(expected, result);
+}
+
+- (void)testUsingAcronymsInRegularSpeech {
+    NSString *input = @"It's OK if you don't want to go work for NASA.";
+    NSString *expected = @"Whatever.";
+    NSString *result = [[self bob] hey:input];
+    XCTAssertEqualObjects(expected, result);
+}
+
+- (void)testNoLetters {
+    NSString *input = @"1, 2, 3";
+    NSString *expected = @"Whatever.";
+    NSString *result = [[self bob] hey:input];
+    XCTAssertEqualObjects(expected, result);
+}
+
+- (void)testStatementContainingQuestionMark {
+    NSString *input = @"Ending with ? means a question.";
+    NSString *expected = @"Whatever.";
+    NSString *result = [[self bob] hey:input];
+    XCTAssertEqualObjects(expected, result);
+}
+
+- (void)testStartingWithWhitespace {
+    NSString *input = @"         hmmmmmmm...";
+    NSString *expected = @"Whatever.";
+    NSString *result = [[self bob] hey:input];
+    XCTAssertEqualObjects(expected, result);
+}
+
+- (void)testNonQuestionEndingWithWhitespace {
+    NSString *input = @"This is a statement ending with whitespace      ";
+    NSString *expected = @"Whatever.";
     NSString *result = [[self bob] hey:input];
     XCTAssertEqualObjects(expected, result);
 }
