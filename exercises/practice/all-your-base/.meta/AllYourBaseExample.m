@@ -51,6 +51,9 @@
         sum -= value;
     }
     
+    if (digits.count == 0) {
+        [digits addObject:@(0)];
+    }
     return [[digits reverseObjectEnumerator] allObjects];
 }
 
