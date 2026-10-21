@@ -1,0 +1,28 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+#else
+# import "{{ header }}"
+#endif
+
+@interface {{ test_class }} : XCTestCase
+
+@end
+
+@implementation {{ test_class }}
+{% for case in cases %}
+- (void){{ case.func_name }} {
+{%- if case.expected | length < 10 %}
+    NSArray<NSNumber *> *expected = {{ case.expected | quote }};
+{%- else %}
+    NSArray<NSNumber *> *expected = @[
+        {%- for chunk in case.expected | batch(10) %}
+	@{{ chunk | join(", @") }},
+	{%- endfor %}
+    ];
+{%- endif %}
+    XCTAssertEqualObjects(expected, [{{ solution_class }} primesUpTo:{{ case.given }}]);
+}
+{% endfor %}
+@end
