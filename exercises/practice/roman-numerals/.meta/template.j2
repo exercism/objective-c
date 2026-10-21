@@ -12,7 +12,7 @@
 
 @implementation {{ test_class }}
 {% for case in cases %}
-- (void){{ case.func_name }} {
+- (void)test{{ case.description | replace(" ", "") }} {
     XCTAssertEqualObjects({{ case.expected | quote }}, [{{ solution_class }} romanNumeralsForValue:{{ case.given }}]);
 }
 {% endfor %}
