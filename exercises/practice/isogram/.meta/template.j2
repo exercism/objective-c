@@ -1,0 +1,23 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+# else
+# import "{{ header }}"
+#endif
+
+@interface {{ test_class }} : XCTestCase
+
+@end
+
+@implementation {{ test_class }}
+{% for case in cases %}
+- (void){{ case.func_name }} {
+{%- if case.expected == True %}
+    XCTAssertTrue([Isogram isIsogram:{{ case.given | quote }}]);
+{%- else %}
+    XCTAssertFalse([Isogram isIsogram:{{ case.given | quote }}]);
+{%- endif %}
+}
+{% endfor %}
+@end

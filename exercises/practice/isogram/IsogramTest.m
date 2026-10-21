@@ -24,6 +24,10 @@
     XCTAssertFalse([Isogram isIsogram:@"eleven"]);
 }
 
+- (void)testWordWithOneDuplicatedCharacterFromTheEndOfTheAlphabet {
+    XCTAssertFalse([Isogram isIsogram:@"zzyzx"]);
+}
+
 - (void)testLongestReportedEnglishIsogram {
     XCTAssertTrue([Isogram isIsogram:@"subdermatoglyphic"]);
 }
@@ -32,16 +36,36 @@
     XCTAssertFalse([Isogram isIsogram:@"Alphabet"]);
 }
 
+- (void)testWordWithDuplicatedCharacterInMixedCaseLowercaseFirst {
+    XCTAssertFalse([Isogram isIsogram:@"alphAbet"]);
+}
+
 - (void)testHypotheticalIsogrammicWordWithHyphen {
     XCTAssertTrue([Isogram isIsogram:@"thumbscrew-japingly"]);
 }
 
-- (void)testIsogramWithDuplicatedNonLetterCharacter {
-    XCTAssertTrue([Isogram isIsogram:@"Hjelmqvist-Gryb-Zock-Pfund-Wax"]);
+- (void)testHypotheticalWordWithDuplicatedCharacterFollowingHyphen {
+    XCTAssertFalse([Isogram isIsogram:@"thumbscrew-jappingly"]);
+}
+
+- (void)testIsogramWithDuplicatedHyphen {
+    XCTAssertTrue([Isogram isIsogram:@"six-year-old"]);
 }
 
 - (void)testMadeUpNameThatIsAnIsogram {
     XCTAssertTrue([Isogram isIsogram:@"Emily Jung Schwartzkopf"]);
+}
+
+- (void)testDuplicatedCharacterInTheMiddle {
+    XCTAssertFalse([Isogram isIsogram:@"accentor"]);
+}
+
+- (void)testSameFirstAndLastCharacters {
+    XCTAssertFalse([Isogram isIsogram:@"angola"]);
+}
+
+- (void)testWordWithDuplicatedCharacterAndWithTwoHyphens {
+    XCTAssertFalse([Isogram isIsogram:@"up-to-date"]);
 }
 
 @end
