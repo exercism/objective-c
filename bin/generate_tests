@@ -68,13 +68,13 @@ def get_cases(specs: pathlib.Path, exercise: pathlib.Path) -> list[dict]:
     return cases
 
 
-def filter_quote(obj) -> str:
+def filter_quote(obj, nsobject: bool = False) -> str:
     """Filter `quote` that converts an arbitrary object to the Objective C representation."""
     if isinstance(obj, dict):
         out = ", ".join(f"{filter_quote(k)}: {filter_quote(v)}" for k, v in obj.items())
         return "{" + out + "}"
     if isinstance(obj, list):
-        out = ",".join(filter_quote(i) for i in obj)
+        out = ", ".join(filter_quote(i, nsobject=True) for i in obj)
         return f"@[{out}]"
     if obj is True:
         return "true"
@@ -83,7 +83,7 @@ def filter_quote(obj) -> str:
     if obj is None:
         return "null"
     if isinstance(obj, (int, float)):
-        return f"{obj}"
+        return f"{obj}" if not nsobject else f"@{obj}" if obj >= 0 else f"@({obj})"
     if isinstance(obj, str):
         return '@"' + repr(obj).removeprefix("'").removesuffix("'").removeprefix('"').removesuffix('"') + '"'
     return TypeError(f"filter_quote does not support type {type(obj)}.")
