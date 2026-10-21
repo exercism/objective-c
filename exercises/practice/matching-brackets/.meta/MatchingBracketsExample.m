@@ -1,6 +1,6 @@
 #import "MatchingBracketsExample.h"
 
-@implementation MatchingBracketsExample
+@implementation MatchingBrackets
 
 + (BOOL)validateBracketPairingAndNestingInString:(NSString *)string {
     NSDictionary *brackets = @{@")" : @"(",

@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface MatchingBracketsExample : NSObject
+@interface MatchingBrackets : NSObject
 
 + (BOOL)validateBracketPairingAndNestingInString:(NSString*)string;
 
