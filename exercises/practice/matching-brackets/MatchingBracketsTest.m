@@ -1,9 +1,11 @@
 #import <XCTest/XCTest.h>
+
 #if __has_include("MatchingBracketsExample.h")
 # import "MatchingBracketsExample.h"
-# else
+#else
 # import "MatchingBrackets.h"
 #endif
+
 @interface MatchingBracketsTest : XCTestCase
 
 @end
@@ -11,54 +13,71 @@
 @implementation MatchingBracketsTest
 
 - (void)testPairedSquareBrackets {
-    XCTAssertTrue([MatchingBracketsExample validateBracketPairingAndNestingInString:@"[]"]);
+    XCTAssertTrue([MatchingBrackets validateBracketPairingAndNestingInString:@"[]"]);
 }
 
 - (void)testEmptyString {
-    XCTAssertTrue([MatchingBracketsExample validateBracketPairingAndNestingInString:@""]);
+    XCTAssertTrue([MatchingBrackets validateBracketPairingAndNestingInString:@""]);
 }
 
 - (void)testUnpairedBrackets {
-    XCTAssertFalse([MatchingBracketsExample validateBracketPairingAndNestingInString:@"[["]);
+    XCTAssertFalse([MatchingBrackets validateBracketPairingAndNestingInString:@"[["]);
 }
 
 - (void)testWrongOrderedBrackets {
-    XCTAssertFalse([MatchingBracketsExample validateBracketPairingAndNestingInString:@"}{"]);
+    XCTAssertFalse([MatchingBrackets validateBracketPairingAndNestingInString:@"}{"]);
+}
+
+- (void)testWrongClosingBracket {
+    XCTAssertFalse([MatchingBrackets validateBracketPairingAndNestingInString:@"{]"]);
 }
 
 - (void)testPairedWithWhitespace {
-    XCTAssertTrue([MatchingBracketsExample validateBracketPairingAndNestingInString:@"{ }"]);
+    XCTAssertTrue([MatchingBrackets validateBracketPairingAndNestingInString:@"{ }"]);
+}
+
+- (void)testPartiallyPairedBrackets {
+    XCTAssertFalse([MatchingBrackets validateBracketPairingAndNestingInString:@"{[])"]);
 }
 
 - (void)testSimpleNestedBrackets {
-    XCTAssertTrue([MatchingBracketsExample validateBracketPairingAndNestingInString:@"{[]}"]);
+    XCTAssertTrue([MatchingBrackets validateBracketPairingAndNestingInString:@"{[]}"]);
 }
 
 - (void)testSeveralPairedBrackets {
-    XCTAssertTrue([MatchingBracketsExample validateBracketPairingAndNestingInString:@"{}[]"]);
+    XCTAssertTrue([MatchingBrackets validateBracketPairingAndNestingInString:@"{}[]"]);
 }
 
 - (void)testPairedAndNestedBrackets {
-    XCTAssertTrue([MatchingBracketsExample validateBracketPairingAndNestingInString:@"([{}({}[])])"]);
+    XCTAssertTrue([MatchingBrackets validateBracketPairingAndNestingInString:@"([{}({}[])])"]);
 }
 
 - (void)testUnopenedClosingBrackets {
-    XCTAssertFalse([MatchingBracketsExample validateBracketPairingAndNestingInString:@"{[)][]}"]);
+    XCTAssertFalse([MatchingBrackets validateBracketPairingAndNestingInString:@"{[)][]}"]);
 }
 
 - (void)testUnpairedAndNestedBrackets {
-    XCTAssertFalse([MatchingBracketsExample validateBracketPairingAndNestingInString:@"([{])"]);
+    XCTAssertFalse([MatchingBrackets validateBracketPairingAndNestingInString:@"([{])"]);
 }
 
 - (void)testPairedAndWrongNestedBrackets {
-    XCTAssertFalse([MatchingBracketsExample validateBracketPairingAndNestingInString:@"[({]})"]);
+    XCTAssertFalse([MatchingBrackets validateBracketPairingAndNestingInString:@"[({]})"]);
+}
+
+- (void)testPairedAndIncompleteBrackets {
+    XCTAssertFalse([MatchingBrackets validateBracketPairingAndNestingInString:@"{}["]);
+}
+
+- (void)testTooManyClosingBrackets {
+    XCTAssertFalse([MatchingBrackets validateBracketPairingAndNestingInString:@"[]]"]);
 }
 
 - (void)testMathExpression {
-    XCTAssertTrue([MatchingBracketsExample validateBracketPairingAndNestingInString:@"(((185 + 223.85) * 15) - 543)/2"]);
+    XCTAssertTrue([MatchingBrackets validateBracketPairingAndNestingInString:@"(((185 + 223.85) * 15) - 543)/2"]);
 }
 
 - (void)testComplexLatexExpression {
-    XCTAssertTrue([MatchingBracketsExample validateBracketPairingAndNestingInString:@"\\left(\\begin{array}{cc} \\frac{1}{3} & x\\\\ \\mathrm{e}^{x} &... x^2 \\end{array}\\right)"]);
+    XCTAssertTrue([MatchingBrackets validateBracketPairingAndNestingInString:@"\\left(\\begin{array}{cc} \\frac{1}{3} & x\\\\ \\mathrm{e}^{x} &... x^2 \\end{array}\\right)"]);
 }
+
 @end
