@@ -1,6 +1,6 @@
 #import "SublistExample.h"
 
-@implementation SublistExample
+@implementation Sublist
 
 + (SublistKind)classifierForFirstList:(NSArray *)firstArray andSecondList:(NSArray *)secondArray { //!OCLint
     
