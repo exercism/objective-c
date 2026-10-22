@@ -44,6 +44,3 @@ description = "run-length decode a string -> multiple whitespace mixed in string
 
 [29f721de-9aad-435f-ba37-7662df4fb551]
 description = "run-length decode a string -> lowercase string"
-
-[2a762efd-8695-4e04-b0d6-9736899fbc16]
-description = "encode and then decode -> encode followed by decode gives original string"
