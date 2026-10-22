@@ -1,0 +1,20 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+#else
+# import "{{ header }}"
+#endif
+
+@interface {{ test_class }} : XCTestCase
+
+@end
+
+@implementation {{ test_class }}
+{% for case in cases %}
+- (void){{ case.func_name }} {
+    DifferenceOfSquares *difference = [[DifferenceOfSquares alloc] initWithMax:{{ case.given }}];
+    XCTAssertEqual({{ case.expected }}, [difference {{ case.property }}]);
+}
+{% endfor %}
+@end
