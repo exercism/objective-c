@@ -1,0 +1,21 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+#else
+# import "{{ header }}"
+#endif
+
+@interface {{ test_class }} : XCTestCase
+
+@end
+
+@implementation {{ test_class }}
+{% for case in cases %}
+- (void){{ case.func_name }} {
+    NSDictionary *input = @{ {% for key, value in case.input.legacy.items() %}@{{ key }}: {{ value | quote }}{{ ", " if not loop.last }}{% endfor %} };
+    NSDictionary *expected = @{ {% for key, value in case.expected.items() %}{{ key | quote }}: @{{ value }}{{ ", " if not loop.last }}{% endfor %} };
+    XCTAssertEqualObjects(expected, [Etl transform:input]);
+}
+{% endfor %}
+@end
