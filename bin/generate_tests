@@ -81,7 +81,7 @@ def filter_quote(obj, nsobject: bool = False) -> str:
     if obj is False:
         return "false"
     if obj is None:
-        return "null"
+        return "nil"
     if isinstance(obj, (int, float)):
         return f"{obj}" if not nsobject else f"@{obj}" if obj >= 0 else f"@({obj})"
     if isinstance(obj, str):

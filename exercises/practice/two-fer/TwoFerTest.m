@@ -2,7 +2,7 @@
 
 #if __has_include("TwoFerExample.h")
 # import "TwoFerExample.h"
-# else
+#else
 # import "TwoFer.h"
 #endif
 
@@ -13,7 +13,7 @@
 @implementation TwoFerTest
 
 NS_ASSUME_NONNULL_BEGIN
-    
+
 - (void)testNoNameGiven {
     XCTAssertEqualObjects([TwoFer twoFerWithName:nil], @"One for you, one for me.");
 }
@@ -27,5 +27,5 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 NS_ASSUME_NONNULL_END
-    
+
 @end
