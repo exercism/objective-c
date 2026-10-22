@@ -71,8 +71,8 @@ def get_cases(specs: pathlib.Path, exercise: pathlib.Path) -> list[dict]:
 def filter_quote(obj, nsobject: bool = False) -> str:
     """Filter `quote` that converts an arbitrary object to the Objective C representation."""
     if isinstance(obj, dict):
-        out = ", ".join(f"{filter_quote(k)}: {filter_quote(v)}" for k, v in obj.items())
-        return "{" + out + "}"
+        out = ", ".join(f"{filter_quote(k)} : {filter_quote(v, nsobject=True)}" for k, v in obj.items())
+        return "@{ " + out + " }"
     if isinstance(obj, list):
         out = ", ".join(filter_quote(i, nsobject=True) for i in obj)
         return f"@[{out}]"
