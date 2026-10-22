@@ -2,7 +2,7 @@
 
 #if __has_include("BinarySearchExample.h")
 # import "BinarySearchExample.h"
-# else
+#else
 # import "BinarySearch.h"
 #endif
 
@@ -12,42 +12,70 @@
 
 @implementation BinarySearchTest
 
-- (void)testHasListData {
-    NSArray *array = @[@1, @3, @4, @6, @8, @9, @11];
-    BinarySearch *binary = [[BinarySearch alloc] initWithArray:array];
-    XCTAssertEqualObjects(binary.list, array);
+- (void)testFindsAValueInAnArrayWithOneElement {
+    NSArray<NSNumber *> *input = @[@6];
+    BinarySearch *binary = [[BinarySearch alloc] initWithArray:input];
+    XCTAssertEqual(0, [binary searchFor:6]);
 }
 
-- (void)testNilForUnsortedList {
-    BinarySearch *binary = [[BinarySearch alloc] initWithArray:@[@2, @1, @4, @3, @6]];
-    XCTAssertNil(binary);
+- (void)testFindsAValueInTheMiddleOfAnArray {
+    NSArray<NSNumber *> *input = @[@1, @3, @4, @6, @8, @9, @11];
+    BinarySearch *binary = [[BinarySearch alloc] initWithArray:input];
+    XCTAssertEqual(3, [binary searchFor:6]);
 }
 
-- (void)testNotFoundForDataNotInList {
-    BinarySearch *binary = [[BinarySearch alloc] initWithArray:@[@1, @3, @6]];
-    XCTAssertEqual([binary searchFor:2], NSNotFound);
+- (void)testFindsAValueAtTheBeginningOfAnArray {
+    NSArray<NSNumber *> *input = @[@1, @3, @4, @6, @8, @9, @11];
+    BinarySearch *binary = [[BinarySearch alloc] initWithArray:input];
+    XCTAssertEqual(0, [binary searchFor:1]);
 }
 
-- (void)testFindsPositionOfMiddleItem {
-    BinarySearch *binary = [[BinarySearch alloc] initWithArray:@[@1, @3, @4, @6, @8, @9, @11]];
-    XCTAssertEqual(3, [binary middle]);
+- (void)testFindsAValueAtTheEndOfAnArray {
+    NSArray<NSNumber *> *input = @[@1, @3, @4, @6, @8, @9, @11];
+    BinarySearch *binary = [[BinarySearch alloc] initWithArray:input];
+    XCTAssertEqual(6, [binary searchFor:11]);
 }
 
-- (void)testFindsPositionOfSearchData {
-    BinarySearch *binary = [[BinarySearch alloc] initWithArray:@[@1, @3, @4, @6, @8, @9, @11]];
-    XCTAssertEqual(5, [binary searchFor:9]);
+- (void)testFindsAValueInAnArrayOfOddLength {
+    NSArray<NSNumber *> *input = @[@1, @3, @5, @8, @13, @21, @34, @55, @89, @144, @233, @377, @634];
+    BinarySearch *binary = [[BinarySearch alloc] initWithArray:input];
+    XCTAssertEqual(9, [binary searchFor:144]);
 }
 
-- (void)testFindsPositionInALargerList {
-    BinarySearch *binary = [[BinarySearch alloc] initWithArray:@[@1, @3, @5, @8, @13, @21, @34, @55, @89, @144]];
-    XCTAssertEqual(1, [binary searchFor:3]);
-    XCTAssertEqual(7, [binary searchFor:55]);
-}
-
-- (void)testFindsCorrectPositionInAListWithAnEvenNumberOfElements {
-    BinarySearch *binary = [[BinarySearch alloc] initWithArray:@[@1, @3, @5, @8, @13, @21, @34, @55, @89, @144, @233, @377]];
+- (void)testFindsAValueInAnArrayOfEvenLength {
+    NSArray<NSNumber *> *input = @[@1, @3, @5, @8, @13, @21, @34, @55, @89, @144, @233, @377];
+    BinarySearch *binary = [[BinarySearch alloc] initWithArray:input];
     XCTAssertEqual(5, [binary searchFor:21]);
-    XCTAssertEqual(6, [binary searchFor:34]);
+}
+
+- (void)testIdentifiesThatAValueIsNotIncludedInTheArray {
+    NSArray<NSNumber *> *input = @[@1, @3, @4, @6, @8, @9, @11];
+    BinarySearch *binary = [[BinarySearch alloc] initWithArray:input];
+    XCTAssertEqual(NSNotFound, [binary searchFor:7]);
+}
+
+- (void)testAValueSmallerThanTheArraySSmallestValueIsNotFound {
+    NSArray<NSNumber *> *input = @[@1, @3, @4, @6, @8, @9, @11];
+    BinarySearch *binary = [[BinarySearch alloc] initWithArray:input];
+    XCTAssertEqual(NSNotFound, [binary searchFor:0]);
+}
+
+- (void)testAValueLargerThanTheArraySLargestValueIsNotFound {
+    NSArray<NSNumber *> *input = @[@1, @3, @4, @6, @8, @9, @11];
+    BinarySearch *binary = [[BinarySearch alloc] initWithArray:input];
+    XCTAssertEqual(NSNotFound, [binary searchFor:13]);
+}
+
+- (void)testNothingIsFoundInAnEmptyArray {
+    NSArray<NSNumber *> *input = @[];
+    BinarySearch *binary = [[BinarySearch alloc] initWithArray:input];
+    XCTAssertEqual(NSNotFound, [binary searchFor:1]);
+}
+
+- (void)testNothingIsFoundWhenTheLeftAndRightBoundsCross {
+    NSArray<NSNumber *> *input = @[@1, @2];
+    BinarySearch *binary = [[BinarySearch alloc] initWithArray:input];
+    XCTAssertEqual(NSNotFound, [binary searchFor:0]);
 }
 
 @end
