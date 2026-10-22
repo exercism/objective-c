@@ -2,7 +2,7 @@
 
 #if __has_include("HammingExample.h")
 # import "HammingExample.h"
-# else
+#else
 # import "Hamming.h"
 #endif
 
