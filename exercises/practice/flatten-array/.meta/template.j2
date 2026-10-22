@@ -1,0 +1,29 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+typedef FlattenArrayExample FlattenArrayTestSubject;
+#else
+# import "{{ header }}"
+typedef FlattenArray FlattenArrayTestSubject;
+#endif
+
+@interface {{ test_class }} : XCTestCase
+
+@end
+
+@implementation {{ test_class }}
+{% macro objc(value) -%}
+{%- if value is none -%}[NSNull null]
+{%- elif value is sequence and value is not string -%}@[{% for item in value %}{{ objc(item) }}{{ ", " if not loop.last }}{% endfor %}]
+{%- else -%}{{ value | quote(nsobject=true) }}
+{%- endif -%}
+{%- endmacro %}
+{% for case in cases %}
+- (void){{ case.func_name }} {
+    NSArray *input = {{ objc(case.given) }};
+    NSArray *expected = {{ objc(case.expected) }};
+    XCTAssertEqualObjects(expected, [FlattenArrayTestSubject flattenArray:input]);
+}
+{% endfor %}
+@end

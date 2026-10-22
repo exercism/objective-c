@@ -2,61 +2,83 @@
 
 #if __has_include("FlattenArrayExample.h")
 # import "FlattenArrayExample.h"
-# else
+typedef FlattenArrayExample FlattenArrayTestSubject;
+#else
 # import "FlattenArray.h"
+typedef FlattenArray FlattenArrayTestSubject;
 #endif
 
 @interface FlattenArrayTest : XCTestCase
 
 @end
 
-static NSNull *nullValue;
-
 @implementation FlattenArrayTest
 
-- (void)setUp {
-    nullValue = [NSNull null];
-}
 
-- (void)testFlattenArrayWithJustIntegers {
-    NSArray *inputArray = @[@1, @[@2, @3, @4, @5, @6, @7], @8];
-    NSArray *expected = @[@1, @2, @3, @4, @5, @6, @7, @8];
-    XCTAssertEqualObjects(expected, [FlattenArrayExample flattenArray:inputArray]);
-}
-
-- (void)testFiveLevelNesting {
-    NSArray *inputArray = @[@0, @2, @[@[@2, @3], @8, @100, @4, @[@[@50]]], @-2];
-    NSArray *expected = @[@0, @2, @2, @3, @8, @100, @4, @50, @-2];
-    XCTAssertEqualObjects(expected, [FlattenArrayExample flattenArray:inputArray]);
-}
-
-- (void)testSixLevelNesting {
-    NSArray *inputArray = @[@1, @[@2, @[@[@3]], @[@4, @[@[@5]]], @6, @7], @8];
-    NSArray *expected = @[@1, @2, @3, @4, @5, @6, @7, @8];
-    XCTAssertEqualObjects(expected, [FlattenArrayExample flattenArray:inputArray]);
-}
-
-- (void)testSixLevelNestingWithNullValues {
-    NSArray *inputArray = @[@0, @2, @[@[@2, @3], @8, @[@[@100]], nullValue, @[@[nullValue]]], @-2];
-    NSArray *expected = @[@0, @2, @2, @3, @8, @100, @-2];
-    XCTAssertEqualObjects(expected, [FlattenArrayExample flattenArray:inputArray]);
-}
-
-- (void)testAllValuesInNestedListAreNull {
-    NSArray *inputArray = @[nullValue, @[@[@[@[nullValue]]]], nullValue, nullValue, @[@[nullValue, nullValue], nullValue], nullValue];
+- (void)testEmpty {
+    NSArray *input = @[];
     NSArray *expected = @[];
-    XCTAssertEqualObjects(expected, [FlattenArrayExample flattenArray:inputArray]);
+    XCTAssertEqualObjects(expected, [FlattenArrayTestSubject flattenArray:input]);
 }
 
-- (void)testFiveLevelDeepNestedListWithDoubleValuesAndNullValues {
-    NSArray *inputArray = @[@0.085, @2.8844557, @[@[@2.00005, @3.13], @8.4, @100, @4.8, @[@[@[nullValue]]]], @-2.5];
-    NSArray *expected = @[@0.085, @2.8844557, @2.00005, @3.13, @8.4, @100, @4.8, @-2.5];
-    XCTAssertEqualObjects(expected, [FlattenArrayExample flattenArray:inputArray]);
+- (void)testNoNesting {
+    NSArray *input = @[@0, @1, @2];
+    NSArray *expected = @[@0, @1, @2];
+    XCTAssertEqualObjects(expected, [FlattenArrayTestSubject flattenArray:input]);
 }
 
-- (void)testSixLevelDeepNestedListWithStringsAndNullValues {
-    NSArray *inputArray = @[@"Zero", @"two", @[@[@[@"Two", @"three"]], @"eight", @[@[@"One Hundred"]], nullValue, @[@[nullValue]]], @"minus two"];
-    NSArray *expected = @[@"Zero", @"two", @"Two", @"three", @"eight", @"One Hundred", @"minus two"];
-    XCTAssertEqualObjects(expected, [FlattenArrayExample flattenArray:inputArray]);
+- (void)testFlattensANestedArray {
+    NSArray *input = @[@[@[]]];
+    NSArray *expected = @[];
+    XCTAssertEqualObjects(expected, [FlattenArrayTestSubject flattenArray:input]);
 }
+
+- (void)testFlattensArrayWithJustIntegersPresent {
+    NSArray *input = @[@1, @[@2, @3, @4, @5, @6, @7], @8];
+    NSArray *expected = @[@1, @2, @3, @4, @5, @6, @7, @8];
+    XCTAssertEqualObjects(expected, [FlattenArrayTestSubject flattenArray:input]);
+}
+
+- (void)test5LevelNesting {
+    NSArray *input = @[@0, @2, @[@[@2, @3], @8, @100, @4, @[@[@[@50]]]], @(-2)];
+    NSArray *expected = @[@0, @2, @2, @3, @8, @100, @4, @50, @(-2)];
+    XCTAssertEqualObjects(expected, [FlattenArrayTestSubject flattenArray:input]);
+}
+
+- (void)test6LevelNesting {
+    NSArray *input = @[@1, @[@2, @[@[@3]], @[@4, @[@[@5]]], @6, @7], @8];
+    NSArray *expected = @[@1, @2, @3, @4, @5, @6, @7, @8];
+    XCTAssertEqualObjects(expected, [FlattenArrayTestSubject flattenArray:input]);
+}
+
+- (void)testNullValuesAreOmittedFromTheFinalResult {
+    NSArray *input = @[@1, @2, [NSNull null]];
+    NSArray *expected = @[@1, @2];
+    XCTAssertEqualObjects(expected, [FlattenArrayTestSubject flattenArray:input]);
+}
+
+- (void)testConsecutiveNullValuesAtTheFrontOfTheArrayAreOmittedFromTheFinalResult {
+    NSArray *input = @[[NSNull null], [NSNull null], @3];
+    NSArray *expected = @[@3];
+    XCTAssertEqualObjects(expected, [FlattenArrayTestSubject flattenArray:input]);
+}
+
+- (void)testConsecutiveNullValuesInTheMiddleOfTheArrayAreOmittedFromTheFinalResult {
+    NSArray *input = @[@1, [NSNull null], [NSNull null], @4];
+    NSArray *expected = @[@1, @4];
+    XCTAssertEqualObjects(expected, [FlattenArrayTestSubject flattenArray:input]);
+}
+
+- (void)test6LevelNestedArrayWithNullValues {
+    NSArray *input = @[@0, @2, @[@[@2, @3], @8, @[@[@100]], [NSNull null], @[@[[NSNull null]]]], @(-2)];
+    NSArray *expected = @[@0, @2, @2, @3, @8, @100, @(-2)];
+    XCTAssertEqualObjects(expected, [FlattenArrayTestSubject flattenArray:input]);
+}
+
+- (void)testAllValuesInNestedArrayAreNull {
+    NSArray *input = @[[NSNull null], @[@[@[[NSNull null]]]], [NSNull null], [NSNull null], @[@[[NSNull null], [NSNull null]], [NSNull null]], [NSNull null]];
+    NSArray *expected = @[];
+    XCTAssertEqualObjects(expected, [FlattenArrayTestSubject flattenArray:input]);
+}
+
 @end
