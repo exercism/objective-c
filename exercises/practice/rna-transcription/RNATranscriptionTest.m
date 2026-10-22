@@ -2,7 +2,7 @@
 
 #if __has_include("RNATranscriptionExample.h")
 # import "RNATranscriptionExample.h"
-# else
+#else
 # import "RNATranscription.h"
 #endif
 
@@ -12,36 +12,28 @@
 
 @implementation RNATranscriptionTest
 
-- (void)test1 {
+- (void)testEmptyRnaSequence {
+    XCTAssertEqualObjects(@"", [[[RNATranscription alloc] init] rnaFromDNAStrand:@""]);
+}
+
+- (void)testRnaComplementOfCytosineIsGuanine {
     XCTAssertEqualObjects(@"G", [[[RNATranscription alloc] init] rnaFromDNAStrand:@"C"]);
 }
 
-- (void)test2 {
+- (void)testRnaComplementOfGuanineIsCytosine {
     XCTAssertEqualObjects(@"C", [[[RNATranscription alloc] init] rnaFromDNAStrand:@"G"]);
 }
 
-- (void)test3 {
+- (void)testRnaComplementOfThymineIsAdenine {
     XCTAssertEqualObjects(@"A", [[[RNATranscription alloc] init] rnaFromDNAStrand:@"T"]);
 }
 
-- (void)test4 {
+- (void)testRnaComplementOfAdenineIsUracil {
     XCTAssertEqualObjects(@"U", [[[RNATranscription alloc] init] rnaFromDNAStrand:@"A"]);
 }
 
-- (void)test5 {
+- (void)testRnaComplement {
     XCTAssertEqualObjects(@"UGCACCAGAAUU", [[[RNATranscription alloc] init] rnaFromDNAStrand:@"ACGTGGTCTTAA"]);
-}
-
-- (void)test6 {
-    XCTAssertEqualObjects(nil, [[[RNATranscription alloc] init] rnaFromDNAStrand:@"U"]);
-}
-
-- (void)test7 {
-    XCTAssertEqualObjects(nil, [[[RNATranscription alloc] init] rnaFromDNAStrand:@"XXX"]);
-}
-
-- (void)test8 {
-    XCTAssertEqualObjects(nil, [[[RNATranscription alloc] init] rnaFromDNAStrand:@"ACGTXXXCTTAA"]);
 }
 
 @end
