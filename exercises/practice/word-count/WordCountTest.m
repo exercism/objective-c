@@ -2,7 +2,7 @@
 
 #if __has_include("WordCountExample.h")
 # import "WordCountExample.h"
-# else
+#else
 # import "WordCount.h"
 #endif
 
@@ -22,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
   XCTAssertEqualObjects(expected, result);
 }
 
-- (void)testCountOneOfEeach {
+- (void)testCountOneOfEachWord {
   WordCount *words = [[WordCount alloc] initWithString:@"one of each"];
   NSDictionary<NSString *, NSNumber *> *expected = @{ @"one" : @1, @"of" : @1, @"each" : @1 };
   NSDictionary<NSString *, NSNumber *> *result = [words count];
@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
   XCTAssertEqualObjects(expected, result);
 }
 
-- (void)testCountMultipleOccurrences {
+- (void)testMultipleOccurrencesOfAWord {
   WordCount *words = [[WordCount alloc] initWithString:@"one fish two fish red fish blue fish"];
   NSDictionary<NSString *, NSNumber *> *expected = @{ @"one" : @1, @"fish" : @4, @"two" : @1, @"red" : @1, @"blue" : @1 };
   NSDictionary<NSString *, NSNumber *> *result = [words count];
@@ -38,8 +38,8 @@ NS_ASSUME_NONNULL_BEGIN
   XCTAssertEqualObjects(expected, result);
 }
 
-- (void)testIgnorePunctation {
-  WordCount *words = [[WordCount alloc] initWithString:@"car : carpet as java : javascript!!&@$%^&"];
+- (void)testIgnorePunctuation {
+  WordCount *words = [[WordCount alloc] initWithString:@"car: carpet as java: javascript!!&@$%^&"];
   NSDictionary<NSString *, NSNumber *> *expected = @{ @"car" : @1, @"carpet" : @1, @"as" : @1, @"java" : @1, @"javascript" : @1 };
   NSDictionary<NSString *, NSNumber *> *result = [words count];
 
@@ -55,8 +55,8 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 - (void)testNormalizeCase {
-  WordCount *words = [[WordCount alloc] initWithString:@"go Go GO"];
-  NSDictionary<NSString *, NSNumber *> *expected = @{ @"go" : @3 };
+  WordCount *words = [[WordCount alloc] initWithString:@"go Go GO Stop stop"];
+  NSDictionary<NSString *, NSNumber *> *expected = @{ @"go" : @3, @"stop" : @2 };
   NSDictionary<NSString *, NSNumber *> *result = [words count];
 
   XCTAssertEqualObjects(expected, result);
@@ -64,4 +64,3 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 NS_ASSUME_NONNULL_END
-

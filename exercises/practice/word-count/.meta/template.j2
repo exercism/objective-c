@@ -1,0 +1,26 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+#else
+# import "{{ header }}"
+#endif
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface {{ test_class }} : XCTestCase
+
+@end
+
+@implementation {{ test_class }}
+{% for case in cases %}
+- (void){{ case.func_name }} {
+  {{ solution_class }} *words = [[{{ solution_class }} alloc] initWithString:{{ case.given | quote }}];
+  NSDictionary<NSString *, NSNumber *> *expected = {{ case.expected | quote }};
+  NSDictionary<NSString *, NSNumber *> *result = [words count];
+
+  XCTAssertEqualObjects(expected, result);
+}
+{% endfor %}
+@end
+NS_ASSUME_NONNULL_END
