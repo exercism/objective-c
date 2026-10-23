@@ -2,7 +2,7 @@
 
 #if __has_include("SumOfMultiplesExample.h")
 # import "SumOfMultiplesExample.h"
-# else
+#else
 # import "SumOfMultiples.h"
 #endif
 
@@ -12,59 +12,84 @@
 
 @implementation SumOfMultiplesTest
 
-- (void)testSumTo1 {
+- (void)testNoMultiplesWithinLimit {
     NSNumber *sum = [SumOfMultiples toLimit:@1 inMultiples:@[@3, @5]];
     XCTAssertEqualObjects(@0, sum);
 }
 
-- (void)testSumTo3 {
+- (void)testOneFactorHasMultiplesWithinLimit {
     NSNumber *sum = [SumOfMultiples toLimit:@4 inMultiples:@[@3, @5]];
     XCTAssertEqualObjects(@3, sum);
 }
 
-- (void)testSumTo10 {
+- (void)testMoreThanOneMultipleWithinLimit {
+    NSNumber *sum = [SumOfMultiples toLimit:@7 inMultiples:@[@3]];
+    XCTAssertEqualObjects(@9, sum);
+}
+
+- (void)testMoreThanOneFactorWithMultiplesWithinLimit {
     NSNumber *sum = [SumOfMultiples toLimit:@10 inMultiples:@[@3, @5]];
     XCTAssertEqualObjects(@23, sum);
 }
 
-- (void)testSumTo100 {
+- (void)testEachMultipleIsOnlyCountedOnce {
     NSNumber *sum = [SumOfMultiples toLimit:@100 inMultiples:@[@3, @5]];
     XCTAssertEqualObjects(@2318, sum);
 }
 
-- (void)testSumTo1000 {
+- (void)testAMuchLargerLimit {
     NSNumber *sum = [SumOfMultiples toLimit:@1000 inMultiples:@[@3, @5]];
     XCTAssertEqualObjects(@233168, sum);
 }
 
-- (void)testConfigurable_7_13_17_to_20 {
+- (void)testThreeFactors {
     NSNumber *sum = [SumOfMultiples toLimit:@20 inMultiples:@[@7, @13, @17]];
     XCTAssertEqualObjects(@51, sum);
 }
 
-- (void)testConfigurable_4_6_to_15 {
+- (void)testFactorsNotRelativelyPrime {
     NSNumber *sum = [SumOfMultiples toLimit:@15 inMultiples:@[@4, @6]];
     XCTAssertEqualObjects(@30, sum);
 }
 
-- (void)testConfigurable_5_6_8_to_150 {
+- (void)testSomePairsOfFactorsRelativelyPrimeAndSomeNot {
     NSNumber *sum = [SumOfMultiples toLimit:@150 inMultiples:@[@5, @6, @8]];
     XCTAssertEqualObjects(@4419, sum);
 }
 
-- (void)testConfigurable_43_47_to_10000 {
+- (void)testOneFactorIsAMultipleOfAnother {
+    NSNumber *sum = [SumOfMultiples toLimit:@51 inMultiples:@[@5, @25]];
+    XCTAssertEqualObjects(@275, sum);
+}
+
+- (void)testMuchLargerFactors {
     NSNumber *sum = [SumOfMultiples toLimit:@10000 inMultiples:@[@43, @47]];
     XCTAssertEqualObjects(@2203160, sum);
 }
 
-- (void)testConfigurable_0_to_10 {
-    NSNumber *sum = [SumOfMultiples toLimit:@10 inMultiples:@[@0]];
+- (void)testAllNumbersAreMultiplesOf1 {
+    NSNumber *sum = [SumOfMultiples toLimit:@100 inMultiples:@[@1]];
+    XCTAssertEqualObjects(@4950, sum);
+}
+
+- (void)testNoFactorsMeansAnEmptySum {
+    NSNumber *sum = [SumOfMultiples toLimit:@10000 inMultiples:@[]];
     XCTAssertEqualObjects(@0, sum);
 }
 
-- (void)testConfigurable_0_1_to_10 {
-    NSNumber *sum = [SumOfMultiples toLimit:@10 inMultiples:@[@0, @1]];
-    XCTAssertEqualObjects(@45, sum);
+- (void)testTheOnlyMultipleOf0Is0 {
+    NSNumber *sum = [SumOfMultiples toLimit:@1 inMultiples:@[@0]];
+    XCTAssertEqualObjects(@0, sum);
+}
+
+- (void)testTheFactor0DoesNotAffectTheSumOfMultiplesOfOtherFactors {
+    NSNumber *sum = [SumOfMultiples toLimit:@4 inMultiples:@[@3, @0]];
+    XCTAssertEqualObjects(@3, sum);
+}
+
+- (void)testSolutionsUsingIncludeExcludeMustExtendToCardinalityGreaterThan3 {
+    NSNumber *sum = [SumOfMultiples toLimit:@10000 inMultiples:@[@2, @3, @5, @7, @11]];
+    XCTAssertEqualObjects(@39614537, sum);
 }
 
 @end
