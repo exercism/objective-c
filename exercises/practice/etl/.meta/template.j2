@@ -15,7 +15,7 @@
 - (void){{ case.func_name }} {
     NSDictionary *input = @{ {% for key, value in case.input.legacy.items() %}@{{ key }}: {{ value | quote }}{{ ", " if not loop.last }}{% endfor %} };
     NSDictionary *expected = @{ {% for key, value in case.expected.items() %}{{ key | quote }}: @{{ value }}{{ ", " if not loop.last }}{% endfor %} };
-    XCTAssertEqualObjects(expected, [Etl transform:input]);
+    XCTAssertEqualObjects(expected, [{{ solution_class }} transform:input]);
 }
 {% endfor %}
 @end
