@@ -1,6 +1,6 @@
 #import <Foundation/Foundation.h>
 
-@interface FlattenArrayExample : NSObject
+@interface FlattenArray : NSObject
 
 + (NSArray *)flattenArray:(NSArray *)list;
 
