@@ -2,7 +2,7 @@
 
 #if __has_include("AllergiesExample.h")
 # import "AllergiesExample.h"
-# else
+#else
 # import "Allergies.h"
 #endif
 
@@ -211,15 +211,5 @@
     Allergies *allergies = [[Allergies alloc] initWithScore:255];
     XCTAssertTrue([allergies hasAllergy:AllergenCats]);
 }
-
-
-
-
-
-
-
-
-
-
 
 @end
