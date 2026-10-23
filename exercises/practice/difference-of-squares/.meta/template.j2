@@ -13,7 +13,7 @@
 @implementation {{ test_class }}
 {% for case in cases %}
 - (void){{ case.func_name }} {
-    DifferenceOfSquares *difference = [[DifferenceOfSquares alloc] initWithMax:{{ case.given }}];
+    {{ solution_class }} *difference = [[{{ solution_class }} alloc] initWithMax:{{ case.given }}];
     XCTAssertEqual({{ case.expected }}, [difference {{ case.property }}]);
 }
 {% endfor %}
