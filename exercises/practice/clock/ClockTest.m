@@ -2,7 +2,7 @@
 
 #if __has_include("ClockExample.h")
 # import "ClockExample.h"
-# else
+#else
 # import "Clock.h"
 #endif
 
@@ -10,163 +10,203 @@
 
 @end
 
-@implementation ClockTest //!OCLint
-
-#pragma mark - Create: Test creating a new clock with an initial time.
+@implementation ClockTest
 
 - (void)testOnTheHour {
-    XCTAssertEqualObjects(@"08:00", [[Clock clockWithHours:8] description]);
+    Clock *clock = [Clock clockWithHours:8 minutes:0];
+    XCTAssertEqualObjects(@"08:00", [clock description]);
 }
 
 - (void)testPastTheHour {
-    XCTAssertEqualObjects(@"11:09", [[Clock clockWithHours:11 minutes:9] description]);
+    Clock *clock = [Clock clockWithHours:11 minutes:9];
+    XCTAssertEqualObjects(@"11:09", [clock description]);
 }
 
 - (void)testMidnightIsZeroHours {
-    XCTAssertEqualObjects(@"00:00", [[Clock clockWithHours:24] description]);
+    Clock *clock = [Clock clockWithHours:24 minutes:0];
+    XCTAssertEqualObjects(@"00:00", [clock description]);
 }
 
 - (void)testHourRollsOver {
-    XCTAssertEqualObjects(@"01:00", [[Clock clockWithHours:25] description]);
+    Clock *clock = [Clock clockWithHours:25 minutes:0];
+    XCTAssertEqualObjects(@"01:00", [clock description]);
 }
 
 - (void)testHourRollsOverContinuously {
-    XCTAssertEqualObjects(@"04:00", [[Clock clockWithHours:100] description]);
+    Clock *clock = [Clock clockWithHours:100 minutes:0];
+    XCTAssertEqualObjects(@"04:00", [clock description]);
 }
 
 - (void)testSixtyMinutesIsNextHour {
-    XCTAssertEqualObjects(@"02:00", [[Clock clockWithHours:1 minutes:60] description]);
+    Clock *clock = [Clock clockWithHours:1 minutes:60];
+    XCTAssertEqualObjects(@"02:00", [clock description]);
 }
 
 - (void)testMinutesRollOver {
-    XCTAssertEqualObjects(@"02:40", [[Clock clockWithHours:0 minutes:160] description]);
+    Clock *clock = [Clock clockWithHours:0 minutes:160];
+    XCTAssertEqualObjects(@"02:40", [clock description]);
 }
 
 - (void)testMinutesRollOverContinuously {
-    XCTAssertEqualObjects(@"04:43", [[Clock clockWithHours:0 minutes:1723] description]);
+    Clock *clock = [Clock clockWithHours:0 minutes:1723];
+    XCTAssertEqualObjects(@"04:43", [clock description]);
 }
 
-- (void)testHoursAndMinutesRollOver {
-    XCTAssertEqualObjects(@"11:01", [[Clock clockWithHours:201 minutes:3001] description]);
+- (void)testHourAndMinutesRollOver {
+    Clock *clock = [Clock clockWithHours:25 minutes:160];
+    XCTAssertEqualObjects(@"03:40", [clock description]);
 }
 
-- (void)testHoursAndMinutesRollOverToExactlyMidnight {
-    XCTAssertEqualObjects(@"00:00", [[Clock clockWithHours:72 minutes:8640] description]);
+- (void)testHourAndMinutesRollOverContinuously {
+    Clock *clock = [Clock clockWithHours:201 minutes:3001];
+    XCTAssertEqualObjects(@"11:01", [clock description]);
+}
+
+- (void)testHourAndMinutesRollOverToExactlyMidnight {
+    Clock *clock = [Clock clockWithHours:72 minutes:8640];
+    XCTAssertEqualObjects(@"00:00", [clock description]);
 }
 
 - (void)testNegativeHour {
-    XCTAssertEqualObjects(@"23:15", [[Clock clockWithHours:-1 minutes:15] description]);
+    Clock *clock = [Clock clockWithHours:-1 minutes:15];
+    XCTAssertEqualObjects(@"23:15", [clock description]);
 }
 
 - (void)testNegativeHourRollsOver {
-    XCTAssertEqualObjects(@"23:00", [[Clock clockWithHours:-25] description]);
+    Clock *clock = [Clock clockWithHours:-25 minutes:0];
+    XCTAssertEqualObjects(@"23:00", [clock description]);
 }
 
 - (void)testNegativeHourRollsOverContinuously {
-    XCTAssertEqualObjects(@"05:00", [[Clock clockWithHours:-91] description]);
+    Clock *clock = [Clock clockWithHours:-91 minutes:0];
+    XCTAssertEqualObjects(@"05:00", [clock description]);
 }
 
 - (void)testNegativeMinutes {
-    XCTAssertEqualObjects(@"00:20", [[Clock clockWithHours:1 minutes:-40] description]);
+    Clock *clock = [Clock clockWithHours:1 minutes:-40];
+    XCTAssertEqualObjects(@"00:20", [clock description]);
 }
 
 - (void)testNegativeMinutesRollOver {
-    XCTAssertEqualObjects(@"22:20", [[Clock clockWithHours:1 minutes:-160] description]);
+    Clock *clock = [Clock clockWithHours:1 minutes:-160];
+    XCTAssertEqualObjects(@"22:20", [clock description]);
 }
 
 - (void)testNegativeMinutesRollOverContinuously {
-    XCTAssertEqualObjects(@"16:40", [[Clock clockWithHours:1 minutes:-4820] description]);
+    Clock *clock = [Clock clockWithHours:1 minutes:-4820];
+    XCTAssertEqualObjects(@"16:40", [clock description]);
 }
 
-- (void)testNegativeHoursAndMinutesBothRollOverContinuously {
-    XCTAssertEqualObjects(@"22:10", [[Clock clockWithHours:-121 minutes:-5810] description]);
+- (void)testNegativeSixtyMinutesIsPreviousHour {
+    Clock *clock = [Clock clockWithHours:2 minutes:-60];
+    XCTAssertEqualObjects(@"01:00", [clock description]);
 }
 
-//#pragma mark - Add: Test adding and subtracting minutes.
+- (void)testNegativeHourAndMinutesBothRollOver {
+    Clock *clock = [Clock clockWithHours:-25 minutes:-160];
+    XCTAssertEqualObjects(@"20:20", [clock description]);
+}
+
+- (void)testNegativeHourAndMinutesBothRollOverContinuously {
+    Clock *clock = [Clock clockWithHours:-121 minutes:-5810];
+    XCTAssertEqualObjects(@"22:10", [clock description]);
+}
 
 - (void)testAddMinutes {
-    Clock *clock = [[Clock clockWithHours:10] addMinutes:3];
-    XCTAssertEqualObjects(@"10:03", clock.description);
+    Clock *clock = [Clock clockWithHours:10 minutes:0];
+    clock = [clock addMinutes:3];
+    XCTAssertEqualObjects(@"10:03", [clock description]);
 }
 
 - (void)testAddNoMinutes {
-    Clock *clock = [[Clock clockWithHours:6 minutes:41] addMinutes:0];
-    XCTAssertEqualObjects(@"06:41", clock.description);
+    Clock *clock = [Clock clockWithHours:6 minutes:41];
+    clock = [clock addMinutes:0];
+    XCTAssertEqualObjects(@"06:41", [clock description]);
 }
 
 - (void)testAddToNextHour {
-    Clock *clock = [[Clock clockWithHours:0 minutes:45] addMinutes:40];
-    XCTAssertEqualObjects(@"01:25", clock.description);
+    Clock *clock = [Clock clockWithHours:0 minutes:45];
+    clock = [clock addMinutes:40];
+    XCTAssertEqualObjects(@"01:25", [clock description]);
 }
 
 - (void)testAddMoreThanOneHour {
-    Clock *clock = [[Clock clockWithHours:10] addMinutes:61];
-    XCTAssertEqualObjects(@"11:01", clock.description);
+    Clock *clock = [Clock clockWithHours:10 minutes:0];
+    clock = [clock addMinutes:61];
+    XCTAssertEqualObjects(@"11:01", [clock description]);
 }
 
 - (void)testAddMoreThanTwoHoursWithCarry {
-    Clock *clock = [[Clock clockWithHours:0 minutes:45] addMinutes:160];
-    XCTAssertEqualObjects(@"03:25", clock.description);
+    Clock *clock = [Clock clockWithHours:0 minutes:45];
+    clock = [clock addMinutes:160];
+    XCTAssertEqualObjects(@"03:25", [clock description]);
 }
 
 - (void)testAddAcrossMidnight {
-    Clock *clock = [[Clock clockWithHours:23 minutes:59] addMinutes:2];
-    XCTAssertEqualObjects(@"00:01", clock.description);
+    Clock *clock = [Clock clockWithHours:23 minutes:59];
+    clock = [clock addMinutes:2];
+    XCTAssertEqualObjects(@"00:01", [clock description]);
 }
 
-- (void)testAddMoreThanOneDay {
-    // (1500 min = 25 hrs)
-    Clock *clock = [[Clock clockWithHours:5 minutes:32] addMinutes:1500];
-    XCTAssertEqualObjects(@"06:32", clock.description);
+- (void)testAddMoreThanOneDay1500Min25Hrs {
+    Clock *clock = [Clock clockWithHours:5 minutes:32];
+    clock = [clock addMinutes:1500];
+    XCTAssertEqualObjects(@"06:32", [clock description]);
 }
 
 - (void)testAddMoreThanTwoDays {
-    Clock *clock = [[Clock clockWithHours:1 minutes:1] addMinutes:3500];
-    XCTAssertEqualObjects(@"11:21", clock.description);
+    Clock *clock = [Clock clockWithHours:1 minutes:1];
+    clock = [clock addMinutes:3500];
+    XCTAssertEqualObjects(@"11:21", [clock description]);
 }
 
 - (void)testSubtractMinutes {
-    Clock *clock = [[Clock clockWithHours:10 minutes:3] subtractMinutes:3];
-    XCTAssertEqualObjects(@"10:00", clock.description);
+    Clock *clock = [Clock clockWithHours:10 minutes:3];
+    clock = [clock subtractMinutes:3];
+    XCTAssertEqualObjects(@"10:00", [clock description]);
 }
 
 - (void)testSubtractToPreviousHour {
-    Clock *clock = [[Clock clockWithHours:10 minutes:3] subtractMinutes:30];
-    XCTAssertEqualObjects(@"09:33", clock.description);
+    Clock *clock = [Clock clockWithHours:10 minutes:3];
+    clock = [clock subtractMinutes:30];
+    XCTAssertEqualObjects(@"09:33", [clock description]);
 }
 
 - (void)testSubtractMoreThanAnHour {
-    Clock *clock = [[Clock clockWithHours:10 minutes:3] subtractMinutes:70];
-    XCTAssertEqualObjects(@"08:53", clock.description);
+    Clock *clock = [Clock clockWithHours:10 minutes:3];
+    clock = [clock subtractMinutes:70];
+    XCTAssertEqualObjects(@"08:53", [clock description]);
 }
 
 - (void)testSubtractAcrossMidnight {
-    Clock *clock = [[Clock clockWithHours:0 minutes:3] subtractMinutes:4];
-    XCTAssertEqualObjects(@"23:59", clock.description);
+    Clock *clock = [Clock clockWithHours:0 minutes:3];
+    clock = [clock subtractMinutes:4];
+    XCTAssertEqualObjects(@"23:59", [clock description]);
 }
 
 - (void)testSubtractMoreThanTwoHours {
-    Clock *clock = [[Clock clockWithHours:0 minutes:0] subtractMinutes:160];
-    XCTAssertEqualObjects(@"21:20", clock.description);
+    Clock *clock = [Clock clockWithHours:0 minutes:0];
+    clock = [clock subtractMinutes:160];
+    XCTAssertEqualObjects(@"21:20", [clock description]);
 }
 
-- (void)testSubtractMoreTHanTwoHoursWithBorrow {
-    Clock *clock = [[Clock clockWithHours:6 minutes:15] subtractMinutes:160];
-    XCTAssertEqualObjects(@"03:35", clock.description);
+- (void)testSubtractMoreThanTwoHoursWithBorrow {
+    Clock *clock = [Clock clockWithHours:6 minutes:15];
+    clock = [clock subtractMinutes:160];
+    XCTAssertEqualObjects(@"03:35", [clock description]);
 }
 
-- (void)testSubtractMoreThanOneDay {
-    // (1500 min = 25 hrs)
-    Clock *clock = [[Clock clockWithHours:5 minutes:32] subtractMinutes:1500];
-    XCTAssertEqualObjects(@"04:32", clock.description);
+- (void)testSubtractMoreThanOneDay1500Min25Hrs {
+    Clock *clock = [Clock clockWithHours:5 minutes:32];
+    clock = [clock subtractMinutes:1500];
+    XCTAssertEqualObjects(@"04:32", [clock description]);
 }
 
 - (void)testSubtractMoreThanTwoDays {
-    Clock *clock = [[Clock clockWithHours:2 minutes:20] subtractMinutes:3000];
-    XCTAssertEqualObjects(@"00:20", clock.description);
+    Clock *clock = [Clock clockWithHours:2 minutes:20];
+    clock = [clock subtractMinutes:3000];
+    XCTAssertEqualObjects(@"00:20", [clock description]);
 }
-
-//#pragma mark - Equal: Construct two separate clocks, set times, test if they are equal.
 
 - (void)testClocksWithSameTime {
     Clock *clock1 = [Clock clockWithHours:15 minutes:37];
@@ -177,13 +217,13 @@
 - (void)testClocksAMinuteApart {
     Clock *clock1 = [Clock clockWithHours:15 minutes:36];
     Clock *clock2 = [Clock clockWithHours:15 minutes:37];
-    XCTAssertNotEqual(clock1, clock2);
+    XCTAssertNotEqualObjects(clock1, clock2);
 }
 
 - (void)testClocksAnHourApart {
     Clock *clock1 = [Clock clockWithHours:14 minutes:37];
     Clock *clock2 = [Clock clockWithHours:15 minutes:37];
-    XCTAssertNotEqual(clock1, clock2);
+    XCTAssertNotEqualObjects(clock1, clock2);
 }
 
 - (void)testClocksWithHourOverflow {
@@ -255,6 +295,12 @@
 - (void)testClocksWithNegativeHoursAndMinutesThatWrap {
     Clock *clock1 = [Clock clockWithHours:18 minutes:7];
     Clock *clock2 = [Clock clockWithHours:-54 minutes:-11513];
+    XCTAssertEqualObjects(clock1, clock2);
+}
+
+- (void)testFullClockAndZeroedClock {
+    Clock *clock1 = [Clock clockWithHours:24 minutes:0];
+    Clock *clock2 = [Clock clockWithHours:0 minutes:0];
     XCTAssertEqualObjects(clock1, clock2);
 }
 

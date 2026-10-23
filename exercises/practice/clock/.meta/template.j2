@@ -1,0 +1,35 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+#else
+# import "{{ header }}"
+#endif
+
+@interface {{ test_class }} : XCTestCase
+
+@end
+
+@implementation {{ test_class }}
+{% for case in cases %}
+- (void){{ case.func_name }} {
+{%- if case.property == 'equal' %}
+    Clock *clock1 = [Clock clockWithHours:{{ case.input.clock1.hour }} minutes:{{ case.input.clock1.minute }}];
+    Clock *clock2 = [Clock clockWithHours:{{ case.input.clock2.hour }} minutes:{{ case.input.clock2.minute }}];
+{%- if case.expected %}
+    XCTAssertEqualObjects(clock1, clock2);
+{%- else %}
+    XCTAssertNotEqualObjects(clock1, clock2);
+{%- endif %}
+{%- else %}
+    Clock *clock = [Clock clockWithHours:{{ case.input.hour }} minutes:{{ case.input.minute }}];
+{%- if case.property == 'add' %}
+    clock = [clock addMinutes:{{ case.input.value }}];
+{%- elif case.property == 'subtract' %}
+    clock = [clock subtractMinutes:{{ case.input.value }}];
+{%- endif %}
+    XCTAssertEqualObjects({{ case.expected | quote }}, [clock description]);
+{%- endif %}
+}
+{% endfor %}
+@end
