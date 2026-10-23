@@ -18,6 +18,10 @@
 }
 
 - (NSInteger)searchFor:(int)number {
+    if (self.list.count == 0) {
+        return NSNotFound;
+    }
+
     NSInteger middleIndex = [self middle];
     int middle = [self.list[middleIndex] intValue];
     
@@ -44,7 +48,12 @@
             return NSNotFound;
         }
         
-        return [binary searchFor:number] + middleIndex;
+        NSInteger result = [binary searchFor:number];
+        if (result == NSNotFound) {
+            return NSNotFound;
+        }
+
+        return result + middleIndex;
     }
 }
 
