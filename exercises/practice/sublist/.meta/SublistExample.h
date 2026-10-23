@@ -7,7 +7,7 @@ typedef NS_ENUM(NSInteger, SublistKind) {
     SublistKindUnequal
 };
 
-@interface SublistExample : NSObject
+@interface Sublist : NSObject
 
 + (SublistKind)classifierForFirstList:(NSArray *)firstArray andSecondList:(NSArray *)secondArray;
 
