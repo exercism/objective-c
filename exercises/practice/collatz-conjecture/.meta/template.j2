@@ -14,9 +14,9 @@
 {% for case in cases %}
 - (void){{ case.func_name }} {
 {%- if not case.expect_error %}
-    XCTAssertEqual({{ case.expected }}, [CollatzConjecture stepsForNumber:{{ case.given }}]);
+    XCTAssertEqual({{ case.expected }}, [{{ solution_class }} stepsForNumber:{{ case.given }}]);
 {%- else %}
-    XCTAssertEqual([CollatzConjecture stepsForNumber:{{ case.given }}], NSNotFound);
+    XCTAssertEqual([{{ solution_class }} stepsForNumber:{{ case.given }}], NSNotFound);
 {%- endif %}
 }
 {% endfor %}

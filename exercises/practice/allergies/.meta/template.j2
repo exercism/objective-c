@@ -12,8 +12,8 @@
 
 @implementation {{ test_class }}
 {% for case in cases %}
-- (void)test{{ case.input.item | capitalize }}{{ case.description.title() | replace(" ", "") }} {
-    Allergies *allergies = [[Allergies alloc] initWithScore:{{ case.input.score }}];
+- (void)test{{ case.input.item | capitalize }}{{ case.func_name.removeprefix("test") }} {
+    {{ solution_class }} *allergies = [[{{ solution_class }} alloc] initWithScore:{{ case.input.score }}];
 {%- if case.expected %}
     XCTAssertTrue([allergies hasAllergy:Allergen{{ case.input.item | capitalize }}]);
 {%- else %}
