@@ -2,7 +2,7 @@
 static NSMutableArray *resultArray;
 static NSNull *nullValue;
 
-@implementation FlattenArrayExample
+@implementation FlattenArray
 
 + (NSArray *)flattenArray:(NSArray *)list{
     resultArray = [NSMutableArray array];
@@ -10,7 +10,7 @@ static NSNull *nullValue;
     
     for (int i = 0; i < list.count; i++) {
         if ([list[i] isKindOfClass:[NSArray class]]) {
-            [FlattenArrayExample extractValuesFromArray:list[i]];
+            [FlattenArray extractValuesFromArray:list[i]];
         } else if (list[i] != nullValue) {
             [resultArray addObject:list[i]];
         }
@@ -23,7 +23,7 @@ static NSNull *nullValue;
 + (void)extractValuesFromArray:(NSArray*)array{
     for (int i = 0; i < array.count; i++) {
         if ([array[i] isKindOfClass:[NSArray class]]) {
-            [FlattenArrayExample extractValuesFromArray:array[i]];
+            [FlattenArray extractValuesFromArray:array[i]];
         } else if (array[i] != nullValue) {
             [resultArray addObject:array[i]];
         }

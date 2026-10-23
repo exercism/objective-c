@@ -2,10 +2,8 @@
 
 #if __has_include("{{ example_header }}")
 # import "{{ example_header }}"
-typedef FlattenArrayExample FlattenArrayTestSubject;
 #else
 # import "{{ header }}"
-typedef FlattenArray FlattenArrayTestSubject;
 #endif
 
 @interface {{ test_class }} : XCTestCase
@@ -23,7 +21,7 @@ typedef FlattenArray FlattenArrayTestSubject;
 - (void){{ case.func_name }} {
     NSArray *input = {{ objc(case.given) }};
     NSArray *expected = {{ objc(case.expected) }};
-    XCTAssertEqualObjects(expected, [FlattenArrayTestSubject flattenArray:input]);
+    XCTAssertEqualObjects(expected, [{{ solution_class }} flattenArray:input]);
 }
 {% endfor %}
 @end
