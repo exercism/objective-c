@@ -13,8 +13,16 @@
 @implementation {{ test_class }}
 {% for case in cases %}
 - (void){{ case.func_name }} {
-    NSDictionary *input = @{ {% for key, value in case.input.legacy.items() %}@{{ key }}: {{ value | quote }}{{ ", " if not loop.last }}{% endfor %} };
-    NSDictionary *expected = @{ {% for key, value in case.expected.items() %}{{ key | quote }}: @{{ value }}{{ ", " if not loop.last }}{% endfor %} };
+    NSDictionary *input = @{
+        {%- for key, value in case.input.legacy.items() %}
+        @{{ key }}: {{ value | quote }},
+        {%- endfor %}
+    };
+    NSDictionary *expected = @{
+        {%- for chunk in case.expected.items() | batch(10) %}
+        {% for key, value in chunk %}{{ key | quote }}: @{{ value }},{% if not loop.last %} {% endif %}{% endfor %}
+        {%- endfor %}
+    };
     XCTAssertEqualObjects(expected, [{{ solution_class }} transform:input]);
 }
 {% endfor %}
