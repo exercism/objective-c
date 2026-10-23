@@ -14,7 +14,7 @@
 {% for case in cases %}
 - (void){{ case.func_name }} {
     NSArray<NSNumber *> *input = {{ case.input.array | quote }};
-    BinarySearch *binary = [[BinarySearch alloc] initWithArray:input];
+    {{ solution_class }} *binary = [[{{ solution_class }} alloc] initWithArray:input];
 {%- if case.expect_error %}
     XCTAssertEqual(NSNotFound, [binary searchFor:{{ case.input.value }}]);
 {%- else %}

@@ -14,9 +14,9 @@
 {% for case in cases %}
 - (void){{ case.func_name }} {
 {%- if case.expected == True %}
-    XCTAssertTrue([Isogram isIsogram:{{ case.given | quote }}]);
+    XCTAssertTrue([{{ solution_class }} isIsogram:{{ case.given | quote }}]);
 {%- else %}
-    XCTAssertFalse([Isogram isIsogram:{{ case.given | quote }}]);
+    XCTAssertFalse([{{ solution_class }} isIsogram:{{ case.given | quote }}]);
 {%- endif %}
 }
 {% endfor %}

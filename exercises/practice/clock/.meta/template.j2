@@ -14,15 +14,15 @@
 {% for case in cases %}
 - (void){{ case.func_name }} {
 {%- if case.property == 'equal' %}
-    Clock *clock1 = [Clock clockWithHours:{{ case.input.clock1.hour }} minutes:{{ case.input.clock1.minute }}];
-    Clock *clock2 = [Clock clockWithHours:{{ case.input.clock2.hour }} minutes:{{ case.input.clock2.minute }}];
+    {{ solution_class }} *clock1 = [{{ solution_class }} clockWithHours:{{ case.input.clock1.hour }} minutes:{{ case.input.clock1.minute }}];
+    {{ solution_class }} *clock2 = [{{ solution_class }} clockWithHours:{{ case.input.clock2.hour }} minutes:{{ case.input.clock2.minute }}];
 {%- if case.expected %}
     XCTAssertEqualObjects(clock1, clock2);
 {%- else %}
     XCTAssertNotEqualObjects(clock1, clock2);
 {%- endif %}
 {%- else %}
-    Clock *clock = [Clock clockWithHours:{{ case.input.hour }} minutes:{{ case.input.minute }}];
+    {{ solution_class }} *clock = [{{ solution_class }} clockWithHours:{{ case.input.hour }} minutes:{{ case.input.minute }}];
 {%- if case.property == 'add' %}
     clock = [clock addMinutes:{{ case.input.value }}];
 {%- elif case.property == 'subtract' %}
