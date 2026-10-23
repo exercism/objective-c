@@ -11,16 +11,10 @@
 @end
 
 @implementation {{ test_class }}
-{% macro objc(value) -%}
-{%- if value is none -%}[NSNull null]
-{%- elif value is sequence and value is not string -%}@[{% for item in value %}{{ objc(item) }}{{ ", " if not loop.last }}{% endfor %}]
-{%- else -%}{{ value | quote(nsobject=true) }}
-{%- endif -%}
-{%- endmacro %}
 {% for case in cases %}
 - (void){{ case.func_name }} {
-    NSArray *input = {{ objc(case.given) }};
-    NSArray *expected = {{ objc(case.expected) }};
+    NSArray *input = {{ case.given | quote }};
+    NSArray *expected = {{ case.expected | quote }};
     XCTAssertEqualObjects(expected, [{{ solution_class }} flattenArray:input]);
 }
 {% endfor %}

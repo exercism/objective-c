@@ -12,7 +12,6 @@
 
 @implementation FlattenArrayTest
 
-
 - (void)testEmpty {
     NSArray *input = @[];
     NSArray *expected = @[];
