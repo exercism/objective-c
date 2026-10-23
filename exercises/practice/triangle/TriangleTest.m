@@ -2,7 +2,7 @@
 
 #if __has_include("TriangleExample.h")
 # import "TriangleExample.h"
-# else
+#else
 # import "Triangle.h"
 #endif
 
@@ -24,7 +24,7 @@
     XCTAssertNotEqual(TriangleKindEquilateral, [Triangle kindForSides:5 :4 :6]);
 }
 
-- (void)testEquilateralAllZeroSidesAreInvalid {
+- (void)testEquilateralAllZeroSidesIsNotATriangle {
     XCTAssertThrows([Triangle kindForSides:0 :0 :0]);
 }
 

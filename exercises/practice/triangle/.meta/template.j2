@@ -1,0 +1,27 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+#else
+# import "{{ header }}"
+#endif
+
+@interface {{ test_class }} : XCTestCase
+
+@end
+
+@implementation {{ test_class }}
+{% for case in cases %}
+- (void)test{{ case.property | title }}{{ case.description | title | replace(" ", "") }} {
+  {%- if "inequality" not in case.description and "all zero" not in case.description %}
+    {%- if case.expected %}
+    XCTAssertEqual(TriangleKind{{ case.property | title }}, [{{ solution_class }} kindForSides:{{ case.given | join(" :") }}]);
+    {%- else %}
+    XCTAssertNotEqual(TriangleKind{{ case.property | title }}, [{{ solution_class }} kindForSides:{{ case.given | join(" :") }}]);
+    {%- endif %}
+  {%- else %}
+    XCTAssertThrows([{{ solution_class }} kindForSides:{{ case.given | join(" :") }}]);
+  {%- endif %}
+}
+{% endfor %}
+@end
