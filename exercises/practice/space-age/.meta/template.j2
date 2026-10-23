@@ -1,0 +1,26 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+#else
+# import "{{ header }}"
+#endif
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface {{ test_class }} : XCTestCase
+
+@end
+
+@implementation {{ test_class }}
+
+static const double AgeAccuracy = 0.01;
+{% for case in cases %}
+- (void){{ case.func_name }} { //!OCLINT
+    {{ solution_class }} *age = [[{{ solution_class }} alloc] initWithSeconds:{{ case.input.seconds }}];
+    XCTAssertEqualWithAccuracy({{ case.expected }}, age.on{{ case.input.planet }}, AgeAccuracy);
+}
+{% endfor %}
+@end
+
+NS_ASSUME_NONNULL_END
