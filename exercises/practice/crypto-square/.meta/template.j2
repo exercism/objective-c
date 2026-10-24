@@ -1,0 +1,21 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+#else
+# import "{{ header }}"
+#endif
+
+@interface {{ test_class }} : XCTestCase
+
+@end
+
+@implementation {{ test_class }}
+{% for case in cases %}
+- (void){{ case.func_name }} {
+    {{ solution_class }} *crypto = [[{{ solution_class }} alloc] initWithText:{{ case.input.plaintext | quote }}];
+    NSString *expected = {{ case.expected | quote }};
+    XCTAssertEqualObjects(expected, crypto.normalizedCipherText);
+}
+{% endfor %}
+@end
