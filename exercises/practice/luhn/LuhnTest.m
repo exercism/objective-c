@@ -2,7 +2,7 @@
 
 #if __has_include("LuhnExample.h")
 # import "LuhnExample.h"
-# else
+#else
 # import "Luhn.h"
 #endif
 
@@ -12,32 +12,32 @@
 
 @implementation LuhnTest
 
-- (void)testSingleDigitStringNotValid {
+- (void)testSingleDigitStringsCanNotBeValid {
     Luhn *luhn = [[Luhn alloc] initWithString:@"1"];
     XCTAssertFalse(luhn.isValid);
 }
 
-- (void)testSingleZeroInvalid {
+- (void)testASingleZeroIsInvalid {
     Luhn *luhn = [[Luhn alloc] initWithString:@"0"];
     XCTAssertFalse(luhn.isValid);
 }
 
-- (void)testSimpleValidSINRemainsValidIfReversed {
+- (void)testASimpleValidSinThatRemainsValidIfReversed {
     Luhn *luhn = [[Luhn alloc] initWithString:@"059"];
     XCTAssertTrue(luhn.isValid);
 }
 
-- (void)testSimpleValidSINInvalidIfReversed {
+- (void)testASimpleValidSinThatBecomesInvalidIfReversed {
     Luhn *luhn = [[Luhn alloc] initWithString:@"59"];
     XCTAssertTrue(luhn.isValid);
 }
 
-- (void)testValidCanadianSIN {
+- (void)testAValidCanadianSin {
     Luhn *luhn = [[Luhn alloc] initWithString:@"055 444 285"];
     XCTAssertTrue(luhn.isValid);
 }
 
-- (void)testInvalidCanadianSIN {
+- (void)testInvalidCanadianSin {
     Luhn *luhn = [[Luhn alloc] initWithString:@"055 444 286"];
     XCTAssertFalse(luhn.isValid);
 }
@@ -47,34 +47,64 @@
     XCTAssertFalse(luhn.isValid);
 }
 
-- (void)testValidStringsWithANonDigitInvalid {
-    Luhn *luhn = [[Luhn alloc] initWithString:@"055a 444 285"];
+- (void)testInvalidLongNumberWithAnEvenRemainder {
+    Luhn *luhn = [[Luhn alloc] initWithString:@"1 2345 6789 1234 5678 9012"];
     XCTAssertFalse(luhn.isValid);
 }
 
-- (void)testValidStringsWithPunctuationInvalid {
+- (void)testValidNumberWithAnEvenNumberOfDigits {
+    Luhn *luhn = [[Luhn alloc] initWithString:@"095 245 88"];
+    XCTAssertTrue(luhn.isValid);
+}
+
+- (void)testValidNumberWithAnOddNumberOfSpaces {
+    Luhn *luhn = [[Luhn alloc] initWithString:@"234 567 891 234"];
+    XCTAssertTrue(luhn.isValid);
+}
+
+- (void)testValidStringsWithANonDigitAddedAtTheEndBecomeInvalid {
+    Luhn *luhn = [[Luhn alloc] initWithString:@"059a"];
+    XCTAssertFalse(luhn.isValid);
+}
+
+- (void)testValidStringsWithPunctuationIncludedBecomeInvalid {
     Luhn *luhn = [[Luhn alloc] initWithString:@"055-444-285"];
     XCTAssertFalse(luhn.isValid);
 }
 
-- (void)testValidStringWithSymbolsInvalid {
-    Luhn *luhn = [[Luhn alloc] initWithString:@"055£ 444$ 285"];
+- (void)testValidStringsWithSymbolsIncludedBecomeInvalid {
+    Luhn *luhn = [[Luhn alloc] initWithString:@"055# 444$ 285"];
     XCTAssertFalse(luhn.isValid);
 }
 
-- (void)testSingleZeroWithSpaceInvalid {
+- (void)testSingleZeroWithSpaceIsInvalid {
     Luhn *luhn = [[Luhn alloc] initWithString:@" 0"];
     XCTAssertFalse(luhn.isValid);
 }
 
-- (void)testMoreThanOneZeroValid {
+- (void)testMoreThanASingleZeroIsValid {
     Luhn *luhn = [[Luhn alloc] initWithString:@"0000 0"];
     XCTAssertTrue(luhn.isValid);
 }
 
-- (void)testInputDigit9CorrectConverted {
+- (void)testInputDigit9IsCorrectlyConvertedToOutputDigit9 {
     Luhn *luhn = [[Luhn alloc] initWithString:@"091"];
     XCTAssertTrue(luhn.isValid);
+}
+
+- (void)testUsingAsciiValueForNonDoubledNonDigitIsnTAllowed {
+    Luhn *luhn = [[Luhn alloc] initWithString:@"055b 444 285"];
+    XCTAssertFalse(luhn.isValid);
+}
+
+- (void)testUsingAsciiValueForDoubledNonDigitIsnTAllowed {
+    Luhn *luhn = [[Luhn alloc] initWithString:@":9"];
+    XCTAssertFalse(luhn.isValid);
+}
+
+- (void)testNonNumericNonSpaceCharInTheMiddleWithASumThatSDivisibleBy10IsnTAllowed {
+    Luhn *luhn = [[Luhn alloc] initWithString:@"59%59"];
+    XCTAssertFalse(luhn.isValid);
 }
 
 @end
