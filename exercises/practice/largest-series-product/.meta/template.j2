@@ -1,0 +1,24 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+#else
+# import "{{ header }}"
+#endif
+
+@interface {{ test_class }} : XCTestCase
+
+@end
+
+@implementation {{ test_class }}
+{% for case in cases %}
+- (void){{ case.func_name }} {
+{%- if case.expect_error %}
+    XCTAssertThrows([[[{{ solution_class }} alloc] initWithNumberString:{{ case.input.digits | quote }}] largestProduct:{{ case.input.span }}]);
+{%- else %}
+    {{ solution_class }} *series = [[{{ solution_class }} alloc] initWithNumberString:{{ case.input.digits | quote }}];
+    XCTAssertEqual({{ case.expected }}, [series largestProduct:{{ case.input.span }}]);
+{%- endif %}
+}
+{% endfor %}
+@end
