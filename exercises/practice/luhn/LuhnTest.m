@@ -52,6 +52,11 @@
     XCTAssertFalse(luhn.isValid);
 }
 
+- (void)testInvalidLongNumberWithARemainderDivisibleBy5 {
+    Luhn *luhn = [[Luhn alloc] initWithString:@"1 2345 6789 1234 5678 9013"];
+    XCTAssertFalse(luhn.isValid);
+}
+
 - (void)testValidNumberWithAnEvenNumberOfDigits {
     Luhn *luhn = [[Luhn alloc] initWithString:@"095 245 88"];
     XCTAssertTrue(luhn.isValid);
@@ -89,6 +94,16 @@
 
 - (void)testInputDigit9IsCorrectlyConvertedToOutputDigit9 {
     Luhn *luhn = [[Luhn alloc] initWithString:@"091"];
+    XCTAssertTrue(luhn.isValid);
+}
+
+- (void)testVeryLongInputIsValid {
+    Luhn *luhn = [[Luhn alloc] initWithString:@"9999999999 9999999999 9999999999 9999999999"];
+    XCTAssertTrue(luhn.isValid);
+}
+
+- (void)testValidLuhnWithAnOddNumberOfDigitsAndNonZeroFirstDigit {
+    Luhn *luhn = [[Luhn alloc] initWithString:@"109"];
     XCTAssertTrue(luhn.isValid);
 }
 
