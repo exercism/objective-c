@@ -2,7 +2,7 @@
 
 #if __has_include("HelloWorldExample.h")
 # import "HelloWorldExample.h"
-# else
+#else
 # import "HelloWorld.h"
 #endif
 
@@ -14,11 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation HelloWorldTest
 
-- (void)testHello {
+- (void)testSayHi {
     NSString *expected = @"Hello, World!";
     NSString *result = [[[HelloWorld alloc] init] hello];
     XCTAssertEqualObjects(expected, result);
 }
 
 @end
+
 NS_ASSUME_NONNULL_END
