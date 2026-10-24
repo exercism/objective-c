@@ -3,17 +3,17 @@
 
 -(long long)grainsAtSquareNumber:(int)squareNo {
 	if (squareNo <= 64 && squareNo > 0) {
-		return pow(2, squareNo - 1);
+		return (long long)(1ULL << (squareNo - 1));
 	}
 	return -1;
 }
 
--(long long)grainsAtBoard {
+-(unsigned long long)grainsAtBoard {
 	long long total = 0;
 	for (int i = 1; i <= 64; i++) {
 		total += [self grainsAtSquareNumber:i];
 	}
-	return total;
+	return (unsigned long long)total;
 }
 
 @end
