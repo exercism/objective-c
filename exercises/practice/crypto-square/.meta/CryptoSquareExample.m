@@ -51,6 +51,9 @@
         int position = index + 1;
         
         if (position % self.numberOfColumns == 0 || position == self.normalizedText.length) {
+            while (segment.length < self.numberOfColumns) {
+                [segment appendString:@" "];
+            }
             [result addObject:[segment copy]];
             [segment setString:@""];
         }
