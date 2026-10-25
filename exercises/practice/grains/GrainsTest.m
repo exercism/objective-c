@@ -2,12 +2,9 @@
 
 #if __has_include("GrainsExample.h")
 # import "GrainsExample.h"
-# else
+#else
 # import "Grains.h"
 #endif
-
-
-NS_ASSUME_NONNULL_BEGIN
 
 @interface GrainsTest : XCTestCase
 
@@ -15,71 +12,59 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation GrainsTest
 
-- (void)testNumberOfGrainsOnSquare1 {
-    long long expected = 1;
-    long long result = [[[Grains alloc]init]grainsAtSquareNumber:1];
-    XCTAssertEqual(expected,result);
+- (void)testGrainsOnSquare1 {
+    Grains *grains = [[Grains alloc] init];
+    XCTAssertEqual(1ULL, [grains grainsAtSquareNumber:1]);
 }
 
-- (void)testNumberOfGrainsOnSquare2 {
-    long long expected = 2;
-    long long result = [[[Grains alloc]init]grainsAtSquareNumber:2];
-    XCTAssertEqual(expected,result);
+- (void)testGrainsOnSquare2 {
+    Grains *grains = [[Grains alloc] init];
+    XCTAssertEqual(2ULL, [grains grainsAtSquareNumber:2]);
 }
 
-- (void)testNumberOfGrainsOnSquare3 {
-    unsigned long long expected = 4;
-    unsigned long long result = [[[Grains alloc]init]grainsAtSquareNumber:3];
-    XCTAssertEqual(expected,result);
+- (void)testGrainsOnSquare3 {
+    Grains *grains = [[Grains alloc] init];
+    XCTAssertEqual(4ULL, [grains grainsAtSquareNumber:3]);
 }
 
-- (void)testNumberOfGrainsOnSquare4 {
-    unsigned long long expected = 8;
-    unsigned long long result = [[[Grains alloc]init]grainsAtSquareNumber:4];
-    XCTAssertEqual(expected,result);
+- (void)testGrainsOnSquare4 {
+    Grains *grains = [[Grains alloc] init];
+    XCTAssertEqual(8ULL, [grains grainsAtSquareNumber:4]);
 }
 
-- (void)testNumberOfGrainsOnSquare16 {
-    unsigned long long expected = 32768;
-    unsigned long long result = [[[Grains alloc]init]grainsAtSquareNumber:16];
-    XCTAssertEqual(expected,result);
+- (void)testGrainsOnSquare16 {
+    Grains *grains = [[Grains alloc] init];
+    XCTAssertEqual(32768ULL, [grains grainsAtSquareNumber:16]);
 }
 
-- (void)testNumberOfGrainsOnSquare32 {
-    unsigned long long expected = 2147483648;
-    unsigned long long result = [[[Grains alloc]init]grainsAtSquareNumber:32];
-    XCTAssertEqual(expected,result);
+- (void)testGrainsOnSquare32 {
+    Grains *grains = [[Grains alloc] init];
+    XCTAssertEqual(2147483648ULL, [grains grainsAtSquareNumber:32]);
 }
 
-- (void)testNumberOfGrainsOnSquare64 {
-    unsigned long long expected = 9223372036854775808;
-    unsigned long long result = [[[Grains alloc]init]grainsAtSquareNumber:64];
-    XCTAssertEqual(expected,result);
+- (void)testGrainsOnSquare64 {
+    Grains *grains = [[Grains alloc] init];
+    XCTAssertEqual(9223372036854775808ULL, [grains grainsAtSquareNumber:64]);
 }
 
-- (void)testNumberOfGrainsOnSquare65 {
-    unsigned long long expected = -1;
-    unsigned long long result = [[[Grains alloc]init]grainsAtSquareNumber:65];
-    XCTAssertEqual(expected,result);
+- (void)testSquare0IsInvalid {
+    Grains *grains = [[Grains alloc] init];
+    XCTAssertEqual(-1, [grains grainsAtSquareNumber:0]);
 }
 
-- (void)testNumberOfGrainsOnSquareNeg1 {
-    unsigned long long expected = -1;
-    unsigned long long result = [[[Grains alloc]init]grainsAtSquareNumber:-1];
-    XCTAssertEqual(expected,result);
+- (void)testNegativeSquareIsInvalid {
+    Grains *grains = [[Grains alloc] init];
+    XCTAssertEqual(-1, [grains grainsAtSquareNumber:-1]);
 }
 
-- (void)testNumberOfGrainsOnSquare0 {
-    unsigned long long expected = -1;
-    unsigned long long result = [[[Grains alloc]init]grainsAtSquareNumber:0];
-    XCTAssertEqual(expected,result);
+- (void)testSquareGreaterThan64IsInvalid {
+    Grains *grains = [[Grains alloc] init];
+    XCTAssertEqual(-1, [grains grainsAtSquareNumber:65]);
 }
 
-- (void)testTotalNumberOfGrains {
-    unsigned long long expected = 18446744073709551615;
-    unsigned long long result = [[[Grains alloc]init]grainsAtBoard];
-    XCTAssertEqual(expected,result);
+- (void)testReturnsTheTotalNumberOfGrainsOnTheBoard {
+    Grains *grains = [[Grains alloc] init];
+    XCTAssertEqual(18446744073709551615ULL, [grains grainsAtBoard]);
 }
 
 @end
-NS_ASSUME_NONNULL_END

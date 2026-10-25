@@ -1,6 +1,8 @@
+#import <Foundation/Foundation.h>
+
 @interface Grains : NSObject {
 
 }
 -(long long)grainsAtSquareNumber:(int)squareNo;
--(long long)grainsAtBoard;
+-(unsigned long long)grainsAtBoard;
 @end
