@@ -1,0 +1,25 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+#else
+# import "{{ header }}"
+#endif
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface {{ test_class }} : XCTestCase
+
+@end
+
+@implementation {{ test_class }}
+{% for case in cases %}
+- (void){{ case.func_name }} {
+    NSString *expected = {{ case.expected | quote }};
+    NSString *result = [[[{{ solution_class }} alloc] init] hello];
+    XCTAssertEqualObjects(expected, result);
+}
+{% endfor %}
+@end
+
+NS_ASSUME_NONNULL_END
