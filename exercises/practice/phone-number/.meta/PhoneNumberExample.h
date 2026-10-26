@@ -5,6 +5,5 @@
 
 - (instancetype)initWithString:(NSString *)inputString;
 - (NSString *)number;
-- (NSString *)areaCode;
 
 @end

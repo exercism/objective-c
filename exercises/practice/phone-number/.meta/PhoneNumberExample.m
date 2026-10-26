@@ -19,47 +19,31 @@
 }
 
 - (NSString *)number {
-  NSString *cleanNumber = [self cleanNumber];
-  if ([cleanNumber length] == 10) {
-    return cleanNumber;
-  } else if ([cleanNumber length] == 11 && [cleanNumber hasPrefix:@"1"]) {
-    return [cleanNumber substringFromIndex:1];
+  if ([self.inputString rangeOfString:@"[a-z]" options:NSRegularExpressionSearch | NSCaseInsensitiveSearch].location != NSNotFound) {
+    return [self defaultInvalidPhoneNumber];
   }
-  return [self defaultInvalidPhoneNumber];
 
-}
+  if ([self.inputString rangeOfString:@"[@:!]" options:NSRegularExpressionSearch].location != NSNotFound) {
+    return [self defaultInvalidPhoneNumber];
+  }
 
-- (NSString *)cleanNumber {
-  NSScanner *scanner = [NSScanner scannerWithString:self.inputString];
-  NSCharacterSet *validChars = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
-  NSMutableString *cleanNumber = [NSMutableString stringWithCapacity:self.inputString.length];
+  NSString *cleanedNumber = [[self.inputString componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]] componentsJoinedByString:@""];
+  if (cleanedNumber.length < 10 || cleanedNumber.length > 11) {
+    return [self defaultInvalidPhoneNumber];
+  }
 
-  while([scanner isAtEnd] == NO) {
-    NSString *cleanDigit;
-    if ([scanner scanCharactersFromSet:validChars intoString:&cleanDigit]) {
-      [cleanNumber appendString:cleanDigit];
-    } else {
-      [scanner setScanLocation:([scanner scanLocation] + 1)];
+  if (cleanedNumber.length == 11) {
+    if (![cleanedNumber hasPrefix:@"1"]) {
+      return [self defaultInvalidPhoneNumber];
     }
+    cleanedNumber = [cleanedNumber substringFromIndex:1];
   }
 
-  return cleanNumber;
-}
+  if ([cleanedNumber characterAtIndex:0] < '2' || [cleanedNumber characterAtIndex:3] < '2') {
+    return [self defaultInvalidPhoneNumber];
+  }
 
-- (NSString *)description {
-  return [NSString stringWithFormat:@"(%@) %@-%@",[self areaCode],[self prefix],[self suffix]];
-}
-
-- (NSString *)areaCode {
-  return [[self number] substringWithRange:NSMakeRange(0,3)];
-}
-
-- (NSString *)prefix {
-  return [[self number] substringWithRange:NSMakeRange(3,3)];
-}
-
-- (NSString *)suffix {
-  return [[self number] substringWithRange:NSMakeRange(6,4)];
+  return cleanedNumber;
 }
 
 - (NSString *)defaultInvalidPhoneNumber {
