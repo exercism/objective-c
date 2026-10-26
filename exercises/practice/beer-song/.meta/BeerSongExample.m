@@ -1,12 +1,12 @@
 #import "BeerSongExample.h"
 
-@interface BeerSongExample ()
+@interface BeerSong ()
 
 @property(nonatomic,assign) int numberOfBeerBottles;
 
 @end
 
-@implementation BeerSongExample
+@implementation BeerSong
 
 -(instancetype)initWithNumberOfBeerBottles:(int)numberOfBottles{
     self = [super init];
@@ -41,7 +41,7 @@
                 
             case 1:[verses appendFormat:@"%d bottle of beer on the wall, %d bottle of beer.\n",numberOfBottles,numberOfBottles];
                 numberOfBottles--;
-                [verses appendString:@"Take one down and pass it around, no more bottles of beer on the wall.\n\n"];
+                [verses appendString:@"Take it down and pass it around, no more bottles of beer on the wall.\n\n"];
                 break;
                 
             case 0: [verses appendString:@"No more bottles of beer on the wall, no more bottles of beer.\n"];

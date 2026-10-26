@@ -1,0 +1,29 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+#else
+# import "{{ header }}"
+#endif
+
+@interface {{ test_class }} : XCTestCase
+
+@end
+
+@implementation {{ test_class }}
+{% for case in cases %}
+- (void){{ case.func_name }} {
+    {{ solution_class }} *song = [[{{ solution_class }} alloc] initWithNumberOfBeerBottles:{{ case.input.startBottles }}];
+    NSArray<NSString *> *expected = @[
+{%- for line in case.expected %}
+        {{ line | quote }}{{ "," if not loop.last }}
+{%- endfor %}
+    ];
+    NSArray<NSString *> *actualSubset = [
+        [[song singBeerSong] componentsSeparatedByString:@"\n"]
+        subarrayWithRange:NSMakeRange(0, expected.count)
+    ];
+    XCTAssertEqualObjects(expected, actualSubset);
+}
+{% endfor %}
+@end
