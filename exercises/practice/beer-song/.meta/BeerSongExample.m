@@ -1,12 +1,12 @@
 #import "BeerSongExample.h"
 
-@interface BeerSongExample ()
+@interface BeerSong ()
 
 @property(nonatomic,assign) int numberOfBeerBottles;
 
 @end
 
-@implementation BeerSongExample
+@implementation BeerSong
 
 -(instancetype)initWithNumberOfBeerBottles:(int)numberOfBottles{
     self = [super init];
