@@ -2,7 +2,7 @@
 
 #if __has_include("ScrabbleScoreExample.h")
 # import "ScrabbleScoreExample.h"
-# else
+#else
 # import "ScrabbleScore.h"
 #endif
 
@@ -12,40 +12,48 @@
 
 @implementation ScrabbleScoreTest
 
-- (void)testEmptyWordScoresZero {
-    XCTAssertEqual(0, [[[ScrabbleScore alloc] initWithWord:@""] score]);
+- (void)testLowercaseLetter {
+    XCTAssertEqual(1, [ScrabbleScore score:@"a"]);
 }
 
-- (void)testWhitespaceScoresZero {
-    XCTAssertEqual(0, [[[ScrabbleScore alloc] initWithWord:@" \t\n"] score]);
+- (void)testUppercaseLetter {
+    XCTAssertEqual(1, [ScrabbleScore score:@"A"]);
 }
 
-- (void)testNilScoresZero {
-    XCTAssertEqual(0, [[[ScrabbleScore alloc] initWithWord:nil] score]);
+- (void)testValuableLetter {
+    XCTAssertEqual(4, [ScrabbleScore score:@"f"]);
 }
 
-- (void)testScoresVeryShortWord {
-    XCTAssertEqual(1, [[[ScrabbleScore alloc] initWithWord:@"a"] score]);
+- (void)testShortWord {
+    XCTAssertEqual(2, [ScrabbleScore score:@"at"]);
 }
 
-- (void)testScoresOtherVeryShortWord {
-    XCTAssertEqual(4, [[[ScrabbleScore alloc] initWithWord:@"f"] score]);
+- (void)testShortValuableWord {
+    XCTAssertEqual(12, [ScrabbleScore score:@"zoo"]);
 }
 
-- (void)testSimpleWordScoresTheNumberOfLetters {
-    XCTAssertEqual(6, [[[ScrabbleScore alloc] initWithWord:@"street"] score]);
+- (void)testMediumWord {
+    XCTAssertEqual(6, [ScrabbleScore score:@"street"]);
 }
 
-- (void)testComplicatedWordScoresMore {
-    XCTAssertEqual(22, [[[ScrabbleScore alloc] initWithWord:@"quirky"] score]);
+- (void)testMediumValuableWord {
+    XCTAssertEqual(22, [ScrabbleScore score:@"quirky"]);
 }
 
-- (void)testScoresAreCaseInsensitive {
-    XCTAssertEqual(41, [[[ScrabbleScore alloc] initWithWord:@"OXYPHENBUTAZONE"] score]);
+- (void)testLongMixedCaseWord {
+    XCTAssertEqual(41, [ScrabbleScore score:@"OxyphenButazone"]);
 }
 
-- (void)testConvenientScoring {
-    XCTAssertEqual(13, [ScrabbleScore score:@"alacrity"]);
+- (void)testEnglishLikeWord {
+    XCTAssertEqual(8, [ScrabbleScore score:@"pinata"]);
+}
+
+- (void)testEmptyInput {
+    XCTAssertEqual(0, [ScrabbleScore score:@""]);
+}
+
+- (void)testEntireAlphabetAvailable {
+    XCTAssertEqual(87, [ScrabbleScore score:@"abcdefghijklmnopqrstuvwxyz"]);
 }
 
 @end
