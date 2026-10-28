@@ -1,0 +1,29 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+#else
+# import "{{ header }}"
+#endif
+
+@interface {{ test_class }} : XCTestCase
+
+@end
+
+@implementation {{ test_class }}
+{% for case in cases %}
+- (void){{ case.func_name }} {
+    {{ solution_class }} *triangle = [[{{ solution_class }} alloc] initWithNumberOfRows:{{ case.given }}];
+{%- if case.expected %}
+    NSArray<NSArray<NSNumber *> *> *expected = @[
+{%- for row in case.expected %}
+        {{ row | quote }}{{ "," if not loop.last }}
+{%- endfor %}
+    ];
+{%- else %}
+    NSArray<NSArray<NSNumber *> *> *expected = @[];
+{%- endif %}
+    XCTAssertEqualObjects(expected, triangle.rows);
+}
+{% endfor %}
+@end

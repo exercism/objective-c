@@ -2,7 +2,7 @@
 
 #if __has_include("PascalsTriangleExample.h")
 # import "PascalsTriangleExample.h"
-# else
+#else
 # import "PascalsTriangle.h"
 #endif
 
@@ -12,42 +12,90 @@
 
 @implementation PascalsTriangleTest
 
-- (void)testOneRow {
+- (void)testZeroRows {
+    PascalsTriangle *triangle = [[PascalsTriangle alloc] initWithNumberOfRows:0];
+    NSArray<NSArray<NSNumber *> *> *expected = @[];
+    XCTAssertEqualObjects(expected, triangle.rows);
+}
+
+- (void)testSingleRow {
     PascalsTriangle *triangle = [[PascalsTriangle alloc] initWithNumberOfRows:1];
-    XCTAssertEqualObjects(@[@[@1]], triangle.rows);
+    NSArray<NSArray<NSNumber *> *> *expected = @[
+        @[@1]
+    ];
+    XCTAssertEqualObjects(expected, triangle.rows);
 }
 
 - (void)testTwoRows {
     PascalsTriangle *triangle = [[PascalsTriangle alloc] initWithNumberOfRows:2];
-    NSArray *expected = @[@[@1], @[@1, @1]];
+    NSArray<NSArray<NSNumber *> *> *expected = @[
+        @[@1],
+        @[@1, @1]
+    ];
     XCTAssertEqualObjects(expected, triangle.rows);
 }
 
 - (void)testThreeRows {
     PascalsTriangle *triangle = [[PascalsTriangle alloc] initWithNumberOfRows:3];
-    NSArray *expected = @[@[@1], @[@1, @1], @[@1, @2, @1]];
+    NSArray<NSArray<NSNumber *> *> *expected = @[
+        @[@1],
+        @[@1, @1],
+        @[@1, @2, @1]
+    ];
     XCTAssertEqualObjects(expected, triangle.rows);
 }
 
-- (void)testFourthRow {
+- (void)testFourRows {
     PascalsTriangle *triangle = [[PascalsTriangle alloc] initWithNumberOfRows:4];
-    NSArray *expected = @[@1, @3, @3, @1];
-    XCTAssertEqualObjects(expected, [triangle.rows lastObject]);
+    NSArray<NSArray<NSNumber *> *> *expected = @[
+        @[@1],
+        @[@1, @1],
+        @[@1, @2, @1],
+        @[@1, @3, @3, @1]
+    ];
+    XCTAssertEqualObjects(expected, triangle.rows);
 }
 
-- (void)testFifthRow {
+- (void)testFiveRows {
     PascalsTriangle *triangle = [[PascalsTriangle alloc] initWithNumberOfRows:5];
-    NSArray *expected = @[@1, @4, @6, @4, @1];
-    XCTAssertEqualObjects(expected, [triangle.rows lastObject]);
+    NSArray<NSArray<NSNumber *> *> *expected = @[
+        @[@1],
+        @[@1, @1],
+        @[@1, @2, @1],
+        @[@1, @3, @3, @1],
+        @[@1, @4, @6, @4, @1]
+    ];
+    XCTAssertEqualObjects(expected, triangle.rows);
 }
 
-- (void)testTwentiethRow {
-    PascalsTriangle *triangle = [[PascalsTriangle alloc] initWithNumberOfRows:20];
-    NSArray *expected = @[
-                    @1, @19, @171, @969, @3876, @11628, @27132, @50388, @75582, @92378, @92378,
-                    @75582, @50388, @27132, @11628, @3876, @969, @171, @19, @1
-                    ];
-    XCTAssertEqualObjects(expected, [triangle.rows lastObject]);
+- (void)testSixRows {
+    PascalsTriangle *triangle = [[PascalsTriangle alloc] initWithNumberOfRows:6];
+    NSArray<NSArray<NSNumber *> *> *expected = @[
+        @[@1],
+        @[@1, @1],
+        @[@1, @2, @1],
+        @[@1, @3, @3, @1],
+        @[@1, @4, @6, @4, @1],
+        @[@1, @5, @10, @10, @5, @1]
+    ];
+    XCTAssertEqualObjects(expected, triangle.rows);
+}
+
+- (void)testTenRows {
+    PascalsTriangle *triangle = [[PascalsTriangle alloc] initWithNumberOfRows:10];
+    NSArray<NSArray<NSNumber *> *> *expected = @[
+        @[@1],
+        @[@1, @1],
+        @[@1, @2, @1],
+        @[@1, @3, @3, @1],
+        @[@1, @4, @6, @4, @1],
+        @[@1, @5, @10, @10, @5, @1],
+        @[@1, @6, @15, @20, @15, @6, @1],
+        @[@1, @7, @21, @35, @35, @21, @7, @1],
+        @[@1, @8, @28, @56, @70, @56, @28, @8, @1],
+        @[@1, @9, @36, @84, @126, @126, @84, @36, @9, @1]
+    ];
+    XCTAssertEqualObjects(expected, triangle.rows);
 }
 
 @end
