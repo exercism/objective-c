@@ -20,34 +20,50 @@
 
 - (NSString *)number {
   if ([self.inputString rangeOfString:@"[a-z]" options:NSRegularExpressionSearch | NSCaseInsensitiveSearch].location != NSNotFound) {
-    return [self defaultInvalidPhoneNumber];
+    [self throwInvalidPhoneNumberWithReason:@"letters not permitted"];
   }
 
   if ([self.inputString rangeOfString:@"[@:!]" options:NSRegularExpressionSearch].location != NSNotFound) {
-    return [self defaultInvalidPhoneNumber];
+    [self throwInvalidPhoneNumberWithReason:@"punctuations not permitted"];
   }
 
   NSString *cleanedNumber = [[self.inputString componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]] componentsJoinedByString:@""];
-  if (cleanedNumber.length < 10 || cleanedNumber.length > 11) {
-    return [self defaultInvalidPhoneNumber];
+  if (cleanedNumber.length < 10) {
+    [self throwInvalidPhoneNumberWithReason:@"incorrect number of digits"];
+  }
+
+  if (cleanedNumber.length > 11) {
+    [self throwInvalidPhoneNumberWithReason:@"more than 11 digits"];
   }
 
   if (cleanedNumber.length == 11) {
     if (![cleanedNumber hasPrefix:@"1"]) {
-      return [self defaultInvalidPhoneNumber];
+      [self throwInvalidPhoneNumberWithReason:@"11 digits must start with 1"];
     }
     cleanedNumber = [cleanedNumber substringFromIndex:1];
   }
 
-  if ([cleanedNumber characterAtIndex:0] < '2' || [cleanedNumber characterAtIndex:3] < '2') {
-    return [self defaultInvalidPhoneNumber];
+  if ([cleanedNumber characterAtIndex:0] == '0') {
+    [self throwInvalidPhoneNumberWithReason:@"area code cannot start with zero"];
+  }
+
+  if ([cleanedNumber characterAtIndex:0] == '1') {
+    [self throwInvalidPhoneNumberWithReason:@"area code cannot start with one"];
+  }
+
+  if ([cleanedNumber characterAtIndex:3] == '0') {
+    [self throwInvalidPhoneNumberWithReason:@"exchange code cannot start with zero"];
+  }
+
+  if ([cleanedNumber characterAtIndex:3] == '1') {
+    [self throwInvalidPhoneNumberWithReason:@"exchange code cannot start with one"];
   }
 
   return cleanedNumber;
 }
 
-- (NSString *)defaultInvalidPhoneNumber {
-  return @"0000000000";
+- (void)throwInvalidPhoneNumberWithReason:(NSString *)reason {
+  @throw [NSException exceptionWithName:@"Invalid phone number" reason:reason userInfo:nil];
 }
 
 
