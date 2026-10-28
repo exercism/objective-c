@@ -1,0 +1,31 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+#else
+# import "{{ header }}"
+#endif
+
+@interface {{ test_class }} : XCTestCase
+
+@end
+
+@implementation {{ test_class }}
+{% for case in cases %}
+- (void){{ case.func_name }} {
+    {{ solution_class }} *meetup = [[{{ solution_class }} alloc] initWithYear:{{ case.input.year }} andMonth:{{ case.input.month }}];
+    NSDate *actual = [meetup dayForDayOfWeek:MeetupDayOfWeek{{ case.input.dayofweek }} andOptions:MeetupOptions{{ case.input.week | capitalize }}];
+    XCTAssertEqualObjects([self dateWithYear:{{ case.expected[:4] | int }} month:{{ case.expected[5:7] | int }} day:{{ case.expected[8:10] | int }}], actual);
+}
+{% endfor %}
+#pragma mark - Helper method
+
+- (NSDate *)dateWithYear:(int)year month:(int)month day:(int)day {
+    NSDateComponents *components = [[NSDateComponents alloc] init];
+    components.year = year;
+    components.month = month;
+    components.day = day;
+
+    return [[NSCalendar currentCalendar] dateFromComponents:components];
+}
+@end
