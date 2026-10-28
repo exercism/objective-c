@@ -19,51 +19,51 @@
 }
 
 - (NSString *)number {
-  NSString *cleanNumber = [self cleanNumber];
-  if ([cleanNumber length] == 10) {
-    return cleanNumber;
-  } else if ([cleanNumber length] == 11 && [cleanNumber hasPrefix:@"1"]) {
-    return [cleanNumber substringFromIndex:1];
+  if ([self.inputString rangeOfString:@"[a-z]" options:NSRegularExpressionSearch | NSCaseInsensitiveSearch].location != NSNotFound) {
+    [self throwInvalidPhoneNumberWithReason:@"letters not permitted"];
   }
-  return [self defaultInvalidPhoneNumber];
 
-}
+  if ([self.inputString rangeOfString:@"[@:!]" options:NSRegularExpressionSearch].location != NSNotFound) {
+    [self throwInvalidPhoneNumberWithReason:@"punctuations not permitted"];
+  }
 
-- (NSString *)cleanNumber {
-  NSScanner *scanner = [NSScanner scannerWithString:self.inputString];
-  NSCharacterSet *validChars = [NSCharacterSet characterSetWithCharactersInString:@"0123456789"];
-  NSMutableString *cleanNumber = [NSMutableString stringWithCapacity:self.inputString.length];
+  NSString *cleanedNumber = [[self.inputString componentsSeparatedByCharactersInSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]] componentsJoinedByString:@""];
+  if (cleanedNumber.length < 10) {
+    [self throwInvalidPhoneNumberWithReason:@"incorrect number of digits"];
+  }
 
-  while([scanner isAtEnd] == NO) {
-    NSString *cleanDigit;
-    if ([scanner scanCharactersFromSet:validChars intoString:&cleanDigit]) {
-      [cleanNumber appendString:cleanDigit];
-    } else {
-      [scanner setScanLocation:([scanner scanLocation] + 1)];
+  if (cleanedNumber.length > 11) {
+    [self throwInvalidPhoneNumberWithReason:@"more than 11 digits"];
+  }
+
+  if (cleanedNumber.length == 11) {
+    if (![cleanedNumber hasPrefix:@"1"]) {
+      [self throwInvalidPhoneNumberWithReason:@"11 digits must start with 1"];
     }
+    cleanedNumber = [cleanedNumber substringFromIndex:1];
   }
 
-  return cleanNumber;
+  if ([cleanedNumber characterAtIndex:0] == '0') {
+    [self throwInvalidPhoneNumberWithReason:@"area code cannot start with zero"];
+  }
+
+  if ([cleanedNumber characterAtIndex:0] == '1') {
+    [self throwInvalidPhoneNumberWithReason:@"area code cannot start with one"];
+  }
+
+  if ([cleanedNumber characterAtIndex:3] == '0') {
+    [self throwInvalidPhoneNumberWithReason:@"exchange code cannot start with zero"];
+  }
+
+  if ([cleanedNumber characterAtIndex:3] == '1') {
+    [self throwInvalidPhoneNumberWithReason:@"exchange code cannot start with one"];
+  }
+
+  return cleanedNumber;
 }
 
-- (NSString *)description {
-  return [NSString stringWithFormat:@"(%@) %@-%@",[self areaCode],[self prefix],[self suffix]];
-}
-
-- (NSString *)areaCode {
-  return [[self number] substringWithRange:NSMakeRange(0,3)];
-}
-
-- (NSString *)prefix {
-  return [[self number] substringWithRange:NSMakeRange(3,3)];
-}
-
-- (NSString *)suffix {
-  return [[self number] substringWithRange:NSMakeRange(6,4)];
-}
-
-- (NSString *)defaultInvalidPhoneNumber {
-  return @"0000000000";
+- (void)throwInvalidPhoneNumberWithReason:(NSString *)reason {
+  @throw [NSException exceptionWithName:@"Invalid phone number" reason:reason userInfo:nil];
 }
 
 

@@ -2,12 +2,9 @@
 
 #if __has_include("PhoneNumberExample.h")
 # import "PhoneNumberExample.h"
-# else
+#else
 # import "PhoneNumber.h"
 #endif
-
-NS_ASSUME_NONNULL_BEGIN
-
 
 @interface PhoneNumberTest : XCTestCase
 
@@ -15,69 +12,112 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation PhoneNumberTest
 
-- (void)testCleansNumber {
-  NSString *startingNumber = @"(123) 456-7890";
-  NSString *expected = @"1234567890";
-  PhoneNumber *number = [[PhoneNumber alloc] initWithString:startingNumber];
-  NSString *result = [number number];
-  XCTAssertEqualObjects(result, expected);
+- (void)testCleansTheNumber {
+    NSString *startingNumber = @"(223) 456-7890";
+    PhoneNumber *phoneNumber = [[PhoneNumber alloc] initWithString:startingNumber];
+    XCTAssertEqualObjects(@"2234567890", [phoneNumber number]);
 }
 
-- (void)testCleansNumberWithDots {
-  NSString *startingNumber = @"123.456.7890";
-  NSString *expected = @"1234567890";
-  PhoneNumber *number = [[PhoneNumber alloc] initWithString:startingNumber];
-  NSString *result = [number number];
-  XCTAssertEqualObjects(result, expected);
+- (void)testCleansNumbersWithDots {
+    NSString *startingNumber = @"223.456.7890";
+    PhoneNumber *phoneNumber = [[PhoneNumber alloc] initWithString:startingNumber];
+    XCTAssertEqualObjects(@"2234567890", [phoneNumber number]);
 }
 
-- (void)testValidWithElevenDigitsAndFirstIsOne {
-  NSString *startingNumber = @"11234567890";
-  NSString *expected = @"1234567890";
-  PhoneNumber *number = [[PhoneNumber alloc] initWithString:startingNumber];
-  NSString *result = [number number];
-  XCTAssertEqualObjects(result, expected);
+- (void)testCleansNumbersWithMultipleSpaces {
+    NSString *startingNumber = @"223 456   7890   ";
+    PhoneNumber *phoneNumber = [[PhoneNumber alloc] initWithString:startingNumber];
+    XCTAssertEqualObjects(@"2234567890", [phoneNumber number]);
 }
 
-- (void)testInvalidWhenElevenDigits {
-  NSString *startingNumber = @"21234567890";
-  NSString *expected = @"0000000000";
-  PhoneNumber *number = [[PhoneNumber alloc] initWithString:startingNumber];
-  NSString *result = [number number];
-  XCTAssertEqualObjects(result, expected);
+- (void)testInvalidWhen9Digits {
+    NSString *startingNumber = @"123456789";
+    PhoneNumber *phoneNumber = [[PhoneNumber alloc] initWithString:startingNumber];
+    XCTAssertThrows([phoneNumber number]);
 }
 
-- (void)testInvalidWhenNineDigits {
-  NSString *startingNumber = @"123456789";
-  NSString *expected = @"0000000000";
-  PhoneNumber *number = [[PhoneNumber alloc] initWithString:startingNumber];
-  NSString *result = [number number];
-  XCTAssertEqualObjects(result, expected);
+- (void)testInvalidWhen11DigitsDoesNotStartWithA1 {
+    NSString *startingNumber = @"22234567890";
+    PhoneNumber *phoneNumber = [[PhoneNumber alloc] initWithString:startingNumber];
+    XCTAssertThrows([phoneNumber number]);
 }
 
-- (void)testAreaCode {
-  NSString *startingNumber = @"1234567890";
-  NSString *expected = @"123";
-  PhoneNumber *number = [[PhoneNumber alloc] initWithString:startingNumber];
-  NSString *result = [number areaCode];
-  XCTAssertEqualObjects(result, expected);
+- (void)testValidWhen11DigitsAndStartingWith1 {
+    NSString *startingNumber = @"12234567890";
+    PhoneNumber *phoneNumber = [[PhoneNumber alloc] initWithString:startingNumber];
+    XCTAssertEqualObjects(@"2234567890", [phoneNumber number]);
 }
 
-- (void)testPrettyPrint {
-  NSString *startingNumber = @"1234567890";
-  NSString *expected = @"(123) 456-7890";
-  PhoneNumber *number = [[PhoneNumber alloc] initWithString:startingNumber];
-  NSString *result = [number description];
-  XCTAssertEqualObjects(result, expected);
+- (void)testValidWhen11DigitsAndStartingWith1EvenWithPunctuation {
+    NSString *startingNumber = @"+1 (223) 456-7890";
+    PhoneNumber *phoneNumber = [[PhoneNumber alloc] initWithString:startingNumber];
+    XCTAssertEqualObjects(@"2234567890", [phoneNumber number]);
 }
 
-- (void)testPrettyPrintWithFullUSPhoneNumber {
-  NSString *startingNumber = @"11234567890";
-  NSString *expected = @"(123) 456-7890";
-  PhoneNumber *number = [[PhoneNumber alloc] initWithString:startingNumber];
-  NSString *result = [number description];
-  XCTAssertEqualObjects(result, expected);
+- (void)testInvalidWhenMoreThan11Digits {
+    NSString *startingNumber = @"321234567890";
+    PhoneNumber *phoneNumber = [[PhoneNumber alloc] initWithString:startingNumber];
+    XCTAssertThrows([phoneNumber number]);
+}
+
+- (void)testInvalidWithLetters {
+    NSString *startingNumber = @"523-abc-7890";
+    PhoneNumber *phoneNumber = [[PhoneNumber alloc] initWithString:startingNumber];
+    XCTAssertThrows([phoneNumber number]);
+}
+
+- (void)testInvalidWithPunctuations {
+    NSString *startingNumber = @"523-@:!-7890";
+    PhoneNumber *phoneNumber = [[PhoneNumber alloc] initWithString:startingNumber];
+    XCTAssertThrows([phoneNumber number]);
+}
+
+- (void)testInvalidIfAreaCodeStartsWith0 {
+    NSString *startingNumber = @"(023) 456-7890";
+    PhoneNumber *phoneNumber = [[PhoneNumber alloc] initWithString:startingNumber];
+    XCTAssertThrows([phoneNumber number]);
+}
+
+- (void)testInvalidIfAreaCodeStartsWith1 {
+    NSString *startingNumber = @"(123) 456-7890";
+    PhoneNumber *phoneNumber = [[PhoneNumber alloc] initWithString:startingNumber];
+    XCTAssertThrows([phoneNumber number]);
+}
+
+- (void)testInvalidIfExchangeCodeStartsWith0 {
+    NSString *startingNumber = @"(223) 056-7890";
+    PhoneNumber *phoneNumber = [[PhoneNumber alloc] initWithString:startingNumber];
+    XCTAssertThrows([phoneNumber number]);
+}
+
+- (void)testInvalidIfExchangeCodeStartsWith1 {
+    NSString *startingNumber = @"(223) 156-7890";
+    PhoneNumber *phoneNumber = [[PhoneNumber alloc] initWithString:startingNumber];
+    XCTAssertThrows([phoneNumber number]);
+}
+
+- (void)testInvalidIfAreaCodeStartsWith0OnValid11DigitNumber {
+    NSString *startingNumber = @"1 (023) 456-7890";
+    PhoneNumber *phoneNumber = [[PhoneNumber alloc] initWithString:startingNumber];
+    XCTAssertThrows([phoneNumber number]);
+}
+
+- (void)testInvalidIfAreaCodeStartsWith1OnValid11DigitNumber {
+    NSString *startingNumber = @"1 (123) 456-7890";
+    PhoneNumber *phoneNumber = [[PhoneNumber alloc] initWithString:startingNumber];
+    XCTAssertThrows([phoneNumber number]);
+}
+
+- (void)testInvalidIfExchangeCodeStartsWith0OnValid11DigitNumber {
+    NSString *startingNumber = @"1 (223) 056-7890";
+    PhoneNumber *phoneNumber = [[PhoneNumber alloc] initWithString:startingNumber];
+    XCTAssertThrows([phoneNumber number]);
+}
+
+- (void)testInvalidIfExchangeCodeStartsWith1OnValid11DigitNumber {
+    NSString *startingNumber = @"1 (223) 156-7890";
+    PhoneNumber *phoneNumber = [[PhoneNumber alloc] initWithString:startingNumber];
+    XCTAssertThrows([phoneNumber number]);
 }
 
 @end
-NS_ASSUME_NONNULL_END
