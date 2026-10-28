@@ -1,0 +1,25 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+#else
+# import "{{ header }}"
+#endif
+
+@interface {{ test_class }} : XCTestCase
+
+@end
+
+@implementation {{ test_class }}
+{% for case in cases %}
+- (void){{ case.func_name }} {
+{%- if case.expect_error %}
+    XCTAssertThrows([[{{ solution_class }} alloc] initWithStrand:{{ case.input.strand | quote }}]);
+{%- else %}
+    {{ solution_class }} *dna = [[{{ solution_class }} alloc] initWithStrand:{{ case.input.strand | quote }}];
+    NSDictionary<NSString *, NSNumber *> *expected = {{ case.expected | quote }};
+    XCTAssertEqualObjects(expected, [dna nucleotideCounts]);
+{%- endif %}
+}
+{% endfor %}
+@end

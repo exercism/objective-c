@@ -21,11 +21,6 @@
 
 }
 
-- (NSUInteger)count:(NSString *)nucleotide {
-  [self validateNucleotide:nucleotide];
-  return [self.nucleotideCounts[nucleotide] unsignedIntegerValue];
-}
-
 - (void)validateStrand:(NSString *)strand {
   NSRange range = [strand rangeOfCharacterFromSet:[self invalidDNANucleotides]];
 
@@ -36,14 +31,6 @@
 
 - (NSCharacterSet *)invalidDNANucleotides {
   return [[self validDNANucleotides] invertedSet];
-}
-
-- (void)validateNucleotide:(NSString *)nucleotide {
-  NSRange range = [nucleotide rangeOfCharacterFromSet:[self validDNANucleotides]];
-
-  if (range.location == NSNotFound) {
-      @throw [NSException exceptionWithName:@"Invalid Nucleotide" reason:@"Invalid" userInfo:@{}];
-  }
 }
 
 - (NSCharacterSet *)validDNANucleotides {
