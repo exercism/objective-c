@@ -2,11 +2,9 @@
 
 #if __has_include("NucleotideCountExample.h")
 # import "NucleotideCountExample.h"
-# else
+#else
 # import "NucleotideCount.h"
 #endif
-
-NS_ASSUME_NONNULL_BEGIN
 
 @interface NucleotideCountTest : XCTestCase
 
@@ -14,59 +12,32 @@ NS_ASSUME_NONNULL_BEGIN
 
 @implementation NucleotideCountTest
 
-- (void)testEmptyDNAStringHasNoAdenosine {
-  NucleotideCount *dna = [[NucleotideCount alloc] initWithStrand:@""];
-  NSUInteger result = [dna count:@"A"];
-  NSUInteger expected = 0;
-  XCTAssertEqual(expected,result);
+- (void)testEmptyStrand {
+    NucleotideCount *dna = [[NucleotideCount alloc] initWithStrand:@""];
+    NSDictionary<NSString *, NSNumber *> *expected = @{ @"A" : @0, @"C" : @0, @"G" : @0, @"T" : @0 };
+    XCTAssertEqualObjects(expected, [dna nucleotideCounts]);
 }
 
-- (void)testEmptyNucleotideCountStringHasNoNucleotides {
-  NucleotideCount *dna = [[NucleotideCount alloc] initWithStrand:@""];
-  NSDictionary<NSString *, NSNumber *> *results = [dna nucleotideCounts];
-  NSDictionary<NSString *, NSNumber *> *expected = @{ @"A": @0, @"T" : @0, @"C" : @0, @"G" : @0 };
-  XCTAssertEqualObjects(results, expected);
+- (void)testCanCountOneNucleotideInSingleCharacterInput {
+    NucleotideCount *dna = [[NucleotideCount alloc] initWithStrand:@"G"];
+    NSDictionary<NSString *, NSNumber *> *expected = @{ @"A" : @0, @"C" : @0, @"G" : @1, @"T" : @0 };
+    XCTAssertEqualObjects(expected, [dna nucleotideCounts]);
 }
 
-- (void)testRepetitiveCytidineGetsCounted {
-  NucleotideCount *dna = [[NucleotideCount alloc] initWithStrand:@"CCCCC"];
-  NSUInteger result = [dna count:@"C"];
-  NSUInteger expected = 5;
-  XCTAssertEqual(expected,result);
+- (void)testStrandWithRepeatedNucleotide {
+    NucleotideCount *dna = [[NucleotideCount alloc] initWithStrand:@"GGGGGGG"];
+    NSDictionary<NSString *, NSNumber *> *expected = @{ @"A" : @0, @"C" : @0, @"G" : @7, @"T" : @0 };
+    XCTAssertEqualObjects(expected, [dna nucleotideCounts]);
 }
 
-- (void)testRepetitiveSequenceHasOnlyGuanosine {
-  NucleotideCount *dna = [[NucleotideCount alloc] initWithStrand:@"GGGGGGGG"];
-  NSDictionary<NSString *, NSNumber *> *results = [dna nucleotideCounts];
-  NSDictionary<NSString *, NSNumber *> *expected = @{ @"A": @0, @"T" : @0, @"C" : @0, @"G" : @8 };
-  XCTAssertEqualObjects(results, expected);
+- (void)testStrandWithMultipleNucleotides {
+    NucleotideCount *dna = [[NucleotideCount alloc] initWithStrand:@"AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC"];
+    NSDictionary<NSString *, NSNumber *> *expected = @{ @"A" : @20, @"C" : @12, @"G" : @17, @"T" : @21 };
+    XCTAssertEqualObjects(expected, [dna nucleotideCounts]);
 }
 
-- (void)testCountsByThymidine {
-  NucleotideCount *dna = [[NucleotideCount alloc] initWithStrand:@"GGGGGTAACCCGG"];
-  NSUInteger result = [dna count:@"T"];
-  NSUInteger expected = 1;
-  XCTAssertEqual(expected,result);
-}
-
-- (void)testCountsANucleotideOnlyOnce {
-  NucleotideCount *dna = [[NucleotideCount alloc] initWithStrand:@"CGATTGGG"];
-  NSUInteger result = [dna count:@"T"];
-  NSUInteger expected = 2;
-  XCTAssertEqual(expected,result);
-}
-
-- (void)testValidatesNucleotideCount {
-  XCTAssertThrows([[NucleotideCount alloc] initWithStrand:@"John"]);
-}
-
-- (void)testCountsAllNucleotides {
-  NSString *longStrand = @"AGCTTTTCATTCTGACTGCAACGGGCAATATGTCTCTGTGTGGATTAAAAAAAGAGTGTCTGATAGCAGC";
-  NucleotideCount *dna = [[NucleotideCount alloc] initWithStrand:longStrand];
-  NSDictionary<NSString *, NSNumber *> *results = [dna nucleotideCounts];
-  NSDictionary<NSString *, NSNumber *> *expected = @{ @"A": @20, @"T" : @21, @"C" : @12, @"G" : @17 };
-  XCTAssertEqualObjects(results, expected);
+- (void)testStrandWithInvalidNucleotides {
+    XCTAssertThrows([[NucleotideCount alloc] initWithStrand:@"AGXXACT"]);
 }
 
 @end
-NS_ASSUME_NONNULL_END
