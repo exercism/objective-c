@@ -13,38 +13,32 @@
 
 
 - (void)testAnEmptyString {
-    NSString *expected = @"";
-    XCTAssertEqualObjects(expected, [@"" reverseString]);
+    XCTAssertEqualObjects(@"", [@"" reverseString]);
 }
 
 
 - (void)testAWord {
-    NSString *expected = @"tobor";
-    XCTAssertEqualObjects(expected, [@"robot" reverseString]);
+    XCTAssertEqualObjects(@"tobor", [@"robot" reverseString]);
 }
 
 
 - (void)testACapitalizedWord {
-    NSString *expected = @"nemaR";
-    XCTAssertEqualObjects(expected, [@"Ramen" reverseString]);
+    XCTAssertEqualObjects(@"nemaR", [@"Ramen" reverseString]);
 }
 
 
 - (void)testASentenceWithPunctuation {
-    NSString *expected = @"!yrgnuh m'I";
-    XCTAssertEqualObjects(expected, [@"I'm hungry!" reverseString]);
+    XCTAssertEqualObjects(@"!yrgnuh m'I", [@"I'm hungry!" reverseString]);
 }
 
 
 - (void)testAPalindrome {
-    NSString *expected = @"racecar";
-    XCTAssertEqualObjects(expected, [@"racecar" reverseString]);
+    XCTAssertEqualObjects(@"racecar", [@"racecar" reverseString]);
 }
 
 
 - (void)testAnEvenSizedWord {
-    NSString *expected = @"reward";
-    XCTAssertEqualObjects(expected, [@"drawer" reverseString]);
+    XCTAssertEqualObjects(@"reward", [@"drawer" reverseString]);
 }
 
 

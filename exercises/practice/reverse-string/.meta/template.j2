@@ -13,8 +13,7 @@
 
 {% for case in cases %}
 - (void){{ case.func_name }} {
-    NSString *expected = {{ case.expected | quote }};
-    XCTAssertEqualObjects(expected, [{{ case.input.value | quote }} reverseString]);
+    XCTAssertEqualObjects({{ case.expected | quote }}, [{{ case.input.value | quote }} reverseString]);
 }
 
 {% endfor %}
