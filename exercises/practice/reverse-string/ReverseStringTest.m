@@ -2,50 +2,50 @@
 
 #if __has_include("ReverseStringExample.h")
 # import "ReverseStringExample.h"
-# else
+#else
 # import "ReverseString.h"
 #endif
 
 @interface ReverseStringTest : XCTestCase
-
 @end
 
 @implementation ReverseStringTest
 
--(void)testReverseEmptyString {
-    
-    NSString *inputString = [NSString string];
-    NSString *expectedOutput = [NSString string];
-    XCTAssertEqualObjects(expectedOutput, [inputString reverseString]);
+
+- (void)testAnEmptyString {
+    NSString *expected = @"";
+    XCTAssertEqualObjects(expected, [@"" reverseString]);
 }
 
--(void)testReverseWord {
-    
-    NSString *inputString = @"robot";
-    NSString *expectedOutput = @"tobor";
-    XCTAssertEqualObjects(expectedOutput,[inputString reverseString]);
+
+- (void)testAWord {
+    NSString *expected = @"tobor";
+    XCTAssertEqualObjects(expected, [@"robot" reverseString]);
 }
 
--(void)testReverseCapitalisedWord {
-    
-    NSString *inputString = @"Ramen";
-    NSString *expectedOutput = @"nemaR";
-    XCTAssertEqualObjects(expectedOutput, [inputString reverseString]);
-    
+
+- (void)testACapitalizedWord {
+    NSString *expected = @"nemaR";
+    XCTAssertEqualObjects(expected, [@"Ramen" reverseString]);
 }
 
--(void)testReverseSentenceWithPunctuation {
-    
-    NSString *inputString = @"I'm hungry!";
-    NSString *expectedOutput = @"!yrgnuh m'I";
-    XCTAssertEqualObjects(expectedOutput, [inputString reverseString]);
+
+- (void)testASentenceWithPunctuation {
+    NSString *expected = @"!yrgnuh m'I";
+    XCTAssertEqualObjects(expected, [@"I'm hungry!" reverseString]);
 }
 
--(void)testReversePalindrome {
-    
-    NSString *inputString = @"racecar";
-    NSString *expectedOutput = @"racecar";
-    XCTAssertEqualObjects(expectedOutput, [inputString reverseString]);
+
+- (void)testAPalindrome {
+    NSString *expected = @"racecar";
+    XCTAssertEqualObjects(expected, [@"racecar" reverseString]);
 }
+
+
+- (void)testAnEvenSizedWord {
+    NSString *expected = @"reward";
+    XCTAssertEqualObjects(expected, [@"drawer" reverseString]);
+}
+
 
 @end
