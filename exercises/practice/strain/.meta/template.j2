@@ -1,0 +1,43 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+#else
+# import "{{ header }}"
+#endif
+
+{% macro predicate(predicate) -%}
+{%- if predicate == "fn(x) -> true" -%}
+^BOOL(id item) { return YES; }
+{%- elif predicate == "fn(x) -> false" -%}
+^BOOL(id item) { return NO; }
+{%- elif predicate == "fn(x) -> x % 2 == 1" -%}
+^BOOL(NSNumber *item) { return item.integerValue % 2 == 1; }
+{%- elif predicate == "fn(x) -> x % 2 == 0" -%}
+^BOOL(NSNumber *item) { return item.integerValue % 2 == 0; }
+{%- elif predicate == "fn(x) -> starts_with(x, 'z')" -%}
+^BOOL(NSString *item) { return [item hasPrefix:@"z"]; }
+{%- elif predicate == "fn(x) -> contains(x, 5)" -%}
+^BOOL(NSArray *item) { return [item containsObject:@5]; }
+{%- endif -%}
+{%- endmacro %}
+
+@interface {{ test_class }} : XCTestCase
+@end
+
+@implementation {{ test_class }}
+
+{% for case in cases %}
+- (void){{ case.func_name }} {
+    NSArray *input = {{ case.input.list | quote }};
+    NSArray *expected = {{ case.expected | quote }};
+    BOOL (^predicate)(id) = {{ predicate(case.input.predicate) }};
+{% if case.property == "keep" %}
+    XCTAssertEqualObjects(expected, [input keep:YES where:predicate]);
+{% else %}
+    XCTAssertEqualObjects(expected, [input discard:predicate]);
+{% endif %}
+}
+
+{% endfor %}
+@end
