@@ -2,232 +2,156 @@
 
 #if __has_include("StrainExample.h")
 # import "StrainExample.h"
-# else
+#else
 # import "Strain.h"
 #endif
 
-@interface StrainTest : XCTestCase
 
+
+@interface StrainTest : XCTestCase
 @end
 
 @implementation StrainTest
 
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+
+- (void)testKeepOnEmptyListReturnsEmptyList {
+    NSArray *input = @[];
+    NSArray *expected = @[];
+    BOOL (^predicate)(id) = ^BOOL(id item) { return YES; };
+
+    XCTAssertEqualObjects(expected, [input keep:YES where:predicate]);
+
 }
 
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
+
+- (void)testKeepsEverything {
+    NSArray *input = @[@1, @3, @5];
+    NSArray *expected = @[@1, @3, @5];
+    BOOL (^predicate)(id) = ^BOOL(id item) { return YES; };
+
+    XCTAssertEqualObjects(expected, [input keep:YES where:predicate]);
+
 }
 
-- (void)testEmptyKeep {
-    
-    NSArray *inputArray = @[];
-    
-    NSArray *expectedArray = inputArray;
-    
-    XCTAssertEqualObjects(expectedArray, [inputArray keep:true where:^BOOL(id  _Nonnull arrayElement) {
-        
-        NSNumber *number = (NSNumber*)arrayElement;
-        int integerNumber = number.intValue;
-        return integerNumber < 10;
-        
-    }]);
+
+- (void)testKeepsNothing {
+    NSArray *input = @[@1, @3, @5];
+    NSArray *expected = @[];
+    BOOL (^predicate)(id) = ^BOOL(id item) { return NO; };
+
+    XCTAssertEqualObjects(expected, [input keep:YES where:predicate]);
+
 }
 
-- (void)testKeepEverything {
-    
-    NSArray *inputArray = @[@1,@2,@3];
-    
-    NSArray *expectedArray = inputArray;
-    
-    XCTAssertEqualObjects(expectedArray, [inputArray keep:true where:^BOOL(id  _Nonnull arrayElement) {
-        
-        NSNumber *number = (NSNumber*)arrayElement;
-        int integerNumber = number.intValue;
-        return integerNumber < 10;
-        
-    }]);
+
+- (void)testKeepsFirstAndLast {
+    NSArray *input = @[@1, @2, @3];
+    NSArray *expected = @[@1, @3];
+    BOOL (^predicate)(id) = ^BOOL(NSNumber *item) { return item.integerValue % 2 == 1; };
+
+    XCTAssertEqualObjects(expected, [input keep:YES where:predicate]);
+
 }
 
--(void)testKeepFirstAndLastElements {
-    
-    NSArray *inputArray = @[@1,@2,@3];
-    
-    NSArray *expectedArray = @[@1,@3];
-    
-    XCTAssertEqualObjects(expectedArray, [inputArray keep:true where:^BOOL(id  _Nonnull arrayElement) {
-        
-        NSNumber *number = (NSNumber*)arrayElement;
-        int integerNumber = number.intValue;
-        return integerNumber % 2 != 0;
-        
-    }]);
+
+- (void)testKeepsNeitherFirstNorLast {
+    NSArray *input = @[@1, @2, @3];
+    NSArray *expected = @[@2];
+    BOOL (^predicate)(id) = ^BOOL(NSNumber *item) { return item.integerValue % 2 == 0; };
+
+    XCTAssertEqualObjects(expected, [input keep:YES where:predicate]);
+
 }
 
--(void)testKeepNeitherFirstNorLastElement {
-    
-    NSArray *inputArray = @[@1,@2,@3,@4,@5];
-    
-    NSArray *expectedArray = @[@2,@4];
-    
-    XCTAssertEqualObjects(expectedArray, [inputArray keep:true where:^BOOL(id  _Nonnull arrayElement) {
-        
-        NSNumber *number = (NSNumber*)arrayElement;
-        int integerNumber = number.intValue;
-        return integerNumber % 2 == 0;
-        
-    }]);
+
+- (void)testKeepsStrings {
+    NSArray *input = @[@"apple", @"zebra", @"banana", @"zombies", @"cherimoya", @"zealot"];
+    NSArray *expected = @[@"zebra", @"zombies", @"zealot"];
+    BOOL (^predicate)(id) = ^BOOL(NSString *item) { return [item hasPrefix:@"z"]; };
+
+    XCTAssertEqualObjects(expected, [input keep:YES where:predicate]);
+
 }
 
--(void)testKeepStrings {
-    
-    NSArray *inputArray = @[@"apple",@"zebra",@"banana",@"Zombies",@"cherimoya",@"zealot"];
-    
-    NSArray *expectedArray = @[@"zebra",@"Zombies",@"zealot"];
-    
-    XCTAssertEqualObjects(expectedArray, [inputArray keep:true where:^BOOL(id  _Nonnull arrayElement) {
-        
-        NSString *string = (NSString*)arrayElement;
-        
-        return ([string rangeOfString:@"z"].location != NSNotFound || [string rangeOfString:@"Z"].location != NSNotFound);
-        
-    }]);
+
+- (void)testKeepsLists {
+    NSArray *input = @[@[@1, @2, @3], @[@5, @5, @5], @[@5, @1, @2], @[@2, @1, @2], @[@1, @5, @2], @[@2, @2, @1], @[@1, @2, @5]];
+    NSArray *expected = @[@[@5, @5, @5], @[@5, @1, @2], @[@1, @5, @2], @[@1, @2, @5]];
+    BOOL (^predicate)(id) = ^BOOL(NSArray *item) { return [item containsObject:@5]; };
+
+    XCTAssertEqualObjects(expected, [input keep:YES where:predicate]);
+
 }
 
--(void)testKeepArrays {
-    
-    NSArray *inputArray = @[@[@1,@2,@3],@[@5,@5,@5],@[@5,@1,@2],@[@2,@1,@2],@[@1,@5,@2],@[@2,@2,@1],@[@1,@2,@5]];
-    
-    NSArray *expectedArray = @[@[@5,@5,@5],@[@5,@1,@2],@[@1,@5,@2],@[@1,@2,@5]];
-    
-    XCTAssertEqualObjects(expectedArray, [inputArray keep:true where:^BOOL(id  _Nonnull arrayElement) {
-        
-        NSArray *nestedArray = (NSArray*)arrayElement;
-        return [nestedArray containsObject:@5];
-        
-    }]);
-   
+
+- (void)testDiscardOnEmptyListReturnsEmptyList {
+    NSArray *input = @[];
+    NSArray *expected = @[];
+    BOOL (^predicate)(id) = ^BOOL(id item) { return YES; };
+
+    XCTAssertEqualObjects(expected, [input discard:predicate]);
+
 }
 
--(void)testDiscardEmptyArray {
-    
-    NSArray *inputArray = @[];
-    
-    NSArray *expectedArray = inputArray;
-    
-    XCTAssertEqualObjects(expectedArray, [inputArray discard:^BOOL(id  _Nonnull arrayElement) {
-        
-        NSNumber *number = (NSNumber*)arrayElement;
-        int integerNumber = number.intValue;
-        return integerNumber < 10;
-        
-    }]);
-    
+
+- (void)testDiscardsEverything {
+    NSArray *input = @[@1, @3, @5];
+    NSArray *expected = @[];
+    BOOL (^predicate)(id) = ^BOOL(id item) { return YES; };
+
+    XCTAssertEqualObjects(expected, [input discard:predicate]);
+
 }
 
--(void)testDiscardNothing {
-    
-    NSArray *inputArray = @[@1,@2,@3];
-    
-    NSArray *expectedArray = inputArray;
-    
-    XCTAssertEqualObjects(expectedArray, [inputArray discard:^BOOL(id  _Nonnull arrayElement) {
-        
-        NSNumber *number = (NSNumber*)arrayElement;
-        int integerNumber = number.intValue;
-        return integerNumber > 10;
-        
-    }]);
+
+- (void)testDiscardsNothing {
+    NSArray *input = @[@1, @3, @5];
+    NSArray *expected = @[@1, @3, @5];
+    BOOL (^predicate)(id) = ^BOOL(id item) { return NO; };
+
+    XCTAssertEqualObjects(expected, [input discard:predicate]);
+
 }
 
--(void)testDiscardFirstAndLastElements {
-    
-    NSArray *inputArray = @[@1,@2,@3];
-    
-    NSArray *expectedArray = @[@2];
-    
-    XCTAssertEqualObjects(expectedArray, [inputArray discard:^BOOL(id  _Nonnull arrayElement) {
-        
-        NSNumber *number = (NSNumber*)arrayElement;
-        int integerNumber = number.intValue;
-        return integerNumber % 2 != 0;
-        
-    }]);
+
+- (void)testDiscardsFirstAndLast {
+    NSArray *input = @[@1, @2, @3];
+    NSArray *expected = @[@2];
+    BOOL (^predicate)(id) = ^BOOL(NSNumber *item) { return item.integerValue % 2 == 1; };
+
+    XCTAssertEqualObjects(expected, [input discard:predicate]);
+
 }
 
--(void)testDiscardNeitherFirstNorLastElement {
-    
-    NSArray *inputArray = @[@1,@2,@3,@4,@5];
-    
-    NSArray *expectedArray = @[@1,@3,@5];
-    
-    XCTAssertEqualObjects(expectedArray, [inputArray discard:^BOOL(id  _Nonnull arrayElement) {
-        
-        NSNumber *number = (NSNumber*)arrayElement;
-        int integerNumber = number.intValue;
-        return integerNumber % 2 == 0;
-        
-    }]);
+
+- (void)testDiscardsNeitherFirstNorLast {
+    NSArray *input = @[@1, @2, @3];
+    NSArray *expected = @[@1, @3];
+    BOOL (^predicate)(id) = ^BOOL(NSNumber *item) { return item.integerValue % 2 == 0; };
+
+    XCTAssertEqualObjects(expected, [input discard:predicate]);
+
 }
 
--(void)testDiscardStrings {
-    
-    NSArray *inputArray = @[@"apple",@"zebra",@"banana",@"Zombies",@"cherimoya",@"zealot"];
-    
-    NSArray *expectedArray = @[@"apple",@"banana",@"cherimoya"];
-    
-    XCTAssertEqualObjects(expectedArray, [inputArray discard:^BOOL(id  _Nonnull arrayElement) {
-        
-        NSString *string = (NSString*)arrayElement;
-        
-        return ([string rangeOfString:@"z"].location != NSNotFound || [string rangeOfString:@"Z"].location != NSNotFound);
-      
-    }]);
+
+- (void)testDiscardsStrings {
+    NSArray *input = @[@"apple", @"zebra", @"banana", @"zombies", @"cherimoya", @"zealot"];
+    NSArray *expected = @[@"apple", @"banana", @"cherimoya"];
+    BOOL (^predicate)(id) = ^BOOL(NSString *item) { return [item hasPrefix:@"z"]; };
+
+    XCTAssertEqualObjects(expected, [input discard:predicate]);
+
 }
 
--(void)testDiscardArrays {
-    
-    NSArray *inputArray = @[@[@1,@2,@3],@[@5,@5,@5],@[@5,@1,@2],@[@2,@1,@2],@[@1,@5,@2],@[@2,@2,@1],@[@1,@2,@5]];
-    
-    NSArray *expectedArray = @[@[@1,@2,@3],@[@2,@1,@2],@[@2,@2,@1]];
-    
-    XCTAssertEqualObjects(expectedArray, [inputArray discard:^BOOL(id  _Nonnull arrayElement) {
-        
-        NSArray *nestedArray = (NSArray*)arrayElement;
-        return [nestedArray containsObject:@5];
-        
-    }]);
+
+- (void)testDiscardsLists {
+    NSArray *input = @[@[@1, @2, @3], @[@5, @5, @5], @[@5, @1, @2], @[@2, @1, @2], @[@1, @5, @2], @[@2, @2, @1], @[@1, @2, @5]];
+    NSArray *expected = @[@[@1, @2, @3], @[@2, @1, @2], @[@2, @2, @1]];
+    BOOL (^predicate)(id) = ^BOOL(NSArray *item) { return [item containsObject:@5]; };
+
+    XCTAssertEqualObjects(expected, [input discard:predicate]);
+
 }
 
--(void)testKeepOnMutableArrays {
-    
-    NSMutableArray *inputArray = [NSMutableArray arrayWithObjects:@[@1,@2,@3],@[@5,@5,@5],@[@5,@1,@2],@[@2,@1,@2],@[@1,@5,@2],@[@2,@2,@1],@[@1,@2,@5], nil];
-    
-    NSArray *expectedArray = @[@[@5,@5,@5],@[@5,@1,@2],@[@1,@5,@2],@[@1,@2,@5]];
-    
-    XCTAssertEqualObjects(expectedArray, [inputArray keep:true where:^BOOL(id  _Nonnull arrayElement) {
-        
-        NSArray *nestedArray = (NSArray*)arrayElement;
-        return [nestedArray containsObject:@5];
-        
-    }]);
-}
-
--(void)testDiscardOnMutableArrays {
-    
-    NSMutableArray *inputArray = [NSMutableArray arrayWithObjects:@[@1,@2,@3],@[@5,@5,@5],@[@5,@1,@2],@[@2,@1,@2],@[@1,@5,@2],@[@2,@2,@1],@[@1,@2,@5], nil];
-    
-    NSArray *expectedArray = @[@[@1,@2,@3],@[@2,@1,@2],@[@2,@2,@1]];
-    
-    XCTAssertEqualObjects(expectedArray, [inputArray discard:^BOOL(id  _Nonnull arrayElement) {
-        
-        NSArray *nestedArray = (NSArray*)arrayElement;
-        return [nestedArray containsObject:@5];
-        
-    }]);
-}
 
 @end
