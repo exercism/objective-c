@@ -1,0 +1,22 @@
+#import <XCTest/XCTest.h>
+
+#if __has_include("{{ example_header }}")
+# import "{{ example_header }}"
+#else
+# import "{{ header }}"
+#endif
+
+@interface {{ test_class }} : XCTestCase
+@end
+
+@implementation {{ test_class }}
+
+{% for case in cases %}
+- (void){{ case.func_name }} {
+    {{ solution_class }} *handshake = [[{{ solution_class }} alloc] initWithNumber:{{ case.input.number }}];
+    NSArray<NSString *> *expected = {{ case.expected | quote }};
+    XCTAssertEqualObjects(expected, handshake.commands);
+}
+
+{% endfor %}
+@end
