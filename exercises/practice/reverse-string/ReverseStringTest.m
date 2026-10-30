@@ -2,50 +2,44 @@
 
 #if __has_include("ReverseStringExample.h")
 # import "ReverseStringExample.h"
-# else
+#else
 # import "ReverseString.h"
 #endif
 
 @interface ReverseStringTest : XCTestCase
-
 @end
 
 @implementation ReverseStringTest
 
--(void)testReverseEmptyString {
-    
-    NSString *inputString = [NSString string];
-    NSString *expectedOutput = [NSString string];
-    XCTAssertEqualObjects(expectedOutput, [inputString reverseString]);
+
+- (void)testAnEmptyString {
+    XCTAssertEqualObjects(@"", [@"" reverseString]);
 }
 
--(void)testReverseWord {
-    
-    NSString *inputString = @"robot";
-    NSString *expectedOutput = @"tobor";
-    XCTAssertEqualObjects(expectedOutput,[inputString reverseString]);
+
+- (void)testAWord {
+    XCTAssertEqualObjects(@"tobor", [@"robot" reverseString]);
 }
 
--(void)testReverseCapitalisedWord {
-    
-    NSString *inputString = @"Ramen";
-    NSString *expectedOutput = @"nemaR";
-    XCTAssertEqualObjects(expectedOutput, [inputString reverseString]);
-    
+
+- (void)testACapitalizedWord {
+    XCTAssertEqualObjects(@"nemaR", [@"Ramen" reverseString]);
 }
 
--(void)testReverseSentenceWithPunctuation {
-    
-    NSString *inputString = @"I'm hungry!";
-    NSString *expectedOutput = @"!yrgnuh m'I";
-    XCTAssertEqualObjects(expectedOutput, [inputString reverseString]);
+
+- (void)testASentenceWithPunctuation {
+    XCTAssertEqualObjects(@"!yrgnuh m'I", [@"I'm hungry!" reverseString]);
 }
 
--(void)testReversePalindrome {
-    
-    NSString *inputString = @"racecar";
-    NSString *expectedOutput = @"racecar";
-    XCTAssertEqualObjects(expectedOutput, [inputString reverseString]);
+
+- (void)testAPalindrome {
+    XCTAssertEqualObjects(@"racecar", [@"racecar" reverseString]);
 }
+
+
+- (void)testAnEvenSizedWord {
+    XCTAssertEqualObjects(@"reward", [@"drawer" reverseString]);
+}
+
 
 @end
