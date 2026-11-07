@@ -1,0 +1,12 @@
+NSString *mostCommonWord(NSString *text) {
+    NSMutableDictionary<NSString *, NSNumber *> *counts = [NSMutableDictionary dictionary];
+    NSString *best = @"";
+    for (NSString *word in [[text lowercaseString] componentsSeparatedByString:@" "]) {
+        NSInteger count = [counts[word] integerValue] + 1;
+        counts[word] = @(count);
+        if (count > [counts[best] integerValue]) {
+            best = word;
+        }
+    }
+    return [NSString stringWithFormat:@"\"%@\" appears %@ times", best, counts[best]];
+}
